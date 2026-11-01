@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [main]
 
+# Required permissions for security scanning
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
 jobs:
   backend-tests:
     name: Backend tests (Maven)
@@ -61,6 +67,7 @@ jobs:
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
+        continue-on-error: true
       
       - name: Run container smoke test
         run: |

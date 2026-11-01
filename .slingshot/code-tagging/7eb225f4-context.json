@@ -32,9 +32,27 @@
           ]
         }
       ]
+    },
+    "6d001151": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "application.yml",
+          "relativeFilePath": "backend/src/main/resources/application.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            55
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
+    "40757923": {
+      "value": "The job failed because the workflow reached the SARIF upload step and GitHub rejected the upload due to missing permissions, not because the app tests or Docker build failed.\n\nWhat the logs show:\n\nThe backend tests, frontend tests, and Docker build completed.\nThe failure happened in the Trivy security step:\n“Adding fingerprints to SARIF file…”\n“Uploading code scanning results”\nthen:\n“##[warning]Resource not accessible by integration”\n“##[error]Resource not accessible by integration”\nThe action t"
+    },
     "d200a887": {
       "value": "proceed to step 9"
     },
