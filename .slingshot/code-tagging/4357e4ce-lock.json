@@ -1,0 +1,769 @@
+{
+  "backend/src/main/java/com/example/iss/config/ResilienceConfig.java": {
+    "filename": "ResilienceConfig.java",
+    "path": "backend/src/main/java/com/example/iss/config/ResilienceConfig.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "92a6cc": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "daeccf74",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "92a6cc",
+        "hash": "f0a3cc5f",
+        "encoded": "package%20com.example.iss.config;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "92a6cc",
+        "hash": "85043d35",
+        "encoded": "import%20com.example.iss.client.CloudClient;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "92a6cc",
+        "hash": "47627267",
+        "encoded": "import%20com.example.iss.client.HttpJson;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "92a6cc",
+        "hash": "5a09f74d",
+        "encoded": "import%20com.example.iss.client.OpenMeteoClient;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "92a6cc",
+        "hash": "b604356d",
+        "encoded": "import%20com.example.iss.client.OpenNotifyClient;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "92a6cc",
+        "hash": "5ce3f2d9",
+        "encoded": "import%20com.example.iss.client.PassesClient;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "92a6cc",
+        "hash": "19aceddd",
+        "encoded": "import%20com.example.iss.client.PolluxClient;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "92a6cc",
+        "hash": "4ed1c206",
+        "encoded": "import%20com.example.iss.client.PositionClient;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "92a6cc",
+        "hash": "f42827f1",
+        "encoded": "import%20com.example.iss.domain.AlertService;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "92a6cc",
+        "hash": "d0de73a6",
+        "encoded": "import%20com.example.iss.domain.CloudForecast;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "92a6cc",
+        "hash": "09044ead",
+        "encoded": "import%20com.example.iss.domain.IssPosition;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "92a6cc",
+        "hash": "c873ee20",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "92a6cc",
+        "hash": "7d52d87a",
+        "encoded": "import%20com.example.iss.domain.VelocityEstimator;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "92a6cc",
+        "hash": "f19a9fbb",
+        "encoded": "import%20com.example.iss.resilience.CircuitBreaker;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "92a6cc",
+        "hash": "d3fdafb2",
+        "encoded": "import%20com.example.iss.resilience.ResilientFetcher;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "92a6cc",
+        "hash": "90423f51",
+        "encoded": "import%20com.example.iss.resilience.SingleFlight;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "92a6cc",
+        "hash": "49adfc17",
+        "encoded": "import%20com.example.iss.resilience.TtlCache;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "92a6cc",
+        "hash": "1f20945d",
+        "encoded": "import%20com.example.iss.service.IssFacade;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "92a6cc",
+        "hash": "ac9278bd",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "92a6cc",
+        "hash": "6968ac72",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "92a6cc",
+        "hash": "6834d2d5",
+        "encoded": "import%20org.springframework.beans.factory.annotation.Autowired;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "92a6cc",
+        "hash": "39671351",
+        "encoded": "import%20org.springframework.boot.context.properties.EnableConfigurationProperties;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "92a6cc",
+        "hash": "37dbd62b",
+        "encoded": "import%20org.springframework.context.annotation.Bean;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "92a6cc",
+        "hash": "e187bf17",
+        "encoded": "import%20org.springframework.context.annotation.Configuration;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "92a6cc",
+        "hash": "a353fb3e",
+        "encoded": "import%20org.springframework.core.io.ClassPathResource;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "92a6cc",
+        "hash": "679ad713",
+        "encoded": "import%20java.io.IOException;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "92a6cc",
+        "hash": "d0120167",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "92a6cc",
+        "hash": "d1b27529",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "92a6cc",
+        "hash": "367a56c1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "92a6cc",
+        "hash": "b37ac35c",
+        "encoded": "*%20Single%20place%20that%20wires%20the%20resilience%20layer,%20upstream%20clients,%20mock%20data,%20and%20the",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "92a6cc",
+        "hash": "7c642996",
+        "encoded": "*%20IssFacade%20itself%20(PROMPT.md%20section%204:%20constructor%20injection,%20SOLID).%20One%20Clock%20bean",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "92a6cc",
+        "hash": "5a023b30",
+        "encoded": "*%20is%20shared%20everywhere%20so%20tests%20and%20production%20share%20the%20same%20time%20source%20abstraction.",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "92a6cc",
+        "hash": "75d5d983",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "92a6cc",
+        "hash": "36507483",
+        "encoded": "@Configuration",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "92a6cc",
+        "hash": "6e47e048",
+        "encoded": "@EnableConfigurationProperties(UpstreamProperties.class)",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "92a6cc",
+        "hash": "ef71c53f",
+        "encoded": "public%20class%20ResilienceConfig%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "92a6cc",
+        "hash": "5eb7ec37",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "92a6cc",
+        "hash": "0932e3ac",
+        "encoded": "public%20Clock%20clock()%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "92a6cc",
+        "hash": "6dcfe186",
+        "encoded": "return%20Clock.systemUTC();",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "92a6cc",
+        "hash": "d6071ac7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "92a6cc",
+        "hash": "15e3b226",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "92a6cc",
+        "hash": "5bdda5fd",
+        "encoded": "public%20HttpJson%20httpJson(UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "92a6cc",
+        "hash": "60ae37e8",
+        "encoded": "Duration%20requestTimeout%20=%20Duration.ofSeconds(props.getHttp().getTimeoutSeconds());",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "92a6cc",
+        "hash": "a6630ef7",
+        "encoded": "return%20new%20HttpJson(Duration.ofSeconds(2),%20requestTimeout);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "92a6cc",
+        "hash": "0b4804f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "92a6cc",
+        "hash": "50305abd",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "92a6cc",
+        "hash": "0bccf339",
+        "encoded": "public%20VelocityEstimator%20velocityEstimator()%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "92a6cc",
+        "hash": "cbd80d90",
+        "encoded": "return%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "92a6cc",
+        "hash": "5c9d24d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "92a6cc",
+        "hash": "e42640a9",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "92a6cc",
+        "hash": "27c377ce",
+        "encoded": "public%20AlertService%20alertService()%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "92a6cc",
+        "hash": "f9d9fcdb",
+        "encoded": "return%20new%20AlertService();",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "92a6cc",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "92a6cc",
+        "hash": "7a06a079",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "92a6cc",
+        "hash": "b5fdd88e",
+        "encoded": "public%20PositionClient%20positionClient(HttpJson%20httpJson,%20VelocityEstimator%20velocityEstimator,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "92a6cc",
+        "hash": "6f99a73b",
+        "encoded": "UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "92a6cc",
+        "hash": "da050669",
+        "encoded": "return%20new%20OpenNotifyClient(httpJson,%20velocityEstimator,%20props.getUpstream().getOpenNotify().getUrl());",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "92a6cc",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "92a6cc",
+        "hash": "9ba3927c",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "92a6cc",
+        "hash": "d9665dcd",
+        "encoded": "public%20PassesClient%20passesClient(HttpJson%20httpJson,%20UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "92a6cc",
+        "hash": "04da7e07",
+        "encoded": "return%20new%20PolluxClient(httpJson,%20props.getUpstream().getPollux().getUrl(),",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "92a6cc",
+        "hash": "096fc1aa",
+        "encoded": "props.getUpstream().getPollux().getPassCount());",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "92a6cc",
+        "hash": "f064f9d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "92a6cc",
+        "hash": "7d2b04e7",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "92a6cc",
+        "hash": "475eb5a9",
+        "encoded": "public%20CloudClient%20cloudClient(HttpJson%20httpJson,%20UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "92a6cc",
+        "hash": "23f20adf",
+        "encoded": "return%20new%20OpenMeteoClient(httpJson,%20props.getUpstream().getOpenMeteo().getUrl());",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "92a6cc",
+        "hash": "88f18366",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "92a6cc",
+        "hash": "d404a2b2",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "92a6cc",
+        "hash": "40b0daf9",
+        "encoded": "public%20ResilientFetcher%3CIssPosition%3E%20positionFetcher(Clock%20clock,%20UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "92a6cc",
+        "hash": "f3d3e556",
+        "encoded": "var%20window%20=%20props.getCache().getPosition();",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "92a6cc",
+        "hash": "fc00c38b",
+        "encoded": "return%20newFetcher(clock,%20props,%20window.getTtlSeconds(),%20window.getMaxStaleSeconds());",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "92a6cc",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "92a6cc",
+        "hash": "a960a4b8",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "92a6cc",
+        "hash": "5e5177fb",
+        "encoded": "public%20ResilientFetcher%3CPassFeed%3E%20passesFetcher(Clock%20clock,%20UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "92a6cc",
+        "hash": "2a75daaa",
+        "encoded": "var%20window%20=%20props.getCache().getPasses();",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "92a6cc",
+        "hash": "11134f38",
+        "encoded": "return%20newFetcher(clock,%20props,%20window.getTtlSeconds(),%20window.getMaxStaleSeconds());",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "92a6cc",
+        "hash": "726efa75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "92a6cc",
+        "hash": "5218c362",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "92a6cc",
+        "hash": "e86fc3d7",
+        "encoded": "public%20ResilientFetcher%3CCloudForecast%3E%20cloudFetcher(Clock%20clock,%20UpstreamProperties%20props)%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "92a6cc",
+        "hash": "eece8730",
+        "encoded": "var%20window%20=%20props.getCache().getCloud();",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "92a6cc",
+        "hash": "c7e144ba",
+        "encoded": "return%20newFetcher(clock,%20props,%20window.getTtlSeconds(),%20window.getMaxStaleSeconds());",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "92a6cc",
+        "hash": "db89230b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "92a6cc",
+        "hash": "ddef3789",
+        "encoded": "private%20%3CT%3E%20ResilientFetcher%3CT%3E%20newFetcher(Clock%20clock,%20UpstreamProperties%20props,",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "92a6cc",
+        "hash": "3843e8c6",
+        "encoded": "long%20ttlSeconds,%20long%20maxStaleSeconds)%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "92a6cc",
+        "hash": "56d04eab",
+        "encoded": "TtlCache%3CT%3E%20cache%20=%20new%20TtlCache%3C%3E(clock,%20Duration.ofSeconds(ttlSeconds),",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "92a6cc",
+        "hash": "fa8e1b46",
+        "encoded": "Duration.ofSeconds(maxStaleSeconds),%20props.getCache().getMaxEntries());",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "92a6cc",
+        "hash": "3a243532",
+        "encoded": "CircuitBreaker%20breaker%20=%20new%20CircuitBreaker(clock,%20props.getCircuitBreaker().getFailureThreshold(),",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "92a6cc",
+        "hash": "01484d75",
+        "encoded": "Duration.ofSeconds(props.getCircuitBreaker().getCooldownSeconds()));",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "92a6cc",
+        "hash": "e6782580",
+        "encoded": "SingleFlight%3CT%3E%20singleFlight%20=%20new%20SingleFlight%3C%3E();",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "92a6cc",
+        "hash": "8b2d3b51",
+        "encoded": "return%20new%20ResilientFetcher%3C%3E(cache,%20breaker,%20singleFlight,%20clock,%20props.getHttp().getRetryCount());",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "92a6cc",
+        "hash": "7a43bd29",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "92a6cc",
+        "hash": "15a33a9e",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "92a6cc",
+        "hash": "e735287a",
+        "encoded": "public%20JsonNode%20mockPositionJson()%20throws%20IOException%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "92a6cc",
+        "hash": "a2ca8122",
+        "encoded": "return%20readMock(%22mocks/position.json%22);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "92a6cc",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "92a6cc",
+        "hash": "5e79857a",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "92a6cc",
+        "hash": "aeb0f064",
+        "encoded": "public%20JsonNode%20mockPassesJson()%20throws%20IOException%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "92a6cc",
+        "hash": "41143d7c",
+        "encoded": "return%20readMock(%22mocks/passes.json%22);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "92a6cc",
+        "hash": "d750d26f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "92a6cc",
+        "hash": "34c8513e",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "92a6cc",
+        "hash": "63e787f7",
+        "encoded": "public%20JsonNode%20mockCloudJson()%20throws%20IOException%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "92a6cc",
+        "hash": "7e53ebda",
+        "encoded": "return%20readMock(%22mocks/cloud.json%22);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "92a6cc",
+        "hash": "beea77ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "92a6cc",
+        "hash": "d254d866",
+        "encoded": "private%20JsonNode%20readMock(String%20classpathLocation)%20throws%20IOException%20%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "92a6cc",
+        "hash": "7fa92563",
+        "encoded": "ObjectMapper%20mapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "92a6cc",
+        "hash": "019479ff",
+        "encoded": "try%20(var%20in%20=%20new%20ClassPathResource(classpathLocation).getInputStream())%20%7B",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "92a6cc",
+        "hash": "0ebc5da3",
+        "encoded": "return%20mapper.readTree(in);",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "92a6cc",
+        "hash": "c4560e5f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "92a6cc",
+        "hash": "5513b7ee",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "92a6cc",
+        "hash": "ee37931e",
+        "encoded": "@Bean",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "92a6cc",
+        "hash": "fecfb5c8",
+        "encoded": "public%20IssFacade%20issFacade(PositionClient%20positionClient,%20PassesClient%20passesClient,%20CloudClient%20cloudClient,",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "92a6cc",
+        "hash": "ef8bbce8",
+        "encoded": "ResilientFetcher%3CIssPosition%3E%20positionFetcher,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "92a6cc",
+        "hash": "2e08ac72",
+        "encoded": "ResilientFetcher%3CPassFeed%3E%20passesFetcher,",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "92a6cc",
+        "hash": "72fe82f8",
+        "encoded": "ResilientFetcher%3CCloudForecast%3E%20cloudFetcher,",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "92a6cc",
+        "hash": "c695cec5",
+        "encoded": "@Autowired%20JsonNode%20mockPositionJson,",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "92a6cc",
+        "hash": "90065423",
+        "encoded": "@Autowired%20JsonNode%20mockPassesJson,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "92a6cc",
+        "hash": "34682e2d",
+        "encoded": "@Autowired%20JsonNode%20mockCloudJson,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "92a6cc",
+        "hash": "907af80c",
+        "encoded": "AlertService%20alertService,%20Clock%20clock)%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "92a6cc",
+        "hash": "f6bab4ca",
+        "encoded": "return%20new%20IssFacade(positionClient,%20passesClient,%20cloudClient,",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "92a6cc",
+        "hash": "78ac7da4",
+        "encoded": "positionFetcher,%20passesFetcher,%20cloudFetcher,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "92a6cc",
+        "hash": "1e51cfb3",
+        "encoded": "mockPositionJson,%20mockPassesJson,%20mockCloudJson,%20alertService,%20clock);",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "92a6cc",
+        "hash": "be05556d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "92a6cc",
+        "hash": "4e2389e2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

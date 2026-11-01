@@ -1,0 +1,427 @@
+{
+  "backend/src/main/java/com/example/iss/client/HttpJson.java": {
+    "filename": "HttpJson.java",
+    "path": "backend/src/main/java/com/example/iss/client/HttpJson.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "291233": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "67b69248",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:06\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "291233",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "291233",
+        "hash": "f59763bd",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "291233",
+        "hash": "6bcd10dc",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "291233",
+        "hash": "7a9def9c",
+        "encoded": "import%20java.io.IOException;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "291233",
+        "hash": "f9e10dee",
+        "encoded": "import%20java.net.URI;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "291233",
+        "hash": "07994f64",
+        "encoded": "import%20java.net.http.HttpClient;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "291233",
+        "hash": "53dc1910",
+        "encoded": "import%20java.net.http.HttpRequest;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "291233",
+        "hash": "15db4a56",
+        "encoded": "import%20java.net.http.HttpResponse;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "291233",
+        "hash": "134b7601",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "291233",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "291233",
+        "hash": "acf2db21",
+        "encoded": "*%20Thin%20java.net.http.HttpClient%20wrapper:%20GET%20a%20URI,%20reject%20non-2xx,%20parse%20the%20body%20as",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "291233",
+        "hash": "44576816",
+        "encoded": "*%20JSON.%20Nothing%20beyond%20this%20sees%20raw%20upstream%20JSON%20(PROMPT.md%20section%204%20-%20Adapter",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "291233",
+        "hash": "973f61d1",
+        "encoded": "*%20pattern).%20Connect%20and%20request%20timeouts%20are%20constructor%20parameters%20(defaults%202s/3s)",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "291233",
+        "hash": "3ab717f9",
+        "encoded": "*%20so%20tests%20can%20use%20short%20values%20without%20touching%20production%20config.",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "291233",
+        "hash": "fc142b2b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "291233",
+        "hash": "81c18a3e",
+        "encoded": "public%20final%20class%20HttpJson%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "291233",
+        "hash": "33726546",
+        "encoded": "private%20static%20final%20Duration%20DEFAULT_CONNECT_TIMEOUT%20=%20Duration.ofSeconds(2);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "291233",
+        "hash": "a6c9dea6",
+        "encoded": "private%20static%20final%20Duration%20DEFAULT_REQUEST_TIMEOUT%20=%20Duration.ofSeconds(3);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "291233",
+        "hash": "28752cf5",
+        "encoded": "private%20final%20Duration%20connectTimeout;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "291233",
+        "hash": "a8c247a3",
+        "encoded": "private%20final%20Duration%20requestTimeout;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "291233",
+        "hash": "77fe1a31",
+        "encoded": "private%20final%20HttpClient%20httpClient;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "291233",
+        "hash": "49dfa384",
+        "encoded": "private%20final%20ObjectMapper%20objectMapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "291233",
+        "hash": "a6e9b9f9",
+        "encoded": "public%20HttpJson()%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "291233",
+        "hash": "6fb34d0c",
+        "encoded": "this(DEFAULT_CONNECT_TIMEOUT,%20DEFAULT_REQUEST_TIMEOUT);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "291233",
+        "hash": "cfdac52c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "291233",
+        "hash": "29698934",
+        "encoded": "public%20HttpJson(Duration%20connectTimeout,%20Duration%20requestTimeout)%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "291233",
+        "hash": "aaac2488",
+        "encoded": "this.connectTimeout%20=%20connectTimeout;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "291233",
+        "hash": "84900c63",
+        "encoded": "this.requestTimeout%20=%20requestTimeout;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "291233",
+        "hash": "9cff63ab",
+        "encoded": "this.httpClient%20=%20HttpClient.newBuilder()",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "291233",
+        "hash": "6043cbd0",
+        "encoded": ".connectTimeout(connectTimeout)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "291233",
+        "hash": "3ff24c49",
+        "encoded": ".build();",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "291233",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "291233",
+        "hash": "77925245",
+        "encoded": "public%20Duration%20connectTimeout()%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "291233",
+        "hash": "b5a28982",
+        "encoded": "return%20connectTimeout;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "291233",
+        "hash": "5663967b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "291233",
+        "hash": "54ab0665",
+        "encoded": "public%20Duration%20requestTimeout()%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "291233",
+        "hash": "58cc9509",
+        "encoded": "return%20requestTimeout;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "291233",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "291233",
+        "hash": "eb0289d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "291233",
+        "hash": "3089bff8",
+        "encoded": "*%20GETs%20%7B@code%20uri%7D%20and%20returns%20the%20parsed%20JSON%20body.",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "291233",
+        "hash": "848da376",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "291233",
+        "hash": "2b1b9947",
+        "encoded": "*%20@throws%20HttpJsonException%20if%20the%20response%20status%20is%20not%202xx",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "291233",
+        "hash": "45f14a0a",
+        "encoded": "*%20@throws%20RuntimeException%20%20if%20the%20request%20fails%20(timeout,%20connection%20error)%20or%20the",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "291233",
+        "hash": "91c1ac61",
+        "encoded": "*%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20body%20is%20not%20valid%20JSON;%20callers%20(ResilientFetcher)%20treat",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "291233",
+        "hash": "f63142c2",
+        "encoded": "*%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20any%20exception%20here%20as%20a%20generic%20upstream%20failure",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "291233",
+        "hash": "b02fb1f0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "291233",
+        "hash": "b0d8683d",
+        "encoded": "public%20JsonNode%20getJson(URI%20uri)%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "291233",
+        "hash": "0654dfa9",
+        "encoded": "HttpRequest%20request%20=%20HttpRequest.newBuilder(uri)",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "291233",
+        "hash": "4cda2d5f",
+        "encoded": ".timeout(requestTimeout)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "291233",
+        "hash": "175250fc",
+        "encoded": ".GET()",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "291233",
+        "hash": "487d06fd",
+        "encoded": ".build();",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "291233",
+        "hash": "27735a90",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "291233",
+        "hash": "bb0d4eba",
+        "encoded": "HttpResponse%3CString%3E%20response%20=%20httpClient.send(request,%20HttpResponse.BodyHandlers.ofString());",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "291233",
+        "hash": "57f37cc3",
+        "encoded": "int%20status%20=%20response.statusCode();",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "291233",
+        "hash": "c456cece",
+        "encoded": "if%20(status%20%3C%20200%20%7C%7C%20status%20%3E%20299)%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "291233",
+        "hash": "c36db96b",
+        "encoded": "throw%20new%20HttpJsonException(%22Upstream%20returned%20HTTP%20%22%20+%20status%20+%20%22%20for%20%22%20+%20uri);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "291233",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "291233",
+        "hash": "54d2fa32",
+        "encoded": "return%20objectMapper.readTree(response.body());",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "291233",
+        "hash": "fb56a650",
+        "encoded": "%7D%20catch%20(IOException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "291233",
+        "hash": "ba811ad1",
+        "encoded": "throw%20new%20RuntimeException(%22HTTP%20request%20failed%20for%20%22%20+%20uri,%20e);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "291233",
+        "hash": "81d16053",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "291233",
+        "hash": "b4cfa7cd",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "291233",
+        "hash": "73498506",
+        "encoded": "throw%20new%20RuntimeException(%22HTTP%20request%20interrupted%20for%20%22%20+%20uri,%20e);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "291233",
+        "hash": "3654c6d8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "291233",
+        "hash": "6387e751",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "291233",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

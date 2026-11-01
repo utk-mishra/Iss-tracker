@@ -1,0 +1,793 @@
+{
+  "backend/src/main/java/com/example/iss/client/PolluxClient.java": {
+    "filename": "PolluxClient.java",
+    "path": "backend/src/main/java/com/example/iss/client/PolluxClient.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "430ac4": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540407,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "f51dccf9",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:07\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "430ac4",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "430ac4",
+        "hash": "b4be9aaa",
+        "encoded": "import%20com.example.iss.domain.Compass;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "430ac4",
+        "hash": "3732c182",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "430ac4",
+        "hash": "274904df",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "430ac4",
+        "hash": "7d53f2f6",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "430ac4",
+        "hash": "2a99b555",
+        "encoded": "import%20java.net.URI;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "430ac4",
+        "hash": "27cc2e5b",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "430ac4",
+        "hash": "f753e300",
+        "encoded": "import%20java.util.ArrayList;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "430ac4",
+        "hash": "b3b096ea",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "430ac4",
+        "hash": "6af161e0",
+        "encoded": "import%20java.util.Locale;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "430ac4",
+        "hash": "ff5105ac",
+        "encoded": "import%20java.util.Objects;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "430ac4",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "430ac4",
+        "hash": "b7692603",
+        "encoded": "*%20Adapter%20for%20Pollux%20Labs%20pass%20predictions%20(PROMPT.md%20section%203.2).",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "430ac4",
+        "hash": "89a75344",
+        "encoded": "*%20%7B@link%20#parse(JsonNode)%7D%20is%20static%20and%20pure.%20A%20malformed%20pass%20(missing%20a%20required",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "430ac4",
+        "hash": "1e162287",
+        "encoded": "*%20field)%20is%20skipped,%20not%20fatal.%20A%20visible%20pass%20with%20missing%20window%20fields%20is%20kept%20as",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "430ac4",
+        "hash": "69dc64fe",
+        "encoded": "*%20NON-observable%20rather%20than%20dropped.%20Rise/set%20directions%20are%20the%20API's%20own%2016-point",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "430ac4",
+        "hash": "ed96ca60",
+        "encoded": "*%20compass%20strings,%20stored%20verbatim;%20%7B@link%20Compass#fromAzimuthDeg(double)%7D%20is%20used%20only",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "430ac4",
+        "hash": "8a1faf6f",
+        "encoded": "*%20as%20a%20fallback%20when%20the%20string%20is%20missing%20or%20blank.",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "430ac4",
+        "hash": "cc674971",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "430ac4",
+        "hash": "5ca877cc",
+        "encoded": "public%20final%20class%20PolluxClient%20implements%20PassesClient%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "430ac4",
+        "hash": "c5ac4ded",
+        "encoded": "private%20final%20HttpJson%20httpJson;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "430ac4",
+        "hash": "01c706b3",
+        "encoded": "private%20final%20String%20baseUrl;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "430ac4",
+        "hash": "4b184bc6",
+        "encoded": "private%20final%20int%20passCount;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "430ac4",
+        "hash": "e6b8f43d",
+        "encoded": "public%20PolluxClient(HttpJson%20httpJson,%20String%20baseUrl,%20int%20passCount)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "430ac4",
+        "hash": "3b828a98",
+        "encoded": "this.httpJson%20=%20Objects.requireNonNull(httpJson,%20%22httpJson%22);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "430ac4",
+        "hash": "643a9cfc",
+        "encoded": "this.baseUrl%20=%20Objects.requireNonNull(baseUrl,%20%22baseUrl%22);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "430ac4",
+        "hash": "9d00dbb9",
+        "encoded": "this.passCount%20=%20passCount;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "430ac4",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "430ac4",
+        "hash": "40653a79",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "430ac4",
+        "hash": "53be1b3d",
+        "encoded": "public%20PassFeed%20fetch(double%20lat,%20double%20lon)%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "430ac4",
+        "hash": "fc7ab9ce",
+        "encoded": "URI%20uri%20=%20URI.create(buildUrl(lat,%20lon));",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "430ac4",
+        "hash": "c33156d1",
+        "encoded": "JsonNode%20json%20=%20httpJson.getJson(uri);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "430ac4",
+        "hash": "849e713a",
+        "encoded": "return%20parse(json);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "430ac4",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "430ac4",
+        "hash": "7ef7f6ed",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "430ac4",
+        "hash": "085c5504",
+        "encoded": "*%20Builds%20the%20Pollux%20Labs%20URL%20with%20locale-independent%20decimal%20formatting",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "430ac4",
+        "hash": "03c1f154",
+        "encoded": "*%20(always%20%22.%22,%20never%20a%20locale-dependent%20separator)%20and%20%7B@code%20n%7D%20always%20sent.",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "430ac4",
+        "hash": "2a068bde",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "430ac4",
+        "hash": "4b01abd2",
+        "encoded": "public%20String%20buildUrl(double%20lat,%20double%20lon)%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "430ac4",
+        "hash": "93b0f21c",
+        "encoded": "return%20String.format(Locale.ROOT,%20%22%25s?lat=%25.4f&lon=%25.4f&n=%25d%22,%20baseUrl,%20lat,%20lon,%20passCount);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "430ac4",
+        "hash": "57c5213d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "430ac4",
+        "hash": "e4aa75d2",
+        "encoded": "public%20static%20PassFeed%20parse(JsonNode%20json)%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "430ac4",
+        "hash": "0833e4ad",
+        "encoded": "double%20tleAgeHours%20=%20json.path(%22tle_age_hours%22).asDouble();",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "430ac4",
+        "hash": "dac86f59",
+        "encoded": "boolean%20tleStale%20=%20json.path(%22tle_stale%22).asBoolean(false);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "430ac4",
+        "hash": "f2246a62",
+        "encoded": "List%3CPass%3E%20passes%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "430ac4",
+        "hash": "a38c6e9c",
+        "encoded": "for%20(JsonNode%20passNode%20:%20json.path(%22passes%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "430ac4",
+        "hash": "3f788bb0",
+        "encoded": "Pass%20pass%20=%20tryParsePass(passNode);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "430ac4",
+        "hash": "af1af2c5",
+        "encoded": "if%20(pass%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "430ac4",
+        "hash": "3a7adab7",
+        "encoded": "passes.add(pass);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "430ac4",
+        "hash": "f4e179c9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "430ac4",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "430ac4",
+        "hash": "c82d515d",
+        "encoded": "return%20new%20PassFeed(passes,%20tleAgeHours,%20tleStale);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "430ac4",
+        "hash": "92368879",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "430ac4",
+        "hash": "0ccf9b63",
+        "encoded": "private%20static%20Pass%20tryParsePass(JsonNode%20passNode)%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "430ac4",
+        "hash": "4b4062e7",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "430ac4",
+        "hash": "ceba260d",
+        "encoded": "return%20parsePass(passNode);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "430ac4",
+        "hash": "e0d910e6",
+        "encoded": "%7D%20catch%20(RuntimeException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "430ac4",
+        "hash": "92c006ce",
+        "encoded": "//%20One%20malformed%20pass%20must%20be%20skipped,%20not%20fail%20the%20whole%20parse%20(section%203.2).",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "430ac4",
+        "hash": "170db25c",
+        "encoded": "return%20null;",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "430ac4",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "430ac4",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "430ac4",
+        "hash": "986030a9",
+        "encoded": "private%20static%20Pass%20parsePass(JsonNode%20passNode)%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "430ac4",
+        "hash": "b8565666",
+        "encoded": "JsonNode%20riseNode%20=%20requireField(passNode,%20%22rise%22);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "430ac4",
+        "hash": "be59901e",
+        "encoded": "JsonNode%20culminationNode%20=%20requireField(passNode,%20%22culmination%22);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "430ac4",
+        "hash": "0f160f51",
+        "encoded": "JsonNode%20setNode%20=%20requireField(passNode,%20%22set%22);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "430ac4",
+        "hash": "a90c7bfb",
+        "encoded": "Instant%20riseTime%20=%20Instant.parse(requireText(riseNode,%20%22time%22));",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "430ac4",
+        "hash": "c56b2fc9",
+        "encoded": "double%20riseAzimuthDeg%20=%20requireDouble(riseNode,%20%22azimuth_deg%22);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "430ac4",
+        "hash": "e01113ac",
+        "encoded": "String%20riseDirection%20=%20resolveDirection(riseNode,%20riseAzimuthDeg);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "430ac4",
+        "hash": "8aa0aacb",
+        "encoded": "Instant%20culminationTime%20=%20Instant.parse(requireText(culminationNode,%20%22time%22));",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "430ac4",
+        "hash": "2b2695ac",
+        "encoded": "double%20maxElevationDeg%20=%20requireDouble(culminationNode,%20%22elevation_deg%22);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "430ac4",
+        "hash": "dc37d4de",
+        "encoded": "Instant%20setTime%20=%20Instant.parse(requireText(setNode,%20%22time%22));",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "430ac4",
+        "hash": "ad0c180c",
+        "encoded": "double%20setAzimuthDeg%20=%20requireDouble(setNode,%20%22azimuth_deg%22);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "430ac4",
+        "hash": "93687749",
+        "encoded": "String%20setDirection%20=%20resolveDirection(setNode,%20setAzimuthDeg);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "430ac4",
+        "hash": "e2f84abf",
+        "encoded": "long%20durationSec%20=%20requireLong(passNode,%20%22duration_sec%22);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "430ac4",
+        "hash": "f6812c0a",
+        "encoded": "boolean%20visible%20=%20passNode.path(%22visible%22).asBoolean(false);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "430ac4",
+        "hash": "604393af",
+        "encoded": "Instant%20visibleStart%20=%20null;",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "430ac4",
+        "hash": "796a0a18",
+        "encoded": "Instant%20visibleEnd%20=%20null;",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "430ac4",
+        "hash": "33b47628",
+        "encoded": "long%20visibleDurationSec%20=%200;",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "430ac4",
+        "hash": "157d6fa1",
+        "encoded": "if%20(visible%20&&%20passNode.hasNonNull(%22visible_start%22)%20&&%20passNode.hasNonNull(%22visible_end%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "430ac4",
+        "hash": "0cdb1a07",
+        "encoded": "visibleStart%20=%20Instant.parse(passNode.get(%22visible_start%22).asText());",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "430ac4",
+        "hash": "0cb610d8",
+        "encoded": "visibleEnd%20=%20Instant.parse(passNode.get(%22visible_end%22).asText());",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "430ac4",
+        "hash": "4b0e95a1",
+        "encoded": "visibleDurationSec%20=%20passNode.path(%22visible_duration_sec%22).asLong(0);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "430ac4",
+        "hash": "998d938c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "430ac4",
+        "hash": "e9f46ef3",
+        "encoded": "//%20A%20visible%20pass%20with%20missing%20window%20fields%20is%20kept%20as%20NON-observable,%20not%20dropped",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "430ac4",
+        "hash": "248fd1e4",
+        "encoded": "//%20(visible%20stays%20true,%20but%20visibleStart/End/DurationSec%20default%20to%20null/0%20above,",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "430ac4",
+        "hash": "8b17ee6a",
+        "encoded": "//%20which%20already%20makes%20Pass.isObservable()%20return%20false).",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "430ac4",
+        "hash": "6dd36e17",
+        "encoded": "return%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "430ac4",
+        "hash": "974139e1",
+        "encoded": "riseTime,%20riseAzimuthDeg,%20riseDirection,",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "430ac4",
+        "hash": "43fd6b94",
+        "encoded": "culminationTime,%20maxElevationDeg,",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "430ac4",
+        "hash": "0ddf59ee",
+        "encoded": "setTime,%20setAzimuthDeg,%20setDirection,",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "430ac4",
+        "hash": "87b10efa",
+        "encoded": "durationSec,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "430ac4",
+        "hash": "8b68e5ab",
+        "encoded": "visible,%20visibleStart,%20visibleEnd,%20visibleDurationSec",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "430ac4",
+        "hash": "ae891e06",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "430ac4",
+        "hash": "a4ba47af",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "430ac4",
+        "hash": "42d4b1ef",
+        "encoded": "private%20static%20String%20resolveDirection(JsonNode%20node,%20double%20azimuthDeg)%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "430ac4",
+        "hash": "5cfbf372",
+        "encoded": "String%20compass%20=%20node.path(%22compass%22).asText(%22%22);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "430ac4",
+        "hash": "e8d48fb4",
+        "encoded": "if%20(compass%20==%20null%20%7C%7C%20compass.isBlank())%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "430ac4",
+        "hash": "f2c121de",
+        "encoded": "return%20Compass.fromAzimuthDeg(azimuthDeg).name();",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "430ac4",
+        "hash": "2de22ffd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "430ac4",
+        "hash": "a9283a4f",
+        "encoded": "return%20compass;",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "430ac4",
+        "hash": "715028b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "430ac4",
+        "hash": "52d2b9a8",
+        "encoded": "private%20static%20JsonNode%20requireField(JsonNode%20parent,%20String%20field)%20%7B",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "430ac4",
+        "hash": "bfcc0b45",
+        "encoded": "JsonNode%20node%20=%20parent.get(field);",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "430ac4",
+        "hash": "1775e303",
+        "encoded": "if%20(node%20==%20null%20%7C%7C%20node.isMissingNode()%20%7C%7C%20node.isNull())%20%7B",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "430ac4",
+        "hash": "998df0d8",
+        "encoded": "throw%20new%20IllegalArgumentException(%22Missing%20required%20field:%20%22%20+%20field);",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "430ac4",
+        "hash": "331ddc52",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "430ac4",
+        "hash": "3ff5c210",
+        "encoded": "return%20node;",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "430ac4",
+        "hash": "5513b7ee",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "430ac4",
+        "hash": "1396824a",
+        "encoded": "private%20static%20String%20requireText(JsonNode%20node,%20String%20field)%20%7B",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "430ac4",
+        "hash": "66c6ce94",
+        "encoded": "if%20(!node.hasNonNull(field))%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "430ac4",
+        "hash": "d51630a2",
+        "encoded": "throw%20new%20IllegalArgumentException(%22Missing%20required%20field:%20%22%20+%20field);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "430ac4",
+        "hash": "c1055582",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "430ac4",
+        "hash": "560c317b",
+        "encoded": "return%20node.get(field).asText();",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "430ac4",
+        "hash": "7ebeb133",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "430ac4",
+        "hash": "0ad9dc9d",
+        "encoded": "private%20static%20double%20requireDouble(JsonNode%20node,%20String%20field)%20%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "430ac4",
+        "hash": "0fe162c5",
+        "encoded": "if%20(!node.hasNonNull(field))%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "430ac4",
+        "hash": "922fdd73",
+        "encoded": "throw%20new%20IllegalArgumentException(%22Missing%20required%20field:%20%22%20+%20field);",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "430ac4",
+        "hash": "a91910dd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "430ac4",
+        "hash": "72e9c005",
+        "encoded": "return%20node.get(field).asDouble();",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "430ac4",
+        "hash": "be05556d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "430ac4",
+        "hash": "df4075c1",
+        "encoded": "private%20static%20long%20requireLong(JsonNode%20node,%20String%20field)%20%7B",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "430ac4",
+        "hash": "ef84e57b",
+        "encoded": "if%20(!node.hasNonNull(field))%20%7B",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "430ac4",
+        "hash": "1510fd54",
+        "encoded": "throw%20new%20IllegalArgumentException(%22Missing%20required%20field:%20%22%20+%20field);",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "430ac4",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "430ac4",
+        "hash": "5cd2caf3",
+        "encoded": "return%20node.get(field).asLong();",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "430ac4",
+        "hash": "f787a6d1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "430ac4",
+        "hash": "a6adb000",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

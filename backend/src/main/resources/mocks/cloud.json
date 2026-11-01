@@ -1,0 +1,26 @@
+{
+  "_label": "MOCK",
+  "_comment": "Static fallback for Open-Meteo hourly cloud cover. Shape mirrors the real api.open-meteo.com/v1/forecast contract so OpenMeteoClient.parse(JsonNode) can parse it unchanged. At load time (Step 5, MockData), the 'time' array is RE-ANCHORED to today's 00:00 UTC (per Clock) keeping the same hour-of-day cloud_cover curve, so offline demos always resolve a cloud value for the mock pass window. Values below show a clear-sky (<20%) morning so Alert 2 ('Clear skies predicted') can trigger against the mock passes.",
+  "latitude": 28.58,
+  "longitude": 77.19,
+  "generationtime_ms": 0.05,
+  "utc_offset_seconds": 0,
+  "timezone": "GMT",
+  "timezone_abbreviation": "GMT",
+  "elevation": 214.0,
+  "hourly_units": { "time": "iso8601", "cloud_cover": "%" },
+  "hourly": {
+    "time": [
+      "2026-11-01T00:00", "2026-11-01T01:00", "2026-11-01T02:00", "2026-11-01T03:00",
+      "2026-11-01T04:00", "2026-11-01T05:00", "2026-11-01T06:00", "2026-11-01T07:00",
+      "2026-11-01T08:00", "2026-11-01T09:00", "2026-11-01T10:00", "2026-11-01T11:00",
+      "2026-11-01T12:00", "2026-11-01T13:00", "2026-11-01T14:00", "2026-11-01T15:00",
+      "2026-11-01T16:00", "2026-11-01T17:00", "2026-11-01T18:00", "2026-11-01T19:00",
+      "2026-11-01T20:00", "2026-11-01T21:00", "2026-11-01T22:00", "2026-11-01T23:00"
+    ],
+    "cloud_cover": [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 5, 10, 15, 8, 3, 1
+    ]
+  }
+}

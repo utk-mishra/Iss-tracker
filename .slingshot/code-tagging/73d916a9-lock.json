@@ -1,0 +1,79 @@
+{
+  "backend/src/main/java/com/example/iss/service/PassesMeta.java": {
+    "filename": "PassesMeta.java",
+    "path": "backend/src/main/java/com/example/iss/service/PassesMeta.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "dd414c": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541125,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "e10375ec",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:22:05\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dd414c",
+        "hash": "565b36d7",
+        "encoded": "package%20com.example.iss.service;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "dd414c",
+        "hash": "de3a3b47",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "dd414c",
+        "hash": "b5995699",
+        "encoded": "*%20Pass-feed%20metadata:%20the%20generic%20%7B@link%20UpstreamMeta%7D%20plus%20Pollux-specific",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "dd414c",
+        "hash": "46e8ec9b",
+        "encoded": "*%20orbital-data%20freshness%20fields%20(PROMPT.md%20section%206:%20meta.passes%20also%20carries",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dd414c",
+        "hash": "c76cd32c",
+        "encoded": "*%20tleAgeHours,%20tleStale).",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "dd414c",
+        "hash": "f2ad3d4c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "dd414c",
+        "hash": "a05d7e65",
+        "encoded": "public%20record%20PassesMeta(UpstreamMeta%20meta,%20double%20tleAgeHours,%20boolean%20tleStale)%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "dd414c",
+        "hash": "1c082ee4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

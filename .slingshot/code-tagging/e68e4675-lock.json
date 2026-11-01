@@ -1,0 +1,961 @@
+{
+  "backend/src/main/java/com/example/iss/api/IssController.java": {
+    "filename": "IssController.java",
+    "path": "backend/src/main/java/com/example/iss/api/IssController.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2e67c3": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "eab830e0",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2e67c3",
+        "hash": "d10dddef",
+        "encoded": "package%20com.example.iss.api;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2e67c3",
+        "hash": "69e03166",
+        "encoded": "import%20com.example.iss.api.dto.ErrorDto;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2e67c3",
+        "hash": "1c252ec9",
+        "encoded": "import%20com.example.iss.api.dto.LinksDto;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2e67c3",
+        "hash": "96be8750",
+        "encoded": "import%20com.example.iss.api.dto.MetaDto;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2e67c3",
+        "hash": "ffa749bd",
+        "encoded": "import%20com.example.iss.api.dto.OverviewResponseDto;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2e67c3",
+        "hash": "1bd3b350",
+        "encoded": "import%20com.example.iss.api.dto.PassDto;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2e67c3",
+        "hash": "3068f1bf",
+        "encoded": "import%20com.example.iss.api.dto.PassesMetaDto;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2e67c3",
+        "hash": "bbfde148",
+        "encoded": "import%20com.example.iss.api.dto.PassesResponseDto;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2e67c3",
+        "hash": "1d325998",
+        "encoded": "import%20com.example.iss.api.dto.PositionDto;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2e67c3",
+        "hash": "8198fbd8",
+        "encoded": "import%20com.example.iss.api.dto.PositionResponseDto;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2e67c3",
+        "hash": "699825d4",
+        "encoded": "import%20com.example.iss.api.dto.UpstreamMetaDto;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2e67c3",
+        "hash": "b134a8ed",
+        "encoded": "import%20com.example.iss.domain.IssPosition;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2e67c3",
+        "hash": "ea2a1dd9",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2e67c3",
+        "hash": "a4452a63",
+        "encoded": "import%20com.example.iss.service.EnrichedPass;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2e67c3",
+        "hash": "179c9f0e",
+        "encoded": "import%20com.example.iss.service.IssFacade;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2e67c3",
+        "hash": "f867a8ad",
+        "encoded": "import%20com.example.iss.service.IssOverview;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2e67c3",
+        "hash": "da660316",
+        "encoded": "import%20com.example.iss.service.PassesResult;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2e67c3",
+        "hash": "b19f8f10",
+        "encoded": "import%20com.example.iss.service.PositionResult;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2e67c3",
+        "hash": "a22cc24f",
+        "encoded": "import%20com.example.iss.service.UpstreamMeta;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2e67c3",
+        "hash": "613dc062",
+        "encoded": "import%20org.springframework.web.bind.annotation.GetMapping;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2e67c3",
+        "hash": "37a65320",
+        "encoded": "import%20org.springframework.web.bind.annotation.RequestMapping;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2e67c3",
+        "hash": "6a86da43",
+        "encoded": "import%20org.springframework.web.bind.annotation.RequestParam;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2e67c3",
+        "hash": "e7d39434",
+        "encoded": "import%20org.springframework.web.bind.annotation.RestController;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2e67c3",
+        "hash": "101b05e8",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2e67c3",
+        "hash": "92dc39e1",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2e67c3",
+        "hash": "86e1a908",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "2e67c3",
+        "hash": "4a532057",
+        "encoded": "*%20REST%20endpoints%20for%20ISS%20position/pass%20data%20(PROMPT.md%20section%206).%20Validation%20happens",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2e67c3",
+        "hash": "475a0a67",
+        "encoded": "*%20here,%20before%20the%20facade%20is%20touched;%20the%20facade%20returns%20domain-shaped%20data%20only,%20this",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2e67c3",
+        "hash": "02300fb2",
+        "encoded": "*%20controller%20maps%20it%20into%20the%20public%20DTO%20shape%20with%20HATEOAS%20links.%20lat/lon%20are%20never",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "2e67c3",
+        "hash": "f9d7d75e",
+        "encoded": "*%20logged%20at%20INFO%20level%20(Step%206%20addition%20e)%20-%20no%20logging%20statement%20here%20references%20them.",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "2e67c3",
+        "hash": "25af1a60",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "2e67c3",
+        "hash": "6b40e4f6",
+        "encoded": "@RestController",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "2e67c3",
+        "hash": "9fe3d1bf",
+        "encoded": "@RequestMapping(%22/api/v1/iss%22)",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "2e67c3",
+        "hash": "e5d79549",
+        "encoded": "public%20class%20IssController%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "2e67c3",
+        "hash": "eab31c66",
+        "encoded": "private%20final%20IssFacade%20facade;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "2e67c3",
+        "hash": "c2697792",
+        "encoded": "public%20IssController(IssFacade%20facade)%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "2e67c3",
+        "hash": "883c2663",
+        "encoded": "this.facade%20=%20facade;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "2e67c3",
+        "hash": "5663967b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "2e67c3",
+        "hash": "67c598ef",
+        "encoded": "@GetMapping(%22/overview%22)",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "2e67c3",
+        "hash": "d45710c4",
+        "encoded": "public%20OverviewResponseDto%20overview(@RequestParam%20String%20lat,%20@RequestParam%20String%20lon,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "2e67c3",
+        "hash": "87e30332",
+        "encoded": "@RequestParam(required%20=%20false,%20defaultValue%20=%20%22false%22)%20String%20offline)%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "2e67c3",
+        "hash": "efdb7179",
+        "encoded": "double%20validLat%20=%20validateLat(lat);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "2e67c3",
+        "hash": "726d09cc",
+        "encoded": "double%20validLon%20=%20validateLon(lon);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "2e67c3",
+        "hash": "91d2fb54",
+        "encoded": "boolean%20isOffline%20=%20validateOffline(offline);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "2e67c3",
+        "hash": "4dc10c91",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(validLat,%20validLon,%20isOffline);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "2e67c3",
+        "hash": "9755d75a",
+        "encoded": "return%20new%20OverviewResponseDto(",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "2e67c3",
+        "hash": "0c760e95",
+        "encoded": "toPositionDto(overview.position()),",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "2e67c3",
+        "hash": "5678ded9",
+        "encoded": "overview.passes().stream().map(this::toPassDto).toList(),",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "2e67c3",
+        "hash": "43e28079",
+        "encoded": "overview.nextVisiblePass()%20==%20null%20?%20null%20:%20toPassDto(overview.nextVisiblePass()),",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "2e67c3",
+        "hash": "3c31eba8",
+        "encoded": "overview.message(),",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "2e67c3",
+        "hash": "0d52a58d",
+        "encoded": "overview.alerts(),",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "2e67c3",
+        "hash": "05d12812",
+        "encoded": "new%20MetaDto(",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "2e67c3",
+        "hash": "901ea699",
+        "encoded": "toUpstreamMetaDto(overview.positionMeta()),",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "2e67c3",
+        "hash": "53346690",
+        "encoded": "toPassesMetaDto(overview.passesMeta().meta(),%20overview.passesMeta().tleAgeHours(),",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "2e67c3",
+        "hash": "32d5ea1d",
+        "encoded": "overview.passesMeta().tleStale()),",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "2e67c3",
+        "hash": "3215612e",
+        "encoded": "toUpstreamMetaDto(overview.cloudMeta())",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "2e67c3",
+        "hash": "34dbe3e5",
+        "encoded": "),",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "2e67c3",
+        "hash": "e0170d39",
+        "encoded": "links(%22/api/v1/iss/overview%22)",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "2e67c3",
+        "hash": "6117a6d8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "2e67c3",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "2e67c3",
+        "hash": "e56b078f",
+        "encoded": "@GetMapping(%22/position%22)",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "2e67c3",
+        "hash": "d99b4065",
+        "encoded": "public%20PositionResponseDto%20position(@RequestParam(required%20=%20false,%20defaultValue%20=%20%22false%22)%20String%20offline)%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "2e67c3",
+        "hash": "b38d790c",
+        "encoded": "boolean%20isOffline%20=%20validateOffline(offline);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "2e67c3",
+        "hash": "368920b6",
+        "encoded": "PositionResult%20result%20=%20facade.getPosition(isOffline);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "2e67c3",
+        "hash": "b965b272",
+        "encoded": "return%20new%20PositionResponseDto(toPositionDto(result.position()),%20toUpstreamMetaDto(result.meta()),",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "2e67c3",
+        "hash": "316d6953",
+        "encoded": "links(%22/api/v1/iss/position%22));",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "2e67c3",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "2e67c3",
+        "hash": "22d10d57",
+        "encoded": "@GetMapping(%22/passes%22)",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "2e67c3",
+        "hash": "7d75f385",
+        "encoded": "public%20PassesResponseDto%20passes(@RequestParam%20String%20lat,%20@RequestParam%20String%20lon,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "2e67c3",
+        "hash": "d2d41165",
+        "encoded": "@RequestParam(required%20=%20false,%20defaultValue%20=%20%22false%22)%20String%20offline)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "2e67c3",
+        "hash": "7fc87df7",
+        "encoded": "double%20validLat%20=%20validateLat(lat);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "2e67c3",
+        "hash": "b63d6d1e",
+        "encoded": "double%20validLon%20=%20validateLon(lon);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "2e67c3",
+        "hash": "a3b43162",
+        "encoded": "boolean%20isOffline%20=%20validateOffline(offline);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "2e67c3",
+        "hash": "7e83d01d",
+        "encoded": "PassesResult%20result%20=%20facade.getPasses(validLat,%20validLon,%20isOffline);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "2e67c3",
+        "hash": "6ebeecdd",
+        "encoded": "return%20new%20PassesResponseDto(",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "2e67c3",
+        "hash": "9f4ebd82",
+        "encoded": "result.passes().stream().map(this::toPassDto).toList(),",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "2e67c3",
+        "hash": "171764ef",
+        "encoded": "new%20MetaDto(null,",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "2e67c3",
+        "hash": "691b1a6c",
+        "encoded": "toPassesMetaDto(result.passesMeta().meta(),%20result.passesMeta().tleAgeHours(),",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "2e67c3",
+        "hash": "653ddf55",
+        "encoded": "result.passesMeta().tleStale()),",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "2e67c3",
+        "hash": "405169c0",
+        "encoded": "toUpstreamMetaDto(result.cloudMeta())),",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "2e67c3",
+        "hash": "e5b2b54d",
+        "encoded": "links(%22/api/v1/iss/passes%22)",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "2e67c3",
+        "hash": "c9e60ca2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "2e67c3",
+        "hash": "db89230b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "2e67c3",
+        "hash": "887cb222",
+        "encoded": "private%20double%20validateLat(String%20raw)%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "2e67c3",
+        "hash": "76f06460",
+        "encoded": "double%20value%20=%20parseFinite(raw,%20%22lat%22);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "2e67c3",
+        "hash": "71946384",
+        "encoded": "if%20(value%20%3C%20-90%20%7C%7C%20value%20%3E%2090)%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "2e67c3",
+        "hash": "56d5bfa8",
+        "encoded": "throw%20new%20InvalidLocationException(%22lat%20must%20be%20in%20%5B-90,90%5D%22);",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "2e67c3",
+        "hash": "020d2fe1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "2e67c3",
+        "hash": "79131532",
+        "encoded": "return%20value;",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "2e67c3",
+        "hash": "79409de0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "2e67c3",
+        "hash": "36e072ff",
+        "encoded": "private%20double%20validateLon(String%20raw)%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "2e67c3",
+        "hash": "3ae317fc",
+        "encoded": "double%20value%20=%20parseFinite(raw,%20%22lon%22);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "2e67c3",
+        "hash": "4a10e233",
+        "encoded": "if%20(value%20%3C%20-180%20%7C%7C%20value%20%3E%20180)%20%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "2e67c3",
+        "hash": "f5f71848",
+        "encoded": "throw%20new%20InvalidLocationException(%22lon%20must%20be%20in%20%5B-180,180%5D%22);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "2e67c3",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "2e67c3",
+        "hash": "d56bcb3b",
+        "encoded": "return%20value;",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "2e67c3",
+        "hash": "a4ba47af",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "2e67c3",
+        "hash": "0a08042b",
+        "encoded": "private%20double%20parseFinite(String%20raw,%20String%20fieldName)%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "2e67c3",
+        "hash": "ecfe7a75",
+        "encoded": "double%20value;",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "2e67c3",
+        "hash": "87cb9536",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "2e67c3",
+        "hash": "6ffe2f32",
+        "encoded": "value%20=%20Double.parseDouble(raw);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "2e67c3",
+        "hash": "4baf8e16",
+        "encoded": "%7D%20catch%20(NumberFormatException%20%7C%20NullPointerException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "2e67c3",
+        "hash": "286d9b42",
+        "encoded": "throw%20new%20InvalidLocationException(fieldName%20+%20%22%20must%20be%20a%20finite%20number%22);",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "2e67c3",
+        "hash": "715028b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "2e67c3",
+        "hash": "9a2a6d5b",
+        "encoded": "if%20(Double.isNaN(value)%20%7C%7C%20Double.isInfinite(value))%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "2e67c3",
+        "hash": "1c3fc9ea",
+        "encoded": "throw%20new%20InvalidLocationException(fieldName%20+%20%22%20must%20be%20a%20finite%20number%22);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "2e67c3",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "2e67c3",
+        "hash": "f210afac",
+        "encoded": "return%20value;",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "2e67c3",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "2e67c3",
+        "hash": "6b1abcb6",
+        "encoded": "private%20boolean%20validateOffline(String%20raw)%20%7B",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "2e67c3",
+        "hash": "c5ffaf78",
+        "encoded": "if%20(%22true%22.equals(raw))%20%7B",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "2e67c3",
+        "hash": "65918f5b",
+        "encoded": "return%20true;",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "2e67c3",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "2e67c3",
+        "hash": "9bb8e78c",
+        "encoded": "if%20(%22false%22.equals(raw))%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "2e67c3",
+        "hash": "afdcf6f8",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "2e67c3",
+        "hash": "c1055582",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "2e67c3",
+        "hash": "d08b2b5a",
+        "encoded": "throw%20new%20InvalidLocationException(%22offline%20must%20be%20exactly%20'true'%20or%20'false'%22);",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "2e67c3",
+        "hash": "7ebeb133",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "2e67c3",
+        "hash": "6f5edda9",
+        "encoded": "private%20PositionDto%20toPositionDto(IssPosition%20position)%20%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "2e67c3",
+        "hash": "d935a609",
+        "encoded": "return%20new%20PositionDto(",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "2e67c3",
+        "hash": "8e929282",
+        "encoded": "position.latitude(),%20position.longitude(),%20position.altitudeKm(),",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "2e67c3",
+        "hash": "5ba85b23",
+        "encoded": "position.velocityKmh(),%20position.observedAt().toString(),%20position.note()",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "2e67c3",
+        "hash": "9bee4e94",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "2e67c3",
+        "hash": "be05556d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "2e67c3",
+        "hash": "3aed4b3d",
+        "encoded": "private%20PassDto%20toPassDto(EnrichedPass%20enrichedPass)%20%7B",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "2e67c3",
+        "hash": "36d69fe1",
+        "encoded": "Pass%20pass%20=%20enrichedPass.pass();",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "2e67c3",
+        "hash": "6f14a05e",
+        "encoded": "return%20new%20PassDto(",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "2e67c3",
+        "hash": "b16fd0b0",
+        "encoded": "pass.riseTime().toString(),",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "2e67c3",
+        "hash": "e9361008",
+        "encoded": "pass.culminationTime().toString(),",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "2e67c3",
+        "hash": "c8de3827",
+        "encoded": "pass.setTime().toString(),",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "2e67c3",
+        "hash": "002d79c8",
+        "encoded": "pass.durationSec(),",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "2e67c3",
+        "hash": "98c917cf",
+        "encoded": "pass.riseDirection(),",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "2e67c3",
+        "hash": "d2362b64",
+        "encoded": "pass.riseAzimuthDeg(),",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "2e67c3",
+        "hash": "ffc4e3ba",
+        "encoded": "pass.setDirection(),",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "2e67c3",
+        "hash": "83f4126d",
+        "encoded": "pass.setAzimuthDeg(),",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "2e67c3",
+        "hash": "d2149b23",
+        "encoded": "pass.maxElevationDeg(),",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "2e67c3",
+        "hash": "81ff5a65",
+        "encoded": "pass.visible(),",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "2e67c3",
+        "hash": "1ac780d9",
+        "encoded": "pass.isObservable(),",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "2e67c3",
+        "hash": "3bfe9af1",
+        "encoded": "pass.visibleStart()%20==%20null%20?%20null%20:%20pass.visibleStart().toString(),",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "2e67c3",
+        "hash": "3a3e1601",
+        "encoded": "pass.visibleEnd()%20==%20null%20?%20null%20:%20pass.visibleEnd().toString(),",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "2e67c3",
+        "hash": "273fd103",
+        "encoded": "pass.visibleDurationSec(),",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "2e67c3",
+        "hash": "6453f408",
+        "encoded": "enrichedPass.magnitude(),",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "2e67c3",
+        "hash": "d3ec0f91",
+        "encoded": "enrichedPass.cloudCoverPct()",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "2e67c3",
+        "hash": "eb279c9f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "2e67c3",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "2e67c3",
+        "hash": "af252661",
+        "encoded": "private%20UpstreamMetaDto%20toUpstreamMetaDto(UpstreamMeta%20meta)%20%7B",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "2e67c3",
+        "hash": "f0477661",
+        "encoded": "return%20new%20UpstreamMetaDto(meta.source().name(),%20meta.degraded(),%20meta.ageMs());",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "2e67c3",
+        "hash": "9fb02724",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "2e67c3",
+        "hash": "e0c78638",
+        "encoded": "private%20PassesMetaDto%20toPassesMetaDto(UpstreamMeta%20meta,%20double%20tleAgeHours,%20boolean%20tleStale)%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "2e67c3",
+        "hash": "7f18e63d",
+        "encoded": "return%20new%20PassesMetaDto(toUpstreamMetaDto(meta),%20tleAgeHours,%20tleStale);",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "2e67c3",
+        "hash": "2ec69243",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "2e67c3",
+        "hash": "fa6d1403",
+        "encoded": "private%20LinksDto%20links(String%20self)%20%7B",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "2e67c3",
+        "hash": "7b162ac1",
+        "encoded": "return%20new%20LinksDto(self,%20%22/api/v1/iss/position%22,%20%22/api/v1/iss/passes%22,%20%22/actuator/health%22,%20%22/docs%22);",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "2e67c3",
+        "hash": "b117a754",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "2e67c3",
+        "hash": "cc7af933",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

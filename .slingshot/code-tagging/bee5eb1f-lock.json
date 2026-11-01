@@ -1,0 +1,79 @@
+{
+  "backend/src/main/java/com/example/iss/client/PassesClient.java": {
+    "filename": "PassesClient.java",
+    "path": "backend/src/main/java/com/example/iss/client/PassesClient.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ba4c06": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540407,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "c553c7e1",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:07\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ba4c06",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ba4c06",
+        "hash": "83c98efc",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ba4c06",
+        "hash": "3da07bb7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ba4c06",
+        "hash": "fba7dcf1",
+        "encoded": "*%20Adapter%20port%20for%20pass%20predictions,%20observer-location%20dependent%20(PROMPT.md%20section%204).",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ba4c06",
+        "hash": "f2ad3d4c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ba4c06",
+        "hash": "4513b5bb",
+        "encoded": "public%20interface%20PassesClient%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ba4c06",
+        "hash": "037dc1da",
+        "encoded": "PassFeed%20fetch(double%20lat,%20double%20lon);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ba4c06",
+        "hash": "2ce165fa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

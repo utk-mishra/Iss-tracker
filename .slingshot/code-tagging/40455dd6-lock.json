@@ -1,0 +1,115 @@
+{
+  "frontend/tests/components/Countdown.test.jsx": {
+    "filename": "Countdown.test.jsx",
+    "path": "frontend/tests/components/Countdown.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "9ffd40": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "c510aee3",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9ffd40",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9ffd40",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9ffd40",
+        "hash": "dbc71199",
+        "encoded": "import%20Countdown%20from%20'../../src/components/Countdown.jsx';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9ffd40",
+        "hash": "05a21e89",
+        "encoded": "describe('Countdown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9ffd40",
+        "hash": "f164616a",
+        "encoded": "it('given%20a%20future%20target%20time,%20when%20rendered,%20then%20a%20countdown%20string%20is%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9ffd40",
+        "hash": "deea2e12",
+        "encoded": "const%20future%20=%20new%20Date(Date.now()%20+%2090%20*%2060%20*%201000).toISOString();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9ffd40",
+        "hash": "d717b063",
+        "encoded": "render(%3CCountdown%20targetIso=%7Bfuture%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9ffd40",
+        "hash": "347ed44d",
+        "encoded": "expect(screen.getByText(/h%7Cm%7Cs/)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "9ffd40",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9ffd40",
+        "hash": "7d012896",
+        "encoded": "it('given%20no%20target%20(null),%20when%20rendered,%20then%20it%20does%20not%20crash%20and%20shows%20a%20placeholder',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9ffd40",
+        "hash": "49240184",
+        "encoded": "render(%3CCountdown%20targetIso=%7Bnull%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9ffd40",
+        "hash": "338ecb66",
+        "encoded": "expect(screen.getByText('%5Cu2014')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9ffd40",
+        "hash": "99e8e451",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9ffd40",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

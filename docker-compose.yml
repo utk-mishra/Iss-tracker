@@ -1,0 +1,61 @@
+# Docker Compose for local development (PROMPT.md section 11)
+# Usage: docker-compose up
+# The container serves both UI and API on http://localhost:8080
+
+version: '3.9'
+
+services:
+  iss-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: iss-tracker:latest
+    container_name: iss-tracker
+    
+    ports:
+      - "8080:8080"
+    
+    environment:
+      # Spring Boot configuration (override defaults)
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-dev}
+      - PORT=8080
+      
+      # Upstream API URLs (optional overrides)
+      - OPEN_NOTIFY_URL=${OPEN_NOTIFY_URL:-http://api.open-notify.org/iss-now.json}
+      - POLLUX_URL=${POLLUX_URL:-https://iss-api.polluxlabs.io/iss-pass}
+      - OPEN_METEO_URL=${OPEN_METEO_URL:-https://api.open-meteo.com/v1/forecast}
+      
+      # Pass count configuration
+      - POLLUX_PASS_COUNT=${POLLUX_PASS_COUNT:-20}
+      
+      # Rate limiting
+      - RATE_LIMIT_PER_MINUTE=${RATE_LIMIT_PER_MINUTE:-120}
+      
+      # CORS and security
+      - CORS_ALLOWED_ORIGINS=${CORS_ALLOWED_ORIGINS:-}
+      - TRUSTED_PROXY=${TRUSTED_PROXY:-false}
+      
+      # Secrets (read from .env file or environment)
+      # Note: None of the upstream APIs require keys, but this shows how it would work
+      - UPSTREAM_API_KEY=${UPSTREAM_API_KEY:-}
+    
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 20s
+    
+    restart: unless-stopped
+    
+    # Uncomment to see logs with timestamps
+    # logging:
+    #   driver: "json-file"
+    #   options:
+    #     max-size: "10m"
+    #     max-file: "3"
+
+# Optional: add a reverse proxy for HTTPS in production
+# networks:
+#   default:
+#     name: iss-tracker-network

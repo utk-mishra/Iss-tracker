@@ -1,0 +1,607 @@
+{
+  "backend/src/test/java/com/example/iss/client/MockDataTest.java": {
+    "filename": "MockDataTest.java",
+    "path": "backend/src/test/java/com/example/iss/client/MockDataTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "230001": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540407,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "352ef37e",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:07\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "230001",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "230001",
+        "hash": "f0c6695b",
+        "encoded": "import%20com.example.iss.domain.CloudForecast;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "230001",
+        "hash": "cb82b72a",
+        "encoded": "import%20com.example.iss.domain.IssPosition;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "230001",
+        "hash": "7b84fc86",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "230001",
+        "hash": "292ce19c",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "230001",
+        "hash": "4eee101a",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "230001",
+        "hash": "0469c089",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "230001",
+        "hash": "17d2d0d5",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "230001",
+        "hash": "653d05f1",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "230001",
+        "hash": "44bd74c6",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "230001",
+        "hash": "89da0bfb",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "230001",
+        "hash": "beca257b",
+        "encoded": "import%20java.io.File;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "230001",
+        "hash": "8487133b",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "230001",
+        "hash": "34bc3a14",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "230001",
+        "hash": "c835ad7d",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "230001",
+        "hash": "514e291d",
+        "encoded": "import%20java.time.ZoneOffset;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "230001",
+        "hash": "9b846dee",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "230001",
+        "hash": "a713c17b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "230001",
+        "hash": "d30121cd",
+        "encoded": "*%20MockData:%20loads%20the%20static%20MOCK%20fallbacks%20(position,%20cloud)%20with%20the%20re-anchoring",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "230001",
+        "hash": "70a2d272",
+        "encoded": "*%20rules%20from%20PROMPT.md%20section%209%20and%20Step%205%20decision%20(f).%20mocks/cloud.json%20itself%20is",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "230001",
+        "hash": "5bd49e92",
+        "encoded": "*%20NEVER%20edited;%20its%2024-hour%20curve%20is%20repeated%20to%20cover%20240%20hourly%20entries%20after",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "230001",
+        "hash": "58d7aed8",
+        "encoded": "*%20re-anchoring%20to%20today's%2000:00%20UTC.",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "230001",
+        "hash": "97550845",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "230001",
+        "hash": "ca4b5dfb",
+        "encoded": "class%20MockDataTest%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "230001",
+        "hash": "7f027bc0",
+        "encoded": "private%20JsonNode%20mockPositionJson;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "230001",
+        "hash": "5c0b9b74",
+        "encoded": "private%20JsonNode%20mockCloudJson;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "230001",
+        "hash": "f1dd728c",
+        "encoded": "private%20JsonNode%20mockPassesJson;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "230001",
+        "hash": "88db9f40",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "230001",
+        "hash": "e1d80a69",
+        "encoded": "void%20setUp()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "230001",
+        "hash": "89987f71",
+        "encoded": "ObjectMapper%20mapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "230001",
+        "hash": "ed1e1128",
+        "encoded": "mockPositionJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/position.json%22));",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "230001",
+        "hash": "19846500",
+        "encoded": "mockCloudJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/cloud.json%22));",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "230001",
+        "hash": "87ce1533",
+        "encoded": "mockPassesJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/passes.json%22));",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "230001",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "230001",
+        "hash": "82e50143",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "230001",
+        "hash": "c7ce1e1e",
+        "encoded": "@DisplayName(%22loadPosition:%20not%20time-shifted%22)",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "230001",
+        "hash": "549bbfd6",
+        "encoded": "class%20LoadPositionNotTimeShifted%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "230001",
+        "hash": "57452e74",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "230001",
+        "hash": "acc38996",
+        "encoded": "@DisplayName(%22given%20the%20mock%20position%20fixture,%20when%20loaded,%20then%20lat/lon%20parse%20correctly%20and%20the%20timestamp%20is%20unshifted%22)",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "230001",
+        "hash": "0506e0c1",
+        "encoded": "void%20givenMockPositionFixture_whenLoaded_thenLatLonCorrectAndTimestampUnshifted()%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "230001",
+        "hash": "4f0eb9d8",
+        "encoded": "IssPosition%20position%20=%20MockData.loadPosition(mockPositionJson);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "230001",
+        "hash": "deb177f4",
+        "encoded": "assertThat(position.latitude()).isEqualTo(20.0000);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "230001",
+        "hash": "91c049ef",
+        "encoded": "assertThat(position.longitude()).isEqualTo(0.0000);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "230001",
+        "hash": "2f8e4b3e",
+        "encoded": "assertThat(position.observedAt().getEpochSecond()).isEqualTo(1793440000L);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "230001",
+        "hash": "fdc1b35f",
+        "encoded": "assertThat(position.altitudeKm()).isEqualTo(IssPosition.CONSTANT_ALTITUDE_KM);",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "230001",
+        "hash": "5c9d24d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "230001",
+        "hash": "2ef1d392",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "230001",
+        "hash": "bc56ed07",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "230001",
+        "hash": "485ae42a",
+        "encoded": "@DisplayName(%22loadCloud:%20re-anchored%20to%20today's%2000:00%20UTC,%20repeated%20to%20240%20entries%22)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "230001",
+        "hash": "45947562",
+        "encoded": "class%20LoadCloudReanchored%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "230001",
+        "hash": "c12de78f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "230001",
+        "hash": "66f008a5",
+        "encoded": "@DisplayName(%22given%20a%20fixed%20clock,%20when%20cloud%20is%20loaded,%20then%20the%20first%20hourly%20entry%20is%20today's%2000:00%20UTC%22)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "230001",
+        "hash": "4241daa7",
+        "encoded": "void%20givenFixedClock_whenCloudLoaded_thenFirstEntryIsTodayMidnightUtc()%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "230001",
+        "hash": "bfb90ec0",
+        "encoded": "Instant%20fixedNow%20=%20Instant.parse(%222026-11-05T14:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "230001",
+        "hash": "beb5682c",
+        "encoded": "Clock%20clock%20=%20Clock.fixed(fixedNow,%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "230001",
+        "hash": "726668f3",
+        "encoded": "CloudForecast%20forecast%20=%20MockData.loadCloud(mockCloudJson,%20clock);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "230001",
+        "hash": "5557097c",
+        "encoded": "Instant%20expectedMidnight%20=%20Instant.parse(%222026-11-05T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "230001",
+        "hash": "a9792a26",
+        "encoded": "assertThat(forecast.hourlyTimes().get(0)).isEqualTo(expectedMidnight);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "230001",
+        "hash": "f064f9d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "230001",
+        "hash": "2c1375c0",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "230001",
+        "hash": "e028c0bf",
+        "encoded": "@DisplayName(%22given%20a%20fixed%20clock,%20when%20cloud%20is%20loaded,%20then%20it%20covers%20240%20hourly%20entries%20(10%20days)%22)",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "230001",
+        "hash": "b1d9676b",
+        "encoded": "void%20givenFixedClock_whenCloudLoaded_thenCovers240Entries()%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "230001",
+        "hash": "789846b2",
+        "encoded": "Clock%20clock%20=%20Clock.fixed(Instant.parse(%222026-11-05T14:00:00Z%22),%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "230001",
+        "hash": "c0531cce",
+        "encoded": "CloudForecast%20forecast%20=%20MockData.loadCloud(mockCloudJson,%20clock);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "230001",
+        "hash": "1dcbf06f",
+        "encoded": "assertThat(forecast.hourlyTimes()).hasSize(240);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "230001",
+        "hash": "0f6d2eb8",
+        "encoded": "assertThat(forecast.hourlyCloudCoverPct()).hasSize(240);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "230001",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "230001",
+        "hash": "f67a3f3d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "230001",
+        "hash": "e403e0f1",
+        "encoded": "@DisplayName(%22given%20a%20fixed%20clock,%20when%20cloud%20is%20loaded,%20then%20the%2024-hour%20cloud_cover%20curve%20repeats%20identically%20each%20day%22)",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "230001",
+        "hash": "c415f1c0",
+        "encoded": "void%20givenFixedClock_whenCloudLoaded_thenCurveRepeatsEachDay()%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "230001",
+        "hash": "45a5d51f",
+        "encoded": "Clock%20clock%20=%20Clock.fixed(Instant.parse(%222026-11-05T14:00:00Z%22),%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "230001",
+        "hash": "3498fdf0",
+        "encoded": "CloudForecast%20forecast%20=%20MockData.loadCloud(mockCloudJson,%20clock);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "230001",
+        "hash": "817c4604",
+        "encoded": "for%20(int%20hourOfDay%20=%200;%20hourOfDay%20%3C%2024;%20hourOfDay++)%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "230001",
+        "hash": "0a817479",
+        "encoded": "Integer%20day0Value%20=%20forecast.hourlyCloudCoverPct().get(hourOfDay);",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "230001",
+        "hash": "3002c577",
+        "encoded": "Integer%20day1Value%20=%20forecast.hourlyCloudCoverPct().get(hourOfDay%20+%2024);",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "230001",
+        "hash": "4e7e2498",
+        "encoded": "assertThat(day1Value).isEqualTo(day0Value);",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "230001",
+        "hash": "4cb4c387",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "230001",
+        "hash": "eb084e75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "230001",
+        "hash": "dda97a1d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "230001",
+        "hash": "56a65326",
+        "encoded": "@DisplayName(%22given%20a%20fixed%20clock%20at%2023:30%20UTC,%20when%20the%20mock%20pass%20(shifted%20+90min)%20is%20looked%20up,%20then%20cloud%20cover%20is%20non-null%20and%20below%2020%22)",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "230001",
+        "hash": "4c3517c3",
+        "encoded": "void%20givenFixedClockAt2330Utc_whenShiftedMockPassLookedUp_thenCloudBelow20()%20%7B",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "230001",
+        "hash": "3dc9858f",
+        "encoded": "Instant%20fixedNow%20=%20Instant.parse(%222026-11-05T23:30:00Z%22);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "230001",
+        "hash": "d5887f3a",
+        "encoded": "Clock%20clock%20=%20Clock.fixed(fixedNow,%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "230001",
+        "hash": "61bfeb57",
+        "encoded": "PassFeed%20shiftedPasses%20=%20PassMock.load(mockPassesJson,%20clock);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "230001",
+        "hash": "c856b65c",
+        "encoded": "Pass%20firstObservable%20=%20shiftedPasses.passes().stream()",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "230001",
+        "hash": "210a9bc5",
+        "encoded": ".filter(Pass::isObservable)",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "230001",
+        "hash": "7e0fe078",
+        "encoded": ".findFirst()",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "230001",
+        "hash": "61b16520",
+        "encoded": ".orElseThrow(()%20-%3E%20new%20AssertionError(%22mock%20must%20contain%20an%20observable%20pass%22));",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "230001",
+        "hash": "e5c3cb7d",
+        "encoded": "assertThat(firstObservable.visibleStart()).isEqualTo(fixedNow.plus(Duration.ofMinutes(90)));",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "230001",
+        "hash": "c0df1b01",
+        "encoded": "CloudForecast%20forecast%20=%20MockData.loadCloud(mockCloudJson,%20clock);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "230001",
+        "hash": "3c48e7ef",
+        "encoded": "Integer%20cloudAtPass%20=%20forecast.cloudCoverPctAt(firstObservable.visibleStart());",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "230001",
+        "hash": "98fe0372",
+        "encoded": "assertThat(cloudAtPass).isNotNull();",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "230001",
+        "hash": "3f82cdfd",
+        "encoded": "assertThat(cloudAtPass).isLessThan(20);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "230001",
+        "hash": "2de22ffd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "230001",
+        "hash": "056477bc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "230001",
+        "hash": "715028b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

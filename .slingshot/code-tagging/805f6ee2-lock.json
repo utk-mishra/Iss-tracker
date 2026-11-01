@@ -1,0 +1,109 @@
+{
+  "backend/src/main/java/com/example/iss/service/EnrichedPass.java": {
+    "filename": "EnrichedPass.java",
+    "path": "backend/src/main/java/com/example/iss/service/EnrichedPass.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "13b60e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541125,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "03f0efc9",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:22:05\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "13b60e",
+        "hash": "565b36d7",
+        "encoded": "package%20com.example.iss.service;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "13b60e",
+        "hash": "45fc393d",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "13b60e",
+        "hash": "3da07bb7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "13b60e",
+        "hash": "704602c7",
+        "encoded": "*%20A%20%7B@link%20Pass%7D%20enriched%20with%20request-time-computed%20fields%20that%20are%20not%20part%20of%20the",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "13b60e",
+        "hash": "5a7e7891",
+        "encoded": "*%20domain%20record%20itself%20(PROMPT.md%20section%206):%20cloud%20cover%20for%20EVERY%20pass,%20magnitude",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "13b60e",
+        "hash": "7827f31f",
+        "encoded": "*%20ONLY%20for%20observable%20passes%20(Step%206%20decision%204).",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "13b60e",
+        "hash": "c59c8240",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "13b60e",
+        "hash": "91cad61e",
+        "encoded": "*%20@param%20pass%20%20%20%20%20%20%20%20%20%20%20the%20underlying%20parsed%20pass",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "13b60e",
+        "hash": "c1ff6a13",
+        "encoded": "*%20@param%20magnitude%20%20%20%20%20%20approximate%20brightness%20magnitude;%20null%20if%20not%20observable",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "13b60e",
+        "hash": "fe6a4c4e",
+        "encoded": "*%20@param%20cloudCoverPct%20%20cloud%20cover%20at%20the%20pass%20time;%20null%20if%20unknown/outside%20forecast",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "13b60e",
+        "hash": "caaefa0e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "13b60e",
+        "hash": "a39828e6",
+        "encoded": "public%20record%20EnrichedPass(Pass%20pass,%20Double%20magnitude,%20Integer%20cloudCoverPct)%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "13b60e",
+        "hash": "66d45cc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

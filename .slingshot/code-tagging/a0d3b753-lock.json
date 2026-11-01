@@ -1,0 +1,457 @@
+{
+  "backend/src/main/java/com/example/iss/client/OpenMeteoClient.java": {
+    "filename": "OpenMeteoClient.java",
+    "path": "backend/src/main/java/com/example/iss/client/OpenMeteoClient.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "400890": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540407,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "9e566d73",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:07\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "400890",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "400890",
+        "hash": "f0c6695b",
+        "encoded": "import%20com.example.iss.domain.CloudForecast;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "400890",
+        "hash": "b41d3a92",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "400890",
+        "hash": "e5a9cfd5",
+        "encoded": "import%20java.net.URI;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "400890",
+        "hash": "4b6050bb",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "400890",
+        "hash": "7860f2f9",
+        "encoded": "import%20java.time.LocalDateTime;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "400890",
+        "hash": "9796ea19",
+        "encoded": "import%20java.time.ZoneOffset;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "400890",
+        "hash": "f753e300",
+        "encoded": "import%20java.util.ArrayList;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "400890",
+        "hash": "b3b096ea",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "400890",
+        "hash": "6af161e0",
+        "encoded": "import%20java.util.Locale;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "400890",
+        "hash": "ff5105ac",
+        "encoded": "import%20java.util.Objects;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "400890",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "400890",
+        "hash": "0d0576ac",
+        "encoded": "*%20Adapter%20for%20Open-Meteo%20hourly%20cloud%20cover%20(PROMPT.md%20section%203.3).",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "400890",
+        "hash": "50310004",
+        "encoded": "*%20%7B@link%20#parse(JsonNode)%7D%20is%20static%20and%20pure:%20times%20have%20no%20%22Z%22%20suffix,%20so%20they%20are",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "400890",
+        "hash": "f53adbeb",
+        "encoded": "*%20parsed%20via%20LocalDateTime%20+%20ZoneOffset.UTC%20(valid%20because%20the%20request%20always%20asks%20for",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "400890",
+        "hash": "f7c25b84",
+        "encoded": "*%20timezone=UTC).%20The%201-hour%20step%20and%20equal%20array%20lengths%20are%20verified;%20any%20violation%20is",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "400890",
+        "hash": "79e7166f",
+        "encoded": "*%20a%20generic%20parse%20failure%20(treated%20like%20a%20timeout%20by%20ResilientFetcher).",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "400890",
+        "hash": "5b817c8d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "400890",
+        "hash": "bfbd12d1",
+        "encoded": "public%20final%20class%20OpenMeteoClient%20implements%20CloudClient%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "400890",
+        "hash": "3ad3791c",
+        "encoded": "private%20static%20final%20long%20ONE_HOUR_SECONDS%20=%203600;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "400890",
+        "hash": "3c3cbd21",
+        "encoded": "private%20final%20HttpJson%20httpJson;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "400890",
+        "hash": "d244a9cc",
+        "encoded": "private%20final%20String%20baseUrl;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "400890",
+        "hash": "342ec186",
+        "encoded": "public%20OpenMeteoClient(HttpJson%20httpJson,%20String%20baseUrl)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "400890",
+        "hash": "3b828a98",
+        "encoded": "this.httpJson%20=%20Objects.requireNonNull(httpJson,%20%22httpJson%22);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "400890",
+        "hash": "643a9cfc",
+        "encoded": "this.baseUrl%20=%20Objects.requireNonNull(baseUrl,%20%22baseUrl%22);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "400890",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "400890",
+        "hash": "cd4b6304",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "400890",
+        "hash": "e7eb3b9f",
+        "encoded": "public%20CloudForecast%20fetch(double%20lat,%20double%20lon)%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "400890",
+        "hash": "e952ca85",
+        "encoded": "URI%20uri%20=%20URI.create(buildUrl(lat,%20lon));",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "400890",
+        "hash": "bdaa1f1c",
+        "encoded": "JsonNode%20json%20=%20httpJson.getJson(uri);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "400890",
+        "hash": "db1365db",
+        "encoded": "return%20parse(json);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "400890",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "400890",
+        "hash": "cf970820",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "400890",
+        "hash": "6663f899",
+        "encoded": "*%20Builds%20the%20Open-Meteo%20URL%20with%20locale-independent%20decimal%20formatting%20and%20the",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "400890",
+        "hash": "e4a51f97",
+        "encoded": "*%20fixed%20query%20parameters%20required%20by%20PROMPT.md%20section%203.3.",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "400890",
+        "hash": "7b590782",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "400890",
+        "hash": "4f2a3399",
+        "encoded": "public%20String%20buildUrl(double%20lat,%20double%20lon)%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "400890",
+        "hash": "d7820cfd",
+        "encoded": "return%20String.format(Locale.ROOT,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "400890",
+        "hash": "de2b709c",
+        "encoded": "%22%25s?latitude=%25.4f&longitude=%25.4f&hourly=cloud_cover&timezone=UTC&forecast_days=10%22,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "400890",
+        "hash": "99ea23cf",
+        "encoded": "baseUrl,%20lat,%20lon);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "400890",
+        "hash": "d90811a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "400890",
+        "hash": "517b3594",
+        "encoded": "public%20static%20CloudForecast%20parse(JsonNode%20json)%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "400890",
+        "hash": "5caf4045",
+        "encoded": "JsonNode%20hourly%20=%20json.path(%22hourly%22);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "400890",
+        "hash": "6f63785c",
+        "encoded": "JsonNode%20timeArray%20=%20hourly.path(%22time%22);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "400890",
+        "hash": "388b2748",
+        "encoded": "JsonNode%20cloudCoverArray%20=%20hourly.path(%22cloud_cover%22);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "400890",
+        "hash": "1b08d153",
+        "encoded": "if%20(timeArray.size()%20!=%20cloudCoverArray.size())%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "400890",
+        "hash": "35bf695b",
+        "encoded": "throw%20new%20IllegalArgumentException(",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "400890",
+        "hash": "080c4214",
+        "encoded": "%22time%20and%20cloud_cover%20arrays%20have%20different%20lengths:%20%22",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "400890",
+        "hash": "1944685e",
+        "encoded": "+%20timeArray.size()%20+%20%22%20vs%20%22%20+%20cloudCoverArray.size());",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "400890",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "400890",
+        "hash": "d6e4c172",
+        "encoded": "List%3CInstant%3E%20hourlyTimes%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "400890",
+        "hash": "68a7456e",
+        "encoded": "List%3CInteger%3E%20hourlyCloudCoverPct%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "400890",
+        "hash": "bdc9654d",
+        "encoded": "Instant%20previous%20=%20null;",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "400890",
+        "hash": "63e58436",
+        "encoded": "for%20(int%20i%20=%200;%20i%20%3C%20timeArray.size();%20i++)%20%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "400890",
+        "hash": "cbf8b2e1",
+        "encoded": "String%20noZTime%20=%20timeArray.get(i).asText();",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "400890",
+        "hash": "ae17ce20",
+        "encoded": "Instant%20current%20=%20LocalDateTime.parse(noZTime).toInstant(ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "400890",
+        "hash": "da93beef",
+        "encoded": "if%20(previous%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "400890",
+        "hash": "4b5bb1ca",
+        "encoded": "long%20diffSeconds%20=%20current.getEpochSecond()%20-%20previous.getEpochSecond();",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "400890",
+        "hash": "1312b43b",
+        "encoded": "if%20(diffSeconds%20!=%20ONE_HOUR_SECONDS)%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "400890",
+        "hash": "2992507e",
+        "encoded": "throw%20new%20IllegalArgumentException(",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "400890",
+        "hash": "244de03c",
+        "encoded": "%22Expected%20exactly%201-hour%20step%20between%20entries,%20got%20%22%20+%20diffSeconds%20+%20%22s%20at%20index%20%22%20+%20i);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "400890",
+        "hash": "6387e751",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "400890",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "400890",
+        "hash": "205536c1",
+        "encoded": "previous%20=%20current;",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "400890",
+        "hash": "c8a34b69",
+        "encoded": "hourlyTimes.add(current);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "400890",
+        "hash": "b3e358b1",
+        "encoded": "JsonNode%20cloudNode%20=%20cloudCoverArray.get(i);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "400890",
+        "hash": "57a934be",
+        "encoded": "hourlyCloudCoverPct.add(cloudNode%20==%20null%20%7C%7C%20cloudNode.isNull()%20?%20null%20:%20cloudNode.asInt());",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "400890",
+        "hash": "d6938858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "400890",
+        "hash": "ff23ca60",
+        "encoded": "return%20new%20CloudForecast(hourlyTimes,%20hourlyCloudCoverPct);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "400890",
+        "hash": "d7cd7257",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "400890",
+        "hash": "7bb00016",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

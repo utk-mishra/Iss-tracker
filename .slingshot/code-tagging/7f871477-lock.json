@@ -1,0 +1,193 @@
+{
+  "backend/src/main/java/com/example/iss/domain/IssPosition.java": {
+    "filename": "IssPosition.java",
+    "path": "backend/src/main/java/com/example/iss/domain/IssPosition.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "b3ef70": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "57eff22f",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:06\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b3ef70",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b3ef70",
+        "hash": "e4c4cb74",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "b3ef70",
+        "hash": "3da07bb7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b3ef70",
+        "hash": "c973d49d",
+        "encoded": "*%20Current%20ISS%20position,%20enriched%20with%20a%20constant%20altitude%20and%20a%20derived%20velocity",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b3ef70",
+        "hash": "5bdfeaf3",
+        "encoded": "*%20(PROMPT.md%20sections%203.1,%205,%206).%20Open-Notify%20provides%20no%20altitude/velocity;%20altitude",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "b3ef70",
+        "hash": "28a0faad",
+        "encoded": "*%20is%20a%20documented%20constant%20(408%20km)%20and%20velocity%20is%20derived%20by%20%7B@link%20VelocityEstimator%7D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b3ef70",
+        "hash": "351096f8",
+        "encoded": "*%20from%20consecutive%20samples.",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "b3ef70",
+        "hash": "7aeb6bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b3ef70",
+        "hash": "eed54b92",
+        "encoded": "*%20@param%20latitude%20%20%20%20%20degrees,%20parsed%20from%20the%20upstream's%20string%20field",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "b3ef70",
+        "hash": "d4162e34",
+        "encoded": "*%20@param%20longitude%20%20%20%20degrees,%20parsed%20from%20the%20upstream's%20string%20field",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "b3ef70",
+        "hash": "1f4e307d",
+        "encoded": "*%20@param%20altitudeKm%20%20%20constant%20408%20km%20approximation;%20Open-Notify%20gives%20no%20altitude",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b3ef70",
+        "hash": "428172a8",
+        "encoded": "*%20@param%20velocityKmh%20%20derived%20ground%20velocity;%20see%20%7B@link%20VelocityEstimator%7D",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "b3ef70",
+        "hash": "39ee78e5",
+        "encoded": "*%20@param%20observedAt%20%20%20instant%20the%20position%20was%20reported%20(upstream's%20unix%20timestamp)",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b3ef70",
+        "hash": "c484a9ba",
+        "encoded": "*%20@param%20note%20%20%20%20%20%20%20%20%20human-readable%20caveat%20about%20the%20constant-altitude%20approximation",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b3ef70",
+        "hash": "7ca1406f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b3ef70",
+        "hash": "9167e10b",
+        "encoded": "public%20record%20IssPosition(",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b3ef70",
+        "hash": "ff612e51",
+        "encoded": "double%20latitude,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "b3ef70",
+        "hash": "84d9eed9",
+        "encoded": "double%20longitude,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b3ef70",
+        "hash": "689532b9",
+        "encoded": "double%20altitudeKm,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "b3ef70",
+        "hash": "73117633",
+        "encoded": "double%20velocityKmh,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b3ef70",
+        "hash": "c4e0f32c",
+        "encoded": "Instant%20observedAt,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b3ef70",
+        "hash": "c0ed5444",
+        "encoded": "String%20note",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b3ef70",
+        "hash": "966fbae2",
+        "encoded": ")%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "b3ef70",
+        "hash": "374baa75",
+        "encoded": "public%20static%20final%20double%20CONSTANT_ALTITUDE_KM%20=%20408.0;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b3ef70",
+        "hash": "a3f82b44",
+        "encoded": "public%20static%20final%20String%20ALTITUDE_NOTE%20=",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "b3ef70",
+        "hash": "d011c3ae",
+        "encoded": "%22Altitude%20is%20a%20constant%20approximation%20(408%20km);%20Open-Notify%20does%20not%20report%20altitude.%22;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "b3ef70",
+        "hash": "46b23985",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

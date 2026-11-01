@@ -1,0 +1,139 @@
+{
+  "frontend/src/components/SourceBadge.jsx": {
+    "filename": "SourceBadge.jsx",
+    "path": "frontend/src/components/SourceBadge.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "7bdb84": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793545053,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "cfea5c3f",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:27:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7bdb84",
+        "hash": "b0956917",
+        "encoded": "import%20%7B%20minutesAgo%20%7D%20from%20'../utils/time.js';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7bdb84",
+        "hash": "576543e1",
+        "encoded": "//%20Per-section%20source%20badges%20must%20follow%20meta%20exactly%20(PROMPT.md%20section%207):",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7bdb84",
+        "hash": "8df7bf1d",
+        "encoded": "//%20never%20infer%20%22live%22%20from%20data%20presence,%20only%20from%20meta.source.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7bdb84",
+        "hash": "0d9e7604",
+        "encoded": "const%20LABELS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7bdb84",
+        "hash": "4f0825a0",
+        "encoded": "FRESH:%20()%20=%3E%20'Live',",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7bdb84",
+        "hash": "a122551d",
+        "encoded": "STALE:%20(ageMs)%20=%3E%20%60Cached%20$%7BminutesAgo(ageMs)%7D%20min%20ago%60,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7bdb84",
+        "hash": "02b844ac",
+        "encoded": "MOCK:%20()%20=%3E%20'Fallback%20data',",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7bdb84",
+        "hash": "af89cfeb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7bdb84",
+        "hash": "5633ddb3",
+        "encoded": "const%20CLASS_NAMES%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7bdb84",
+        "hash": "7558cfb3",
+        "encoded": "FRESH:%20'badge-fresh',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7bdb84",
+        "hash": "45998706",
+        "encoded": "STALE:%20'badge-stale',",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7bdb84",
+        "hash": "abf2cef3",
+        "encoded": "MOCK:%20'badge-mock',",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7bdb84",
+        "hash": "734baa97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7bdb84",
+        "hash": "4820e410",
+        "encoded": "export%20default%20function%20SourceBadge(%7B%20source,%20ageMs%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "7bdb84",
+        "hash": "a9ef21ab",
+        "encoded": "const%20label%20=%20(LABELS%5Bsource%5D%20%7C%7C%20(()%20=%3E%20source))(ageMs);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7bdb84",
+        "hash": "0aa124d7",
+        "encoded": "const%20className%20=%20CLASS_NAMES%5Bsource%5D%20%7C%7C%20'badge-unknown';",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7bdb84",
+        "hash": "1d079eaf",
+        "encoded": "return%20%3Cspan%20className=%7B%60badge%20$%7BclassName%7D%60%7D%3E%7Blabel%7D%3C/span%3E;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7bdb84",
+        "hash": "4b5cc20d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

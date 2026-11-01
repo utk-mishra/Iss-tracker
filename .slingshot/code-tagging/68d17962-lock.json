@@ -1,0 +1,97 @@
+{
+  "frontend/src/components/TleStaleWarning.jsx": {
+    "filename": "TleStaleWarning.jsx",
+    "path": "frontend/src/components/TleStaleWarning.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "66a7ef": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793545053,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "25646a5b",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:27:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "66a7ef",
+        "hash": "9196fb7a",
+        "encoded": "//%20Warning%20shown%20whenever%20meta.passes.tleStale%20is%20true%20(PROMPT.md%20section%207).",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "66a7ef",
+        "hash": "98a51fc0",
+        "encoded": "export%20default%20function%20TleStaleWarning(%7B%20tleStale%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "66a7ef",
+        "hash": "9fabab74",
+        "encoded": "if%20(!tleStale)%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "66a7ef",
+        "hash": "9e01c0bf",
+        "encoded": "return%20null;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "66a7ef",
+        "hash": "22b977f0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "66a7ef",
+        "hash": "d0fafc8a",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "66a7ef",
+        "hash": "bd910726",
+        "encoded": "%3Cdiv%20role=%22alert%22%20className=%22banner%20banner-warning%22%3E",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "66a7ef",
+        "hash": "682efc82",
+        "encoded": "Orbital%20data%20(TLE)%20is%20stale%20-%20pass%20predictions%20may%20be%20less%20accurate.",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "66a7ef",
+        "hash": "c95682ef",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "66a7ef",
+        "hash": "a2e077a7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "66a7ef",
+        "hash": "e9a9f96c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+openapi: 3.0.3
+info:
+  title: ISS Location & Pass Predictor API
+  description: >
+    Current ISS position, pass predictions, and conditional viewing alerts for a
+    given observer location. Every response declares the degradation level
+    (FRESH/STALE/MOCK) of each upstream it depends on. See /docs for a human-readable
+    guide with curl examples.
+  version: "1.0.0"
+servers:
+  - url: /
+tags:
+  - name: iss
+    description: ISS position, pass predictions, and alerts
+paths:
+  /api/v1/iss/overview:
+    get:
+      tags: [iss]
+      summary: Full overview - position, passes, next visible pass, alerts
+      parameters:
+        - $ref: '#/components/parameters/Lat'
+        - $ref: '#/components/parameters/Lon'
+        - $ref: '#/components/parameters/Offline'
+      responses:
+        '200':
+          description: Successful overview
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OverviewResponse'
+              example:
+                position:
+                  latitude: 28.6139
+                  longitude: 77.2090
+                  altitudeKm: 408.0
+                  velocityKmh: 27600.0
+                  observedAt: "2026-11-01T00:00:00Z"
+                  note: "Altitude is a constant approximation (408 km); Open-Notify does not report altitude."
+                passes: []
+                nextVisiblePass: null
+                message: "No visible pass in the returned predictions"
+                alerts: []
+                meta:
+                  position: { source: FRESH, degraded: false, ageMs: 0 }
+                  passes: { meta: { source: FRESH, degraded: false, ageMs: 0 }, tleAgeHours: 7.4, tleStale: false }
+                  cloud: { source: FRESH, degraded: false, ageMs: 0 }
+                _links:
+                  self: /api/v1/iss/overview
+                  position: /api/v1/iss/position
+                  passes: /api/v1/iss/passes
+                  health: /actuator/health
+                  docs: /docs
+        '400':
+          description: Invalid lat/lon/offline parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
+              example: { error: "lat must be in [-90,90]", status: 400 }
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
+              example: { error: "Rate limit exceeded", status: 429 }
+        '500':
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
+              example: { error: "Internal server error", status: 500 }
+  /api/v1/iss/position:
+    get:
+      tags: [iss]
+      summary: Current ISS position only (poll every 5-10 seconds)
+      parameters:
+        - $ref: '#/components/parameters/Offline'
+      responses:
+        '200':
+          description: Successful position fetch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PositionResponse'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
+  /api/v1/iss/passes:
+    get:
+      tags: [iss]
+      summary: Pass predictions for a given observer location
+      parameters:
+        - $ref: '#/components/parameters/Lat'
+        - $ref: '#/components/parameters/Lon'
+        - $ref: '#/components/parameters/Offline'
+      responses:
+        '200':
+          description: Successful passes fetch
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PassesResponse'
+        '400':
+          description: Invalid lat/lon/offline parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDto'
+components:
+  parameters:
+    Lat:
+      name: lat
+      in: query
+      required: true
+      schema: { type: number, format: double, minimum: -90, maximum: 90 }
+      description: Observer latitude in degrees, must be finite.
+    Lon:
+      name: lon
+      in: query
+      required: true
+      schema: { type: number, format: double, minimum: -180, maximum: 180 }
+      description: Observer longitude in degrees, must be finite.
+    Offline:
+      name: offline
+      in: query
+      required: false
+      schema: { type: string, enum: ["true", "false"], default: "false" }
+      description: Forces offline mode (never touches the network) when exactly "true".
+  schemas:
+    ErrorDto:
+      type: object
+      properties:
+        error: { type: string }
+        status: { type: integer }
+      required: [error, status]
+    LinksDto:
+      type: object
+      properties:
+        self: { type: string }
+        position: { type: string }
+        passes: { type: string }
+        health: { type: string }
+        docs: { type: string }
+    UpstreamMetaDto:
+      type: object
+      properties:
+        source: { type: string, enum: [FRESH, STALE, MOCK] }
+        degraded: { type: boolean }
+        ageMs: { type: integer, format: int64 }
+    PassesMetaDto:
+      type: object
+      properties:
+        meta: { $ref: '#/components/schemas/UpstreamMetaDto' }
+        tleAgeHours: { type: number, format: double }
+        tleStale: { type: boolean }
+    MetaDto:
+      type: object
+      properties:
+        position: { $ref: '#/components/schemas/UpstreamMetaDto' }
+        passes: { $ref: '#/components/schemas/PassesMetaDto' }
+        cloud: { $ref: '#/components/schemas/UpstreamMetaDto' }
+    PositionDto:
+      type: object
+      properties:
+        latitude: { type: number, format: double }
+        longitude: { type: number, format: double }
+        altitudeKm: { type: number, format: double }
+        velocityKmh: { type: number, format: double }
+        observedAt: { type: string, format: date-time }
+        note: { type: string }
+    PassDto:
+      type: object
+      properties:
+        rise: { type: string, format: date-time }
+        culmination: { type: string, format: date-time }
+        set: { type: string, format: date-time }
+        durationSec: { type: integer, format: int64 }
+        riseDirection: { type: string }
+        riseAzimuthDeg: { type: number, format: double }
+        setDirection: { type: string }
+        setAzimuthDeg: { type: number, format: double }
+        maxElevationDeg: { type: number, format: double }
+        visible: { type: boolean }
+        observable: { type: boolean }
+        visibleStart: { type: string, format: date-time, nullable: true }
+        visibleEnd: { type: string, format: date-time, nullable: true }
+        visibleDurationSec: { type: integer, format: int64 }
+        magnitude: { type: number, format: double, nullable: true }
+        cloudCoverPct: { type: integer, nullable: true }
+    OverviewResponse:
+      type: object
+      properties:
+        position: { $ref: '#/components/schemas/PositionDto' }
+        passes:
+          type: array
+          items: { $ref: '#/components/schemas/PassDto' }
+        nextVisiblePass:
+          allOf: [{ $ref: '#/components/schemas/PassDto' }]
+          nullable: true
+        message: { type: string, nullable: true }
+        alerts:
+          type: array
+          items: { type: string }
+        meta: { $ref: '#/components/schemas/MetaDto' }
+        _links: { $ref: '#/components/schemas/LinksDto' }
+    PassesResponse:
+      type: object
+      properties:
+        passes:
+          type: array
+          items: { $ref: '#/components/schemas/PassDto' }
+        meta: { $ref: '#/components/schemas/MetaDto' }
+        _links: { $ref: '#/components/schemas/LinksDto' }
+    PositionResponse:
+      type: object
+      properties:
+        position: { $ref: '#/components/schemas/PositionDto' }
+        meta: { $ref: '#/components/schemas/UpstreamMetaDto' }
+        _links: { $ref: '#/components/schemas/LinksDto' }

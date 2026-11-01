@@ -1,0 +1,1525 @@
+{
+  "backend/src/test/java/com/example/iss/service/IssFacadeTest.java": {
+    "filename": "IssFacadeTest.java",
+    "path": "backend/src/test/java/com/example/iss/service/IssFacadeTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "11d2c8": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "453fbd4e",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "11d2c8",
+        "hash": "565b36d7",
+        "encoded": "package%20com.example.iss.service;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "11d2c8",
+        "hash": "85043d35",
+        "encoded": "import%20com.example.iss.client.CloudClient;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "11d2c8",
+        "hash": "bcd0d4e4",
+        "encoded": "import%20com.example.iss.client.PassesClient;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "11d2c8",
+        "hash": "047b7c83",
+        "encoded": "import%20com.example.iss.client.PositionClient;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "11d2c8",
+        "hash": "23cbb40a",
+        "encoded": "import%20com.example.iss.domain.AlertService;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "11d2c8",
+        "hash": "c4916a8d",
+        "encoded": "import%20com.example.iss.domain.CloudForecast;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "11d2c8",
+        "hash": "02ec986e",
+        "encoded": "import%20com.example.iss.domain.IssPosition;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "11d2c8",
+        "hash": "da97d0fb",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "11d2c8",
+        "hash": "d2261cf2",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "11d2c8",
+        "hash": "eec42135",
+        "encoded": "import%20com.example.iss.resilience.CircuitBreaker;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "11d2c8",
+        "hash": "75fe4cbe",
+        "encoded": "import%20com.example.iss.resilience.ResilientFetcher;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "11d2c8",
+        "hash": "8261a1c0",
+        "encoded": "import%20com.example.iss.resilience.SingleFlight;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "11d2c8",
+        "hash": "1247cbcc",
+        "encoded": "import%20com.example.iss.resilience.TtlCache;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "11d2c8",
+        "hash": "7a9f2d69",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "11d2c8",
+        "hash": "5e2eadf9",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "11d2c8",
+        "hash": "54ef713e",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "11d2c8",
+        "hash": "63ec0cef",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "11d2c8",
+        "hash": "20fdf014",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "11d2c8",
+        "hash": "3cfbeb44",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "11d2c8",
+        "hash": "08de4d60",
+        "encoded": "import%20org.mockito.Mockito;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "11d2c8",
+        "hash": "281508c1",
+        "encoded": "import%20java.io.File;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "11d2c8",
+        "hash": "b8e71c74",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "11d2c8",
+        "hash": "57fd1d3a",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "11d2c8",
+        "hash": "101b05e8",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "11d2c8",
+        "hash": "dfd1825b",
+        "encoded": "import%20java.time.ZoneOffset;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "11d2c8",
+        "hash": "96bfdb34",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "11d2c8",
+        "hash": "f2a8d7be",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "11d2c8",
+        "hash": "c97b8808",
+        "encoded": "import%20static%20org.mockito.ArgumentMatchers.anyDouble;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "11d2c8",
+        "hash": "d1916069",
+        "encoded": "import%20static%20org.mockito.Mockito.never;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "11d2c8",
+        "hash": "f6690d3a",
+        "encoded": "import%20static%20org.mockito.Mockito.verify;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "11d2c8",
+        "hash": "aabd456c",
+        "encoded": "import%20static%20org.mockito.Mockito.when;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "11d2c8",
+        "hash": "bfb1acd4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "11d2c8",
+        "hash": "e12968ac",
+        "encoded": "*%20IssFacade:%20orchestrates%20the%20three%20ResilientFetchers%20+%20enrichment%20+%20alerts",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "11d2c8",
+        "hash": "b4e3e6b9",
+        "encoded": "*%20(PROMPT.md%20section%206,%20Step%206%20plan).%20No%20Spring%20context%20-%20plain%20constructor%20wiring",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "11d2c8",
+        "hash": "b4af877a",
+        "encoded": "*%20with%20mocked%20clients,%20so%20this%20is%20fast%20and%20fully%20isolated%20from%20the%20HTTP%20layer.",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "11d2c8",
+        "hash": "ba46d75f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "11d2c8",
+        "hash": "0a60dcd6",
+        "encoded": "class%20IssFacadeTest%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "11d2c8",
+        "hash": "69082298",
+        "encoded": "private%20static%20final%20double%20LAT%20=%2028.6139;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "11d2c8",
+        "hash": "ec7cd258",
+        "encoded": "private%20static%20final%20double%20LON%20=%2077.2090;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "11d2c8",
+        "hash": "91725952",
+        "encoded": "private%20PositionClient%20positionClient;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "11d2c8",
+        "hash": "fb7bec53",
+        "encoded": "private%20PassesClient%20passesClient;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "11d2c8",
+        "hash": "a12291f1",
+        "encoded": "private%20CloudClient%20cloudClient;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "11d2c8",
+        "hash": "466ba949",
+        "encoded": "private%20Clock%20clock;",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "11d2c8",
+        "hash": "16296f2a",
+        "encoded": "private%20IssFacade%20facade;",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "11d2c8",
+        "hash": "0a55e26a",
+        "encoded": "private%20JsonNode%20mockPositionJson;",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "11d2c8",
+        "hash": "82fc7fc1",
+        "encoded": "private%20JsonNode%20mockPassesJson;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "11d2c8",
+        "hash": "f7eaa0be",
+        "encoded": "private%20JsonNode%20mockCloudJson;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "11d2c8",
+        "hash": "89665a90",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "11d2c8",
+        "hash": "8020ff83",
+        "encoded": "void%20setUp()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "11d2c8",
+        "hash": "d50af532",
+        "encoded": "positionClient%20=%20Mockito.mock(PositionClient.class);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "11d2c8",
+        "hash": "94c7de66",
+        "encoded": "passesClient%20=%20Mockito.mock(PassesClient.class);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "11d2c8",
+        "hash": "7a5f6663",
+        "encoded": "cloudClient%20=%20Mockito.mock(CloudClient.class);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "11d2c8",
+        "hash": "8cfb186e",
+        "encoded": "clock%20=%20Clock.fixed(Instant.parse(%222026-11-01T00:00:00Z%22),%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "11d2c8",
+        "hash": "7690bd6d",
+        "encoded": "ObjectMapper%20mapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "11d2c8",
+        "hash": "5415ef2a",
+        "encoded": "mockPositionJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/position.json%22));",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "11d2c8",
+        "hash": "4d3ac454",
+        "encoded": "mockPassesJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/passes.json%22));",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "11d2c8",
+        "hash": "5cbbf16d",
+        "encoded": "mockCloudJson%20=%20mapper.readTree(new%20File(%22src/main/resources/mocks/cloud.json%22));",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "11d2c8",
+        "hash": "d46cb76a",
+        "encoded": "ResilientFetcher%3CIssPosition%3E%20positionFetcher%20=%20newFetcher(Duration.ofSeconds(5),%20Duration.ofHours(1));",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "11d2c8",
+        "hash": "84372f03",
+        "encoded": "ResilientFetcher%3CPassFeed%3E%20passesFetcher%20=%20newFetcher(Duration.ofMinutes(15),%20Duration.ofHours(24));",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "11d2c8",
+        "hash": "0bfa49bb",
+        "encoded": "ResilientFetcher%3CCloudForecast%3E%20cloudFetcher%20=%20newFetcher(Duration.ofMinutes(30),%20Duration.ofHours(12));",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "11d2c8",
+        "hash": "d2883e97",
+        "encoded": "facade%20=%20new%20IssFacade(",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "11d2c8",
+        "hash": "f1849acb",
+        "encoded": "positionClient,%20passesClient,%20cloudClient,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "11d2c8",
+        "hash": "5772eb81",
+        "encoded": "positionFetcher,%20passesFetcher,%20cloudFetcher,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "11d2c8",
+        "hash": "9bf30b69",
+        "encoded": "mockPositionJson,%20mockPassesJson,%20mockCloudJson,",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "11d2c8",
+        "hash": "c42df32a",
+        "encoded": "new%20AlertService(),%20clock",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "11d2c8",
+        "hash": "deaf3d1d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "11d2c8",
+        "hash": "20d59727",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "11d2c8",
+        "hash": "a51922f6",
+        "encoded": "private%20%3CT%3E%20ResilientFetcher%3CT%3E%20newFetcher(Duration%20ttl,%20Duration%20maxStale)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "11d2c8",
+        "hash": "6d615857",
+        "encoded": "TtlCache%3CT%3E%20cache%20=%20new%20TtlCache%3C%3E(clock,%20ttl,%20maxStale,%20500);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "11d2c8",
+        "hash": "3bc33c82",
+        "encoded": "CircuitBreaker%20breaker%20=%20new%20CircuitBreaker(clock,%203,%20Duration.ofSeconds(30));",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "11d2c8",
+        "hash": "9b8ee036",
+        "encoded": "SingleFlight%3CT%3E%20singleFlight%20=%20new%20SingleFlight%3C%3E();",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "11d2c8",
+        "hash": "969a17fd",
+        "encoded": "return%20new%20ResilientFetcher%3C%3E(cache,%20breaker,%20singleFlight,%20clock,%201);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "11d2c8",
+        "hash": "d7cd7257",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "11d2c8",
+        "hash": "58230160",
+        "encoded": "private%20Pass%20observablePass(Instant%20visibleStart,%20Instant%20visibleEnd,%20Instant%20setTime,%20long%20durationSec,%20double%20maxElevationDeg)%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "11d2c8",
+        "hash": "428f5084",
+        "encoded": "return%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "11d2c8",
+        "hash": "14d1ce56",
+        "encoded": "visibleStart.minusSeconds(60),%2010.0,%20%22N%22,",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "11d2c8",
+        "hash": "a8a3ecc8",
+        "encoded": "visibleStart,%20maxElevationDeg,",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "11d2c8",
+        "hash": "c416b65a",
+        "encoded": "setTime,%20200.0,%20%22S%22,",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "11d2c8",
+        "hash": "c5c5561a",
+        "encoded": "durationSec,",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "11d2c8",
+        "hash": "932097d1",
+        "encoded": "true,%20visibleStart,%20visibleEnd,",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "11d2c8",
+        "hash": "7b489528",
+        "encoded": "Duration.between(visibleStart,%20visibleEnd).getSeconds()",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "11d2c8",
+        "hash": "0cce519e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "11d2c8",
+        "hash": "4cb4c387",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "11d2c8",
+        "hash": "5d8d7801",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "11d2c8",
+        "hash": "0ebb4eca",
+        "encoded": "@DisplayName(%22fully%20offline%22)",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "11d2c8",
+        "hash": "2f375fe8",
+        "encoded": "class%20FullyOffline%20%7B",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "11d2c8",
+        "hash": "e0469c58",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "11d2c8",
+        "hash": "c66fea0a",
+        "encoded": "@DisplayName(%22given%20offline=true,%20when%20overview%20is%20requested,%20then%20all%20three%20sources%20are%20MOCK%20and%20zero%20network%20calls%20are%20made%22)",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "11d2c8",
+        "hash": "1a03a183",
+        "encoded": "void%20givenOffline_whenOverviewRequested_thenAllMockAndZeroNetworkCalls()%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "11d2c8",
+        "hash": "c5b856d0",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20true);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "11d2c8",
+        "hash": "d4c5002f",
+        "encoded": "assertThat(overview.positionMeta().source().name()).isEqualTo(%22MOCK%22);",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "11d2c8",
+        "hash": "73ce57d9",
+        "encoded": "assertThat(overview.passesMeta().meta().source().name()).isEqualTo(%22MOCK%22);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "11d2c8",
+        "hash": "9847c770",
+        "encoded": "assertThat(overview.cloudMeta().source().name()).isEqualTo(%22MOCK%22);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "11d2c8",
+        "hash": "96373424",
+        "encoded": "verify(positionClient,%20never()).fetch();",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "11d2c8",
+        "hash": "159efdbc",
+        "encoded": "verify(passesClient,%20never()).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "11d2c8",
+        "hash": "eb4fb98b",
+        "encoded": "verify(cloudClient,%20never()).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "11d2c8",
+        "hash": "3674f723",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "11d2c8",
+        "hash": "d62f96c2",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "11d2c8",
+        "hash": "6ce89793",
+        "encoded": "@DisplayName(%22given%20offline=true,%20when%20overview%20is%20requested,%20then%20the%20ISS%20visible%20soon%20alert%20is%20present%22)",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "11d2c8",
+        "hash": "8067485a",
+        "encoded": "void%20givenOffline_whenOverviewRequested_thenIssVisibleSoonAlertPresent()%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "11d2c8",
+        "hash": "fcad3b31",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20true);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "11d2c8",
+        "hash": "0dd554bf",
+        "encoded": "assertThat(overview.alerts()).anyMatch(a%20-%3E%20a.startsWith(%22ISS%20visible%20soon%22));",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "11d2c8",
+        "hash": "0ca73160",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "11d2c8",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "11d2c8",
+        "hash": "73bed308",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "11d2c8",
+        "hash": "e4372121",
+        "encoded": "@DisplayName(%22dropping%20past%20passes%22)",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "11d2c8",
+        "hash": "6fd08f1b",
+        "encoded": "class%20DroppingPastPasses%20%7B",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "11d2c8",
+        "hash": "5cd27037",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "11d2c8",
+        "hash": "d66a1a06",
+        "encoded": "@DisplayName(%22given%20a%20pass%20whose%20set%20time%20is%20already%20past,%20when%20overview%20is%20requested,%20then%20that%20pass%20is%20excluded%20and%20never%20nextVisiblePass%22)",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "11d2c8",
+        "hash": "ab633370",
+        "encoded": "void%20givenPassSetTimeInPast_whenOverviewRequested_thenExcluded()%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "11d2c8",
+        "hash": "89479718",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "11d2c8",
+        "hash": "142e1416",
+        "encoded": "Pass%20pastPass%20=%20observablePass(now.minusSeconds(600),%20now.minusSeconds(300),%20now.minusSeconds(100),%20400,%2050.0);",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "11d2c8",
+        "hash": "e3509f6e",
+        "encoded": "Pass%20futurePass%20=%20observablePass(now.plusSeconds(3600),%20now.plusSeconds(3900),%20now.plusSeconds(4000),%20400,%2050.0);",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "11d2c8",
+        "hash": "ba0fd53b",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "11d2c8",
+        "hash": "b55339af",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(pastPass,%20futurePass),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "11d2c8",
+        "hash": "5b369afc",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "11d2c8",
+        "hash": "28ff1983",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "11d2c8",
+        "hash": "8823f89e",
+        "encoded": "when(positionClient.fetch()).thenReturn(",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "11d2c8",
+        "hash": "c453d021",
+        "encoded": "new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "11d2c8",
+        "hash": "78e4bde3",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "11d2c8",
+        "hash": "16554165",
+        "encoded": "assertThat(overview.passes()).extracting(EnrichedPass::pass).doesNotContain(pastPass);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "11d2c8",
+        "hash": "e911d4f1",
+        "encoded": "assertThat(overview.passes()).extracting(EnrichedPass::pass).contains(futurePass);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "11d2c8",
+        "hash": "f2807599",
+        "encoded": "assertThat(overview.nextVisiblePass()).isNotNull();",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "11d2c8",
+        "hash": "4cd76bbe",
+        "encoded": "assertThat(overview.nextVisiblePass().pass()).isEqualTo(futurePass);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "11d2c8",
+        "hash": "2d25e64b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "11d2c8",
+        "hash": "f787a6d1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "11d2c8",
+        "hash": "4745489d",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "11d2c8",
+        "hash": "7eb6d948",
+        "encoded": "@DisplayName(%22next%20visible%20pass%20selection%22)",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "11d2c8",
+        "hash": "1b0cabfa",
+        "encoded": "class%20NextVisiblePassSelection%20%7B",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "11d2c8",
+        "hash": "e4a3de98",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "11d2c8",
+        "hash": "531cda23",
+        "encoded": "@DisplayName(%22given%20a%20pass%20whose%20visibleEnd%20is%20exactly%20now,%20when%20overview%20is%20requested,%20then%20it%20is%20excluded%22)",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "11d2c8",
+        "hash": "bcb15b26",
+        "encoded": "void%20givenVisibleEndExactlyNow_whenOverviewRequested_thenExcluded()%20%7B",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "11d2c8",
+        "hash": "72492df7",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "11d2c8",
+        "hash": "badc67e2",
+        "encoded": "Pass%20endingNow%20=%20observablePass(now.minusSeconds(300),%20now,%20now.plusSeconds(60),%20400,%2050.0);",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "11d2c8",
+        "hash": "b6328f1c",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "11d2c8",
+        "hash": "c4324a71",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(endingNow),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "11d2c8",
+        "hash": "eef5ac51",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "11d2c8",
+        "hash": "2ddad522",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "11d2c8",
+        "hash": "5019717f",
+        "encoded": "when(positionClient.fetch()).thenReturn(new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "11d2c8",
+        "hash": "cdc29d78",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "11d2c8",
+        "hash": "a43a83ec",
+        "encoded": "assertThat(overview.nextVisiblePass()).isNull();",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "11d2c8",
+        "hash": "b5188d22",
+        "encoded": "assertThat(overview.message()).isEqualTo(%22No%20visible%20pass%20in%20the%20returned%20predictions%22);",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "11d2c8",
+        "hash": "d5691714",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "11d2c8",
+        "hash": "9e915d2f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "11d2c8",
+        "hash": "93a881a6",
+        "encoded": "@DisplayName(%22given%20a%20pass%20whose%20visibleEnd%20is%20one%20second%20after%20now,%20when%20overview%20is%20requested,%20then%20it%20is%20the%20nextVisiblePass%22)",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "11d2c8",
+        "hash": "e0743f2b",
+        "encoded": "void%20givenVisibleEndOneSecondAfterNow_whenOverviewRequested_thenIncluded()%20%7B",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "11d2c8",
+        "hash": "a17acf96",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "11d2c8",
+        "hash": "059dde77",
+        "encoded": "Pass%20endingSoon%20=%20observablePass(now.minusSeconds(300),%20now.plusSeconds(1),%20now.plusSeconds(60),%20400,%2050.0);",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "11d2c8",
+        "hash": "759f14df",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "11d2c8",
+        "hash": "0b05a0a6",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(endingSoon),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "11d2c8",
+        "hash": "c70570a2",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "11d2c8",
+        "hash": "3a0cc457",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "11d2c8",
+        "hash": "c9cabc78",
+        "encoded": "when(positionClient.fetch()).thenReturn(new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "11d2c8",
+        "hash": "72cd5a7c",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "11d2c8",
+        "hash": "538ba7d4",
+        "encoded": "assertThat(overview.nextVisiblePass()).isNotNull();",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "11d2c8",
+        "hash": "07a06b48",
+        "encoded": "assertThat(overview.nextVisiblePass().pass()).isEqualTo(endingSoon);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "11d2c8",
+        "hash": "c802a6c7",
+        "encoded": "assertThat(overview.message()).isNull();",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "11d2c8",
+        "hash": "92ab12a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "11d2c8",
+        "hash": "aab5eeb9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "11d2c8",
+        "hash": "ec3d928d",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "11d2c8",
+        "hash": "7a99dc1f",
+        "encoded": "@DisplayName(%22cache-key%20rounding%22)",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "11d2c8",
+        "hash": "a3862aa0",
+        "encoded": "class%20CacheKeyRounding%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "11d2c8",
+        "hash": "a707eb0e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "11d2c8",
+        "hash": "d281c4c9",
+        "encoded": "@DisplayName(%22given%20two%20lat/lon%20pairs%20differing%20only%20beyond%20the%202nd%20decimal,%20when%20fetched%20twice,%20then%20the%20upstream%20is%20invoked%20only%20once%22)",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "11d2c8",
+        "hash": "41c230a1",
+        "encoded": "void%20givenLatLonDifferingBeyond2ndDecimal_whenFetchedTwice_thenUpstreamInvokedOnce()%20%7B",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "11d2c8",
+        "hash": "6f65c449",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "11d2c8",
+        "hash": "2cacaa2f",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "11d2c8",
+        "hash": "f1dec75f",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "11d2c8",
+        "hash": "9aefa7c2",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "11d2c8",
+        "hash": "bbfc3c9c",
+        "encoded": "when(positionClient.fetch()).thenReturn(",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "11d2c8",
+        "hash": "48ecfd51",
+        "encoded": "new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20clock.instant(),%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "11d2c8",
+        "hash": "15bc1bbe",
+        "encoded": "facade.getOverview(28.61391,%2077.20899,%20false);",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "11d2c8",
+        "hash": "8d5aab78",
+        "encoded": "facade.getOverview(28.61394,%2077.20901,%20false);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "11d2c8",
+        "hash": "99a5dd58",
+        "encoded": "verify(passesClient,%20Mockito.times(1)).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "11d2c8",
+        "hash": "f0775b50",
+        "encoded": "verify(cloudClient,%20Mockito.times(1)).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "11d2c8",
+        "hash": "5b361ecf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "11d2c8",
+        "hash": "62fb61d7",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "11d2c8",
+        "hash": "18a7777b",
+        "encoded": "@DisplayName(%22given%20lat/lon%20that%20rounds%20to%20negative%20zero,%20when%20the%20cache%20key%20is%20built,%20then%20it%20is%20normalised%20to%20the%20same%20key%20as%20positive%20zero%22)",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "11d2c8",
+        "hash": "32864575",
+        "encoded": "void%20givenLatLonRoundingToNegativeZero_whenCacheKeyBuilt_thenNormalisedToPositiveZero()%20%7B",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "11d2c8",
+        "hash": "24c5c9f6",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "11d2c8",
+        "hash": "f8021bf2",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "11d2c8",
+        "hash": "6465d9b9",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "11d2c8",
+        "hash": "297ce2d7",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "11d2c8",
+        "hash": "ae9a400d",
+        "encoded": "when(positionClient.fetch()).thenReturn(",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "11d2c8",
+        "hash": "2bc335d0",
+        "encoded": "new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20clock.instant(),%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "11d2c8",
+        "hash": "21adf510",
+        "encoded": "facade.getOverview(-0.001,%20-0.001,%20false);",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "11d2c8",
+        "hash": "f3029edd",
+        "encoded": "facade.getOverview(0.001,%200.001,%20false);",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "11d2c8",
+        "hash": "26abb332",
+        "encoded": "verify(passesClient,%20Mockito.times(1)).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "11d2c8",
+        "hash": "9bd82ff7",
+        "encoded": "verify(cloudClient,%20Mockito.times(1)).fetch(anyDouble(),%20anyDouble());",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "11d2c8",
+        "hash": "ed507790",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "11d2c8",
+        "hash": "e196358d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "11d2c8",
+        "hash": "248469ba",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "11d2c8",
+        "hash": "ffa9099b",
+        "encoded": "@DisplayName(%22per-pass%20enrichment%22)",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "11d2c8",
+        "hash": "d66c05a1",
+        "encoded": "class%20PerPassEnrichment%20%7B",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "11d2c8",
+        "hash": "032e6a25",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "11d2c8",
+        "hash": "2f2706de",
+        "encoded": "@DisplayName(%22given%20an%20observable%20pass%20and%20known%20cloud%20cover,%20when%20overview%20is%20requested,%20then%20both%20magnitude%20and%20cloud%20cover%20are%20populated%22)",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "11d2c8",
+        "hash": "9c9a2d5f",
+        "encoded": "void%20givenObservablePassAndKnownCloud_whenOverviewRequested_thenMagnitudeAndCloudPopulated()%20%7B",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "11d2c8",
+        "hash": "b1a41721",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "11d2c8",
+        "hash": "159a3255",
+        "encoded": "Instant%20visibleStart%20=%20now.plusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "11d2c8",
+        "hash": "b5f43898",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(300),%20visibleStart.plusSeconds(360),%20400,%2085.0);",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "11d2c8",
+        "hash": "9d14aa5a",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "11d2c8",
+        "hash": "5d4c61b6",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(pass),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "11d2c8",
+        "hash": "ed4e2ea2",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "11d2c8",
+        "hash": "9653d57b",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(visibleStart),%20List.of(15)));",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "11d2c8",
+        "hash": "572c3b1e",
+        "encoded": "when(positionClient.fetch()).thenReturn(new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "11d2c8",
+        "hash": "aacd6165",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "11d2c8",
+        "hash": "ea136232",
+        "encoded": "EnrichedPass%20enriched%20=%20overview.passes().get(0);",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "11d2c8",
+        "hash": "02d9b38e",
+        "encoded": "assertThat(enriched.magnitude()).isEqualTo(-3.5);",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "11d2c8",
+        "hash": "45eead27",
+        "encoded": "assertThat(enriched.cloudCoverPct()).isEqualTo(15);",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "11d2c8",
+        "hash": "2aa52ef0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "11d2c8",
+        "hash": "216f3a39",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "11d2c8",
+        "hash": "545c0042",
+        "encoded": "@DisplayName(%22given%20a%20non-observable%20pass,%20when%20overview%20is%20requested,%20then%20magnitude%20is%20null%20but%20cloud%20cover%20is%20still%20populated%22)",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "11d2c8",
+        "hash": "89447946",
+        "encoded": "void%20givenNonObservablePass_whenOverviewRequested_thenMagnitudeNullButCloudPopulated()%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "11d2c8",
+        "hash": "b325747e",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "11d2c8",
+        "hash": "da7fd12d",
+        "encoded": "Instant%20riseTime%20=%20now.plusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "11d2c8",
+        "hash": "0a94ccc1",
+        "encoded": "Pass%20nonObservable%20=%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "11d2c8",
+        "hash": "1ad21a57",
+        "encoded": "riseTime,%2010.0,%20%22N%22,",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "11d2c8",
+        "hash": "717da1de",
+        "encoded": "riseTime.plusSeconds(60),%2015.0,",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "11d2c8",
+        "hash": "43957c55",
+        "encoded": "riseTime.plusSeconds(120),%20200.0,%20%22S%22,",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "11d2c8",
+        "hash": "cc5e576b",
+        "encoded": "120,%20false,%20null,%20null,%200",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "11d2c8",
+        "hash": "69b18f0e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "11d2c8",
+        "hash": "b2c20753",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "11d2c8",
+        "hash": "af442926",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(nonObservable),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "11d2c8",
+        "hash": "ea270915",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "11d2c8",
+        "hash": "91330126",
+        "encoded": ".thenReturn(new%20CloudForecast(List.of(riseTime),%20List.of(40)));",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "11d2c8",
+        "hash": "3cdba59c",
+        "encoded": "when(positionClient.fetch()).thenReturn(new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "11d2c8",
+        "hash": "3cd3031b",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "11d2c8",
+        "hash": "6ce40b8e",
+        "encoded": "EnrichedPass%20enriched%20=%20overview.passes().get(0);",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "11d2c8",
+        "hash": "bbc5fd60",
+        "encoded": "assertThat(enriched.magnitude()).isNull();",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "11d2c8",
+        "hash": "74633426",
+        "encoded": "assertThat(enriched.cloudCoverPct()).isEqualTo(40);",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "11d2c8",
+        "hash": "3222a662",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "11d2c8",
+        "hash": "2eb2d005",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "11d2c8",
+        "hash": "491b1e22",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "11d2c8",
+        "hash": "c03069ef",
+        "encoded": "@DisplayName(%22concurrent%20upstream%20fetches%22)",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "11d2c8",
+        "hash": "118c60b2",
+        "encoded": "class%20ConcurrentUpstreamFetches%20%7B",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "11d2c8",
+        "hash": "2890d6b7",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "11d2c8",
+        "hash": "553782bd",
+        "encoded": "@DisplayName(%22given%20all%20three%20upstreams%20succeed,%20when%20overview%20is%20requested,%20then%20all%20three%20results%20are%20present%20and%20FRESH%22)",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "11d2c8",
+        "hash": "6f038a58",
+        "encoded": "void%20givenAllUpstreamsSucceed_whenOverviewRequested_thenAllFresh()%20%7B",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "11d2c8",
+        "hash": "290213ea",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "11d2c8",
+        "hash": "4dd8f4d5",
+        "encoded": "when(positionClient.fetch()).thenReturn(new%20IssPosition(1.0,%202.0,%20408.0,%2027000.0,%20now,%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "11d2c8",
+        "hash": "d6de3b09",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble())).thenReturn(new%20PassFeed(List.of(),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "11d2c8",
+        "hash": "48a45656",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble())).thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "11d2c8",
+        "hash": "88930043",
+        "encoded": "IssOverview%20overview%20=%20facade.getOverview(LAT,%20LON,%20false);",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "11d2c8",
+        "hash": "da68847d",
+        "encoded": "assertThat(overview.positionMeta().source().name()).isEqualTo(%22FRESH%22);",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "11d2c8",
+        "hash": "eba2cb3c",
+        "encoded": "assertThat(overview.passesMeta().meta().source().name()).isEqualTo(%22FRESH%22);",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "11d2c8",
+        "hash": "bda883f5",
+        "encoded": "assertThat(overview.cloudMeta().source().name()).isEqualTo(%22FRESH%22);",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "11d2c8",
+        "hash": "70d6c9f9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "11d2c8",
+        "hash": "d71f86cc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "11d2c8",
+        "hash": "522d2419",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

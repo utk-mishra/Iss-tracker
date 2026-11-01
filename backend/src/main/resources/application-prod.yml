@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: WARN
+    com.example.iss: INFO
+
+management:
+  endpoint:
+    health:
+      show-details: never

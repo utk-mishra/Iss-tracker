@@ -1,0 +1,31 @@
+{
+  "filename": "SecurityHeadersFilter.java",
+  "path": "backend/src/main/java/com/example/iss/api/SecurityHeadersFilter.java",
+  "version": "1.1",
+  "files": {
+    "59080d46": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            210
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "0f2fece0": {
+      "value": "Plan approved with these decisions and additions. Write tests first and show me the failing run before implementing each class. Do not touch resilience/, domain/, client/ unless you find a real bug (tell me first).\n\nDECISIONS\n1. Docs: NO new dependency and NO CDN. Serve openapi.yaml at /openapi.yaml and a small self-contained static /docs page (endpoint list, example curl commands, link to the spec). Offline mode must work.\n2. Rate limit: 120 requests/minute per IP, configurable (RATE_LIMIT_PER_"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

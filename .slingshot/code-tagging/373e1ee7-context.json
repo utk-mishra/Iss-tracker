@@ -1,0 +1,96 @@
+{
+  "filename": "application.yml",
+  "path": "backend/src/main/resources/application.yml",
+  "version": "1.1",
+  "files": {
+    "3f7e0600": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        }
+      ]
+    },
+    "737ca0c7": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        },
+        {
+          "programming_language": "YAML",
+          "fileName": "application.yml",
+          "relativeFilePath": "backend/src/main/resources/application.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            49
+          ]
+        }
+      ]
+    },
+    "e52f8671": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            217
+          ]
+        }
+      ]
+    },
+    "59080d46": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            210
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "1b4d9f38": {
+      "value": "Re-read CLAUDE.md and PROMPT.md (PROMPT.md was updated: see the STATUS block and section 5). Do Step 1 only. Restate which step you're on and which rules apply, then build it. Stop after Step 1 and wait for \"continue\"."
+    },
+    "8493eeec": {
+      "value": "continue. Re-read CLAUDE.md and PROMPT.md, then do Step 2 only (TtlCache and CircuitBreaker, tests first). Show me the failing tests before the implementation. Stop after Step 2."
+    },
+    "4ebaf7ba": {
+      "value": "Read CLAUDE.md and PROMPT.md in the project root, fully. PROMPT.md was just updated: see the STATUS block, section 4 (client structure), section 5 (compass, alerts) and section 12 (Step 5 decisions a-g). Steps 0-4 are done and committed. The Step 5 plan is APPROVED, so you may now write code.\n\nDo Step 5 ONLY, in this order:\n\n(a) Port fix first, as its own tiny change: application.yml server.port must default to 8080 (${PORT:8080}). Check that Dockerfile EXPOSE and HEALTHCHECK also use 8080. Run "
+    },
+    "0f2fece0": {
+      "value": "Plan approved with these decisions and additions. Write tests first and show me the failing run before implementing each class. Do not touch resilience/, domain/, client/ unless you find a real bug (tell me first).\n\nDECISIONS\n1. Docs: NO new dependency and NO CDN. Serve openapi.yaml at /openapi.yaml and a small self-contained static /docs page (endpoint list, example curl commands, link to the spec). Offline mode must work.\n2. Rate limit: 120 requests/minute per IP, configurable (RATE_LIMIT_PER_"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

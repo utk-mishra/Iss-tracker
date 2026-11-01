@@ -1,0 +1,42 @@
+{
+  "filename": "MutableClock.java",
+  "path": "backend/src/test/java/com/example/iss/resilience/MutableClock.java",
+  "version": "1.1",
+  "files": {
+    "737ca0c7": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        },
+        {
+          "programming_language": "YAML",
+          "fileName": "application.yml",
+          "relativeFilePath": "backend/src/main/resources/application.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            49
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "8493eeec": {
+      "value": "continue. Re-read CLAUDE.md and PROMPT.md, then do Step 2 only (TtlCache and CircuitBreaker, tests first). Show me the failing tests before the implementation. Stop after Step 2."
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,169 @@
+{
+  "frontend/tests/hooks/useOfflineToggle.test.js": {
+    "filename": "useOfflineToggle.test.js",
+    "path": "frontend/tests/hooks/useOfflineToggle.test.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5b820e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "76960385",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5b820e",
+        "hash": "a649e68a",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20beforeEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5b820e",
+        "hash": "22cb92c1",
+        "encoded": "import%20%7B%20renderHook,%20act%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5b820e",
+        "hash": "68f3defa",
+        "encoded": "import%20useOfflineToggle%20from%20'../../src/hooks/useOfflineToggle.js';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5b820e",
+        "hash": "7772dffa",
+        "encoded": "describe('useOfflineToggle',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5b820e",
+        "hash": "fc8f2efd",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5b820e",
+        "hash": "a33e20d5",
+        "encoded": "window.localStorage.clear();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5b820e",
+        "hash": "93b14583",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5b820e",
+        "hash": "534565d9",
+        "encoded": "it('given%20nothing%20stored,%20when%20initialised,%20then%20it%20defaults%20to%20false',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5b820e",
+        "hash": "bb58dab0",
+        "encoded": "const%20%7B%20result%20%7D%20=%20renderHook(()%20=%3E%20useOfflineToggle());",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5b820e",
+        "hash": "722614d9",
+        "encoded": "expect(result.current.offline).toBe(false);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5b820e",
+        "hash": "b83e12be",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5b820e",
+        "hash": "72909ca7",
+        "encoded": "it('given%20the%20toggle%20is%20set%20to%20true,%20when%20set,%20then%20it%20is%20persisted%20to%20localStorage',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5b820e",
+        "hash": "8faddfce",
+        "encoded": "const%20%7B%20result%20%7D%20=%20renderHook(()%20=%3E%20useOfflineToggle());",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5b820e",
+        "hash": "25934e79",
+        "encoded": "act(()%20=%3E%20result.current.setOffline(true));",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5b820e",
+        "hash": "6dadba5e",
+        "encoded": "expect(result.current.offline).toBe(true);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5b820e",
+        "hash": "1264125e",
+        "encoded": "expect(window.localStorage.getItem('iss-tracker:offline')).toBe('true');",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5b820e",
+        "hash": "675df099",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5b820e",
+        "hash": "2d9b022d",
+        "encoded": "it('given%20a%20previous%20session%20persisted%20offline=true,%20when%20re-initialised,%20then%20it%20restores%20true',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5b820e",
+        "hash": "d8c40721",
+        "encoded": "window.localStorage.setItem('iss-tracker:offline',%20'true');",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5b820e",
+        "hash": "70b884f2",
+        "encoded": "const%20%7B%20result%20%7D%20=%20renderHook(()%20=%3E%20useOfflineToggle());",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5b820e",
+        "hash": "00e4a2a3",
+        "encoded": "expect(result.current.offline).toBe(true);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5b820e",
+        "hash": "b991b7e1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5b820e",
+        "hash": "0322bb6d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

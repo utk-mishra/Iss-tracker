@@ -1,0 +1,49 @@
+{
+  "backend/src/main/java/com/example/iss/api/dto/PassesMetaDto.java": {
+    "filename": "PassesMetaDto.java",
+    "path": "backend/src/main/java/com/example/iss/api/dto/PassesMetaDto.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "718bbd": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "0be115b2",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "718bbd",
+        "hash": "f5994d6d",
+        "encoded": "package%20com.example.iss.api.dto;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "718bbd",
+        "hash": "abde20b6",
+        "encoded": "public%20record%20PassesMetaDto(UpstreamMetaDto%20meta,%20double%20tleAgeHours,%20boolean%20tleStale)%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "718bbd",
+        "hash": "973e69d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

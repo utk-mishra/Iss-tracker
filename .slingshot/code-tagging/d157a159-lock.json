@@ -1,0 +1,151 @@
+{
+  "backend/src/main/java/com/example/iss/api/dto/PassDto.java": {
+    "filename": "PassDto.java",
+    "path": "backend/src/main/java/com/example/iss/api/dto/PassDto.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8d7433": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "b7ed17af",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8d7433",
+        "hash": "f5994d6d",
+        "encoded": "package%20com.example.iss.api.dto;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8d7433",
+        "hash": "ad1b9b20",
+        "encoded": "public%20record%20PassDto(",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8d7433",
+        "hash": "24c5702e",
+        "encoded": "String%20rise,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8d7433",
+        "hash": "c9fcc69c",
+        "encoded": "String%20culmination,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8d7433",
+        "hash": "d0614af9",
+        "encoded": "String%20set,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8d7433",
+        "hash": "e3f09961",
+        "encoded": "long%20durationSec,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8d7433",
+        "hash": "42a2ff1d",
+        "encoded": "String%20riseDirection,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8d7433",
+        "hash": "e7c643c4",
+        "encoded": "double%20riseAzimuthDeg,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8d7433",
+        "hash": "17064f24",
+        "encoded": "String%20setDirection,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8d7433",
+        "hash": "50301297",
+        "encoded": "double%20setAzimuthDeg,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8d7433",
+        "hash": "0f6461cf",
+        "encoded": "double%20maxElevationDeg,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8d7433",
+        "hash": "4453a6e5",
+        "encoded": "boolean%20visible,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8d7433",
+        "hash": "cc4f72bb",
+        "encoded": "boolean%20observable,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8d7433",
+        "hash": "81efa19f",
+        "encoded": "String%20visibleStart,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8d7433",
+        "hash": "8bd810a8",
+        "encoded": "String%20visibleEnd,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8d7433",
+        "hash": "3c0200dd",
+        "encoded": "long%20visibleDurationSec,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8d7433",
+        "hash": "43d5ee58",
+        "encoded": "Double%20magnitude,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8d7433",
+        "hash": "09cfa88b",
+        "encoded": "Integer%20cloudCoverPct",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8d7433",
+        "hash": "3a526025",
+        "encoded": ")%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8d7433",
+        "hash": "acbf036f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

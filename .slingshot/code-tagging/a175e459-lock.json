@@ -1,0 +1,79 @@
+{
+  "backend/src/main/resources/application-dev.yml": {
+    "filename": "application-dev.yml",
+    "path": "backend/src/main/resources/application-dev.yml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a8996c": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793536725,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "1b4d9f38",
+          "files": "3f7e0600"
+        },
+        "hash": "69caf5e7",
+        "messageId": "system_a9f63bb0-d5f0-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:08:45\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a8996c",
+        "hash": "6dc13fd6",
+        "encoded": "logging:",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a8996c",
+        "hash": "a6a52ad6",
+        "encoded": "level:",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a8996c",
+        "hash": "e7d897b0",
+        "encoded": "root:%20INFO",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a8996c",
+        "hash": "2a3ef43d",
+        "encoded": "com.example.iss:%20DEBUG",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a8996c",
+        "hash": "16760554",
+        "encoded": "management:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a8996c",
+        "hash": "9e2fc6a1",
+        "encoded": "endpoint:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a8996c",
+        "hash": "635206a1",
+        "encoded": "health:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a8996c",
+        "hash": "a5fc95e1",
+        "encoded": "show-details:%20always",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

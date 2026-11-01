@@ -1,0 +1,109 @@
+{
+  "backend/src/main/java/com/example/iss/IssTrackerApplication.java": {
+    "filename": "IssTrackerApplication.java",
+    "path": "backend/src/main/java/com/example/iss/IssTrackerApplication.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "eef2c2": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793536725,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "1b4d9f38",
+          "files": "3f7e0600"
+        },
+        "hash": "93da5944",
+        "messageId": "system_a9f63bb0-d5f0-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:08:45\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "eef2c2",
+        "hash": "977a0484",
+        "encoded": "package%20com.example.iss;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "eef2c2",
+        "hash": "b2a739bd",
+        "encoded": "import%20org.springframework.boot.SpringApplication;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "eef2c2",
+        "hash": "93b94c0f",
+        "encoded": "import%20org.springframework.boot.autoconfigure.SpringBootApplication;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "eef2c2",
+        "hash": "b9fc3b5c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "eef2c2",
+        "hash": "0f050552",
+        "encoded": "*%20Entry%20point%20for%20the%20ISS%20Location%20&%20Pass%20Predictor%20backend.",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "eef2c2",
+        "hash": "b227610e",
+        "encoded": "*%20Serves%20the%20REST%20API%20and,%20in%20production,%20the%20bundled%20React%20static%20build%20on%20port%208080.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "eef2c2",
+        "hash": "11d7e9e0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "eef2c2",
+        "hash": "aed9d461",
+        "encoded": "@SpringBootApplication",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "eef2c2",
+        "hash": "9987d39f",
+        "encoded": "public%20class%20IssTrackerApplication%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "eef2c2",
+        "hash": "53d43102",
+        "encoded": "public%20static%20void%20main(String%5B%5D%20args)%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "eef2c2",
+        "hash": "b3cc9131",
+        "encoded": "SpringApplication.run(IssTrackerApplication.class,%20args);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "eef2c2",
+        "hash": "66d45cc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "eef2c2",
+        "hash": "c8f9d1c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

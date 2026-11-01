@@ -1,0 +1,357 @@
+{
+  "frontend/tests/App.test.jsx": {
+    "filename": "App.test.jsx",
+    "path": "frontend/tests/App.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "673810": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "8060e199",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "2cb5ca": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "7c428fc3",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "1c3f43": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "16cba650",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "1c3f43",
+        "hash": "c01c9563",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach,%20afterEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "1c3f43",
+        "hash": "654365ac",
+        "encoded": "import%20%7B%20render,%20screen,%20waitFor%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "1c3f43",
+        "hash": "921172ea",
+        "encoded": "import%20App%20from%20'../src/App.jsx';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "1c3f43",
+        "hash": "e6fa4800",
+        "encoded": "import%20*%20as%20client%20from%20'../src/api/client.js';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "1c3f43",
+        "hash": "07bdfe68",
+        "encoded": "import%20fixture%20from%20'./fixtures/overview-response.json';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "1c3f43",
+        "hash": "d5097a2f",
+        "encoded": "import%20noPassFixture%20from%20'./fixtures/overview-no-pass-response.json';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "1c3f43",
+        "hash": "a335a93a",
+        "encoded": "vi.mock('../src/api/client.js',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "1c3f43",
+        "hash": "d40ed3d5",
+        "encoded": "const%20actual%20=%20await%20vi.importActual('../src/api/client.js');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "1c3f43",
+        "hash": "bb1325b1",
+        "encoded": "return%20%7B%20...actual,%20fetchOverview:%20vi.fn(),%20fetchPosition:%20vi.fn()%20%7D;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "1c3f43",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "1c3f43",
+        "hash": "35a93a81",
+        "encoded": "describe('App%20(integration,%20real%20backend%20fixture)',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "1c3f43",
+        "hash": "3c17880c",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "1c3f43",
+        "hash": "7022febc",
+        "encoded": "vi.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1c3f43",
+        "hash": "50f57612",
+        "encoded": "window.localStorage.clear();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1c3f43",
+        "hash": "d505918b",
+        "encoded": "client.fetchPosition.mockResolvedValue(%7B%20position:%20fixture.position,%20meta:%20fixture.meta.position%20%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "1c3f43",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "1c3f43",
+        "hash": "de7293b9",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "1c3f43",
+        "hash": "d702b667",
+        "encoded": "vi.useRealTimers();",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "1c3f43",
+        "hash": "76a9f041",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "1c3f43",
+        "hash": "58ba7d26",
+        "encoded": "it('given%20the%20real%20/overview%20fixture%20with%20alerts,%20when%20the%20app%20loads,%20then%20alerts,%20badges%20and%20passes%20are%20rendered',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "1c3f43",
+        "hash": "25e4870b",
+        "encoded": "client.fetchOverview.mockResolvedValue(fixture);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "1c3f43",
+        "hash": "a17285a7",
+        "encoded": "render(%3CApp%20/%3E);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "1c3f43",
+        "hash": "2ddad132",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "1c3f43",
+        "hash": "c674326b",
+        "encoded": "expect(screen.getByText('ISS%20visible%20soon%20-%20Check%20sky%20in%20NW')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "1c3f43",
+        "hash": "b991b7e1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "1c3f43",
+        "hash": "1b01e567",
+        "encoded": "expect(screen.getAllByText('Fallback%20data').length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "1c3f43",
+        "hash": "595ed059",
+        "encoded": "expect(screen.getByText(/visible%20%5C(instant%5C)/i)).not.toBeNull;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "1c3f43",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "1c3f43",
+        "hash": "8c1a2f2c",
+        "encoded": "it('given%20the%20no-pass%20fixture,%20when%20the%20app%20loads,%20then%20the%20%22no%20visible%20pass%22%20message%20is%20shown%20and%20tleStale%20warning%20appears',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "1c3f43",
+        "hash": "d5b4012a",
+        "encoded": "client.fetchOverview.mockResolvedValue(noPassFixture);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "1c3f43",
+        "hash": "3117deec",
+        "encoded": "render(%3CApp%20/%3E);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "1c3f43",
+        "hash": "7f9c46ac",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "1c3f43",
+        "hash": "f7dfe116",
+        "encoded": "expect(screen.getByText('No%20visible%20pass%20in%20the%20returned%20predictions')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "1c3f43",
+        "hash": "6f909b24",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "1c3f43",
+        "hash": "096ba00d",
+        "encoded": "expect(screen.getByRole('alert',%20%7B%20name:%20''%20%7D)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "1c3f43",
+        "hash": "39fe36a7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "1c3f43",
+        "hash": "816d4a12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "2cb5ca",
+        "hash": "bebdf76a",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "2cb5ca",
+        "hash": "34dce1f4",
+        "encoded": "expect(screen.getByText('ISS%20visible%20soon%20-%20Check%20sky%20in%20NW')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "2cb5ca",
+        "hash": "1e68d63f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "2cb5ca",
+        "hash": "01c0fffa",
+        "encoded": "expect(screen.getAllByText('Fallback%20data').length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "2cb5ca",
+        "hash": "849a1492",
+        "encoded": "expect(screen.getAllByRole('row').length).toBeGreaterThan(1);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "2cb5ca",
+        "hash": "8d10f9ca",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "673810",
+        "hash": "0e34b496",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "673810",
+        "hash": "e114e03f",
+        "encoded": "expect(screen.getByText('No%20visible%20pass%20in%20the%20returned%20predictions')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "673810",
+        "hash": "2f7a06b9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "673810",
+        "hash": "7ece8547",
+        "encoded": "expect(screen.getByText(/TLE.*stale/i)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "673810",
+        "hash": "98569f06",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

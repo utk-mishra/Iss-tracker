@@ -1,0 +1,109 @@
+{
+  "backend/src/main/java/com/example/iss/resilience/Result.java": {
+    "filename": "Result.java",
+    "path": "backend/src/main/java/com/example/iss/resilience/Result.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "94a4c8": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538003,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4da4b984",
+          "files": "87c3b3ee"
+        },
+        "hash": "b8d833c7",
+        "messageId": "system_db72c5d0-d5f2-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:30:03\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "94a4c8",
+        "hash": "ad23dc91",
+        "encoded": "package%20com.example.iss.resilience;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "94a4c8",
+        "hash": "de3a3b47",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "94a4c8",
+        "hash": "18277e8e",
+        "encoded": "*%20Outcome%20of%20a%20%7B@link%20ResilientFetcher#fetch%7D%20call.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "94a4c8",
+        "hash": "eb596e7b",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "94a4c8",
+        "hash": "9a84b058",
+        "encoded": "*%20@param%20data%20%20%20the%20resolved%20value%20(live,%20cached,%20or%20mock)",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "94a4c8",
+        "hash": "236db729",
+        "encoded": "*%20@param%20source%20which%20degradation%20level%20produced%20%7B@code%20data%7D",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "94a4c8",
+        "hash": "536ab061",
+        "encoded": "*%20@param%20ageMs%20%20how%20old%20%7B@code%20data%7D%20is,%20in%20milliseconds,%20relative%20to%20the%20fetch%20time;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "94a4c8",
+        "hash": "9af97624",
+        "encoded": "*%20%20%20%20%20%20%20%20%20%20%20%20%20%20%200%20for%20freshly-fetched-from-upstream%20or%20MOCK%20data%20(a%20mock%20has%20no",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "94a4c8",
+        "hash": "494c6e32",
+        "encoded": "*%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20meaningful%20age).",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "94a4c8",
+        "hash": "cb171e00",
+        "encoded": "*%20@param%20%3CT%3E%20the%20type%20of%20the%20fetched%20value",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "94a4c8",
+        "hash": "c27421dc",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "94a4c8",
+        "hash": "3ed3ce72",
+        "encoded": "public%20record%20Result%3CT%3E(T%20data,%20Source%20source,%20long%20ageMs)%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "94a4c8",
+        "hash": "e683dcf7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

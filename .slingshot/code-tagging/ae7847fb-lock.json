@@ -1,0 +1,3206 @@
+{
+  "backend/src/test/java/com/example/iss/resilience/ResilientFetcherTest.java": {
+    "filename": "ResilientFetcherTest.java",
+    "path": "backend/src/test/java/com/example/iss/resilience/ResilientFetcherTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a36a9a": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793537980,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4da4b984",
+          "files": "87c3b3ee"
+        },
+        "hash": "f2b73865",
+        "messageId": "system_db72c5d0-d5f2-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:29:40\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "4bfa24": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538169,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4da4b984",
+          "files": "87c3b3ee"
+        },
+        "hash": "3479a88f",
+        "messageId": "system_db72c5d0-d5f2-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:32:49\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4bfa24",
+        "hash": "ad23dc91",
+        "encoded": "package%20com.example.iss.resilience;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4bfa24",
+        "hash": "ccf5397e",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4bfa24",
+        "hash": "30ce71d8",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "4bfa24",
+        "hash": "05e61be7",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "4bfa24",
+        "hash": "bb73e0ae",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "4bfa24",
+        "hash": "601f609b",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "4bfa24",
+        "hash": "27cc2e5b",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4bfa24",
+        "hash": "56ecddd2",
+        "encoded": "import%20java.util.concurrent.Callable;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4bfa24",
+        "hash": "94f19a31",
+        "encoded": "import%20java.util.concurrent.CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "4bfa24",
+        "hash": "327f5275",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "4bfa24",
+        "hash": "a0e10c5f",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "4bfa24",
+        "hash": "b01837b1",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "4bfa24",
+        "hash": "8e163d57",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "4bfa24",
+        "hash": "ece92f03",
+        "encoded": "*%20ResilientFetcher%3CT%3E:%20the%20single%20fallback%20chain%20every%20upstream%20call%20goes%20through.",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "4bfa24",
+        "hash": "64f91ca5",
+        "encoded": "*%20See%20PROMPT.md%20section%202%20(degradation%20table,%20TTL/max-stale)%20and%20section%209",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "4bfa24",
+        "hash": "b7475f34",
+        "encoded": "*%20(exact%20scenario%20list).%20All%20timing%20uses%20MutableClock;%20concurrency%20uses%20CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "4bfa24",
+        "hash": "e9f58b17",
+        "encoded": "*%20no%20Thread.sleep%20anywhere.",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "4bfa24",
+        "hash": "cc674971",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "4bfa24",
+        "hash": "fc865d96",
+        "encoded": "class%20ResilientFetcherTest%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "4bfa24",
+        "hash": "8f8d584d",
+        "encoded": "private%20static%20final%20Duration%20TTL%20=%20Duration.ofSeconds(5);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "4bfa24",
+        "hash": "65a7cc6c",
+        "encoded": "private%20static%20final%20Duration%20MAX_STALE%20=%20Duration.ofSeconds(60);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "4bfa24",
+        "hash": "3dba4819",
+        "encoded": "private%20static%20final%20int%20FAILURE_THRESHOLD%20=%203;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "4bfa24",
+        "hash": "9635c006",
+        "encoded": "private%20static%20final%20Duration%20COOLDOWN%20=%20Duration.ofSeconds(30);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "4bfa24",
+        "hash": "750b22ce",
+        "encoded": "private%20static%20final%20String%20KEY%20=%20%2228.61,77.21%22;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "4bfa24",
+        "hash": "de87a263",
+        "encoded": "private%20static%20final%20String%20MOCK_VALUE%20=%20%22MOCK-value%22;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "4bfa24",
+        "hash": "b41dae32",
+        "encoded": "private%20MutableClock%20clock;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "4bfa24",
+        "hash": "cbcc4e32",
+        "encoded": "private%20TtlCache%3CString%3E%20cache;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "4bfa24",
+        "hash": "2766b84b",
+        "encoded": "private%20CircuitBreaker%20breaker;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "4bfa24",
+        "hash": "a1baad64",
+        "encoded": "private%20SingleFlight%3CString%3E%20singleFlight;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "4bfa24",
+        "hash": "6aa52b1a",
+        "encoded": "private%20ResilientFetcher%3CString%3E%20fetcher;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "4bfa24",
+        "hash": "44aca50b",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "4bfa24",
+        "hash": "829bed1f",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "4bfa24",
+        "hash": "32b9bbb7",
+        "encoded": "clock%20=%20new%20MutableClock(Instant.parse(%222026-11-01T00:00:00Z%22));",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "4bfa24",
+        "hash": "2f7aea20",
+        "encoded": "cache%20=%20new%20TtlCache%3C%3E(clock,%20TTL,%20MAX_STALE,%20500);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "4bfa24",
+        "hash": "c3ad8a47",
+        "encoded": "breaker%20=%20new%20CircuitBreaker(clock,%20FAILURE_THRESHOLD,%20COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "4bfa24",
+        "hash": "f0bd36d4",
+        "encoded": "singleFlight%20=%20new%20SingleFlight%3C%3E();",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "4bfa24",
+        "hash": "8f18daa5",
+        "encoded": "fetcher%20=%20new%20ResilientFetcher%3C%3E(cache,%20breaker,%20singleFlight,%20clock,%201);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "4bfa24",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "4bfa24",
+        "hash": "23347e80",
+        "encoded": "private%20Callable%3CString%3E%20succeedingUpstream(String%20value)%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "4bfa24",
+        "hash": "8e235c86",
+        "encoded": "return%20()%20-%3E%20value;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "4bfa24",
+        "hash": "d90811a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "4bfa24",
+        "hash": "5904f80e",
+        "encoded": "private%20Callable%3CString%3E%20failingUpstream(AtomicInteger%20callCount)%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "4bfa24",
+        "hash": "6166e7d1",
+        "encoded": "return%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "4bfa24",
+        "hash": "b78f9133",
+        "encoded": "callCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "4bfa24",
+        "hash": "5090005e",
+        "encoded": "throw%20new%20RuntimeException(%22upstream%20down%22);",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "4bfa24",
+        "hash": "60ce3341",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "4bfa24",
+        "hash": "2ef1d392",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "4bfa24",
+        "hash": "bc56ed07",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "4bfa24",
+        "hash": "9bb38eba",
+        "encoded": "@DisplayName(%22success%20path%22)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "4bfa24",
+        "hash": "0b52d85c",
+        "encoded": "class%20SuccessPath%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "4bfa24",
+        "hash": "c12de78f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "4bfa24",
+        "hash": "0a3470b3",
+        "encoded": "@DisplayName(%22given%20an%20empty%20cache%20and%20a%20healthy%20upstream,%20when%20fetched,%20then%20result%20is%20FRESH%20and%20cache%20is%20populated%22)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "4bfa24",
+        "hash": "125f0057",
+        "encoded": "void%20givenEmptyCacheAndHealthyUpstream_whenFetched_thenFreshAndCachePopulated()%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "4bfa24",
+        "hash": "5c9565c1",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20succeedingUpstream(%22live-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "4bfa24",
+        "hash": "c536e387",
+        "encoded": "assertThat(result.data()).isEqualTo(%22live-value%22);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "4bfa24",
+        "hash": "8d469b74",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "4bfa24",
+        "hash": "577efe3c",
+        "encoded": "assertThat(result.ageMs()).isZero();",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "4bfa24",
+        "hash": "ac266759",
+        "encoded": "assertThat(cache.get(KEY)).isPresent();",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "4bfa24",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "4bfa24",
+        "hash": "d5ffe37e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "4bfa24",
+        "hash": "78adb41c",
+        "encoded": "@DisplayName(%22given%20a%20fresh%20cache%20entry%20within%20TTL,%20when%20fetched%20again,%20then%20result%20is%20FRESH%20from%20cache%20and%20upstream%20is%20not%20called%22)",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "4bfa24",
+        "hash": "26037cda",
+        "encoded": "void%20givenFreshCacheEntry_whenFetchedAgain_thenFreshFromCacheWithoutUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "4bfa24",
+        "hash": "fb34b4f3",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "4bfa24",
+        "hash": "adc1a23b",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "4bfa24",
+        "hash": "860bc9d3",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "4bfa24",
+        "hash": "2cfeafdc",
+        "encoded": "return%20%22live-value%22;",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "4bfa24",
+        "hash": "21de1fe7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "4bfa24",
+        "hash": "a8ca755f",
+        "encoded": "fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "4bfa24",
+        "hash": "cbcd89cd",
+        "encoded": "clock.advance(Duration.ofSeconds(1));",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "4bfa24",
+        "hash": "5b21973b",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "4bfa24",
+        "hash": "3117b722",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "4bfa24",
+        "hash": "b835cb4c",
+        "encoded": "assertThat(result.data()).isEqualTo(%22live-value%22);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "4bfa24",
+        "hash": "528a31a7",
+        "encoded": "assertThat(upstreamCalls.get()).isEqualTo(1);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "4bfa24",
+        "hash": "726efa75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "4bfa24",
+        "hash": "be432204",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "4bfa24",
+        "hash": "1629fae6",
+        "encoded": "@DisplayName(%22given%20upstream%20fails%20once%20then%20succeeds%20on%20retry,%20when%20fetched,%20then%20result%20is%20FRESH%22)",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "4bfa24",
+        "hash": "b9376b8f",
+        "encoded": "void%20givenUpstreamFailsOnceThenSucceeds_whenFetched_thenFresh()%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "4bfa24",
+        "hash": "9be73d98",
+        "encoded": "AtomicInteger%20attempts%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "4bfa24",
+        "hash": "451d62f9",
+        "encoded": "Callable%3CString%3E%20flaky%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "4bfa24",
+        "hash": "93c7b2d9",
+        "encoded": "if%20(attempts.incrementAndGet()%20==%201)%20%7B",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "4bfa24",
+        "hash": "2b093aeb",
+        "encoded": "throw%20new%20RuntimeException(%22transient%22);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "4bfa24",
+        "hash": "21cc0f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "4bfa24",
+        "hash": "ee3b2f73",
+        "encoded": "return%20%22recovered-value%22;",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "4bfa24",
+        "hash": "1ada558b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "4bfa24",
+        "hash": "37c67749",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20flaky,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "4bfa24",
+        "hash": "d253c7cf",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "4bfa24",
+        "hash": "8483d247",
+        "encoded": "assertThat(result.data()).isEqualTo(%22recovered-value%22);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "4bfa24",
+        "hash": "afc74c29",
+        "encoded": "assertThat(attempts.get()).isEqualTo(2);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "4bfa24",
+        "hash": "5a59cee7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "4bfa24",
+        "hash": "2290762e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "4bfa24",
+        "hash": "c397537a",
+        "encoded": "@DisplayName(%22given%20a%20successful%20fetch,%20when%20the%20breaker%20had%20prior%20failures,%20then%20the%20failure%20count%20resets%22)",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "4bfa24",
+        "hash": "6dd6b1c3",
+        "encoded": "void%20givenSuccessfulFetch_whenBreakerHadPriorFailures_thenFailureCountResets()%20%7B",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "4bfa24",
+        "hash": "135e403c",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "4bfa24",
+        "hash": "4722902e",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "4bfa24",
+        "hash": "37db3d5e",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "4bfa24",
+        "hash": "03bc5fc3",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "4bfa24",
+        "hash": "74859dd4",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22live-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "4bfa24",
+        "hash": "a4e1e102",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "4bfa24",
+        "hash": "9da1438d",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "4bfa24",
+        "hash": "2b91b6d4",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "4bfa24",
+        "hash": "bbb8ad4f",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "4bfa24",
+        "hash": "aa8bd8cc",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "4bfa24",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "4bfa24",
+        "hash": "331ddc52",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "4bfa24",
+        "hash": "32156412",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "4bfa24",
+        "hash": "701ea142",
+        "encoded": "@DisplayName(%22stale%20fallback%22)",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "4bfa24",
+        "hash": "f3a8db77",
+        "encoded": "class%20StaleFallback%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "4bfa24",
+        "hash": "94f59b31",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "4bfa24",
+        "hash": "57f4b338",
+        "encoded": "@DisplayName(%22given%20a%20stale%20cache%20entry%20within%20max-stale,%20when%20upstream%20fails,%20then%20result%20is%20STALE%20with%20the%20cached%20data%22)",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "4bfa24",
+        "hash": "6e5c4f28",
+        "encoded": "void%20givenStaleCacheEntryWithinMaxStale_whenUpstreamFails_thenStaleWithCachedData()%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "4bfa24",
+        "hash": "7528898c",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22old-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "4bfa24",
+        "hash": "a5cbee35",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "4bfa24",
+        "hash": "56268c23",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "4bfa24",
+        "hash": "f8aca14b",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "4bfa24",
+        "hash": "7daf6138",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "4bfa24",
+        "hash": "32121d6c",
+        "encoded": "assertThat(result.data()).isEqualTo(%22old-value%22);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "4bfa24",
+        "hash": "f4148736",
+        "encoded": "assertThat(result.ageMs()).isEqualTo(TTL.plusSeconds(1).toMillis());",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "4bfa24",
+        "hash": "1b2fde43",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "4bfa24",
+        "hash": "c706937b",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "4bfa24",
+        "hash": "84ba4c8f",
+        "encoded": "@DisplayName(%22given%20the%20circuit%20breaker%20is%20OPEN,%20when%20fetched%20with%20a%20stale%20cache%20entry,%20then%20result%20is%20STALE%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "4bfa24",
+        "hash": "e934f233",
+        "encoded": "void%20givenBreakerOpen_whenFetchedWithStaleCacheEntry_thenStaleWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "4bfa24",
+        "hash": "5a8b89c5",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22old-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "4bfa24",
+        "hash": "4a67f99d",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "4bfa24",
+        "hash": "a035ea01",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "4bfa24",
+        "hash": "c830f6ca",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "4bfa24",
+        "hash": "2f40473f",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "4bfa24",
+        "hash": "b03b59fa",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "4bfa24",
+        "hash": "aa541bda",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "4bfa24",
+        "hash": "1a86b765",
+        "encoded": "int%20callsBeforeNextFetch%20=%20failCount.get();",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "4bfa24",
+        "hash": "9d861262",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "4bfa24",
+        "hash": "4db543c0",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "4bfa24",
+        "hash": "c4a5bd50",
+        "encoded": "assertThat(result.data()).isEqualTo(%22old-value%22);",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "4bfa24",
+        "hash": "78fc12f4",
+        "encoded": "assertThat(failCount.get()).isEqualTo(callsBeforeNextFetch);",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "4bfa24",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "4bfa24",
+        "hash": "b205e858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "4bfa24",
+        "hash": "5803bcfa",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "4bfa24",
+        "hash": "267c7c76",
+        "encoded": "@DisplayName(%22mock%20fallback%22)",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "4bfa24",
+        "hash": "ae7fbae4",
+        "encoded": "class%20MockFallback%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "4bfa24",
+        "hash": "7e3bf870",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "4bfa24",
+        "hash": "b6c6aadf",
+        "encoded": "@DisplayName(%22given%20an%20empty%20cache%20and%20upstream%20fails,%20when%20fetched,%20then%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "4bfa24",
+        "hash": "10a705bc",
+        "encoded": "void%20givenEmptyCacheAndUpstreamFails_whenFetched_thenMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "4bfa24",
+        "hash": "fd12d833",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "4bfa24",
+        "hash": "abbe4399",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "4bfa24",
+        "hash": "3191d959",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "4bfa24",
+        "hash": "b3201184",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "4bfa24",
+        "hash": "2ad336fe",
+        "encoded": "assertThat(result.ageMs()).isZero();",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "4bfa24",
+        "hash": "dee02b44",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "4bfa24",
+        "hash": "a511794b",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "4bfa24",
+        "hash": "fca6b270",
+        "encoded": "@DisplayName(%22given%20a%20cache%20entry%20older%20than%20max-stale,%20when%20upstream%20fails,%20then%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "4bfa24",
+        "hash": "47312164",
+        "encoded": "void%20givenCacheEntryOlderThanMaxStale_whenUpstreamFails_thenMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "4bfa24",
+        "hash": "c93aa389",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22ancient-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "4bfa24",
+        "hash": "6471ad2c",
+        "encoded": "clock.advance(MAX_STALE.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "4bfa24",
+        "hash": "8df39488",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "4bfa24",
+        "hash": "cd90deec",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "4bfa24",
+        "hash": "ff17797f",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "4bfa24",
+        "hash": "d5a4670f",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "4bfa24",
+        "hash": "bd24004b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "4bfa24",
+        "hash": "8826be22",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "4bfa24",
+        "hash": "f2036c9a",
+        "encoded": "@DisplayName(%22given%20a%20MOCK%20result%20was%20returned,%20when%20fetched%20again%20later,%20then%20the%20mock%20value%20was%20never%20cached%22)",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "4bfa24",
+        "hash": "f041979d",
+        "encoded": "void%20givenMockResultReturned_whenFetchedAgainLater_thenMockValueNeverCached()%20%7B",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "4bfa24",
+        "hash": "4a764f2b",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "4bfa24",
+        "hash": "7591878e",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "4bfa24",
+        "hash": "8bc6dbf5",
+        "encoded": "assertThat(cache.get(KEY)).isEmpty();",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "4bfa24",
+        "hash": "3df17949",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "4bfa24",
+        "hash": "e8746c24",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20succeedingUpstream(%22finally-live%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "4bfa24",
+        "hash": "a85b7346",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "4bfa24",
+        "hash": "5b988590",
+        "encoded": "assertThat(result.data()).isEqualTo(%22finally-live%22);",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "4bfa24",
+        "hash": "d5064ca8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "4bfa24",
+        "hash": "5b361ecf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "4bfa24",
+        "hash": "1a294b33",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "4bfa24",
+        "hash": "0c066a32",
+        "encoded": "@DisplayName(%22forced%20offline%20mode%22)",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "4bfa24",
+        "hash": "163b6e65",
+        "encoded": "class%20ForcedOffline%20%7B",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "4bfa24",
+        "hash": "f29ba696",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "4bfa24",
+        "hash": "354d3575",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20no%20cache%20entry,%20when%20fetched,%20then%20result%20is%20MOCK%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "4bfa24",
+        "hash": "61fe29bc",
+        "encoded": "void%20givenOfflineAndNoCacheEntry_whenFetched_thenMockWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "4bfa24",
+        "hash": "3d06d0e6",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "4bfa24",
+        "hash": "72d803a1",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "4bfa24",
+        "hash": "4abb8c8f",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "4bfa24",
+        "hash": "9044791f",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "4bfa24",
+        "hash": "6e01f517",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "4bfa24",
+        "hash": "0207f0d8",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "4bfa24",
+        "hash": "99b148c6",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "4bfa24",
+        "hash": "5787b034",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "4bfa24",
+        "hash": "9192b8d3",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "4bfa24",
+        "hash": "6993302a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "4bfa24",
+        "hash": "47769bd7",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "4bfa24",
+        "hash": "2f337483",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20a%20cached%20entry%20still%20within%20TTL,%20when%20fetched,%20then%20result%20is%20STALE%20(not%20FRESH)%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "4bfa24",
+        "hash": "3e7dec2b",
+        "encoded": "void%20givenOfflineAndCachedEntryWithinTtl_whenFetched_thenStaleNotFreshWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "4bfa24",
+        "hash": "01a09d2e",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22cached-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "4bfa24",
+        "hash": "e2dca3f2",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "4bfa24",
+        "hash": "9a179c07",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "4bfa24",
+        "hash": "47a96758",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "4bfa24",
+        "hash": "a94b61c8",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "4bfa24",
+        "hash": "1f1b96c1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "4bfa24",
+        "hash": "81a3b68a",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "4bfa24",
+        "hash": "7d56694e",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "4bfa24",
+        "hash": "f7d02076",
+        "encoded": "assertThat(result.data()).isEqualTo(%22cached-value%22);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "4bfa24",
+        "hash": "28a8653d",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "4bfa24",
+        "hash": "5c5db35a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "4bfa24",
+        "hash": "93ec0015",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "4bfa24",
+        "hash": "a901cd61",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20a%20cached%20entry%20beyond%20max-stale,%20when%20fetched,%20then%20result%20is%20MOCK%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "4bfa24",
+        "hash": "357c2d44",
+        "encoded": "void%20givenOfflineAndCacheEntryBeyondMaxStale_whenFetched_thenMockWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "4bfa24",
+        "hash": "f208b8a7",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22ancient-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "4bfa24",
+        "hash": "f8f13de5",
+        "encoded": "clock.advance(MAX_STALE.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "4bfa24",
+        "hash": "030eb7b9",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "4bfa24",
+        "hash": "07ea0da5",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "4bfa24",
+        "hash": "1c34e912",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "4bfa24",
+        "hash": "e339f92d",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "4bfa24",
+        "hash": "4b015219",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "4bfa24",
+        "hash": "c6a39bfe",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "4bfa24",
+        "hash": "cbfe8f13",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "4bfa24",
+        "hash": "aaedfa63",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "4bfa24",
+        "hash": "5f0c467a",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "4bfa24",
+        "hash": "2b3722a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "4bfa24",
+        "hash": "f9e5f5b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "4bfa24",
+        "hash": "8606f0a4",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "4bfa24",
+        "hash": "04ce0cdb",
+        "encoded": "@DisplayName(%22circuit%20breaker%20integration%22)",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "4bfa24",
+        "hash": "c08a8067",
+        "encoded": "class%20CircuitBreakerIntegration%20%7B",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "4bfa24",
+        "hash": "51f61841",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "4bfa24",
+        "hash": "a4699d69",
+        "encoded": "@DisplayName(%22given%20the%20breaker%20is%20already%20OPEN,%20when%20fetched%20with%20no%20cache,%20then%20upstream%20is%20never%20invoked%20and%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "4bfa24",
+        "hash": "474fea26",
+        "encoded": "void%20givenBreakerOpenAndNoCache_whenFetched_thenUpstreamNeverInvokedAndMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "4bfa24",
+        "hash": "56d4ebd9",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "4bfa24",
+        "hash": "23e38c63",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "4bfa24",
+        "hash": "59e22d6f",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "4bfa24",
+        "hash": "50a244f2",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "4bfa24",
+        "hash": "90ee041f",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "4bfa24",
+        "hash": "e46c8f70",
+        "encoded": "int%20callsSoFar%20=%20failCount.get();",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "4bfa24",
+        "hash": "a108e86c",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "4bfa24",
+        "hash": "8c93d31f",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "4bfa24",
+        "hash": "8c9d0804",
+        "encoded": "assertThat(failCount.get()).isEqualTo(callsSoFar);",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "4bfa24",
+        "hash": "40b784f3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "4bfa24",
+        "hash": "c89f6ffc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "4bfa24",
+        "hash": "63328b33",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "4bfa24",
+        "hash": "d412bdd2",
+        "encoded": "@DisplayName(%22single-flight%20integration%22)",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "4bfa24",
+        "hash": "f322f48a",
+        "encoded": "class%20SingleFlightIntegration%20%7B",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "4bfa24",
+        "hash": "202a8351",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "4bfa24",
+        "hash": "24c6ab54",
+        "encoded": "@DisplayName(%22given%20concurrent%20fetches%20for%20the%20same%20key%20with%20an%20empty%20cache,%20when%20both%20resolve,%20then%20upstream%20is%20invoked%20exactly%20once%22)",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "4bfa24",
+        "hash": "1162a712",
+        "encoded": "void%20givenConcurrentFetchesSameKeyEmptyCache_whenResolved_thenUpstreamInvokedOnce()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "4bfa24",
+        "hash": "79753f54",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "4bfa24",
+        "hash": "a16e3d28",
+        "encoded": "CountDownLatch%20leaderEnteredUpstream%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "4bfa24",
+        "hash": "31e0d6bf",
+        "encoded": "CountDownLatch%20release%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "4bfa24",
+        "hash": "b32a0051",
+        "encoded": "Callable%3CString%3E%20slowUpstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "4bfa24",
+        "hash": "f623f0f7",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "4bfa24",
+        "hash": "a660ce0e",
+        "encoded": "leaderEnteredUpstream.countDown();",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "4bfa24",
+        "hash": "5d7d67a9",
+        "encoded": "release.await();",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "4bfa24",
+        "hash": "6426592e",
+        "encoded": "return%20%22shared-live-value%22;",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "4bfa24",
+        "hash": "24193658",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "4bfa24",
+        "hash": "d8375777",
+        "encoded": "Runnable%20fetchTask%20=%20()%20-%3E%20fetcher.fetch(KEY,%20slowUpstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "4bfa24",
+        "hash": "e9e7add7",
+        "encoded": "Thread%20t1%20=%20new%20Thread(fetchTask);",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "4bfa24",
+        "hash": "6febafcc",
+        "encoded": "Thread%20t2%20=%20new%20Thread(fetchTask);",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "4bfa24",
+        "hash": "4fe1aa2f",
+        "encoded": "t1.start();",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "4bfa24",
+        "hash": "c271907b",
+        "encoded": "assertThat(leaderEnteredUpstream.await(5,%20TimeUnit.SECONDS)).isTrue();",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "4bfa24",
+        "hash": "f163fdf8",
+        "encoded": "t2.start();",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "4bfa24",
+        "hash": "e49dd177",
+        "encoded": "//%20Give%20the%20follower%20a%20chance%20to%20reach%20the%20single-flight%20wait%20point%20before%20releasing",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "4bfa24",
+        "hash": "74eb12d4",
+        "encoded": "//%20the%20leader;%20this%20is%20a%20bounded%20join-free%20handoff,%20not%20a%20correctness%20dependency",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "4bfa24",
+        "hash": "2bee00eb",
+        "encoded": "//%20(dedup%20is%20verified%20below%20purely%20by%20call%20count,%20regardless%20of%20exact%20interleaving).",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "4bfa24",
+        "hash": "c50eb8a4",
+        "encoded": "release.countDown();",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "4bfa24",
+        "hash": "cd675285",
+        "encoded": "t1.join(5000);",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "4bfa24",
+        "hash": "10527039",
+        "encoded": "t2.join(5000);",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "4bfa24",
+        "hash": "a9a6a19c",
+        "encoded": "assertThat(upstreamCalls.get()).isEqualTo(1);",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "4bfa24",
+        "hash": "9e8092ac",
+        "encoded": "assertThat(cache.get(KEY)).isPresent();",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "4bfa24",
+        "hash": "b32432ec",
+        "encoded": "assertThat(cache.get(KEY).orElseThrow().value()).isEqualTo(%22shared-live-value%22);",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "4bfa24",
+        "hash": "ec4f700a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "4bfa24",
+        "hash": "97eb50be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "4bfa24",
+        "hash": "895a4ec6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "a36a9a",
+        "hash": "47e60640",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "a36a9a",
+        "hash": "2342f8e8",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "a36a9a",
+        "hash": "1885632d",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "a36a9a",
+        "hash": "0bf46adb",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "a36a9a",
+        "hash": "d16f866f",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "a36a9a",
+        "hash": "eecb4881",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "a36a9a",
+        "hash": "b3fcced3",
+        "encoded": "import%20java.util.concurrent.Callable;",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "a36a9a",
+        "hash": "804a9ba3",
+        "encoded": "import%20java.util.concurrent.CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "a36a9a",
+        "hash": "347f4a38",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "a36a9a",
+        "hash": "0e128ac2",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "a36a9a",
+        "hash": "2e16bd0e",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "a36a9a",
+        "hash": "886d4578",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "a36a9a",
+        "hash": "6419d4ee",
+        "encoded": "*%20ResilientFetcher%3CT%3E:%20the%20single%20fallback%20chain%20every%20upstream%20call%20goes%20through.",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "a36a9a",
+        "hash": "c98f658e",
+        "encoded": "*%20See%20PROMPT.md%20section%202%20(degradation%20table,%20TTL/max-stale)%20and%20section%209",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "a36a9a",
+        "hash": "0dde8737",
+        "encoded": "*%20(exact%20scenario%20list).%20All%20timing%20uses%20MutableClock;%20concurrency%20uses%20CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "a36a9a",
+        "hash": "cb4fdb98",
+        "encoded": "*%20no%20Thread.sleep%20anywhere.",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "a36a9a",
+        "hash": "729750fa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "a36a9a",
+        "hash": "4707e978",
+        "encoded": "class%20ResilientFetcherTest%20%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "a36a9a",
+        "hash": "e761940c",
+        "encoded": "private%20static%20final%20Duration%20TTL%20=%20Duration.ofSeconds(5);",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "a36a9a",
+        "hash": "af4dc57a",
+        "encoded": "private%20static%20final%20Duration%20MAX_STALE%20=%20Duration.ofSeconds(60);",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "a36a9a",
+        "hash": "3fb5790e",
+        "encoded": "private%20static%20final%20int%20FAILURE_THRESHOLD%20=%203;",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "a36a9a",
+        "hash": "1d868e63",
+        "encoded": "private%20static%20final%20Duration%20COOLDOWN%20=%20Duration.ofSeconds(30);",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "a36a9a",
+        "hash": "febc7f5b",
+        "encoded": "private%20static%20final%20String%20KEY%20=%20%2228.61,77.21%22;",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "a36a9a",
+        "hash": "10b5e4ab",
+        "encoded": "private%20static%20final%20String%20MOCK_VALUE%20=%20%22MOCK-value%22;",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "a36a9a",
+        "hash": "c0221693",
+        "encoded": "private%20MutableClock%20clock;",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "a36a9a",
+        "hash": "94ff65f1",
+        "encoded": "private%20TtlCache%3CString%3E%20cache;",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "a36a9a",
+        "hash": "95bff55a",
+        "encoded": "private%20CircuitBreaker%20breaker;",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "a36a9a",
+        "hash": "2cd8c8be",
+        "encoded": "private%20SingleFlight%3CString%3E%20singleFlight;",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "a36a9a",
+        "hash": "e0064afb",
+        "encoded": "private%20ResilientFetcher%3CString%3E%20fetcher;",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "a36a9a",
+        "hash": "653567fd",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "a36a9a",
+        "hash": "9ae08315",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "a36a9a",
+        "hash": "d5185687",
+        "encoded": "clock%20=%20new%20MutableClock(Instant.parse(%222026-11-01T00:00:00Z%22));",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "a36a9a",
+        "hash": "3400db30",
+        "encoded": "cache%20=%20new%20TtlCache%3C%3E(clock,%20TTL,%20MAX_STALE,%20500);",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "a36a9a",
+        "hash": "65a1e05f",
+        "encoded": "breaker%20=%20new%20CircuitBreaker(clock,%20FAILURE_THRESHOLD,%20COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "a36a9a",
+        "hash": "0c7a7af7",
+        "encoded": "singleFlight%20=%20new%20SingleFlight%3C%3E();",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "a36a9a",
+        "hash": "44cc5877",
+        "encoded": "fetcher%20=%20new%20ResilientFetcher%3C%3E(cache,%20breaker,%20singleFlight,%20clock,%201);",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "a36a9a",
+        "hash": "4d8336e7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "a36a9a",
+        "hash": "34dcad94",
+        "encoded": "private%20Callable%3CString%3E%20succeedingUpstream(String%20value)%20%7B",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "a36a9a",
+        "hash": "8717318f",
+        "encoded": "return%20()%20-%3E%20value;",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "a36a9a",
+        "hash": "a1b1e08b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "a36a9a",
+        "hash": "054f33db",
+        "encoded": "private%20Callable%3CString%3E%20failingUpstream(AtomicInteger%20callCount)%20%7B",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "a36a9a",
+        "hash": "130140f4",
+        "encoded": "return%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "a36a9a",
+        "hash": "78b2533f",
+        "encoded": "callCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "a36a9a",
+        "hash": "bf338f32",
+        "encoded": "throw%20new%20RuntimeException(%22upstream%20down%22);",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "a36a9a",
+        "hash": "dd22c47a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "a36a9a",
+        "hash": "90600561",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "a36a9a",
+        "hash": "741c3ee4",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "a36a9a",
+        "hash": "f9276d61",
+        "encoded": "@DisplayName(%22success%20path%22)",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "a36a9a",
+        "hash": "72c93bbb",
+        "encoded": "class%20SuccessPath%20%7B",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "a36a9a",
+        "hash": "327cb026",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "a36a9a",
+        "hash": "78a224f3",
+        "encoded": "@DisplayName(%22given%20an%20empty%20cache%20and%20a%20healthy%20upstream,%20when%20fetched,%20then%20result%20is%20FRESH%20and%20cache%20is%20populated%22)",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "a36a9a",
+        "hash": "3d3d388e",
+        "encoded": "void%20givenEmptyCacheAndHealthyUpstream_whenFetched_thenFreshAndCachePopulated()%20%7B",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "a36a9a",
+        "hash": "070ec537",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20succeedingUpstream(%22live-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "a36a9a",
+        "hash": "4d365170",
+        "encoded": "assertThat(result.data()).isEqualTo(%22live-value%22);",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "a36a9a",
+        "hash": "c4791d99",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "a36a9a",
+        "hash": "fabe63c2",
+        "encoded": "assertThat(result.ageMs()).isZero();",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "a36a9a",
+        "hash": "e3f196a3",
+        "encoded": "assertThat(cache.get(KEY)).isPresent();",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "a36a9a",
+        "hash": "d0aadab5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "a36a9a",
+        "hash": "a8628dad",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "a36a9a",
+        "hash": "8af76d95",
+        "encoded": "@DisplayName(%22given%20a%20fresh%20cache%20entry%20within%20TTL,%20when%20fetched%20again,%20then%20result%20is%20FRESH%20from%20cache%20and%20upstream%20is%20not%20called%22)",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "a36a9a",
+        "hash": "b9780461",
+        "encoded": "void%20givenFreshCacheEntry_whenFetchedAgain_thenFreshFromCacheWithoutUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "a36a9a",
+        "hash": "e4584b2a",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "a36a9a",
+        "hash": "c51bdba8",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "a36a9a",
+        "hash": "0d25b8af",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "a36a9a",
+        "hash": "098eef3d",
+        "encoded": "return%20%22live-value%22;",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "a36a9a",
+        "hash": "47b309c5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "a36a9a",
+        "hash": "6a03958d",
+        "encoded": "fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "a36a9a",
+        "hash": "07ada4fc",
+        "encoded": "clock.advance(Duration.ofSeconds(1));",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "a36a9a",
+        "hash": "18add971",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "a36a9a",
+        "hash": "ad6a4b42",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "a36a9a",
+        "hash": "ac54f1a8",
+        "encoded": "assertThat(result.data()).isEqualTo(%22live-value%22);",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "a36a9a",
+        "hash": "0711fa4b",
+        "encoded": "assertThat(upstreamCalls.get()).isEqualTo(1);",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "a36a9a",
+        "hash": "520cc2b9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "a36a9a",
+        "hash": "4d9e5831",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "a36a9a",
+        "hash": "c2a21993",
+        "encoded": "@DisplayName(%22given%20upstream%20fails%20once%20then%20succeeds%20on%20retry,%20when%20fetched,%20then%20result%20is%20FRESH%22)",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "a36a9a",
+        "hash": "814f93bc",
+        "encoded": "void%20givenUpstreamFailsOnceThenSucceeds_whenFetched_thenFresh()%20%7B",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "a36a9a",
+        "hash": "b4871f61",
+        "encoded": "AtomicInteger%20attempts%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "a36a9a",
+        "hash": "a39dbb8c",
+        "encoded": "Callable%3CString%3E%20flaky%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "a36a9a",
+        "hash": "8e612aad",
+        "encoded": "if%20(attempts.incrementAndGet()%20==%201)%20%7B",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "a36a9a",
+        "hash": "4f2c85e0",
+        "encoded": "throw%20new%20RuntimeException(%22transient%22);",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "a36a9a",
+        "hash": "6195f359",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "a36a9a",
+        "hash": "de69af36",
+        "encoded": "return%20%22recovered-value%22;",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "a36a9a",
+        "hash": "aa13f615",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "a36a9a",
+        "hash": "e317400f",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20flaky,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "a36a9a",
+        "hash": "85be89ad",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "a36a9a",
+        "hash": "6dfaf89f",
+        "encoded": "assertThat(result.data()).isEqualTo(%22recovered-value%22);",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "a36a9a",
+        "hash": "4062e755",
+        "encoded": "assertThat(attempts.get()).isEqualTo(2);",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "a36a9a",
+        "hash": "c20a5f2e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "a36a9a",
+        "hash": "64861b80",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "a36a9a",
+        "hash": "db9df9d6",
+        "encoded": "@DisplayName(%22given%20a%20successful%20fetch,%20when%20the%20breaker%20had%20prior%20failures,%20then%20the%20failure%20count%20resets%22)",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "a36a9a",
+        "hash": "23cb6ee9",
+        "encoded": "void%20givenSuccessfulFetch_whenBreakerHadPriorFailures_thenFailureCountResets()%20%7B",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "a36a9a",
+        "hash": "5c4aa005",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "a36a9a",
+        "hash": "647548a2",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "a36a9a",
+        "hash": "e8b017ab",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "a36a9a",
+        "hash": "faf4836e",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "a36a9a",
+        "hash": "67d34d7b",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22live-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "a36a9a",
+        "hash": "cd6c48fe",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "a36a9a",
+        "hash": "987b4ac9",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "a36a9a",
+        "hash": "0a7e592b",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "a36a9a",
+        "hash": "6a1737e7",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "a36a9a",
+        "hash": "dff93efe",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "a36a9a",
+        "hash": "b46dfc3f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "a36a9a",
+        "hash": "502dbde5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "a36a9a",
+        "hash": "3d8d79fa",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "a36a9a",
+        "hash": "4d7545a4",
+        "encoded": "@DisplayName(%22stale%20fallback%22)",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "a36a9a",
+        "hash": "d40ba487",
+        "encoded": "class%20StaleFallback%20%7B",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "a36a9a",
+        "hash": "e09f50a1",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "a36a9a",
+        "hash": "b084773e",
+        "encoded": "@DisplayName(%22given%20a%20stale%20cache%20entry%20within%20max-stale,%20when%20upstream%20fails,%20then%20result%20is%20STALE%20with%20the%20cached%20data%22)",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "a36a9a",
+        "hash": "4b592e0b",
+        "encoded": "void%20givenStaleCacheEntryWithinMaxStale_whenUpstreamFails_thenStaleWithCachedData()%20%7B",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "a36a9a",
+        "hash": "87b954f2",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22old-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "a36a9a",
+        "hash": "f8b0694f",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "a36a9a",
+        "hash": "1bdcfbc0",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "a36a9a",
+        "hash": "adb7d4ec",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "a36a9a",
+        "hash": "9fee3bbc",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "a36a9a",
+        "hash": "459781a8",
+        "encoded": "assertThat(result.data()).isEqualTo(%22old-value%22);",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "a36a9a",
+        "hash": "94d02c47",
+        "encoded": "assertThat(result.ageMs()).isEqualTo(TTL.plusSeconds(1).toMillis());",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "a36a9a",
+        "hash": "b66c11d8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "a36a9a",
+        "hash": "a223c7cc",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "a36a9a",
+        "hash": "72e8e5f9",
+        "encoded": "@DisplayName(%22given%20the%20circuit%20breaker%20is%20OPEN,%20when%20fetched%20with%20a%20stale%20cache%20entry,%20then%20result%20is%20STALE%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "a36a9a",
+        "hash": "3d3c8d0a",
+        "encoded": "void%20givenBreakerOpen_whenFetchedWithStaleCacheEntry_thenStaleWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "a36a9a",
+        "hash": "57674326",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22old-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "a36a9a",
+        "hash": "db880d81",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "a36a9a",
+        "hash": "7fe68fde",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "a36a9a",
+        "hash": "889531f2",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "a36a9a",
+        "hash": "7378b432",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "a36a9a",
+        "hash": "c7a8baf4",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "a36a9a",
+        "hash": "104b24cc",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "a36a9a",
+        "hash": "f5b630b5",
+        "encoded": "int%20callsBeforeNextFetch%20=%20failCount.get();",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "a36a9a",
+        "hash": "6f3a9149",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "a36a9a",
+        "hash": "a23d677d",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "a36a9a",
+        "hash": "16953311",
+        "encoded": "assertThat(result.data()).isEqualTo(%22old-value%22);",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "a36a9a",
+        "hash": "1cb79d28",
+        "encoded": "assertThat(failCount.get()).isEqualTo(callsBeforeNextFetch);",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "a36a9a",
+        "hash": "58e03eb2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "a36a9a",
+        "hash": "ded6c097",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "a36a9a",
+        "hash": "4d5d9aee",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "a36a9a",
+        "hash": "4a167b45",
+        "encoded": "@DisplayName(%22mock%20fallback%22)",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "a36a9a",
+        "hash": "5c376de9",
+        "encoded": "class%20MockFallback%20%7B",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "a36a9a",
+        "hash": "8daa114d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "a36a9a",
+        "hash": "43d94758",
+        "encoded": "@DisplayName(%22given%20an%20empty%20cache%20and%20upstream%20fails,%20when%20fetched,%20then%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "a36a9a",
+        "hash": "107ba586",
+        "encoded": "void%20givenEmptyCacheAndUpstreamFails_whenFetched_thenMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "a36a9a",
+        "hash": "f2e2c94a",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "a36a9a",
+        "hash": "cf08c403",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "a36a9a",
+        "hash": "b5755a7b",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "a36a9a",
+        "hash": "bc3e5b33",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "a36a9a",
+        "hash": "a837aa69",
+        "encoded": "assertThat(result.ageMs()).isZero();",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "a36a9a",
+        "hash": "8e24bd9a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "a36a9a",
+        "hash": "eecfab86",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "a36a9a",
+        "hash": "98769ee8",
+        "encoded": "@DisplayName(%22given%20a%20cache%20entry%20older%20than%20max-stale,%20when%20upstream%20fails,%20then%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "a36a9a",
+        "hash": "5b9da87a",
+        "encoded": "void%20givenCacheEntryOlderThanMaxStale_whenUpstreamFails_thenMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "a36a9a",
+        "hash": "0f9a7005",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22ancient-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "a36a9a",
+        "hash": "9054b4ba",
+        "encoded": "clock.advance(MAX_STALE.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "a36a9a",
+        "hash": "f3287893",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "a36a9a",
+        "hash": "8c3fc2d0",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "a36a9a",
+        "hash": "955e7f10",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "a36a9a",
+        "hash": "c00bbab8",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "a36a9a",
+        "hash": "27ee0bdd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "a36a9a",
+        "hash": "cd395e05",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "a36a9a",
+        "hash": "98a8bbb5",
+        "encoded": "@DisplayName(%22given%20a%20MOCK%20result%20was%20returned,%20when%20fetched%20again%20later,%20then%20the%20mock%20value%20was%20never%20cached%22)",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "a36a9a",
+        "hash": "d21e0b5c",
+        "encoded": "void%20givenMockResultReturned_whenFetchedAgainLater_thenMockValueNeverCached()%20%7B",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "a36a9a",
+        "hash": "b47c0c04",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "a36a9a",
+        "hash": "661459a0",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "a36a9a",
+        "hash": "5e0bfe08",
+        "encoded": "assertThat(cache.get(KEY)).isEmpty();",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "a36a9a",
+        "hash": "35d9a5b5",
+        "encoded": "clock.advance(TTL.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "a36a9a",
+        "hash": "a62fc551",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20succeedingUpstream(%22finally-live%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "a36a9a",
+        "hash": "540d4974",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.FRESH);",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "a36a9a",
+        "hash": "3d719fde",
+        "encoded": "assertThat(result.data()).isEqualTo(%22finally-live%22);",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "a36a9a",
+        "hash": "56372730",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "a36a9a",
+        "hash": "bc41186d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "a36a9a",
+        "hash": "61e42870",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "a36a9a",
+        "hash": "852566fc",
+        "encoded": "@DisplayName(%22forced%20offline%20mode%22)",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "a36a9a",
+        "hash": "75c90874",
+        "encoded": "class%20ForcedOffline%20%7B",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "a36a9a",
+        "hash": "37d77cae",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "a36a9a",
+        "hash": "2599ead1",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20no%20cache%20entry,%20when%20fetched,%20then%20result%20is%20MOCK%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "a36a9a",
+        "hash": "663daa31",
+        "encoded": "void%20givenOfflineAndNoCacheEntry_whenFetched_thenMockWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "a36a9a",
+        "hash": "9bd710c7",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "a36a9a",
+        "hash": "f2fc6eb2",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "a36a9a",
+        "hash": "6a197bf2",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "a36a9a",
+        "hash": "934f49df",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "a36a9a",
+        "hash": "f4267df0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "a36a9a",
+        "hash": "769b0b18",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "551": {
+        "chunkId": "a36a9a",
+        "hash": "9800c3cf",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "a36a9a",
+        "hash": "63987157",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "a36a9a",
+        "hash": "cb584822",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "a36a9a",
+        "hash": "39e5bbe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "a36a9a",
+        "hash": "0beaa8f8",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "a36a9a",
+        "hash": "215bdcc3",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20a%20cached%20entry%20still%20within%20TTL,%20when%20fetched,%20then%20result%20is%20STALE%20(not%20FRESH)%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "a36a9a",
+        "hash": "89b97a0a",
+        "encoded": "void%20givenOfflineAndCachedEntryWithinTtl_whenFetched_thenStaleNotFreshWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "a36a9a",
+        "hash": "d6091327",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22cached-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "a36a9a",
+        "hash": "576d97d0",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "a36a9a",
+        "hash": "8a1d9a4d",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "a36a9a",
+        "hash": "bc25c9eb",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "a36a9a",
+        "hash": "7fa8c2e7",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "a36a9a",
+        "hash": "7c9c8da1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "a36a9a",
+        "hash": "a921a3ff",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "a36a9a",
+        "hash": "a83fec0a",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.STALE);",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "a36a9a",
+        "hash": "a3d53767",
+        "encoded": "assertThat(result.data()).isEqualTo(%22cached-value%22);",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "a36a9a",
+        "hash": "ec3462de",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "a36a9a",
+        "hash": "8fa727d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "a36a9a",
+        "hash": "9f3faadf",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "a36a9a",
+        "hash": "18fc98ea",
+        "encoded": "@DisplayName(%22given%20offline=true%20and%20a%20cached%20entry%20beyond%20max-stale,%20when%20fetched,%20then%20result%20is%20MOCK%20and%20upstream%20is%20never%20invoked%22)",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "a36a9a",
+        "hash": "ae64f2bf",
+        "encoded": "void%20givenOfflineAndCacheEntryBeyondMaxStale_whenFetched_thenMockWithoutInvokingUpstream()%20%7B",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "a36a9a",
+        "hash": "9d68d1eb",
+        "encoded": "fetcher.fetch(KEY,%20succeedingUpstream(%22ancient-value%22),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "a36a9a",
+        "hash": "a5b6e755",
+        "encoded": "clock.advance(MAX_STALE.plusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "a36a9a",
+        "hash": "def185a2",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "581": {
+        "chunkId": "a36a9a",
+        "hash": "1140010b",
+        "encoded": "Callable%3CString%3E%20upstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "a36a9a",
+        "hash": "3f22ace3",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "a36a9a",
+        "hash": "7a49521c",
+        "encoded": "return%20%22should-never-be-returned%22;",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "a36a9a",
+        "hash": "034ac7c3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "a36a9a",
+        "hash": "b3d93498",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20upstream,%20()%20-%3E%20MOCK_VALUE,%20true);",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "a36a9a",
+        "hash": "46dab0d4",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "a36a9a",
+        "hash": "5a421c21",
+        "encoded": "assertThat(result.data()).isEqualTo(MOCK_VALUE);",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "a36a9a",
+        "hash": "89ffd325",
+        "encoded": "assertThat(upstreamCalls.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "a36a9a",
+        "hash": "bb414505",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "a36a9a",
+        "hash": "081419dd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "a36a9a",
+        "hash": "58648bf0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "a36a9a",
+        "hash": "ebc8b00e",
+        "encoded": "@DisplayName(%22circuit%20breaker%20integration%22)",
+        "prevChunkIds": []
+      },
+      "596": {
+        "chunkId": "a36a9a",
+        "hash": "e6d3632b",
+        "encoded": "class%20CircuitBreakerIntegration%20%7B",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "a36a9a",
+        "hash": "b2d39481",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "a36a9a",
+        "hash": "95680c41",
+        "encoded": "@DisplayName(%22given%20the%20breaker%20is%20already%20OPEN,%20when%20fetched%20with%20no%20cache,%20then%20upstream%20is%20never%20invoked%20and%20result%20is%20MOCK%22)",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "a36a9a",
+        "hash": "eeab90f8",
+        "encoded": "void%20givenBreakerOpenAndNoCache_whenFetched_thenUpstreamNeverInvokedAndMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "601": {
+        "chunkId": "a36a9a",
+        "hash": "25df15b6",
+        "encoded": "AtomicInteger%20failCount%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "a36a9a",
+        "hash": "3cd2054b",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "603": {
+        "chunkId": "a36a9a",
+        "hash": "e91f21de",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "604": {
+        "chunkId": "a36a9a",
+        "hash": "65f02dd6",
+        "encoded": "fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "605": {
+        "chunkId": "a36a9a",
+        "hash": "5cff169a",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "607": {
+        "chunkId": "a36a9a",
+        "hash": "171af3ca",
+        "encoded": "int%20callsSoFar%20=%20failCount.get();",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "a36a9a",
+        "hash": "f7f51a9f",
+        "encoded": "Result%3CString%3E%20result%20=%20fetcher.fetch(KEY,%20failingUpstream(failCount),%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "610": {
+        "chunkId": "a36a9a",
+        "hash": "f4bc21b2",
+        "encoded": "assertThat(result.source()).isEqualTo(Source.MOCK);",
+        "prevChunkIds": []
+      },
+      "611": {
+        "chunkId": "a36a9a",
+        "hash": "1789dd18",
+        "encoded": "assertThat(failCount.get()).isEqualTo(callsSoFar);",
+        "prevChunkIds": []
+      },
+      "612": {
+        "chunkId": "a36a9a",
+        "hash": "b5404a33",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "a36a9a",
+        "hash": "5d61ef76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "615": {
+        "chunkId": "a36a9a",
+        "hash": "36bc12dd",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "a36a9a",
+        "hash": "06cb81bf",
+        "encoded": "@DisplayName(%22single-flight%20integration%22)",
+        "prevChunkIds": []
+      },
+      "617": {
+        "chunkId": "a36a9a",
+        "hash": "6b505d0d",
+        "encoded": "class%20SingleFlightIntegration%20%7B",
+        "prevChunkIds": []
+      },
+      "619": {
+        "chunkId": "a36a9a",
+        "hash": "4deecd81",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "620": {
+        "chunkId": "a36a9a",
+        "hash": "2fc6ef0c",
+        "encoded": "@DisplayName(%22given%20concurrent%20fetches%20for%20the%20same%20key%20with%20an%20empty%20cache,%20when%20both%20resolve,%20then%20upstream%20is%20invoked%20exactly%20once%22)",
+        "prevChunkIds": []
+      },
+      "621": {
+        "chunkId": "a36a9a",
+        "hash": "e473674f",
+        "encoded": "void%20givenConcurrentFetchesSameKeyEmptyCache_whenResolved_thenUpstreamInvokedOnce()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "622": {
+        "chunkId": "a36a9a",
+        "hash": "81b120f9",
+        "encoded": "AtomicInteger%20upstreamCalls%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "623": {
+        "chunkId": "a36a9a",
+        "hash": "7f24ea48",
+        "encoded": "CountDownLatch%20bothStarted%20=%20new%20CountDownLatch(2);",
+        "prevChunkIds": []
+      },
+      "624": {
+        "chunkId": "a36a9a",
+        "hash": "571a0f77",
+        "encoded": "CountDownLatch%20release%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "625": {
+        "chunkId": "a36a9a",
+        "hash": "00a01838",
+        "encoded": "Callable%3CString%3E%20slowUpstream%20=%20()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "626": {
+        "chunkId": "a36a9a",
+        "hash": "a3c19fab",
+        "encoded": "upstreamCalls.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "627": {
+        "chunkId": "a36a9a",
+        "hash": "c8312d64",
+        "encoded": "bothStarted.countDown();",
+        "prevChunkIds": []
+      },
+      "628": {
+        "chunkId": "a36a9a",
+        "hash": "119f92ed",
+        "encoded": "release.await();",
+        "prevChunkIds": []
+      },
+      "629": {
+        "chunkId": "a36a9a",
+        "hash": "c4d0ca2b",
+        "encoded": "return%20%22shared-live-value%22;",
+        "prevChunkIds": []
+      },
+      "630": {
+        "chunkId": "a36a9a",
+        "hash": "9b6e6eb5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "632": {
+        "chunkId": "a36a9a",
+        "hash": "df2a2967",
+        "encoded": "Runnable%20fetchTask%20=%20()%20-%3E%20fetcher.fetch(KEY,%20slowUpstream,%20()%20-%3E%20MOCK_VALUE,%20false);",
+        "prevChunkIds": []
+      },
+      "633": {
+        "chunkId": "a36a9a",
+        "hash": "7e84ed4d",
+        "encoded": "Thread%20t1%20=%20new%20Thread(fetchTask);",
+        "prevChunkIds": []
+      },
+      "634": {
+        "chunkId": "a36a9a",
+        "hash": "9417c2b1",
+        "encoded": "Thread%20t2%20=%20new%20Thread(fetchTask);",
+        "prevChunkIds": []
+      },
+      "635": {
+        "chunkId": "a36a9a",
+        "hash": "0ddbfdb2",
+        "encoded": "t1.start();",
+        "prevChunkIds": []
+      },
+      "636": {
+        "chunkId": "a36a9a",
+        "hash": "e924f75d",
+        "encoded": "t2.start();",
+        "prevChunkIds": []
+      },
+      "638": {
+        "chunkId": "a36a9a",
+        "hash": "32e3a758",
+        "encoded": "bothStarted.await(1,%20TimeUnit.SECONDS);",
+        "prevChunkIds": []
+      },
+      "639": {
+        "chunkId": "a36a9a",
+        "hash": "a5e53d43",
+        "encoded": "release.countDown();",
+        "prevChunkIds": []
+      },
+      "640": {
+        "chunkId": "a36a9a",
+        "hash": "3e4a3379",
+        "encoded": "t1.join(5000);",
+        "prevChunkIds": []
+      },
+      "641": {
+        "chunkId": "a36a9a",
+        "hash": "4be4d0c8",
+        "encoded": "t2.join(5000);",
+        "prevChunkIds": []
+      },
+      "643": {
+        "chunkId": "a36a9a",
+        "hash": "d94da778",
+        "encoded": "assertThat(upstreamCalls.get()).isEqualTo(1);",
+        "prevChunkIds": []
+      },
+      "644": {
+        "chunkId": "a36a9a",
+        "hash": "5a460636",
+        "encoded": "assertThat(cache.get(KEY)).isPresent();",
+        "prevChunkIds": []
+      },
+      "645": {
+        "chunkId": "a36a9a",
+        "hash": "5548d904",
+        "encoded": "assertThat(cache.get(KEY).orElseThrow().value()).isEqualTo(%22shared-live-value%22);",
+        "prevChunkIds": []
+      },
+      "646": {
+        "chunkId": "a36a9a",
+        "hash": "f4ec153c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "647": {
+        "chunkId": "a36a9a",
+        "hash": "85a1daaf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "648": {
+        "chunkId": "a36a9a",
+        "hash": "a9bddf3b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

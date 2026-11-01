@@ -1,0 +1,271 @@
+{
+  "frontend/src/hooks/usePositionPolling.js": {
+    "filename": "usePositionPolling.js",
+    "path": "frontend/src/hooks/usePositionPolling.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "1f6ae4": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "a8104d71",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "1f6ae4",
+        "hash": "d012d3fe",
+        "encoded": "import%20%7B%20useEffect,%20useRef,%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "1f6ae4",
+        "hash": "c543efbe",
+        "encoded": "import%20%7B%20fetchPosition%20%7D%20from%20'../api/client.js';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "1f6ae4",
+        "hash": "f8ab1d7a",
+        "encoded": "import%20usePageVisibility%20from%20'./usePageVisibility.js';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "1f6ae4",
+        "hash": "1beee5bd",
+        "encoded": "const%20DEFAULT_POLL_MS%20=%205000;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "1f6ae4",
+        "hash": "d6c88340",
+        "encoded": "//%20Fast%20poll%20of%20/position%20only%20(every%205-10s%20per%20PROMPT.md%20section%207),%20independent%20of",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "1f6ae4",
+        "hash": "2080abd8",
+        "encoded": "//%20the%20slower%20/overview%20poll.%20Pauses%20while%20the%20tab%20is%20hidden;%20keeps%20last%20good%20data%20on%20error.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "1f6ae4",
+        "hash": "20545b2b",
+        "encoded": "export%20default%20function%20usePositionPolling(%7B%20offline,%20pollMs%20=%20DEFAULT_POLL_MS%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "1f6ae4",
+        "hash": "b5e2149b",
+        "encoded": "const%20%5Bdata,%20setData%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "1f6ae4",
+        "hash": "5941d664",
+        "encoded": "const%20%5Berror,%20setError%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "1f6ae4",
+        "hash": "53202339",
+        "encoded": "const%20isVisible%20=%20usePageVisibility();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "1f6ae4",
+        "hash": "13f073f7",
+        "encoded": "const%20isVisibleRef%20=%20useRef(isVisible);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "1f6ae4",
+        "hash": "26d1340e",
+        "encoded": "isVisibleRef.current%20=%20isVisible;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1f6ae4",
+        "hash": "2d0f8d2e",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1f6ae4",
+        "hash": "e645ed31",
+        "encoded": "let%20cancelled%20=%20false;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "1f6ae4",
+        "hash": "4c08f91b",
+        "encoded": "async%20function%20load()%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "1f6ae4",
+        "hash": "c52ccaae",
+        "encoded": "if%20(!isVisibleRef.current)%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "1f6ae4",
+        "hash": "191b7aa3",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "1f6ae4",
+        "hash": "4b5cc20d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "1f6ae4",
+        "hash": "fb70f4e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "1f6ae4",
+        "hash": "68b996fa",
+        "encoded": "const%20result%20=%20await%20fetchPosition(%7B%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "1f6ae4",
+        "hash": "2c79a7d8",
+        "encoded": "if%20(!cancelled)%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "1f6ae4",
+        "hash": "44b1b54b",
+        "encoded": "setData(result);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "1f6ae4",
+        "hash": "7be0e943",
+        "encoded": "setError(null);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "1f6ae4",
+        "hash": "a7947416",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "1f6ae4",
+        "hash": "1063b06a",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "1f6ae4",
+        "hash": "c6061f25",
+        "encoded": "if%20(!cancelled)%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "1f6ae4",
+        "hash": "70fc23e5",
+        "encoded": "setError(err);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "1f6ae4",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "1f6ae4",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "1f6ae4",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "1f6ae4",
+        "hash": "79bb1d2f",
+        "encoded": "load();",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "1f6ae4",
+        "hash": "3a0f3289",
+        "encoded": "const%20interval%20=%20setInterval(load,%20pollMs);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "1f6ae4",
+        "hash": "187d003b",
+        "encoded": "return%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "1f6ae4",
+        "hash": "8d1f0925",
+        "encoded": "cancelled%20=%20true;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "1f6ae4",
+        "hash": "224c116e",
+        "encoded": "clearInterval(interval);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "1f6ae4",
+        "hash": "d54d591a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "1f6ae4",
+        "hash": "263e2b44",
+        "encoded": "//%20eslint-disable-next-line%20react-hooks/exhaustive-deps",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "1f6ae4",
+        "hash": "602c114c",
+        "encoded": "%7D,%20%5Boffline,%20pollMs%5D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "1f6ae4",
+        "hash": "a279295b",
+        "encoded": "return%20%7B%20data,%20error%20%7D;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "1f6ae4",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

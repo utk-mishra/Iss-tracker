@@ -1,0 +1,49 @@
+{
+  "filename": "ci.yml",
+  "path": ".github/workflows/ci.yml",
+  "version": "1.1",
+  "files": {
+    "3f7e0600": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        }
+      ]
+    },
+    "17ee55be": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            219
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "1b4d9f38": {
+      "value": "Re-read CLAUDE.md and PROMPT.md (PROMPT.md was updated: see the STATUS block and section 5). Do Step 1 only. Restate which step you're on and which rules apply, then build it. Stop after Step 1 and wait for \"continue\"."
+    },
+    "d6d8f4f5": {
+      "value": "approve step 8 and proceed ahead"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

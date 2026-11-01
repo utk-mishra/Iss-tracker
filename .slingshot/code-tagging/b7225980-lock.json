@@ -1,0 +1,1334 @@
+{
+  "backend/src/test/java/com/example/iss/domain/VelocityEstimatorTest.java": {
+    "filename": "VelocityEstimatorTest.java",
+    "path": "backend/src/test/java/com/example/iss/domain/VelocityEstimatorTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a9cef9": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538968,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "6f0ac854",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:08\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "ebd213": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538968,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "81511617",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:08\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ebd213",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ebd213",
+        "hash": "cd07b803",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ebd213",
+        "hash": "3842b4d7",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ebd213",
+        "hash": "877b8003",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ebd213",
+        "hash": "f80a047e",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ebd213",
+        "hash": "d91c4b92",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ebd213",
+        "hash": "c9c127e6",
+        "encoded": "import%20java.util.concurrent.CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ebd213",
+        "hash": "c16b7e81",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ebd213",
+        "hash": "6be8486d",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ebd213",
+        "hash": "41054f89",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ebd213",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ebd213",
+        "hash": "93e1ad98",
+        "encoded": "*%20VelocityEstimator:%20derives%20km/h%20from%20two%20consecutive%20ISS%20samples%20via%20haversine%20arc",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ebd213",
+        "hash": "e19e0de6",
+        "encoded": "*%20length%20scaled%20by%20(R+408)/R,%20divided%20by%20elapsed%20time.%20Thread-safe%20via%20AtomicReference.",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ebd213",
+        "hash": "7b3d8fd1",
+        "encoded": "*%20See%20PROMPT.md%20section%205.",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ebd213",
+        "hash": "f12acb0c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ebd213",
+        "hash": "5bdb873f",
+        "encoded": "class%20VelocityEstimatorTest%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ebd213",
+        "hash": "2232493f",
+        "encoded": "private%20static%20final%20double%20DEFAULT_VELOCITY_KMH%20=%2027_600.0;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ebd213",
+        "hash": "f7129619",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ebd213",
+        "hash": "f8e4c524",
+        "encoded": "@DisplayName(%22no%20previous%20sample%22)",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ebd213",
+        "hash": "b3987915",
+        "encoded": "class%20NoPreviousSample%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ebd213",
+        "hash": "11e836f6",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ebd213",
+        "hash": "a18ee633",
+        "encoded": "@DisplayName(%22given%20a%20fresh%20estimator%20with%20no%20prior%20sample,%20when%20estimated,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ebd213",
+        "hash": "37eb43e2",
+        "encoded": "void%20givenNoPriorSample_whenEstimated_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ebd213",
+        "hash": "b969ed19",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ebd213",
+        "hash": "18b4d600",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.0,%2077.0,%20Instant.parse(%222026-11-01T00:00:00Z%22));",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ebd213",
+        "hash": "f6e84ee5",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ebd213",
+        "hash": "dfad4947",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ebd213",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ebd213",
+        "hash": "75b67b65",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ebd213",
+        "hash": "a12804a2",
+        "encoded": "@DisplayName(%22timestamp%20did%20not%20advance%22)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ebd213",
+        "hash": "b4838ccc",
+        "encoded": "class%20TimestampDidNotAdvance%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ebd213",
+        "hash": "533a5a9f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ebd213",
+        "hash": "ef8843a4",
+        "encoded": "@DisplayName(%22given%20a%20previous%20sample%20at%20the%20same%20timestamp,%20when%20estimated%20again,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ebd213",
+        "hash": "bd8d5ec1",
+        "encoded": "void%20givenSameTimestamp_whenEstimatedAgain_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ebd213",
+        "hash": "7fde778b",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ebd213",
+        "hash": "530fc10a",
+        "encoded": "Instant%20t%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ebd213",
+        "hash": "6250dde5",
+        "encoded": "estimator.estimateKmh(28.0,%2077.0,%20t);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ebd213",
+        "hash": "601f6724",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.1,%2077.1,%20t);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ebd213",
+        "hash": "099b2d5a",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ebd213",
+        "hash": "88fadba2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ebd213",
+        "hash": "e2f50416",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ebd213",
+        "hash": "485f78ae",
+        "encoded": "@DisplayName(%22given%20a%20previous%20sample%20at%20a%20later%20timestamp,%20when%20estimated%20with%20an%20earlier%20timestamp,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ebd213",
+        "hash": "92f05fd4",
+        "encoded": "void%20givenLaterPreviousTimestamp_whenEstimatedWithEarlierTimestamp_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "ebd213",
+        "hash": "3e9a0fbb",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ebd213",
+        "hash": "e60895f4",
+        "encoded": "Instant%20later%20=%20Instant.parse(%222026-11-01T00:00:10Z%22);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "ebd213",
+        "hash": "4dd81453",
+        "encoded": "Instant%20earlier%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ebd213",
+        "hash": "faf655f8",
+        "encoded": "estimator.estimateKmh(28.0,%2077.0,%20later);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ebd213",
+        "hash": "b8e0118a",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.1,%2077.1,%20earlier);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ebd213",
+        "hash": "ac990ec1",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "ebd213",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ebd213",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "ebd213",
+        "hash": "d09f9fed",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ebd213",
+        "hash": "3336babb",
+        "encoded": "@DisplayName(%22two%20realistic%20consecutive%20samples%22)",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ebd213",
+        "hash": "dcaa673c",
+        "encoded": "class%20RealisticConsecutiveSamples%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "ebd213",
+        "hash": "d5ffe37e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ebd213",
+        "hash": "1c672e20",
+        "encoded": "@DisplayName(%22given%20two%20realistic%20ISS%20positions%20about%205%20seconds%20apart,%20when%20estimated,%20then%20velocity%20is%20roughly%2027000-28000%20km/h%22)",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "ebd213",
+        "hash": "20289ba9",
+        "encoded": "void%20givenTwoRealisticPositions5SecondsApart_whenEstimated_thenVelocityRoughly27000To28000()%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ebd213",
+        "hash": "e2305af2",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "ebd213",
+        "hash": "cd291f68",
+        "encoded": "Instant%20t0%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "ebd213",
+        "hash": "d557f863",
+        "encoded": "Instant%20t1%20=%20t0.plus(Duration.ofSeconds(5));",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "ebd213",
+        "hash": "b4d3ef3b",
+        "encoded": "//%20Real%20ISS%20ground%20speed%20is%20~7.66%20km/s%20=%3E%20~38.3%20km%20in%205s%20on%20the%20ground%20track,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ebd213",
+        "hash": "494d6d12",
+        "encoded": "//%20scaled%20by%20(R+408)/R%20to%20the%20orbital%20altitude%20as%20specified.",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "ebd213",
+        "hash": "b2c11887",
+        "encoded": "estimator.estimateKmh(35.5243,%20-156.7653,%20t0);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ebd213",
+        "hash": "0de6381a",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(35.5584,%20-156.6484,%20t1);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ebd213",
+        "hash": "4008f0d5",
+        "encoded": "assertThat(velocity).isBetween(27_000.0,%2028_000.0);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "ebd213",
+        "hash": "7bb00016",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ebd213",
+        "hash": "9c0e6ebc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "ebd213",
+        "hash": "0d8eb17f",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "ebd213",
+        "hash": "fe1b973c",
+        "encoded": "@DisplayName(%22thread%20safety%22)",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "ebd213",
+        "hash": "ee5a042b",
+        "encoded": "class%20ThreadSafety%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "ebd213",
+        "hash": "010694a4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "ebd213",
+        "hash": "0ce89831",
+        "encoded": "@DisplayName(%22given%20concurrent%20estimate%20calls,%20when%20they%20race,%20then%20no%20exception%20is%20thrown%20and%20a%20previous%20sample%20is%20consistently%20tracked%22)",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "ebd213",
+        "hash": "af335c5c",
+        "encoded": "void%20givenConcurrentEstimateCalls_whenTheyRace_thenNoExceptionAndConsistentState()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "ebd213",
+        "hash": "1a4d3a13",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "ebd213",
+        "hash": "8ea7a8fa",
+        "encoded": "int%20threads%20=%208;",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "ebd213",
+        "hash": "6234e2be",
+        "encoded": "CountDownLatch%20ready%20=%20new%20CountDownLatch(threads);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "ebd213",
+        "hash": "41f5fc2c",
+        "encoded": "CountDownLatch%20go%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "ebd213",
+        "hash": "6a96b640",
+        "encoded": "AtomicInteger%20errors%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "ebd213",
+        "hash": "97b838f9",
+        "encoded": "Thread%5B%5D%20workers%20=%20new%20Thread%5Bthreads%5D;",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "ebd213",
+        "hash": "82cdc468",
+        "encoded": "for%20(int%20i%20=%200;%20i%20%3C%20threads;%20i++)%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "ebd213",
+        "hash": "1bbfa587",
+        "encoded": "int%20idx%20=%20i;",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "ebd213",
+        "hash": "81852606",
+        "encoded": "workers%5Bi%5D%20=%20new%20Thread(()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "ebd213",
+        "hash": "dc90e156",
+        "encoded": "ready.countDown();",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "ebd213",
+        "hash": "6e2f82d3",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "ebd213",
+        "hash": "dd5e1bdc",
+        "encoded": "go.await();",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "ebd213",
+        "hash": "5e932dc7",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "ebd213",
+        "hash": "e4f9a00e",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "ebd213",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "ebd213",
+        "hash": "2ef794af",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "ebd213",
+        "hash": "9fefe760",
+        "encoded": "estimator.estimateKmh(28.0%20+%20idx%20*%200.001,%2077.0%20+%20idx%20*%200.001,",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "ebd213",
+        "hash": "67c83704",
+        "encoded": "Instant.parse(%222026-11-01T00:00:00Z%22).plusSeconds(idx));",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "ebd213",
+        "hash": "a073bde9",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "ebd213",
+        "hash": "363e244f",
+        "encoded": "errors.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "ebd213",
+        "hash": "a9314f3f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "ebd213",
+        "hash": "0ed0ef34",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "ebd213",
+        "hash": "905fafe1",
+        "encoded": "workers%5Bi%5D.start();",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "ebd213",
+        "hash": "715028b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "ebd213",
+        "hash": "b4c4600d",
+        "encoded": "assertThat(ready.await(5,%20TimeUnit.SECONDS)).isTrue();",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "ebd213",
+        "hash": "be23f45d",
+        "encoded": "go.countDown();",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "ebd213",
+        "hash": "9c538b7c",
+        "encoded": "for%20(Thread%20t%20:%20workers)%20%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "ebd213",
+        "hash": "a0e27f96",
+        "encoded": "t.join(5000);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "ebd213",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "ebd213",
+        "hash": "86ed2201",
+        "encoded": "assertThat(errors.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "ebd213",
+        "hash": "5513b7ee",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "ebd213",
+        "hash": "b945986d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "ebd213",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "a9cef9",
+        "hash": "2fe27c10",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "a9cef9",
+        "hash": "338c9d31",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "a9cef9",
+        "hash": "589bec96",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "a9cef9",
+        "hash": "657e3551",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "a9cef9",
+        "hash": "04ad99c9",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "a9cef9",
+        "hash": "a7dcb1d1",
+        "encoded": "import%20java.util.concurrent.CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "a9cef9",
+        "hash": "9cd10d36",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "a9cef9",
+        "hash": "67d3ee24",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "a9cef9",
+        "hash": "68e4c8a2",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "a9cef9",
+        "hash": "000f98e6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "a9cef9",
+        "hash": "49edf7fd",
+        "encoded": "*%20VelocityEstimator:%20derives%20km/h%20from%20two%20consecutive%20ISS%20samples%20via%20haversine%20arc",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "a9cef9",
+        "hash": "288327a7",
+        "encoded": "*%20length%20scaled%20by%20(R+408)/R,%20divided%20by%20elapsed%20time.%20Thread-safe%20via%20AtomicReference.",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "a9cef9",
+        "hash": "349b5428",
+        "encoded": "*%20See%20PROMPT.md%20section%205.",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "a9cef9",
+        "hash": "6a0e900a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "a9cef9",
+        "hash": "e70ad959",
+        "encoded": "class%20VelocityEstimatorTest%20%7B",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "a9cef9",
+        "hash": "319ae993",
+        "encoded": "private%20static%20final%20double%20DEFAULT_VELOCITY_KMH%20=%2027_600.0;",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "a9cef9",
+        "hash": "fdc85c13",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "a9cef9",
+        "hash": "f5551393",
+        "encoded": "@DisplayName(%22no%20previous%20sample%22)",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "a9cef9",
+        "hash": "8e724e22",
+        "encoded": "class%20NoPreviousSample%20%7B",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "a9cef9",
+        "hash": "e26acb7b",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "a9cef9",
+        "hash": "d185e4e9",
+        "encoded": "@DisplayName(%22given%20a%20fresh%20estimator%20with%20no%20prior%20sample,%20when%20estimated,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "a9cef9",
+        "hash": "d55bd535",
+        "encoded": "void%20givenNoPriorSample_whenEstimated_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "a9cef9",
+        "hash": "59af38d6",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "a9cef9",
+        "hash": "8f4c2381",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.0,%2077.0,%20Instant.parse(%222026-11-01T00:00:00Z%22));",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "a9cef9",
+        "hash": "fc7a7734",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "a9cef9",
+        "hash": "3e35702d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "a9cef9",
+        "hash": "a4485fa2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "a9cef9",
+        "hash": "21d89848",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "a9cef9",
+        "hash": "e2d06e61",
+        "encoded": "@DisplayName(%22timestamp%20did%20not%20advance%22)",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "a9cef9",
+        "hash": "10453d81",
+        "encoded": "class%20TimestampDidNotAdvance%20%7B",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "a9cef9",
+        "hash": "5a62b637",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "a9cef9",
+        "hash": "4c2ffc7a",
+        "encoded": "@DisplayName(%22given%20a%20previous%20sample%20at%20the%20same%20timestamp,%20when%20estimated%20again,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "a9cef9",
+        "hash": "c71fae73",
+        "encoded": "void%20givenSameTimestamp_whenEstimatedAgain_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "a9cef9",
+        "hash": "f8ea4b05",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "a9cef9",
+        "hash": "4b435575",
+        "encoded": "Instant%20t%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "a9cef9",
+        "hash": "34eb60b1",
+        "encoded": "estimator.estimateKmh(28.0,%2077.0,%20t);",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "a9cef9",
+        "hash": "c2a74be6",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.1,%2077.1,%20t);",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "a9cef9",
+        "hash": "ab20161a",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "a9cef9",
+        "hash": "1e08084c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "a9cef9",
+        "hash": "2fada2a3",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "a9cef9",
+        "hash": "b4205634",
+        "encoded": "@DisplayName(%22given%20a%20previous%20sample%20at%20a%20later%20timestamp,%20when%20estimated%20with%20an%20earlier%20timestamp,%20then%20default%20velocity%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "a9cef9",
+        "hash": "70656319",
+        "encoded": "void%20givenLaterPreviousTimestamp_whenEstimatedWithEarlierTimestamp_thenDefaultVelocityReturned()%20%7B",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "a9cef9",
+        "hash": "3ee0a973",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "a9cef9",
+        "hash": "ee771a56",
+        "encoded": "Instant%20later%20=%20Instant.parse(%222026-11-01T00:00:10Z%22);",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "a9cef9",
+        "hash": "cd981c93",
+        "encoded": "Instant%20earlier%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "a9cef9",
+        "hash": "ee3d277e",
+        "encoded": "estimator.estimateKmh(28.0,%2077.0,%20later);",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "a9cef9",
+        "hash": "842406e1",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(28.1,%2077.1,%20earlier);",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "a9cef9",
+        "hash": "3a034265",
+        "encoded": "assertThat(velocity).isEqualTo(DEFAULT_VELOCITY_KMH);",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "a9cef9",
+        "hash": "c7ef80cf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "a9cef9",
+        "hash": "ca78192d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "a9cef9",
+        "hash": "bd866887",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "a9cef9",
+        "hash": "c7b8b543",
+        "encoded": "@DisplayName(%22two%20realistic%20consecutive%20samples%22)",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "a9cef9",
+        "hash": "ac410c21",
+        "encoded": "class%20RealisticConsecutiveSamples%20%7B",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "a9cef9",
+        "hash": "40200214",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "a9cef9",
+        "hash": "a1c4b6da",
+        "encoded": "@DisplayName(%22given%20two%20realistic%20ISS%20positions%20about%205%20seconds%20apart,%20when%20estimated,%20then%20velocity%20is%20roughly%2027000-28000%20km/h%22)",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "a9cef9",
+        "hash": "10424fae",
+        "encoded": "void%20givenTwoRealisticPositions5SecondsApart_whenEstimated_thenVelocityRoughly27000To28000()%20%7B",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "a9cef9",
+        "hash": "ad77338f",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "a9cef9",
+        "hash": "b39aa82c",
+        "encoded": "Instant%20t0%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "a9cef9",
+        "hash": "e4764c9a",
+        "encoded": "Instant%20t1%20=%20t0.plus(Duration.ofSeconds(5));",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "a9cef9",
+        "hash": "630db81b",
+        "encoded": "//%20ISS%20orbital%20ground%20speed%20is%20~7.66%20km/s%20(~27,600%20km/h%20before%20altitude%20scaling).",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "a9cef9",
+        "hash": "10e3fed0",
+        "encoded": "//%20A%20pure%20latitude%20displacement%20of%200.323%20deg%20(~35.9%20km%20great-circle)%20over%205s,",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "a9cef9",
+        "hash": "47f52aeb",
+        "encoded": "//%20scaled%20by%20(R+408)/R,%20lands%20in%20the%20expected%2027,000-28,000%20km/h%20band.",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "a9cef9",
+        "hash": "4a11b49f",
+        "encoded": "//%20Latitude%2020%20degrees%20N%20/%20100%20degrees%20E%20is%20within%20the%20ISS's%20~51.6%20degree",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "a9cef9",
+        "hash": "5181ade8",
+        "encoded": "//%20orbital%20inclination,%20so%20this%20is%20a%20physically%20plausible%20ground-track%20pair.",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "a9cef9",
+        "hash": "5e90571d",
+        "encoded": "estimator.estimateKmh(20.0000,%20100.0000,%20t0);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "a9cef9",
+        "hash": "84720e6e",
+        "encoded": "double%20velocity%20=%20estimator.estimateKmh(20.3230,%20100.0000,%20t1);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "a9cef9",
+        "hash": "2a67f353",
+        "encoded": "assertThat(velocity).isBetween(27_000.0,%2028_000.0);",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "a9cef9",
+        "hash": "ce884ff8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "a9cef9",
+        "hash": "f83f30dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "a9cef9",
+        "hash": "d3a0492c",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "a9cef9",
+        "hash": "04c2224d",
+        "encoded": "@DisplayName(%22thread%20safety%22)",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "a9cef9",
+        "hash": "d5ba257e",
+        "encoded": "class%20ThreadSafety%20%7B",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "a9cef9",
+        "hash": "a69911ac",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "a9cef9",
+        "hash": "5b82ff99",
+        "encoded": "@DisplayName(%22given%20concurrent%20estimate%20calls,%20when%20they%20race,%20then%20no%20exception%20is%20thrown%20and%20a%20previous%20sample%20is%20consistently%20tracked%22)",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "a9cef9",
+        "hash": "ff60a328",
+        "encoded": "void%20givenConcurrentEstimateCalls_whenTheyRace_thenNoExceptionAndConsistentState()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "a9cef9",
+        "hash": "71a6d1a7",
+        "encoded": "VelocityEstimator%20estimator%20=%20new%20VelocityEstimator();",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "a9cef9",
+        "hash": "f13bce2a",
+        "encoded": "int%20threads%20=%208;",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "a9cef9",
+        "hash": "24841de8",
+        "encoded": "CountDownLatch%20ready%20=%20new%20CountDownLatch(threads);",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "a9cef9",
+        "hash": "fee93453",
+        "encoded": "CountDownLatch%20go%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "a9cef9",
+        "hash": "14108d89",
+        "encoded": "AtomicInteger%20errors%20=%20new%20AtomicInteger();",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "a9cef9",
+        "hash": "25fefdff",
+        "encoded": "Thread%5B%5D%20workers%20=%20new%20Thread%5Bthreads%5D;",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "a9cef9",
+        "hash": "ce88150f",
+        "encoded": "for%20(int%20i%20=%200;%20i%20%3C%20threads;%20i++)%20%7B",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "a9cef9",
+        "hash": "3832136b",
+        "encoded": "int%20idx%20=%20i;",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "a9cef9",
+        "hash": "a6be282c",
+        "encoded": "workers%5Bi%5D%20=%20new%20Thread(()%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "a9cef9",
+        "hash": "4917ab59",
+        "encoded": "ready.countDown();",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "a9cef9",
+        "hash": "a6fb3690",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "a9cef9",
+        "hash": "ba7c3498",
+        "encoded": "go.await();",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "a9cef9",
+        "hash": "ab61a124",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "a9cef9",
+        "hash": "9a1b1ee3",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "a9cef9",
+        "hash": "d5bc439e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "a9cef9",
+        "hash": "69c3025b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "a9cef9",
+        "hash": "5a3cf371",
+        "encoded": "estimator.estimateKmh(28.0%20+%20idx%20*%200.001,%2077.0%20+%20idx%20*%200.001,",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "a9cef9",
+        "hash": "776c20c2",
+        "encoded": "Instant.parse(%222026-11-01T00:00:00Z%22).plusSeconds(idx));",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "a9cef9",
+        "hash": "ef6bd9d2",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "a9cef9",
+        "hash": "ec3d3e20",
+        "encoded": "errors.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "a9cef9",
+        "hash": "4eea9b81",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "a9cef9",
+        "hash": "5263d6d7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "a9cef9",
+        "hash": "a9169120",
+        "encoded": "workers%5Bi%5D.start();",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "a9cef9",
+        "hash": "8381033a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "a9cef9",
+        "hash": "ff249f1b",
+        "encoded": "assertThat(ready.await(5,%20TimeUnit.SECONDS)).isTrue();",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "a9cef9",
+        "hash": "c77d09df",
+        "encoded": "go.countDown();",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "a9cef9",
+        "hash": "8bc7da69",
+        "encoded": "for%20(Thread%20t%20:%20workers)%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "a9cef9",
+        "hash": "30259d71",
+        "encoded": "t.join(5000);",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "a9cef9",
+        "hash": "108356aa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "a9cef9",
+        "hash": "6ed19bc2",
+        "encoded": "assertThat(errors.get()).isZero();",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "a9cef9",
+        "hash": "41edc21c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "a9cef9",
+        "hash": "edd4ba50",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "a9cef9",
+        "hash": "e40a7bcd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

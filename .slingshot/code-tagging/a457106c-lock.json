@@ -1,0 +1,481 @@
+{
+  "frontend/tests/api/client.test.js": {
+    "filename": "client.test.js",
+    "path": "frontend/tests/api/client.test.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a79a7d": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793545006,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "be897ec0",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:26:46\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a79a7d",
+        "hash": "c01c9563",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach,%20afterEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a79a7d",
+        "hash": "8be623f9",
+        "encoded": "import%20%7B%20fetchOverview,%20fetchPosition,%20ApiError%20%7D%20from%20'../../src/api/client.js';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a79a7d",
+        "hash": "bfb0cfe5",
+        "encoded": "describe('fetchOverview',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "a79a7d",
+        "hash": "ceb3aa01",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a79a7d",
+        "hash": "3dca9159",
+        "encoded": "global.fetch%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a79a7d",
+        "hash": "022881cf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a79a7d",
+        "hash": "58a68067",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a79a7d",
+        "hash": "d41ba82e",
+        "encoded": "vi.restoreAllMocks();",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a79a7d",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "a79a7d",
+        "hash": "5d9c748d",
+        "encoded": "it('given%20a%20successful%20response,%20when%20overview%20is%20fetched,%20then%20the%20parsed%20JSON%20is%20returned',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "a79a7d",
+        "hash": "37c44f0c",
+        "encoded": "const%20body%20=%20%7B%20position:%20%7B%7D,%20passes:%20%5B%5D%20%7D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "a79a7d",
+        "hash": "029a0846",
+        "encoded": "global.fetch.mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "a79a7d",
+        "hash": "cea8491f",
+        "encoded": "ok:%20true,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "a79a7d",
+        "hash": "2a21b2df",
+        "encoded": "status:%20200,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "a79a7d",
+        "hash": "a125363c",
+        "encoded": "json:%20async%20()%20=%3E%20body,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "a79a7d",
+        "hash": "8d35ba9b",
+        "encoded": "headers:%20new%20Headers(),",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "a79a7d",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "a79a7d",
+        "hash": "46e4fc97",
+        "encoded": "const%20result%20=%20await%20fetchOverview(%7B%20lat:%2028.6139,%20lon:%2077.209,%20offline:%20false%20%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "a79a7d",
+        "hash": "af60a44f",
+        "encoded": "expect(result).toEqual(body);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "a79a7d",
+        "hash": "de0c810d",
+        "encoded": "expect(global.fetch).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "a79a7d",
+        "hash": "5c4e4e33",
+        "encoded": "expect.stringContaining('/api/v1/iss/overview?lat=28.6139&lon=77.209&offline=false'),",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "a79a7d",
+        "hash": "ba7063da",
+        "encoded": "expect.any(Object)",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "a79a7d",
+        "hash": "38c6736a",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "a79a7d",
+        "hash": "56683f82",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "a79a7d",
+        "hash": "527515d4",
+        "encoded": "it('given%20a%20429%20response,%20when%20overview%20is%20fetched,%20then%20an%20ApiError%20carrying%20retryAfter%20is%20thrown',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "a79a7d",
+        "hash": "c7ac4731",
+        "encoded": "const%20headers%20=%20new%20Headers(%7B%20'Retry-After':%20'42'%20%7D);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "a79a7d",
+        "hash": "3074c4a4",
+        "encoded": "global.fetch.mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "a79a7d",
+        "hash": "f176f56a",
+        "encoded": "ok:%20false,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "a79a7d",
+        "hash": "9b4241d9",
+        "encoded": "status:%20429,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "a79a7d",
+        "hash": "2077058a",
+        "encoded": "json:%20async%20()%20=%3E%20(%7B%20error:%20'Rate%20limit%20exceeded',%20status:%20429%20%7D),",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "a79a7d",
+        "hash": "b9978779",
+        "encoded": "headers,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "a79a7d",
+        "hash": "8e8ca0f5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "a79a7d",
+        "hash": "653f0339",
+        "encoded": "await%20expect(fetchOverview(%7B%20lat:%200,%20lon:%200,%20offline:%20false%20%7D)).rejects.toMatchObject(%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "a79a7d",
+        "hash": "0c7a6e46",
+        "encoded": "status:%20429,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "a79a7d",
+        "hash": "181c06e0",
+        "encoded": "retryAfter:%20'42',",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "a79a7d",
+        "hash": "6f909b24",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "a79a7d",
+        "hash": "9ebe5e1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "a79a7d",
+        "hash": "c3b07107",
+        "encoded": "it('given%20a%20400%20response,%20when%20overview%20is%20fetched,%20then%20an%20ApiError%20with%20the%20server%20message%20is%20thrown',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "a79a7d",
+        "hash": "b734127c",
+        "encoded": "global.fetch.mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "a79a7d",
+        "hash": "7c0ad884",
+        "encoded": "ok:%20false,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "a79a7d",
+        "hash": "60bf5aba",
+        "encoded": "status:%20400,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "a79a7d",
+        "hash": "776a5b57",
+        "encoded": "json:%20async%20()%20=%3E%20(%7B%20error:%20'lat%20must%20be%20in%20%5B-90,90%5D',%20status:%20400%20%7D),",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "a79a7d",
+        "hash": "ab2b6d32",
+        "encoded": "headers:%20new%20Headers(),",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "a79a7d",
+        "hash": "b6499095",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "a79a7d",
+        "hash": "b1b51810",
+        "encoded": "await%20expect(fetchOverview(%7B%20lat:%20999,%20lon:%200,%20offline:%20false%20%7D)).rejects.toMatchObject(%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "a79a7d",
+        "hash": "3c369029",
+        "encoded": "status:%20400,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "a79a7d",
+        "hash": "883b5b33",
+        "encoded": "message:%20'lat%20must%20be%20in%20%5B-90,90%5D',",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "a79a7d",
+        "hash": "4f8dfc51",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "a79a7d",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "a79a7d",
+        "hash": "883a1be9",
+        "encoded": "it('given%20fetch%20rejects%20(network%20error),%20when%20overview%20is%20fetched,%20then%20an%20ApiError%20is%20thrown%20without%20crashing',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "a79a7d",
+        "hash": "ec25752f",
+        "encoded": "global.fetch.mockRejectedValue(new%20TypeError('Failed%20to%20fetch'));",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "a79a7d",
+        "hash": "aa4868cf",
+        "encoded": "await%20expect(fetchOverview(%7B%20lat:%200,%20lon:%200,%20offline:%20false%20%7D)).rejects.toBeInstanceOf(ApiError);",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "a79a7d",
+        "hash": "841a9c8c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "a79a7d",
+        "hash": "da39c591",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "a79a7d",
+        "hash": "6692c56e",
+        "encoded": "describe('fetchPosition',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "a79a7d",
+        "hash": "f52cdb3b",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "a79a7d",
+        "hash": "3ce4c60f",
+        "encoded": "global.fetch%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "a79a7d",
+        "hash": "abd57649",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "a79a7d",
+        "hash": "28599771",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "a79a7d",
+        "hash": "29a9a5a0",
+        "encoded": "vi.restoreAllMocks();",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "a79a7d",
+        "hash": "294f5374",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "a79a7d",
+        "hash": "5d8d0036",
+        "encoded": "it('given%20offline=true,%20when%20position%20is%20fetched,%20then%20the%20query%20string%20includes%20offline=true',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "a79a7d",
+        "hash": "12172fa1",
+        "encoded": "global.fetch.mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "a79a7d",
+        "hash": "eb004657",
+        "encoded": "ok:%20true,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "a79a7d",
+        "hash": "253f27e9",
+        "encoded": "status:%20200,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "a79a7d",
+        "hash": "62439340",
+        "encoded": "json:%20async%20()%20=%3E%20(%7B%20position:%20%7B%7D%20%7D),",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "a79a7d",
+        "hash": "c8e46fb8",
+        "encoded": "headers:%20new%20Headers(),",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "a79a7d",
+        "hash": "afbb28ea",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "a79a7d",
+        "hash": "118ed772",
+        "encoded": "await%20fetchPosition(%7B%20offline:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "a79a7d",
+        "hash": "c266bee3",
+        "encoded": "expect(global.fetch).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "a79a7d",
+        "hash": "a5544927",
+        "encoded": "expect.stringContaining('offline=true'),",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "a79a7d",
+        "hash": "544fc3de",
+        "encoded": "expect.any(Object)",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "a79a7d",
+        "hash": "fd7f7fe7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "a79a7d",
+        "hash": "cd46b899",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "a79a7d",
+        "hash": "79e71f8b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

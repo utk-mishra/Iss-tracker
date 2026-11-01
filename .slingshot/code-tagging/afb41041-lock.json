@@ -1,0 +1,391 @@
+{
+  "jenkins/job-config.xml": {
+    "filename": "job-config.xml",
+    "path": "jenkins/job-config.xml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "f103e7": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793548576,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "d6d8f4f5",
+          "files": "17ee55be"
+        },
+        "hash": "72b01a6f",
+        "messageId": "system_d4e09b70-d60b-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 21:26:16\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f103e7",
+        "hash": "63de02f3",
+        "encoded": "%3C?xml%20version='1.1'%20encoding='UTF-8'?%3E",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "f103e7",
+        "hash": "c99fc25f",
+        "encoded": "%3C!--%20Jenkins%20job%20configuration%20for%20ISS%20Tracker%20(PROMPT.md%20section%2011)%20--%3E",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f103e7",
+        "hash": "7313cd1e",
+        "encoded": "%3C!--%20Import%20this%20via%20Jenkins%20UI%20or%20use%20JCasC%20--%3E",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "f103e7",
+        "hash": "430a86ce",
+        "encoded": "%3Cflow-definition%20plugin=%22workflow-job@2.40%22%3E",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f103e7",
+        "hash": "856c24cf",
+        "encoded": "%3Cactions/%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f103e7",
+        "hash": "97e08e79",
+        "encoded": "%3Cdescription%3EISS%20Location%20&%20Pass%20Predictor%20-%20Multi-stage%20pipeline%20with%20tests,%20security%20scan,%20and%20deployment%3C/description%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f103e7",
+        "hash": "1cd60695",
+        "encoded": "%3CkeepDependencies%3Efalse%3C/keepDependencies%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "f103e7",
+        "hash": "9a056352",
+        "encoded": "%3Cproperties%3E",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "f103e7",
+        "hash": "dd9983fb",
+        "encoded": "%3Chudson.plugins.jira.JiraProjectProperty%20plugin=%22jira@3.7%22/%3E",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f103e7",
+        "hash": "7a6c458b",
+        "encoded": "%3Chudson.model.ParametersDefinitionProperty%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f103e7",
+        "hash": "bae37482",
+        "encoded": "%3CparameterDefinitions%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "f103e7",
+        "hash": "8ade2f82",
+        "encoded": "%3Chudson.model.ChoiceParameterDefinition%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f103e7",
+        "hash": "896c86aa",
+        "encoded": "%3Cname%3EDEPLOY_ENV%3C/name%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "f103e7",
+        "hash": "6078089d",
+        "encoded": "%3Cdescription%3ESpring%20Boot%20profile%20/%20deployment%20environment%3C/description%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f103e7",
+        "hash": "1361255c",
+        "encoded": "%3Cchoices%20class=%22java.util.Arrays$ArrayList%22%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f103e7",
+        "hash": "7dba59a8",
+        "encoded": "%3Ca%20class=%22string-array%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "f103e7",
+        "hash": "08a9190b",
+        "encoded": "%3Cstring%3Edev%3C/string%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "f103e7",
+        "hash": "023843ff",
+        "encoded": "%3Cstring%3Estaging%3C/string%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "f103e7",
+        "hash": "9cf8d667",
+        "encoded": "%3Cstring%3Eprod%3C/string%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "f103e7",
+        "hash": "0f45b754",
+        "encoded": "%3C/a%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "f103e7",
+        "hash": "ac98eb23",
+        "encoded": "%3C/choices%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "f103e7",
+        "hash": "954b28f3",
+        "encoded": "%3C/hudson.model.ChoiceParameterDefinition%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "f103e7",
+        "hash": "dac1a00b",
+        "encoded": "%3C/parameterDefinitions%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "f103e7",
+        "hash": "6afa85fc",
+        "encoded": "%3C/hudson.model.ParametersDefinitionProperty%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "f103e7",
+        "hash": "5d4b0cbd",
+        "encoded": "%3Corg.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "f103e7",
+        "hash": "024b5fd6",
+        "encoded": "%3Ctriggers%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "f103e7",
+        "hash": "902dc097",
+        "encoded": "%3Chudson.triggers.SCMTrigger%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "f103e7",
+        "hash": "77313f20",
+        "encoded": "%3Cspec%3EH/5%20*%20*%20*%20*%3C/spec%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "f103e7",
+        "hash": "44b9be88",
+        "encoded": "%3CignorePostCommitHooks%3Efalse%3C/ignorePostCommitHooks%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "f103e7",
+        "hash": "13ee49fa",
+        "encoded": "%3C/hudson.triggers.SCMTrigger%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "f103e7",
+        "hash": "4bd8e5fc",
+        "encoded": "%3C/triggers%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "f103e7",
+        "hash": "4b167bf1",
+        "encoded": "%3C/org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "f103e7",
+        "hash": "0dbe0d44",
+        "encoded": "%3C/properties%3E",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "f103e7",
+        "hash": "c38abb29",
+        "encoded": "%3Cdefinition%20class=%22org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition%22%20plugin=%22workflow-cps@2.90%22%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "f103e7",
+        "hash": "395c509d",
+        "encoded": "%3Cscm%20class=%22hudson.plugins.git.GitSCM%22%20plugin=%22git@4.10.0%22%3E",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "f103e7",
+        "hash": "3c218165",
+        "encoded": "%3CconfigVersion%3E2%3C/configVersion%3E",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "f103e7",
+        "hash": "7800796f",
+        "encoded": "%3CuserRemoteConfigs%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "f103e7",
+        "hash": "dcda1643",
+        "encoded": "%3Chudson.plugins.git.UserRemoteConfig%3E",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "f103e7",
+        "hash": "e01e9088",
+        "encoded": "%3Curl%3Ehttps://github.com/your-org/iss-tracker.git%3C/url%3E",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "f103e7",
+        "hash": "4c38d1d6",
+        "encoded": "%3CcredentialsId%3Egithub-credentials%3C/credentialsId%3E",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "f103e7",
+        "hash": "916cbcee",
+        "encoded": "%3C/hudson.plugins.git.UserRemoteConfig%3E",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "f103e7",
+        "hash": "8b9b78d8",
+        "encoded": "%3C/userRemoteConfigs%3E",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "f103e7",
+        "hash": "0b94b0bf",
+        "encoded": "%3Cbranches%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "f103e7",
+        "hash": "8c5ff3f5",
+        "encoded": "%3Chudson.plugins.git.BranchSpec%3E",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "f103e7",
+        "hash": "d75b4733",
+        "encoded": "%3Cname%3E*/main%3C/name%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "f103e7",
+        "hash": "fc7c9fb1",
+        "encoded": "%3C/hudson.plugins.git.BranchSpec%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "f103e7",
+        "hash": "80827b2e",
+        "encoded": "%3Chudson.plugins.git.BranchSpec%3E",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "f103e7",
+        "hash": "cf196c43",
+        "encoded": "%3Cname%3E*/develop%3C/name%3E",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "f103e7",
+        "hash": "27c03f88",
+        "encoded": "%3C/hudson.plugins.git.BranchSpec%3E",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "f103e7",
+        "hash": "1a82b900",
+        "encoded": "%3C/branches%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "f103e7",
+        "hash": "c4d6b08b",
+        "encoded": "%3CdoGenerateSubmoduleConfigurations%3Efalse%3C/doGenerateSubmoduleConfigurations%3E",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "f103e7",
+        "hash": "f4d95711",
+        "encoded": "%3CsubmoduleCfg%20class=%22list%22/%3E",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "f103e7",
+        "hash": "5e47fa5d",
+        "encoded": "%3Cextensions/%3E",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "f103e7",
+        "hash": "57c2c7d1",
+        "encoded": "%3C/scm%3E",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "f103e7",
+        "hash": "67fd3a38",
+        "encoded": "%3CscriptPath%3EJenkinsfile%3C/scriptPath%3E",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "f103e7",
+        "hash": "0434c8c1",
+        "encoded": "%3Clightweight%3Etrue%3C/lightweight%3E",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "f103e7",
+        "hash": "af1fc986",
+        "encoded": "%3C/definition%3E",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "f103e7",
+        "hash": "186c1945",
+        "encoded": "%3Ctriggers/%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "f103e7",
+        "hash": "ea7b4423",
+        "encoded": "%3Cdisabled%3Efalse%3C/disabled%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "f103e7",
+        "hash": "b576b72c",
+        "encoded": "%3C/flow-definition%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

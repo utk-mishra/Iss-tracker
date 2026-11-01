@@ -1,0 +1,931 @@
+{
+  "backend/src/test/java/com/example/iss/client/HttpJsonTest.java": {
+    "filename": "HttpJsonTest.java",
+    "path": "backend/src/test/java/com/example/iss/client/HttpJsonTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "38d96d": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "494a6756",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:06\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "38d96d",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "38d96d",
+        "hash": "f59763bd",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "38d96d",
+        "hash": "809f6002",
+        "encoded": "import%20com.sun.net.httpserver.HttpServer;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "38d96d",
+        "hash": "3c75a9fe",
+        "encoded": "import%20org.junit.jupiter.api.AfterEach;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "38d96d",
+        "hash": "031395b9",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "38d96d",
+        "hash": "7ace57ff",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "38d96d",
+        "hash": "6d9fe6fd",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "38d96d",
+        "hash": "8365326f",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "38d96d",
+        "hash": "87095f05",
+        "encoded": "import%20java.net.InetSocketAddress;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "38d96d",
+        "hash": "c9ea30fb",
+        "encoded": "import%20java.net.URI;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "38d96d",
+        "hash": "5b525af9",
+        "encoded": "import%20java.nio.charset.StandardCharsets;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "38d96d",
+        "hash": "bb31dcac",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "38d96d",
+        "hash": "e9ca049a",
+        "encoded": "import%20java.util.concurrent.CountDownLatch;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "38d96d",
+        "hash": "f8937421",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "38d96d",
+        "hash": "546d0a42",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThatThrownBy;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "38d96d",
+        "hash": "1fbc648f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "38d96d",
+        "hash": "f7a2a8fe",
+        "encoded": "*%20HttpJson:%20thin%20java.net.http.HttpClient%20wrapper.%20Tested%20against%20the%20JDK's%20built-in",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "38d96d",
+        "hash": "d20aeb3a",
+        "encoded": "*%20com.sun.net.httpserver.HttpServer%20on%20an%20ephemeral%20port%20-%20no%20real%20network%20calls,%20no",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "38d96d",
+        "hash": "c03728a5",
+        "encoded": "*%20new%20dependencies,%20no%20Thread.sleep.%20Timeouts%20are%20constructor%20parameters%20so%20tests%20can",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "38d96d",
+        "hash": "67014c0c",
+        "encoded": "*%20use%20short%20values%20(~200ms)%20instead%20of%20the%202s/3s%20production%20defaults.",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "38d96d",
+        "hash": "7189984f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "38d96d",
+        "hash": "7a96a898",
+        "encoded": "class%20HttpJsonTest%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "38d96d",
+        "hash": "37897177",
+        "encoded": "private%20HttpServer%20server;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "38d96d",
+        "hash": "88a153c0",
+        "encoded": "private%20int%20port;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "38d96d",
+        "hash": "4247661e",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "38d96d",
+        "hash": "677baffb",
+        "encoded": "void%20setUp()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "38d96d",
+        "hash": "36844ea0",
+        "encoded": "server%20=%20HttpServer.create(new%20InetSocketAddress(0),%200);",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "38d96d",
+        "hash": "2416ee9d",
+        "encoded": "port%20=%20server.getAddress().getPort();",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "38d96d",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "38d96d",
+        "hash": "f7b70adc",
+        "encoded": "@AfterEach",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "38d96d",
+        "hash": "b00b176e",
+        "encoded": "void%20tearDown()%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "38d96d",
+        "hash": "1185c1cf",
+        "encoded": "if%20(server%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "38d96d",
+        "hash": "6395869b",
+        "encoded": "server.stop(0);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "38d96d",
+        "hash": "792377b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "38d96d",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "38d96d",
+        "hash": "82582f05",
+        "encoded": "private%20String%20baseUrl()%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "38d96d",
+        "hash": "0a736f22",
+        "encoded": "return%20%22http://localhost:%22%20+%20port;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "38d96d",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "38d96d",
+        "hash": "001c32a7",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "38d96d",
+        "hash": "d32a5e7c",
+        "encoded": "@DisplayName(%22successful%20responses%22)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "38d96d",
+        "hash": "7f6a8c18",
+        "encoded": "class%20SuccessfulResponses%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "38d96d",
+        "hash": "d56f2434",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "38d96d",
+        "hash": "02b76f09",
+        "encoded": "@DisplayName(%22given%20a%20200%20response%20with%20valid%20JSON,%20when%20fetched,%20then%20the%20parsed%20JsonNode%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "38d96d",
+        "hash": "fec829e3",
+        "encoded": "void%20given200WithValidJson_whenFetched_thenParsedJsonNodeReturned()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "38d96d",
+        "hash": "4ace9cf9",
+        "encoded": "server.createContext(%22/ok%22,%20exchange%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "38d96d",
+        "hash": "13c203b2",
+        "encoded": "byte%5B%5D%20body%20=%20%22%7B%5C%22hello%5C%22:%5C%22world%5C%22%7D%22.getBytes(StandardCharsets.UTF_8);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "38d96d",
+        "hash": "53a03f78",
+        "encoded": "exchange.sendResponseHeaders(200,%20body.length);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "38d96d",
+        "hash": "4da8f806",
+        "encoded": "exchange.getResponseBody().write(body);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "38d96d",
+        "hash": "79b3ebc9",
+        "encoded": "exchange.close();",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "38d96d",
+        "hash": "22ea84c9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "38d96d",
+        "hash": "c388b963",
+        "encoded": "server.start();",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "38d96d",
+        "hash": "605ede10",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson(Duration.ofSeconds(2),%20Duration.ofSeconds(3));",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "38d96d",
+        "hash": "52161b3e",
+        "encoded": "JsonNode%20result%20=%20httpJson.getJson(URI.create(baseUrl()%20+%20%22/ok%22));",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "38d96d",
+        "hash": "ba173fee",
+        "encoded": "assertThat(result.get(%22hello%22).asText()).isEqualTo(%22world%22);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "38d96d",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "38d96d",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "38d96d",
+        "hash": "285ee777",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "38d96d",
+        "hash": "0bfe49cc",
+        "encoded": "@DisplayName(%22non-2xx%20responses%22)",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "38d96d",
+        "hash": "6a884353",
+        "encoded": "class%20NonTwoXxResponses%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "38d96d",
+        "hash": "2c1375c0",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "38d96d",
+        "hash": "5cb2c39d",
+        "encoded": "@DisplayName(%22given%20a%20404%20response,%20when%20fetched,%20then%20an%20exception%20is%20thrown%22)",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "38d96d",
+        "hash": "f7aa86c9",
+        "encoded": "void%20given404Response_whenFetched_thenExceptionThrown()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "38d96d",
+        "hash": "de4d3196",
+        "encoded": "server.createContext(%22/missing%22,%20exchange%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "38d96d",
+        "hash": "a1221f73",
+        "encoded": "byte%5B%5D%20body%20=%20%22not%20found%22.getBytes(StandardCharsets.UTF_8);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "38d96d",
+        "hash": "8f8dd737",
+        "encoded": "exchange.sendResponseHeaders(404,%20body.length);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "38d96d",
+        "hash": "e85cc0c2",
+        "encoded": "exchange.getResponseBody().write(body);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "38d96d",
+        "hash": "d112931c",
+        "encoded": "exchange.close();",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "38d96d",
+        "hash": "afbb28ea",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "38d96d",
+        "hash": "2a51039a",
+        "encoded": "server.start();",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "38d96d",
+        "hash": "bcfcb5a3",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson(Duration.ofSeconds(2),%20Duration.ofSeconds(3));",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "38d96d",
+        "hash": "322c1377",
+        "encoded": "assertThatThrownBy(()%20-%3E%20httpJson.getJson(URI.create(baseUrl()%20+%20%22/missing%22)))",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "38d96d",
+        "hash": "8685f0f1",
+        "encoded": ".isInstanceOf(HttpJsonException.class);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "38d96d",
+        "hash": "f4ff50cd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "38d96d",
+        "hash": "967b2f34",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "38d96d",
+        "hash": "19d5b512",
+        "encoded": "@DisplayName(%22given%20a%20500%20response,%20when%20fetched,%20then%20an%20exception%20is%20thrown%22)",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "38d96d",
+        "hash": "4da8c25b",
+        "encoded": "void%20given500Response_whenFetched_thenExceptionThrown()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "38d96d",
+        "hash": "0ba06b0a",
+        "encoded": "server.createContext(%22/error%22,%20exchange%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "38d96d",
+        "hash": "723e9f6e",
+        "encoded": "byte%5B%5D%20body%20=%20%22server%20error%22.getBytes(StandardCharsets.UTF_8);",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "38d96d",
+        "hash": "203fc7ec",
+        "encoded": "exchange.sendResponseHeaders(500,%20body.length);",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "38d96d",
+        "hash": "2bc8af52",
+        "encoded": "exchange.getResponseBody().write(body);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "38d96d",
+        "hash": "2fbe4e5e",
+        "encoded": "exchange.close();",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "38d96d",
+        "hash": "e3b88b3c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "38d96d",
+        "hash": "4218bffd",
+        "encoded": "server.start();",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "38d96d",
+        "hash": "aea1250b",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson(Duration.ofSeconds(2),%20Duration.ofSeconds(3));",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "38d96d",
+        "hash": "ead86fad",
+        "encoded": "assertThatThrownBy(()%20-%3E%20httpJson.getJson(URI.create(baseUrl()%20+%20%22/error%22)))",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "38d96d",
+        "hash": "43263607",
+        "encoded": ".isInstanceOf(HttpJsonException.class);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "38d96d",
+        "hash": "34001782",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "38d96d",
+        "hash": "7a43bd29",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "38d96d",
+        "hash": "40dff45b",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "38d96d",
+        "hash": "a6026fa3",
+        "encoded": "@DisplayName(%22malformed%20body%22)",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "38d96d",
+        "hash": "2d8cd266",
+        "encoded": "class%20MalformedBody%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "38d96d",
+        "hash": "cbf477b1",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "38d96d",
+        "hash": "42ecdf65",
+        "encoded": "@DisplayName(%22given%20a%20200%20response%20with%20invalid%20JSON,%20when%20fetched,%20then%20an%20exception%20is%20thrown%22)",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "38d96d",
+        "hash": "d49173a3",
+        "encoded": "void%20given200WithInvalidJson_whenFetched_thenExceptionThrown()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "38d96d",
+        "hash": "5980c29d",
+        "encoded": "server.createContext(%22/badjson%22,%20exchange%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "38d96d",
+        "hash": "e7b9a394",
+        "encoded": "byte%5B%5D%20body%20=%20%22%7Bnot%20valid%20json%22.getBytes(StandardCharsets.UTF_8);",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "38d96d",
+        "hash": "8e4f528d",
+        "encoded": "exchange.sendResponseHeaders(200,%20body.length);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "38d96d",
+        "hash": "a99d23f5",
+        "encoded": "exchange.getResponseBody().write(body);",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "38d96d",
+        "hash": "0e22ef0a",
+        "encoded": "exchange.close();",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "38d96d",
+        "hash": "f38e05b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "38d96d",
+        "hash": "82535887",
+        "encoded": "server.start();",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "38d96d",
+        "hash": "a4368819",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson(Duration.ofSeconds(2),%20Duration.ofSeconds(3));",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "38d96d",
+        "hash": "f285ca2a",
+        "encoded": "assertThatThrownBy(()%20-%3E%20httpJson.getJson(URI.create(baseUrl()%20+%20%22/badjson%22)))",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "38d96d",
+        "hash": "8736b552",
+        "encoded": ".isInstanceOf(Exception.class);",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "38d96d",
+        "hash": "331ddc52",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "38d96d",
+        "hash": "c4560e5f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "38d96d",
+        "hash": "95e3ed81",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "38d96d",
+        "hash": "39cc62aa",
+        "encoded": "@DisplayName(%22request%20timeout%22)",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "38d96d",
+        "hash": "1b577128",
+        "encoded": "class%20RequestTimeout%20%7B",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "38d96d",
+        "hash": "72c762b5",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "38d96d",
+        "hash": "f337c04d",
+        "encoded": "@DisplayName(%22given%20a%20server%20that%20never%20responds,%20when%20fetched%20with%20a%20short%20request%20timeout,%20then%20it%20throws%20within%20that%20timeout%22)",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "38d96d",
+        "hash": "25c66676",
+        "encoded": "void%20givenServerNeverResponds_whenFetchedWithShortTimeout_thenThrowsWithinTimeout()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "38d96d",
+        "hash": "b041d9e6",
+        "encoded": "CountDownLatch%20releaseHandler%20=%20new%20CountDownLatch(1);",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "38d96d",
+        "hash": "3984492a",
+        "encoded": "server.createContext(%22/hang%22,%20exchange%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "38d96d",
+        "hash": "63f98dcd",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "38d96d",
+        "hash": "140315f3",
+        "encoded": "releaseHandler.await();",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "38d96d",
+        "hash": "2a3a2343",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "38d96d",
+        "hash": "d10f27b0",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "38d96d",
+        "hash": "be05556d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "38d96d",
+        "hash": "668675b9",
+        "encoded": "exchange.sendResponseHeaders(200,%202);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "38d96d",
+        "hash": "090676a7",
+        "encoded": "exchange.getResponseBody().write(%22%7B%7D%22.getBytes(StandardCharsets.UTF_8));",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "38d96d",
+        "hash": "04d670b0",
+        "encoded": "exchange.close();",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "38d96d",
+        "hash": "8fee1500",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "38d96d",
+        "hash": "3d286ff3",
+        "encoded": "server.start();",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "38d96d",
+        "hash": "6bccb0a0",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson(Duration.ofMillis(200),%20Duration.ofMillis(200));",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "38d96d",
+        "hash": "c139ca31",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "38d96d",
+        "hash": "cf31443a",
+        "encoded": "assertThatThrownBy(()%20-%3E%20httpJson.getJson(URI.create(baseUrl()%20+%20%22/hang%22)))",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "38d96d",
+        "hash": "57ea4d12",
+        "encoded": ".isInstanceOf(Exception.class);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "38d96d",
+        "hash": "f26fa8ed",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "38d96d",
+        "hash": "cce24aac",
+        "encoded": "releaseHandler.countDown();",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "38d96d",
+        "hash": "1dd7a3a6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "38d96d",
+        "hash": "dbb55d46",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "38d96d",
+        "hash": "0b3cc65a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "38d96d",
+        "hash": "95054ec3",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "38d96d",
+        "hash": "ce970f87",
+        "encoded": "@DisplayName(%22timeout%20configuration%22)",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "38d96d",
+        "hash": "a460dee3",
+        "encoded": "class%20TimeoutConfiguration%20%7B",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "38d96d",
+        "hash": "bfaec939",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "38d96d",
+        "hash": "52a9d189",
+        "encoded": "@DisplayName(%22given%20default%20constructor%20values,%20when%20connect%20timeout%20is%20inspected,%20then%20it%20is%202%20seconds%22)",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "38d96d",
+        "hash": "10cf1f13",
+        "encoded": "void%20givenDefaultValues_whenConnectTimeoutInspected_thenIs2Seconds()%20%7B",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "38d96d",
+        "hash": "0b3b9b8d",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson();",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "38d96d",
+        "hash": "a80b5dfb",
+        "encoded": "assertThat(httpJson.connectTimeout()).isEqualTo(Duration.ofSeconds(2));",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "38d96d",
+        "hash": "73b8c9b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "38d96d",
+        "hash": "7e3bf870",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "38d96d",
+        "hash": "fc726a93",
+        "encoded": "@DisplayName(%22given%20default%20constructor%20values,%20when%20request%20timeout%20is%20inspected,%20then%20it%20is%203%20seconds%22)",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "38d96d",
+        "hash": "530da7e6",
+        "encoded": "void%20givenDefaultValues_whenRequestTimeoutInspected_thenIs3Seconds()%20%7B",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "38d96d",
+        "hash": "d77c95a6",
+        "encoded": "HttpJson%20httpJson%20=%20new%20HttpJson();",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "38d96d",
+        "hash": "07014e07",
+        "encoded": "assertThat(httpJson.requestTimeout()).isEqualTo(Duration.ofSeconds(3));",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "38d96d",
+        "hash": "cc7af933",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "38d96d",
+        "hash": "9a3fe29c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "38d96d",
+        "hash": "5efbcd97",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

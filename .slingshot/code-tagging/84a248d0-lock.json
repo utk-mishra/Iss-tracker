@@ -1,0 +1,187 @@
+{
+  "frontend/vite.config.js": {
+    "filename": "vite.config.js",
+    "path": "frontend/vite.config.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "1adacb": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793544850,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "44c91082",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:24:10\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "1adacb",
+        "hash": "1b7b7cbe",
+        "encoded": "import%20%7B%20defineConfig%20%7D%20from%20'vite';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "1adacb",
+        "hash": "0c8f7073",
+        "encoded": "import%20react%20from%20'@vitejs/plugin-react';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "1adacb",
+        "hash": "852b1c39",
+        "encoded": "//%20Dev%20proxy%20/api%20-%3E%20http://localhost:8080%20by%20default,%20overridable%20with",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "1adacb",
+        "hash": "ddd3bb0a",
+        "encoded": "//%20VITE_API_TARGET%20(PROMPT.md%20section%207).%20Production%20build%20output%20goes%20to",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "1adacb",
+        "hash": "4e882ce8",
+        "encoded": "//%20frontend/dist;%20Step%208%20copies%20it%20into%20the%20Spring%20static%20folder.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "1adacb",
+        "hash": "e563e637",
+        "encoded": "export%20default%20defineConfig((%7B%20mode%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "1adacb",
+        "hash": "4e867841",
+        "encoded": "const%20apiTarget%20=%20process.env.VITE_API_TARGET%20%7C%7C%20'http://localhost:8080';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "1adacb",
+        "hash": "7cef9078",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "1adacb",
+        "hash": "9e145e88",
+        "encoded": "plugins:%20%5Breact()%5D,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "1adacb",
+        "hash": "8f79fa70",
+        "encoded": "server:%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "1adacb",
+        "hash": "101c55b1",
+        "encoded": "proxy:%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "1adacb",
+        "hash": "bab7c2ad",
+        "encoded": "'/api':%20%7B%20target:%20apiTarget,%20changeOrigin:%20true%20%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "1adacb",
+        "hash": "cb81cbc0",
+        "encoded": "'/actuator':%20%7B%20target:%20apiTarget,%20changeOrigin:%20true%20%7D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "1adacb",
+        "hash": "aaa19923",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1adacb",
+        "hash": "e682a066",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1adacb",
+        "hash": "b945dc95",
+        "encoded": "build:%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "1adacb",
+        "hash": "a0d3fea9",
+        "encoded": "outDir:%20'dist',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "1adacb",
+        "hash": "1cba0cb6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "1adacb",
+        "hash": "736ac91b",
+        "encoded": "test:%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "1adacb",
+        "hash": "7a81f15b",
+        "encoded": "environment:%20'jsdom',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "1adacb",
+        "hash": "4d298d6e",
+        "encoded": "setupFiles:%20%5B'./tests/setup.js'%5D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "1adacb",
+        "hash": "0c1d3067",
+        "encoded": "globals:%20true,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "1adacb",
+        "hash": "aec00657",
+        "encoded": "css:%20true,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "1adacb",
+        "hash": "daa73354",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "1adacb",
+        "hash": "1ed0374a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "1adacb",
+        "hash": "1ca2ca1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

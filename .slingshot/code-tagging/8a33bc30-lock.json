@@ -1,0 +1,193 @@
+{
+  "Dockerfile": {
+    "filename": "Dockerfile",
+    "path": "Dockerfile",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8f5e53": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793536726,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "1b4d9f38",
+          "files": "3f7e0600"
+        },
+        "hash": "b08e809e",
+        "messageId": "system_a9f63bb0-d5f0-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:08:46\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8f5e53",
+        "hash": "24a92afd",
+        "encoded": "#%20syntax=docker/dockerfile:1",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8f5e53",
+        "hash": "7678d782",
+        "encoded": "#%20----%20Stage%201:%20build%20frontend%20(React/Vite)%20----",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8f5e53",
+        "hash": "0cf28b55",
+        "encoded": "FROM%20node:20-alpine%20AS%20frontend-build",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8f5e53",
+        "hash": "11e3d3cb",
+        "encoded": "WORKDIR%20/app/frontend",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8f5e53",
+        "hash": "74d41a54",
+        "encoded": "#%20Frontend%20is%20added%20in%20Step%207;%20keep%20this%20stage%20resilient%20if%20it%20doesn't%20exist%20yet.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8f5e53",
+        "hash": "2d342727",
+        "encoded": "COPY%20frontend/package*.json%20./",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8f5e53",
+        "hash": "33fe949b",
+        "encoded": "RUN%20if%20%5B%20-f%20package.json%20%5D;%20then%20npm%20ci;%20fi",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8f5e53",
+        "hash": "16db7bff",
+        "encoded": "COPY%20frontend/%20./",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8f5e53",
+        "hash": "60537fbc",
+        "encoded": "RUN%20if%20%5B%20-f%20package.json%20%5D;%20then%20npm%20run%20build;%20else%20mkdir%20-p%20dist;%20fi",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8f5e53",
+        "hash": "5e7f3c62",
+        "encoded": "#%20----%20Stage%202:%20build%20backend%20(Maven)%20----",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8f5e53",
+        "hash": "0bba6c54",
+        "encoded": "FROM%20maven:3.9-eclipse-temurin-21%20AS%20backend-build",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8f5e53",
+        "hash": "5c8cd329",
+        "encoded": "WORKDIR%20/app/backend",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8f5e53",
+        "hash": "fe85e584",
+        "encoded": "COPY%20backend/pom.xml%20./",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8f5e53",
+        "hash": "fcea4b1b",
+        "encoded": "RUN%20mvn%20-q%20-B%20dependency:go-offline",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8f5e53",
+        "hash": "96ad3a1c",
+        "encoded": "COPY%20backend/src%20./src",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8f5e53",
+        "hash": "6f398a27",
+        "encoded": "COPY%20--from=frontend-build%20/app/frontend/dist%20./src/main/resources/static",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8f5e53",
+        "hash": "fd42a6d6",
+        "encoded": "RUN%20mvn%20-q%20-B%20clean%20package%20-DskipTests",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8f5e53",
+        "hash": "de71b05d",
+        "encoded": "#%20----%20Stage%203:%20runtime%20----",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8f5e53",
+        "hash": "325dccb9",
+        "encoded": "FROM%20eclipse-temurin:21-jre-alpine%20AS%20runtime",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "8f5e53",
+        "hash": "83eef51d",
+        "encoded": "RUN%20addgroup%20-S%20iss%20&&%20adduser%20-S%20iss%20-G%20iss",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8f5e53",
+        "hash": "7ff34398",
+        "encoded": "WORKDIR%20/app",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8f5e53",
+        "hash": "b84a461b",
+        "encoded": "COPY%20--from=backend-build%20/app/backend/target/iss-tracker.jar%20./app.jar",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "8f5e53",
+        "hash": "629fd6b5",
+        "encoded": "USER%20iss",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8f5e53",
+        "hash": "c79fe19d",
+        "encoded": "EXPOSE%208080",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8f5e53",
+        "hash": "50148a9d",
+        "encoded": "HEALTHCHECK%20--interval=30s%20--timeout=3s%20--start-period=20s%20--retries=3%20%5C",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8f5e53",
+        "hash": "fb354c47",
+        "encoded": "CMD%20wget%20-qO-%20http://localhost:8080/actuator/health%20%7C%20grep%20-q%20'%22status%22:%22UP%22'%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8f5e53",
+        "hash": "198a3648",
+        "encoded": "ENTRYPOINT%20%5B%22java%22,%20%22-jar%22,%20%22/app/app.jar%22%5D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

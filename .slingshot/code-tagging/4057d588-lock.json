@@ -1,0 +1,85 @@
+{
+  "frontend/tests/components/LoadingSkeleton.test.jsx": {
+    "filename": "LoadingSkeleton.test.jsx",
+    "path": "frontend/tests/components/LoadingSkeleton.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "76fec4": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "7096ca0d",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "76fec4",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "76fec4",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "76fec4",
+        "hash": "12363172",
+        "encoded": "import%20LoadingSkeleton%20from%20'../../src/components/LoadingSkeleton.jsx';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "76fec4",
+        "hash": "5ad78bdc",
+        "encoded": "describe('LoadingSkeleton',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "76fec4",
+        "hash": "329ead9b",
+        "encoded": "it('given%20it%20is%20rendered,%20then%20it%20exposes%20a%20status%20role%20for%20accessibility',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "76fec4",
+        "hash": "1ed160e3",
+        "encoded": "render(%3CLoadingSkeleton%20/%3E);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "76fec4",
+        "hash": "e5ad2a90",
+        "encoded": "expect(screen.getByRole('status')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "76fec4",
+        "hash": "a0290d90",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "76fec4",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

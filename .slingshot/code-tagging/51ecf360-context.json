@@ -1,0 +1,31 @@
+{
+  "filename": "OfflineToggle.test.jsx",
+  "path": "frontend/tests/components/OfflineToggle.test.jsx",
+  "version": "1.1",
+  "files": {
+    "17ee55be": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            219
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "bfb7e7e4": {
+      "value": "go ahead"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

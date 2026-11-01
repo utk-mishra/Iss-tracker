@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: iss-tracker
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-stacktrace: never
+    include-message: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+# --- Upstream configuration (Step 0 verified contracts; see PROMPT.md section 3) ---
+iss:
+  upstream:
+    open-notify:
+      url: ${OPEN_NOTIFY_URL:http://api.open-notify.org/iss-now.json}
+    pollux:
+      url: ${POLLUX_URL:https://iss-api.polluxlabs.io/iss-pass}
+      pass-count: ${POLLUX_PASS_COUNT:20}
+    open-meteo:
+      url: ${OPEN_METEO_URL:https://api.open-meteo.com/v1/forecast}
+  cache:
+    position:
+      ttl-seconds: 5
+      max-stale-seconds: 3600
+    passes:
+      ttl-seconds: 900
+      max-stale-seconds: 86400
+    cloud:
+      ttl-seconds: 1800
+      max-stale-seconds: 43200
+    max-entries: 500
+  circuit-breaker:
+    failure-threshold: 3
+    cooldown-seconds: 30
+  http:
+    timeout-seconds: 3
+    retry-count: 1
+  security:
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:}
+  rate-limit:
+    per-minute: ${RATE_LIMIT_PER_MINUTE:120}
+    trusted-proxy: ${TRUSTED_PROXY:false}

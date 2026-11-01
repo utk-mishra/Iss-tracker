@@ -1,0 +1,349 @@
+{
+  "backend/src/test/java/com/example/iss/domain/MagnitudeCalculatorTest.java": {
+    "filename": "MagnitudeCalculatorTest.java",
+    "path": "backend/src/test/java/com/example/iss/domain/MagnitudeCalculatorTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "378c8e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538664,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "b968fa0e",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:41:04\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "378c8e",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "378c8e",
+        "hash": "cd07b803",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "378c8e",
+        "hash": "3842b4d7",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "378c8e",
+        "hash": "877b8003",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "378c8e",
+        "hash": "900e6c46",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "378c8e",
+        "hash": "cfd8e328",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "378c8e",
+        "hash": "86129612",
+        "encoded": "*%20MagnitudeCalculator:%20elevation-band%20approximation%20(PROMPT.md%20section%205).",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "378c8e",
+        "hash": "749b13df",
+        "encoded": "*%20%3E=80%20-%3E%20-3.5;%20%3E=40%20-%3E%20-2.5;%20%3E=20%20-%3E%20-1.5;%20else%20-0.5.",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "378c8e",
+        "hash": "c27421dc",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "378c8e",
+        "hash": "0829c6d2",
+        "encoded": "class%20MagnitudeCalculatorTest%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "378c8e",
+        "hash": "38183fe5",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "378c8e",
+        "hash": "ca057da1",
+        "encoded": "@DisplayName(%2280%20degree%20boundary%22)",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "378c8e",
+        "hash": "29af5d22",
+        "encoded": "class%20EightyDegreeBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "378c8e",
+        "hash": "c645d8e7",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "378c8e",
+        "hash": "50ac2c11",
+        "encoded": "@DisplayName(%22given%20max%20elevation%20exactly%2080,%20when%20calculated,%20then%20magnitude%20is%20-3.5%22)",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "378c8e",
+        "hash": "89ef040b",
+        "encoded": "void%20given80_whenCalculated_thenMinus3_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "378c8e",
+        "hash": "096e7f4c",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(80)).isEqualTo(-3.5);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "378c8e",
+        "hash": "4c3814eb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "378c8e",
+        "hash": "08906b3e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "378c8e",
+        "hash": "1f03b9c0",
+        "encoded": "@DisplayName(%22given%20max%20elevation%2079.9,%20when%20calculated,%20then%20magnitude%20is%20-2.5%22)",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "378c8e",
+        "hash": "8e18fdf9",
+        "encoded": "void%20given79_9_whenCalculated_thenMinus2_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "378c8e",
+        "hash": "4c3af4ca",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(79.9)).isEqualTo(-2.5);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "378c8e",
+        "hash": "46b23985",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "378c8e",
+        "hash": "7721e417",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "378c8e",
+        "hash": "982ef1e0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "378c8e",
+        "hash": "2c314e57",
+        "encoded": "@DisplayName(%2240%20degree%20boundary%22)",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "378c8e",
+        "hash": "2b5875e8",
+        "encoded": "class%20FortyDegreeBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "378c8e",
+        "hash": "c5eb05e4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "378c8e",
+        "hash": "fe1cc0ee",
+        "encoded": "@DisplayName(%22given%20max%20elevation%20exactly%2040,%20when%20calculated,%20then%20magnitude%20is%20-2.5%22)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "378c8e",
+        "hash": "1798e9ef",
+        "encoded": "void%20given40_whenCalculated_thenMinus2_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "378c8e",
+        "hash": "f0b24638",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(40)).isEqualTo(-2.5);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "378c8e",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "378c8e",
+        "hash": "bbc67fab",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "378c8e",
+        "hash": "84e6c483",
+        "encoded": "@DisplayName(%22given%20max%20elevation%2039.9,%20when%20calculated,%20then%20magnitude%20is%20-1.5%22)",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "378c8e",
+        "hash": "7a5d0bfc",
+        "encoded": "void%20given39_9_whenCalculated_thenMinus1_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "378c8e",
+        "hash": "467889ea",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(39.9)).isEqualTo(-1.5);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "378c8e",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "378c8e",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "378c8e",
+        "hash": "8aa5794d",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "378c8e",
+        "hash": "e9a53646",
+        "encoded": "@DisplayName(%2220%20degree%20boundary%22)",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "378c8e",
+        "hash": "9e3969b5",
+        "encoded": "class%20TwentyDegreeBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "378c8e",
+        "hash": "af5e472d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "378c8e",
+        "hash": "e30b8894",
+        "encoded": "@DisplayName(%22given%20max%20elevation%20exactly%2020,%20when%20calculated,%20then%20magnitude%20is%20-1.5%22)",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "378c8e",
+        "hash": "0acf7b8d",
+        "encoded": "void%20given20_whenCalculated_thenMinus1_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "378c8e",
+        "hash": "00302112",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(20)).isEqualTo(-1.5);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "378c8e",
+        "hash": "cdb7b2a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "378c8e",
+        "hash": "524ab78c",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "378c8e",
+        "hash": "a2240781",
+        "encoded": "@DisplayName(%22given%20max%20elevation%2019.9,%20when%20calculated,%20then%20magnitude%20is%20-0.5%22)",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "378c8e",
+        "hash": "d9f58fd2",
+        "encoded": "void%20given19_9_whenCalculated_thenMinus0_5()%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "378c8e",
+        "hash": "3ac56bae",
+        "encoded": "assertThat(MagnitudeCalculator.fromMaxElevationDeg(19.9)).isEqualTo(-0.5);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "378c8e",
+        "hash": "646a8e84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "378c8e",
+        "hash": "78db855a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "378c8e",
+        "hash": "48dc6fe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

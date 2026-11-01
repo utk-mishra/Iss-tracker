@@ -1,0 +1,69 @@
+{
+  "PROMPT.md": {
+    "filename": "PROMPT.md",
+    "path": "PROMPT.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "0ddb8c": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793536773,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "chat",
+        "type": "copyCode",
+        "extraContext": {
+          "promptMessage": "1b4d9f38",
+          "files": "3f7e0600"
+        },
+        "hash": "76008643",
+        "messageId": "system_a9f63bb0-d5f0-11f1-a621-096a9ff7de59",
+        "codeBlockId": "system_a9f63bb0-d5f0-11f1-a621-096a9ff7de59-Codeblock-1",
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:09:33\n- **source**: chat\n- **type**: copyCode\n"
+      },
+      "d4044a": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538984,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "chat",
+        "type": "copyCode",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "76008643",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": "system_47436920-d5f5-11f1-a621-096a9ff7de59-Codeblock-2",
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:24\n- **source**: chat\n- **type**: copyCode\n"
+      },
+      "e49a3e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538984,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "chat",
+        "type": "copyCode",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "76008643",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": "system_47436920-d5f5-11f1-a621-096a9ff7de59-Codeblock-2",
+        "isActive": false,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:24\n- **source**: chat\n- **type**: copyCode\n"
+      }
+    },
+    "lines": {},
+    "_prevLineCount": 219
+  }
+}

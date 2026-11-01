@@ -1,0 +1,103 @@
+{
+  "frontend/tests/components/CompassDial.test.jsx": {
+    "filename": "CompassDial.test.jsx",
+    "path": "frontend/tests/components/CompassDial.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8cfeb6": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "27c55711",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8cfeb6",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8cfeb6",
+        "hash": "0152b21f",
+        "encoded": "import%20%7B%20render%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8cfeb6",
+        "hash": "1450cd2f",
+        "encoded": "import%20CompassDial%20from%20'../../src/components/CompassDial.jsx';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8cfeb6",
+        "hash": "af25091c",
+        "encoded": "describe('CompassDial',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8cfeb6",
+        "hash": "6adfeea0",
+        "encoded": "it('given%20rise%20and%20set%20azimuths,%20when%20rendered,%20then%20an%20SVG%20element%20is%20produced',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8cfeb6",
+        "hash": "b66ff9ea",
+        "encoded": "const%20%7B%20container%20%7D%20=%20render(%3CCompassDial%20riseAzimuthDeg=%7B315.6%7D%20setAzimuthDeg=%7B139.9%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8cfeb6",
+        "hash": "f31a77ff",
+        "encoded": "expect(container.querySelector('svg')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8cfeb6",
+        "hash": "a0290d90",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8cfeb6",
+        "hash": "536e1cc2",
+        "encoded": "it('given%20null%20azimuths,%20when%20rendered,%20then%20it%20does%20not%20crash',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8cfeb6",
+        "hash": "f234bb9c",
+        "encoded": "expect(()%20=%3E%20render(%3CCompassDial%20riseAzimuthDeg=%7Bnull%7D%20setAzimuthDeg=%7Bnull%7D%20/%3E)).not.toThrow();",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8cfeb6",
+        "hash": "b83e12be",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8cfeb6",
+        "hash": "13877439",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "frontend/tests/components/PositionCard.test.jsx": {
+    "filename": "PositionCard.test.jsx",
+    "path": "frontend/tests/components/PositionCard.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "fb01d6": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "b4e02b59",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f21c83": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "0ec14d26",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f21c83",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "f21c83",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f21c83",
+        "hash": "56641e66",
+        "encoded": "import%20PositionCard%20from%20'../../src/components/PositionCard.jsx';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "f21c83",
+        "hash": "5322c3ac",
+        "encoded": "import%20fixture%20from%20'../fixtures/overview-response.json';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f21c83",
+        "hash": "ea86f59f",
+        "encoded": "describe('PositionCard',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f21c83",
+        "hash": "866b0ee4",
+        "encoded": "it('given%20a%20real%20position,%20when%20rendered,%20then%20latitude,%20longitude,%20altitude%20and%20velocity%20are%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "f21c83",
+        "hash": "7d794dd6",
+        "encoded": "render(%3CPositionCard%20position=%7Bfixture.position%7D%20meta=%7Bfixture.meta.position%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f21c83",
+        "hash": "a2f560f2",
+        "encoded": "expect(screen.getByText(/20/)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f21c83",
+        "hash": "47296523",
+        "encoded": "expect(screen.getByText(/408/)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "f21c83",
+        "hash": "8542e13e",
+        "encoded": "expect(screen.getByText(/27600/)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f21c83",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f21c83",
+        "hash": "8dc1c64f",
+        "encoded": "it('given%20no%20position%20(null),%20when%20rendered,%20then%20it%20does%20not%20crash',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f21c83",
+        "hash": "0308cc90",
+        "encoded": "expect(()%20=%3E%20render(%3CPositionCard%20position=%7Bnull%7D%20meta=%7Bnull%7D%20/%3E)).not.toThrow();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "f21c83",
+        "hash": "99e8e451",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "f21c83",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fb01d6",
+        "hash": "7630c589",
+        "encoded": "it('given%20a%20real%20position,%20when%20rendered,%20then%20latitude,%20longitude,%20altitude%20and%20velocity%20are%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fb01d6",
+        "hash": "489af06b",
+        "encoded": "render(%3CPositionCard%20position=%7Bfixture.position%7D%20meta=%7Bfixture.meta.position%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fb01d6",
+        "hash": "0eb87e81",
+        "encoded": "expect(screen.getByText(%60$%7Bfixture.position.latitude%7D%5Cu00b0%60)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fb01d6",
+        "hash": "c99548f8",
+        "encoded": "expect(screen.getByText(%60$%7Bfixture.position.altitudeKm%7D%20km%60)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "fb01d6",
+        "hash": "67877f0b",
+        "encoded": "expect(screen.getByText(%60$%7Bfixture.position.velocityKmh%7D%20km/h%60)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "fb01d6",
+        "hash": "b991b7e1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "frontend/tests/components/OfflineToggle.test.jsx": {
+    "filename": "OfflineToggle.test.jsx",
+    "path": "frontend/tests/components/OfflineToggle.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "3cd4b1": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793545093,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "15146c0a",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:28:13\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3cd4b1",
+        "hash": "a649e68a",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20beforeEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "3cd4b1",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "3cd4b1",
+        "hash": "c9114392",
+        "encoded": "import%20userEvent%20from%20'@testing-library/user-event';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "3cd4b1",
+        "hash": "ed8c5048",
+        "encoded": "import%20OfflineToggle%20from%20'../../src/components/OfflineToggle.jsx';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "3cd4b1",
+        "hash": "d71845e3",
+        "encoded": "describe('OfflineToggle',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3cd4b1",
+        "hash": "77b31d3b",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "3cd4b1",
+        "hash": "5e71ed7d",
+        "encoded": "window.localStorage.clear();",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3cd4b1",
+        "hash": "0269e656",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3cd4b1",
+        "hash": "71f2ca5e",
+        "encoded": "it('given%20the%20toggle%20is%20off,%20when%20clicked,%20then%20onChange%20is%20called%20with%20true%20and%20persisted%20to%20localStorage',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3cd4b1",
+        "hash": "3588b5a4",
+        "encoded": "let%20offline%20=%20false;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3cd4b1",
+        "hash": "06bffbdd",
+        "encoded": "const%20onChange%20=%20(value)%20=%3E%20%7B%20offline%20=%20value;%20%7D;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "3cd4b1",
+        "hash": "4116e0db",
+        "encoded": "render(%3COfflineToggle%20offline=%7Boffline%7D%20onChange=%7BonChange%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3cd4b1",
+        "hash": "758f0866",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "3cd4b1",
+        "hash": "3555d3d9",
+        "encoded": "await%20user.click(screen.getByRole('checkbox'));",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "3cd4b1",
+        "hash": "6bdd1861",
+        "encoded": "expect(offline).toBe(true);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "3cd4b1",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "3cd4b1",
+        "hash": "2fb64472",
+        "encoded": "it('given%20offline=true%20is%20passed%20in,%20when%20rendered,%20then%20the%20checkbox%20is%20checked',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "3cd4b1",
+        "hash": "0760e3f1",
+        "encoded": "render(%3COfflineToggle%20offline=%7Btrue%7D%20onChange=%7B()%20=%3E%20%7B%7D%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "3cd4b1",
+        "hash": "2d2aadbb",
+        "encoded": "expect(screen.getByRole('checkbox')).toBeChecked();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3cd4b1",
+        "hash": "6b97514d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3cd4b1",
+        "hash": "1ca2ca1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

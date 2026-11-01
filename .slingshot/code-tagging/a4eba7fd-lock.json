@@ -1,0 +1,355 @@
+{
+  "backend/src/main/java/com/example/iss/client/PassMock.java": {
+    "filename": "PassMock.java",
+    "path": "backend/src/main/java/com/example/iss/client/PassMock.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "efe8a4": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540407,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "cfb1315c",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:07\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "efe8a4",
+        "hash": "73d60ae2",
+        "encoded": "package%20com.example.iss.client;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "efe8a4",
+        "hash": "45fc393d",
+        "encoded": "import%20com.example.iss.domain.Pass;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "efe8a4",
+        "hash": "7d34e95d",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "efe8a4",
+        "hash": "cd5884f8",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "efe8a4",
+        "hash": "2627de51",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "efe8a4",
+        "hash": "601f609b",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "efe8a4",
+        "hash": "27cc2e5b",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "efe8a4",
+        "hash": "f753e300",
+        "encoded": "import%20java.util.ArrayList;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "efe8a4",
+        "hash": "b3b096ea",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "efe8a4",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "efe8a4",
+        "hash": "ed21b019",
+        "encoded": "*%20Loads%20the%20static%20mocks/passes.json%20fallback%20and%20time-shifts%20every%20instant%20so%20the",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "efe8a4",
+        "hash": "2db279f7",
+        "encoded": "*%20first%20OBSERVABLE%20pass%20starts%20~90%20minutes%20from%20%22now%22%20per%20the%20injected%20Clock",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "efe8a4",
+        "hash": "b063f4e0",
+        "encoded": "*%20(PROMPT.md%20section%209,%20Step%205%20decision%20f).%20Reuses%20%7B@link%20PolluxClient#parse(JsonNode)%7D",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "efe8a4",
+        "hash": "939e0710",
+        "encoded": "*%20since%20the%20mock%20is%20schema-identical%20to%20the%20real%20Pollux%20response%20by%20design.%20Labeling",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "efe8a4",
+        "hash": "8e45623d",
+        "encoded": "*%20the%20result%20as%20MOCK%20in%20a%20response's%20meta%20is%20the%20caller's%20(IssFacade,%20Step%206)",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "efe8a4",
+        "hash": "559d1877",
+        "encoded": "*%20responsibility,%20not%20this%20loader's.",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "efe8a4",
+        "hash": "4b6c9127",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "efe8a4",
+        "hash": "d88fe8c7",
+        "encoded": "public%20final%20class%20PassMock%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "efe8a4",
+        "hash": "9bff8239",
+        "encoded": "private%20static%20final%20Duration%20ANCHOR_OFFSET%20=%20Duration.ofMinutes(90);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "efe8a4",
+        "hash": "e4b142c5",
+        "encoded": "private%20PassMock()%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "efe8a4",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "efe8a4",
+        "hash": "f96793a5",
+        "encoded": "public%20static%20PassFeed%20load(JsonNode%20mockPassesJson,%20Clock%20clock)%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "efe8a4",
+        "hash": "8953fca8",
+        "encoded": "PassFeed%20original%20=%20PolluxClient.parse(mockPassesJson);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "efe8a4",
+        "hash": "ff9537ae",
+        "encoded": "Pass%20firstObservable%20=%20original.passes().stream()",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "efe8a4",
+        "hash": "7e2e7d75",
+        "encoded": ".filter(Pass::isObservable)",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "efe8a4",
+        "hash": "92257a7b",
+        "encoded": ".findFirst()",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "efe8a4",
+        "hash": "3cde2add",
+        "encoded": ".orElseThrow(()%20-%3E%20new%20IllegalStateException(",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "efe8a4",
+        "hash": "0fd92648",
+        "encoded": "%22mocks/passes.json%20must%20contain%20at%20least%20one%20observable%20pass%22));",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "efe8a4",
+        "hash": "e2dd3a82",
+        "encoded": "Instant%20targetStart%20=%20clock.instant().plus(ANCHOR_OFFSET);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "efe8a4",
+        "hash": "e307c150",
+        "encoded": "Duration%20shiftDelta%20=%20Duration.between(firstObservable.visibleStart(),%20targetStart);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "efe8a4",
+        "hash": "d1bcc68e",
+        "encoded": "List%3CPass%3E%20shiftedPasses%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "efe8a4",
+        "hash": "7c2af30e",
+        "encoded": "for%20(Pass%20pass%20:%20original.passes())%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "efe8a4",
+        "hash": "b1229f5c",
+        "encoded": "shiftedPasses.add(shift(pass,%20shiftDelta));",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "efe8a4",
+        "hash": "5663967b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "efe8a4",
+        "hash": "aaa597f9",
+        "encoded": "return%20new%20PassFeed(shiftedPasses,%20original.tleAgeHours(),%20original.tleStale());",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "efe8a4",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "efe8a4",
+        "hash": "ab018085",
+        "encoded": "private%20static%20Pass%20shift(Pass%20pass,%20Duration%20delta)%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "efe8a4",
+        "hash": "5656df50",
+        "encoded": "return%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "efe8a4",
+        "hash": "ca7c2319",
+        "encoded": "pass.riseTime().plus(delta),",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "efe8a4",
+        "hash": "9679f0c7",
+        "encoded": "pass.riseAzimuthDeg(),",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "efe8a4",
+        "hash": "ab28ae45",
+        "encoded": "pass.riseDirection(),",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "efe8a4",
+        "hash": "10b5a154",
+        "encoded": "pass.culminationTime().plus(delta),",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "efe8a4",
+        "hash": "59ba64b0",
+        "encoded": "pass.maxElevationDeg(),",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "efe8a4",
+        "hash": "9559df81",
+        "encoded": "pass.setTime().plus(delta),",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "efe8a4",
+        "hash": "8ea2668e",
+        "encoded": "pass.setAzimuthDeg(),",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "efe8a4",
+        "hash": "50765ea9",
+        "encoded": "pass.setDirection(),",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "efe8a4",
+        "hash": "fd459f34",
+        "encoded": "pass.durationSec(),",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "efe8a4",
+        "hash": "1520e884",
+        "encoded": "pass.visible(),",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "efe8a4",
+        "hash": "b2f19ff9",
+        "encoded": "pass.visibleStart()%20==%20null%20?%20null%20:%20pass.visibleStart().plus(delta),",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "efe8a4",
+        "hash": "c9bc755e",
+        "encoded": "pass.visibleEnd()%20==%20null%20?%20null%20:%20pass.visibleEnd().plus(delta),",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "efe8a4",
+        "hash": "84c4e7fa",
+        "encoded": "pass.visibleDurationSec()",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "efe8a4",
+        "hash": "eec168c4",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "efe8a4",
+        "hash": "646a8e84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "efe8a4",
+        "hash": "78db855a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

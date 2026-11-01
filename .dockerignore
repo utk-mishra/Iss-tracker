@@ -1,0 +1,11 @@
+backend/target
+frontend/node_modules
+frontend/dist
+.git
+.gitignore
+.github
+.agent
+*.md
+docs/
+.env
+.env.*

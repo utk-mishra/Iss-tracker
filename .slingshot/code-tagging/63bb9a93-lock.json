@@ -1,0 +1,433 @@
+{
+  "backend/src/test/java/com/example/iss/api/SecurityHeadersFilterTest.java": {
+    "filename": "SecurityHeadersFilterTest.java",
+    "path": "backend/src/test/java/com/example/iss/api/SecurityHeadersFilterTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "f13244": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "2ae24c8e",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f13244",
+        "hash": "d10dddef",
+        "encoded": "package%20com.example.iss.api;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f13244",
+        "hash": "927c67e2",
+        "encoded": "import%20jakarta.servlet.FilterChain;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "f13244",
+        "hash": "928fd519",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f13244",
+        "hash": "d4dad7e4",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f13244",
+        "hash": "695ccfe0",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f13244",
+        "hash": "6fff3017",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "f13244",
+        "hash": "62483b0d",
+        "encoded": "import%20org.springframework.mock.web.MockHttpServletRequest;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "f13244",
+        "hash": "c8130ce2",
+        "encoded": "import%20org.springframework.mock.web.MockHttpServletResponse;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f13244",
+        "hash": "4bda1ce5",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "f13244",
+        "hash": "f4bccb7e",
+        "encoded": "import%20static%20org.mockito.Mockito.mock;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f13244",
+        "hash": "f3bc91f0",
+        "encoded": "import%20static%20org.mockito.Mockito.verify;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f13244",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f13244",
+        "hash": "4f1d3845",
+        "encoded": "*%20SecurityHeadersFilter:%20applies%20the%20fixed%20header%20set%20from%20Step%206%20decision%203%20to%20every",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "f13244",
+        "hash": "458a3c1f",
+        "encoded": "*%20response,%20plus%20Cache-Control:%20no-store%20on%20/api/**%20only.",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "f13244",
+        "hash": "fc142b2b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "f13244",
+        "hash": "d0d55866",
+        "encoded": "class%20SecurityHeadersFilterTest%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "f13244",
+        "hash": "25c4b759",
+        "encoded": "private%20SecurityHeadersFilter%20filter;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "f13244",
+        "hash": "21d1f058",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "f13244",
+        "hash": "34fa1d5d",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "f13244",
+        "hash": "f5c9f54f",
+        "encoded": "filter%20=%20new%20SecurityHeadersFilter();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "f13244",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "f13244",
+        "hash": "f0f2f647",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "f13244",
+        "hash": "90802189",
+        "encoded": "@DisplayName(%22headers%20applied%20to%20every%20response%22)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "f13244",
+        "hash": "8a9c0b94",
+        "encoded": "class%20HeadersAppliedToEveryResponse%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "f13244",
+        "hash": "2faecc66",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "f13244",
+        "hash": "1537382e",
+        "encoded": "@DisplayName(%22given%20any%20request,%20when%20filtered,%20then%20the%20response%20carries%20all%20required%20security%20headers%20with%20the%20exact%20expected%20values%22)",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "f13244",
+        "hash": "c2c8e686",
+        "encoded": "void%20givenAnyRequest_whenFiltered_thenAllSecurityHeadersPresent()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "f13244",
+        "hash": "64d5469d",
+        "encoded": "MockHttpServletRequest%20request%20=%20new%20MockHttpServletRequest(%22GET%22,%20%22/docs%22);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "f13244",
+        "hash": "8dd85442",
+        "encoded": "MockHttpServletResponse%20response%20=%20new%20MockHttpServletResponse();",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "f13244",
+        "hash": "f2c92284",
+        "encoded": "FilterChain%20chain%20=%20mock(FilterChain.class);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "f13244",
+        "hash": "bf513f9f",
+        "encoded": "filter.doFilter(request,%20response,%20chain);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "f13244",
+        "hash": "3c707ea6",
+        "encoded": "assertThat(response.getHeader(%22X-Content-Type-Options%22)).isEqualTo(%22nosniff%22);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "f13244",
+        "hash": "996985eb",
+        "encoded": "assertThat(response.getHeader(%22X-Frame-Options%22)).isEqualTo(%22DENY%22);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "f13244",
+        "hash": "bc135a8f",
+        "encoded": "assertThat(response.getHeader(%22Referrer-Policy%22)).isEqualTo(%22no-referrer%22);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "f13244",
+        "hash": "c400f024",
+        "encoded": "assertThat(response.getHeader(%22Permissions-Policy%22)).isEqualTo(%22geolocation=(self)%22);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "f13244",
+        "hash": "ed58cd85",
+        "encoded": "String%20csp%20=%20response.getHeader(%22Content-Security-Policy%22);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "f13244",
+        "hash": "4a0276b9",
+        "encoded": "assertThat(csp).contains(%22default-src%20'self'%22);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "f13244",
+        "hash": "56b72cd4",
+        "encoded": "assertThat(csp).contains(%22style-src%20'self'%20'unsafe-inline'%22);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "f13244",
+        "hash": "28daa811",
+        "encoded": "assertThat(csp).contains(%22img-src%20'self'%20data:%22);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "f13244",
+        "hash": "4791cae4",
+        "encoded": "assertThat(csp).contains(%22connect-src%20'self'%22);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "f13244",
+        "hash": "b471bffc",
+        "encoded": "assertThat(csp).contains(%22frame-ancestors%20'none'%22);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "f13244",
+        "hash": "0bd25873",
+        "encoded": "assertThat(csp).contains(%22base-uri%20'self'%22);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "f13244",
+        "hash": "927dd0f4",
+        "encoded": "assertThat(csp).contains(%22form-action%20'self'%22);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "f13244",
+        "hash": "1b514edc",
+        "encoded": "verify(chain).doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "f13244",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "f13244",
+        "hash": "5c9d24d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "f13244",
+        "hash": "bbf276c0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "f13244",
+        "hash": "cd0fa790",
+        "encoded": "@DisplayName(%22Cache-Control%20on%20/api/**%20only%22)",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "f13244",
+        "hash": "d9fabe4f",
+        "encoded": "class%20CacheControlOnApiOnly%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "f13244",
+        "hash": "085facb9",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "f13244",
+        "hash": "65d6581b",
+        "encoded": "@DisplayName(%22given%20a%20request%20to%20/api/v1/iss/overview,%20when%20filtered,%20then%20Cache-Control%20is%20no-store%22)",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "f13244",
+        "hash": "75ae5d89",
+        "encoded": "void%20givenApiRequest_whenFiltered_thenCacheControlNoStore()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "f13244",
+        "hash": "99c4a3c9",
+        "encoded": "MockHttpServletRequest%20request%20=%20new%20MockHttpServletRequest(%22GET%22,%20%22/api/v1/iss/overview%22);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "f13244",
+        "hash": "9893418b",
+        "encoded": "MockHttpServletResponse%20response%20=%20new%20MockHttpServletResponse();",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "f13244",
+        "hash": "8a7f7cfc",
+        "encoded": "filter.doFilter(request,%20response,%20mock(FilterChain.class));",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "f13244",
+        "hash": "a3be11ae",
+        "encoded": "assertThat(response.getHeader(%22Cache-Control%22)).isEqualTo(%22no-store%22);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "f13244",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "f13244",
+        "hash": "597dafce",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "f13244",
+        "hash": "57cab74d",
+        "encoded": "@DisplayName(%22given%20a%20request%20to%20a%20non-api%20path,%20when%20filtered,%20then%20Cache-Control%20is%20not%20forced%20to%20no-store%22)",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "f13244",
+        "hash": "712457f2",
+        "encoded": "void%20givenNonApiRequest_whenFiltered_thenCacheControlNotForced()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "f13244",
+        "hash": "cff93df5",
+        "encoded": "MockHttpServletRequest%20request%20=%20new%20MockHttpServletRequest(%22GET%22,%20%22/docs%22);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "f13244",
+        "hash": "f2bad1f6",
+        "encoded": "MockHttpServletResponse%20response%20=%20new%20MockHttpServletResponse();",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "f13244",
+        "hash": "e85e649d",
+        "encoded": "filter.doFilter(request,%20response,%20mock(FilterChain.class));",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "f13244",
+        "hash": "cb8df105",
+        "encoded": "assertThat(response.getHeader(%22Cache-Control%22)).isNotEqualTo(%22no-store%22);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "f13244",
+        "hash": "a2f26355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "f13244",
+        "hash": "d6938858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "f13244",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

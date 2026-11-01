@@ -1,0 +1,415 @@
+{
+  "frontend/tests/components/LocationForm.test.jsx": {
+    "filename": "LocationForm.test.jsx",
+    "path": "frontend/tests/components/LocationForm.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "6d1dd3": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793545093,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "2ce06f4c",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:28:13\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6d1dd3",
+        "hash": "1c5ee88a",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "6d1dd3",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6d1dd3",
+        "hash": "c9114392",
+        "encoded": "import%20userEvent%20from%20'@testing-library/user-event';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "6d1dd3",
+        "hash": "81dbd2fb",
+        "encoded": "import%20LocationForm%20from%20'../../src/components/LocationForm.jsx';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "6d1dd3",
+        "hash": "7feffb2b",
+        "encoded": "describe('LocationForm',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6d1dd3",
+        "hash": "b17d8ced",
+        "encoded": "it('given%20valid%20lat/lon,%20when%20submitted,%20then%20onSubmit%20is%20called%20with%20the%20parsed%20numbers',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "6d1dd3",
+        "hash": "48dae3c9",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6d1dd3",
+        "hash": "f967e484",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "6d1dd3",
+        "hash": "dc809ce5",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "6d1dd3",
+        "hash": "c1b1bd88",
+        "encoded": "await%20user.type(screen.getByLabelText(/latitude/i),%20'28.6139');",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6d1dd3",
+        "hash": "eb2297d1",
+        "encoded": "await%20user.type(screen.getByLabelText(/longitude/i),%20'77.2090');",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "6d1dd3",
+        "hash": "c4ddc95d",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20these%20coordinates/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "6d1dd3",
+        "hash": "3ff8fe20",
+        "encoded": "expect(onSubmit).toHaveBeenCalledWith(%7B%20lat:%2028.6139,%20lon:%2077.209%20%7D);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "6d1dd3",
+        "hash": "99e8e451",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "6d1dd3",
+        "hash": "f1e06257",
+        "encoded": "it('given%20lat=91%20(just%20outside%20boundary),%20when%20submitted,%20then%20onSubmit%20is%20not%20called%20and%20an%20error%20is%20shown',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "6d1dd3",
+        "hash": "62a69ff0",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "6d1dd3",
+        "hash": "cc0766fc",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "6d1dd3",
+        "hash": "6904c231",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "6d1dd3",
+        "hash": "c13c11bf",
+        "encoded": "await%20user.type(screen.getByLabelText(/latitude/i),%20'91');",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "6d1dd3",
+        "hash": "b450b9dc",
+        "encoded": "await%20user.type(screen.getByLabelText(/longitude/i),%20'0');",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "6d1dd3",
+        "hash": "f24066e7",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20these%20coordinates/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "6d1dd3",
+        "hash": "7f13d469",
+        "encoded": "expect(onSubmit).not.toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "6d1dd3",
+        "hash": "a43b7dd0",
+        "encoded": "expect(screen.getByRole('alert')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "6d1dd3",
+        "hash": "69a835b5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "6d1dd3",
+        "hash": "c9611cee",
+        "encoded": "it('given%20lat=90%20(exactly%20on%20boundary),%20when%20submitted,%20then%20onSubmit%20is%20called',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "6d1dd3",
+        "hash": "46b091af",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "6d1dd3",
+        "hash": "be124496",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "6d1dd3",
+        "hash": "77e4a964",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "6d1dd3",
+        "hash": "de12db87",
+        "encoded": "await%20user.type(screen.getByLabelText(/latitude/i),%20'90');",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "6d1dd3",
+        "hash": "1be7f79c",
+        "encoded": "await%20user.type(screen.getByLabelText(/longitude/i),%20'0');",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "6d1dd3",
+        "hash": "32a54a94",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20these%20coordinates/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "6d1dd3",
+        "hash": "f3c9318c",
+        "encoded": "expect(onSubmit).toHaveBeenCalledWith(%7B%20lat:%2090,%20lon:%200%20%7D);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "6d1dd3",
+        "hash": "8636d221",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "6d1dd3",
+        "hash": "5b648521",
+        "encoded": "it('given%20lon=181%20(just%20outside%20boundary),%20when%20submitted,%20then%20onSubmit%20is%20not%20called',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "6d1dd3",
+        "hash": "086b8c27",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "6d1dd3",
+        "hash": "0e2d7029",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "6d1dd3",
+        "hash": "36aed738",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "6d1dd3",
+        "hash": "6a49edd8",
+        "encoded": "await%20user.type(screen.getByLabelText(/latitude/i),%20'0');",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "6d1dd3",
+        "hash": "1437b6bf",
+        "encoded": "await%20user.type(screen.getByLabelText(/longitude/i),%20'181');",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "6d1dd3",
+        "hash": "13075f02",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20these%20coordinates/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "6d1dd3",
+        "hash": "4f549a46",
+        "encoded": "expect(onSubmit).not.toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "6d1dd3",
+        "hash": "3287ea85",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "6d1dd3",
+        "hash": "b2985a78",
+        "encoded": "it('given%20a%20non-numeric%20latitude,%20when%20submitted,%20then%20onSubmit%20is%20not%20called',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "6d1dd3",
+        "hash": "8d3b2025",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "6d1dd3",
+        "hash": "68cd322d",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "6d1dd3",
+        "hash": "eeb24773",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "6d1dd3",
+        "hash": "d345dfd7",
+        "encoded": "await%20user.type(screen.getByLabelText(/latitude/i),%20'abc');",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "6d1dd3",
+        "hash": "bbe28fce",
+        "encoded": "await%20user.type(screen.getByLabelText(/longitude/i),%20'0');",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "6d1dd3",
+        "hash": "52f4e2ab",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20these%20coordinates/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "6d1dd3",
+        "hash": "ae101c11",
+        "encoded": "expect(onSubmit).not.toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "6d1dd3",
+        "hash": "51f60cc3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "6d1dd3",
+        "hash": "3c2b85ae",
+        "encoded": "it('given%20geolocation%20is%20available,%20when%20%22Use%20my%20location%22%20is%20clicked,%20then%20onSubmit%20is%20called%20with%20the%20returned%20coordinates',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "6d1dd3",
+        "hash": "6891473f",
+        "encoded": "const%20onSubmit%20=%20vi.fn();",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "6d1dd3",
+        "hash": "02752a23",
+        "encoded": "const%20getCurrentPosition%20=%20vi.fn((success)%20=%3E",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "6d1dd3",
+        "hash": "f32e4ee2",
+        "encoded": "success(%7B%20coords:%20%7B%20latitude:%2012.34,%20longitude:%2056.78%20%7D%20%7D)",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "6d1dd3",
+        "hash": "793c9e03",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "6d1dd3",
+        "hash": "9f312b33",
+        "encoded": "vi.stubGlobal('navigator',%20%7B%20geolocation:%20%7B%20getCurrentPosition%20%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "6d1dd3",
+        "hash": "e9c13773",
+        "encoded": "render(%3CLocationForm%20onSubmit=%7BonSubmit%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "6d1dd3",
+        "hash": "88550fca",
+        "encoded": "const%20user%20=%20userEvent.setup();",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "6d1dd3",
+        "hash": "f18b9c5e",
+        "encoded": "await%20user.click(screen.getByRole('button',%20%7B%20name:%20/use%20my%20location/i%20%7D));",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "6d1dd3",
+        "hash": "ae379f4d",
+        "encoded": "expect(onSubmit).toHaveBeenCalledWith(%7B%20lat:%2012.34,%20lon:%2056.78%20%7D);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "6d1dd3",
+        "hash": "626d1055",
+        "encoded": "vi.unstubAllGlobals();",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "6d1dd3",
+        "hash": "5f95f156",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "6d1dd3",
+        "hash": "afbb28ea",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

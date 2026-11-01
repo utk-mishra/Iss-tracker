@@ -1,0 +1,40 @@
+{
+  "_label": "MOCK",
+  "_comment": "Static fallback for Pollux Labs pass predictions. Shape mirrors the real iss-api.polluxlabs.io/iss-pass contract so PolluxClient.parse(JsonNode) can parse it unchanged. At load time (Step 5, MockData/PassMock), all rise/culmination/set/visible_start/visible_end timestamps are TIME-SHIFTED relative to Clock.now() so the first visible pass (passes[1]) starts ~90 minutes from now, duration 343s (>5 min, triggers Alert 3), culmination elevation 83.8 deg (magnitude <-2, triggers Alert 4). Absolute timestamps below are placeholders only.",
+  "satellite": "ISS (ZARYA) MOCK",
+  "tle_epoch": "2026-11-01T05:00:23Z",
+  "tle_age_hours": 7.4,
+  "tle_stale": false,
+  "observer": { "lat": 28.6139, "lon": 77.209, "elevation_m": 0.0 },
+  "generated_at": "2026-11-01T12:23:58Z",
+  "params": { "min_elevation_deg": 10.0, "visible_only": false, "sun_alt_max_deg": -6.0, "days_ahead": 10, "days_ahead_capped": false },
+  "passes": [
+    {
+      "rise": { "time": "2026-11-01T15:56:08Z", "azimuth_deg": 197.1, "compass": "SSW" },
+      "culmination": { "time": "2026-11-01T15:59:13Z", "elevation_deg": 35.7 },
+      "set": { "time": "2026-11-01T16:02:19Z", "azimuth_deg": 60.9, "compass": "ENE" },
+      "duration_sec": 371,
+      "above_horizon": true,
+      "visible": false
+    },
+    {
+      "rise": { "time": "2026-11-04T00:08:12Z", "azimuth_deg": 315.6, "compass": "NW" },
+      "culmination": { "time": "2026-11-04T00:11:35Z", "elevation_deg": 83.8 },
+      "set": { "time": "2026-11-04T00:14:57Z", "azimuth_deg": 139.9, "compass": "SE" },
+      "duration_sec": 406,
+      "above_horizon": true,
+      "visible": true,
+      "visible_start": "2026-11-04T00:09:12Z",
+      "visible_end": "2026-11-04T00:14:57Z",
+      "visible_duration_sec": 343
+    },
+    {
+      "rise": { "time": "2026-11-04T15:09:49Z", "azimuth_deg": 218.3, "compass": "SW" },
+      "culmination": { "time": "2026-11-04T15:13:08Z", "elevation_deg": 78.5 },
+      "set": { "time": "2026-11-04T15:16:28Z", "azimuth_deg": 45.6, "compass": "NE" },
+      "duration_sec": 399,
+      "above_horizon": true,
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "backend/src/test/java/com/example/iss/ApplicationContextSmokeTest.java": {
+    "filename": "ApplicationContextSmokeTest.java",
+    "path": "backend/src/test/java/com/example/iss/ApplicationContextSmokeTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "07ce2b": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "ea194bec",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "07ce2b",
+        "hash": "977a0484",
+        "encoded": "package%20com.example.iss;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "07ce2b",
+        "hash": "85043d35",
+        "encoded": "import%20com.example.iss.client.CloudClient;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "07ce2b",
+        "hash": "bcd0d4e4",
+        "encoded": "import%20com.example.iss.client.PassesClient;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "07ce2b",
+        "hash": "047b7c83",
+        "encoded": "import%20com.example.iss.client.PositionClient;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "07ce2b",
+        "hash": "7854db2c",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "07ce2b",
+        "hash": "6fff3017",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "07ce2b",
+        "hash": "56f2c38b",
+        "encoded": "import%20org.springframework.boot.test.context.SpringBootTest;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "07ce2b",
+        "hash": "0fff0b09",
+        "encoded": "import%20org.springframework.boot.test.mock.mockito.MockBean;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "07ce2b",
+        "hash": "87707c3e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "07ce2b",
+        "hash": "08de2bb3",
+        "encoded": "*%20Step%206%20addition%20g:%20a%20context-load%20smoke%20test%20that%20makes%20NO%20network%20calls.%20All%20three",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "07ce2b",
+        "hash": "54824348",
+        "encoded": "*%20upstream%20clients%20are%20mocked%20(but%20never%20stubbed/invoked),%20so%20if%20the%20context%20starts",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "07ce2b",
+        "hash": "ba2fbaf0",
+        "encoded": "*%20successfully%20it%20proves%20every%20bean%20(ResilienceConfig,%20FilterConfig,%20WebConfig,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "07ce2b",
+        "hash": "613950d9",
+        "encoded": "*%20IssController,%20ApiExceptionHandler,%20etc.)%20wires%20correctly%20without%20ever%20reaching",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "07ce2b",
+        "hash": "447fd1cd",
+        "encoded": "*%20the%20real%20Open-Notify/Pollux/Open-Meteo%20endpoints.",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "07ce2b",
+        "hash": "7ca1406f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "07ce2b",
+        "hash": "81a18d82",
+        "encoded": "@SpringBootTest",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "07ce2b",
+        "hash": "87cdf93b",
+        "encoded": "class%20ApplicationContextSmokeTest%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "07ce2b",
+        "hash": "35b40220",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "07ce2b",
+        "hash": "d5b0b808",
+        "encoded": "private%20PositionClient%20positionClient;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "07ce2b",
+        "hash": "762236c7",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "07ce2b",
+        "hash": "70be5124",
+        "encoded": "private%20PassesClient%20passesClient;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "07ce2b",
+        "hash": "9d84dd10",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "07ce2b",
+        "hash": "5e9b734f",
+        "encoded": "private%20CloudClient%20cloudClient;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "07ce2b",
+        "hash": "11e836f6",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "07ce2b",
+        "hash": "d00eae78",
+        "encoded": "@DisplayName(%22given%20the%20full%20Spring%20context,%20when%20it%20starts,%20then%20it%20loads%20successfully%20with%20zero%20network%20calls%22)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "07ce2b",
+        "hash": "60b7e9f4",
+        "encoded": "void%20givenFullContext_whenStarted_thenLoadsSuccessfully()%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "07ce2b",
+        "hash": "ff09ece8",
+        "encoded": "//%20No%20assertions%20needed%20beyond%20the%20context%20loading:%20@SpringBootTest%20already",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "07ce2b",
+        "hash": "ea0a5456",
+        "encoded": "//%20fails%20the%20test%20if%20the%20ApplicationContext%20cannot%20be%20created.%20Mocked%20clients",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "07ce2b",
+        "hash": "f4b5ee60",
+        "encoded": "//%20guarantee%20no%20real%20HTTP%20call%20is%20ever%20attempted%20during%20context%20startup.",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "07ce2b",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "07ce2b",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

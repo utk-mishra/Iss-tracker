@@ -1,0 +1,31 @@
+{
+  "filename": "MagnitudeCalculator.java",
+  "path": "backend/src/main/java/com/example/iss/domain/MagnitudeCalculator.java",
+  "version": "1.1",
+  "files": {
+    "80393ba7": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            207
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "0418f3bc": {
+      "value": "Read CLAUDE.md and PROMPT.md in the project root, fully. PROMPT.md was updated: see the STATUS block and section 5. Steps 0-3 are done and committed. Do not modify the resilience package.\n\nDo Step 4 ONLY: Compass, MagnitudeCalculator, VelocityEstimator and AlertService in package com.example.iss.domain, plus the minimal supporting records they need (Pass etc.).\n\nRules for this step:\n1. Write the tests FIRST. Run them and show me the failing output before you implement anything.\n2. JUnit 5, given"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

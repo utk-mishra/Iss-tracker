@@ -1,0 +1,4988 @@
+{
+  "docs/sequence.drawio": {
+    "filename": "sequence.drawio",
+    "path": "docs/sequence.drawio",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ff60e6": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793552136,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "d200a887",
+          "files": "17ee55be"
+        },
+        "hash": "a3a417c9",
+        "messageId": "system_215d4450-d60f-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 22:25:36\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "9e3e71": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793567668,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "01b702e0",
+          "files": "aac5a744"
+        },
+        "hash": "9d14ddf4",
+        "messageId": "system_375c3b20-d638-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 02:44:28\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9e3e71",
+        "hash": "e8b6cdca",
+        "encoded": "%3Cmxfile%20host=%22Electron%22%20modified=%222026-11-01T12:00:00.000Z%22%20agent=%22Mozilla/5.0%22%20version=%2222.0.0%22%20etag=%22ISS_TRACKER_SEQUENCES%22%20type=%22device%22%3E",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9e3e71",
+        "hash": "75bd630c",
+        "encoded": "%3Cdiagram%20name=%221-Happy-Path-FRESH%22%20id=%22seq1%22%3E",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9e3e71",
+        "hash": "29fff3ad",
+        "encoded": "%3CmxGraphModel%20dx=%221200%22%20dy=%22800%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221400%22%20pageHeight=%22900%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "9e3e71",
+        "hash": "997a9040",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9e3e71",
+        "hash": "3a06adbe",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9e3e71",
+        "hash": "551f509f",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9e3e71",
+        "hash": "fe3bc7cf",
+        "encoded": "%3C!--%20Title%20--%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9e3e71",
+        "hash": "499fb479",
+        "encoded": "%3CmxCell%20id=%22title%22%20value=%22Scenario%201:%20Happy%20Path%20(All%20FRESH)%22%20style=%22text;html=1;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "9e3e71",
+        "hash": "030e8d1c",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2220%22%20width=%221320%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9e3e71",
+        "hash": "fab2ccdb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9e3e71",
+        "hash": "9d26baad",
+        "encoded": "%3C!--%20Actors%20--%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9e3e71",
+        "hash": "06821046",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9e3e71",
+        "hash": "40187864",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "9e3e71",
+        "hash": "ef384fe6",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9e3e71",
+        "hash": "38977371",
+        "encoded": "%3CmxCell%20id=%22controller%22%20value=%22IssController%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9e3e71",
+        "hash": "92b398f8",
+        "encoded": "%3CmxGeometry%20x=%22240%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9e3e71",
+        "hash": "650677f9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9e3e71",
+        "hash": "1b88ed37",
+        "encoded": "%3CmxCell%20id=%22facade%22%20value=%22IssFacade%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9e3e71",
+        "hash": "770c71b7",
+        "encoded": "%3CmxGeometry%20x=%22420%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "9e3e71",
+        "hash": "d4973b67",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "9e3e71",
+        "hash": "f95b0969",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9e3e71",
+        "hash": "c8a8d0df",
+        "encoded": "%3CmxGeometry%20x=%22600%22%20y=%2280%22%20width=%22140%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9e3e71",
+        "hash": "c6b271ba",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "9e3e71",
+        "hash": "e3307d45",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "9e3e71",
+        "hash": "389d7707",
+        "encoded": "%3CmxGeometry%20x=%22800%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9e3e71",
+        "hash": "63fe5ecc",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "9e3e71",
+        "hash": "76425a70",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9e3e71",
+        "hash": "ad1cdf38",
+        "encoded": "%3CmxGeometry%20x=%22960%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9e3e71",
+        "hash": "e845dc84",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9e3e71",
+        "hash": "fb40cf8d",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;fillColor=#d5e8d4;strokeColor=#82b366;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "9e3e71",
+        "hash": "84359243",
+        "encoded": "%3CmxGeometry%20x=%221140%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "9e3e71",
+        "hash": "f023dc89",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "9e3e71",
+        "hash": "bf64564a",
+        "encoded": "%3C!--%20Messages%20--%3E",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "9e3e71",
+        "hash": "522379ab",
+        "encoded": "%3CmxCell%20id=%22msg1%22%20value=%22GET%20/overview%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22client%22%20target=%22controller%22%3E",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "9e3e71",
+        "hash": "83a2fabc",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "9e3e71",
+        "hash": "a172e2db",
+        "encoded": "%3CmxPoint%20x=%22130%22%20y=%22200%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "9e3e71",
+        "hash": "44a7eafa",
+        "encoded": "%3CmxPoint%20x=%22300%22%20y=%22200%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "9e3e71",
+        "hash": "9979a29f",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "9e3e71",
+        "hash": "30411b9b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "9e3e71",
+        "hash": "070a77f9",
+        "encoded": "%3CmxCell%20id=%22msg2%22%20value=%22getOverview(lat,%20lon,%20offline)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22controller%22%20target=%22facade%22%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "9e3e71",
+        "hash": "154806ff",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "9e3e71",
+        "hash": "4bb09903",
+        "encoded": "%3CmxPoint%20x=%22300%22%20y=%22240%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "9e3e71",
+        "hash": "c393feb3",
+        "encoded": "%3CmxPoint%20x=%22480%22%20y=%22240%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "9e3e71",
+        "hash": "143897aa",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "9e3e71",
+        "hash": "049e1cd5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "9e3e71",
+        "hash": "c135308a",
+        "encoded": "%3CmxCell%20id=%22msg3%22%20value=%22fetch(key,%20callable,%20offline=false)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22facade%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "9e3e71",
+        "hash": "ee69915a",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "9e3e71",
+        "hash": "69d0338e",
+        "encoded": "%3CmxPoint%20x=%22480%22%20y=%22280%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "9e3e71",
+        "hash": "7a3905d6",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22280%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "9e3e71",
+        "hash": "d60c8f3d",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "9e3e71",
+        "hash": "1d2a01f4",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "9e3e71",
+        "hash": "882eb26e",
+        "encoded": "%3CmxCell%20id=%22msg4%22%20value=%22get(key)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "9e3e71",
+        "hash": "8d2f56a1",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "9e3e71",
+        "hash": "7888a810",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22320%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "9e3e71",
+        "hash": "b0fc886f",
+        "encoded": "%3CmxPoint%20x=%22850%22%20y=%22320%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "9e3e71",
+        "hash": "983c00cc",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "9e3e71",
+        "hash": "792f2bc1",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "9e3e71",
+        "hash": "327cc5a8",
+        "encoded": "%3CmxCell%20id=%22msg4ret%22%20value=%22MISS%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "9e3e71",
+        "hash": "2dc37b67",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "9e3e71",
+        "hash": "2ad0f589",
+        "encoded": "%3CmxPoint%20x=%22850%22%20y=%22360%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "9e3e71",
+        "hash": "9c24dd31",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22360%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "9e3e71",
+        "hash": "16d46bfa",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "9e3e71",
+        "hash": "9125ed59",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "9e3e71",
+        "hash": "c2804a84",
+        "encoded": "%3CmxCell%20id=%22msg5%22%20value=%22isOpen()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "9e3e71",
+        "hash": "09caba88",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "9e3e71",
+        "hash": "32951b14",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22400%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "9e3e71",
+        "hash": "70877916",
+        "encoded": "%3CmxPoint%20x=%221020%22%20y=%22400%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "9e3e71",
+        "hash": "ddd2c6b3",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "9e3e71",
+        "hash": "ddf5c193",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "9e3e71",
+        "hash": "0d8e2216",
+        "encoded": "%3CmxCell%20id=%22msg5ret%22%20value=%22false%20(CLOSED)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "9e3e71",
+        "hash": "0facbe60",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "9e3e71",
+        "hash": "08e121dc",
+        "encoded": "%3CmxPoint%20x=%221020%22%20y=%22440%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "9e3e71",
+        "hash": "946ec546",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22440%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "9e3e71",
+        "hash": "0ef984a4",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "9e3e71",
+        "hash": "cbf13b3d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "9e3e71",
+        "hash": "4c839ffc",
+        "encoded": "%3CmxCell%20id=%22msg6%22%20value=%22HTTP%20GET%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "9e3e71",
+        "hash": "8bbdded6",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "9e3e71",
+        "hash": "c7237092",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22480%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "9e3e71",
+        "hash": "9165c049",
+        "encoded": "%3CmxPoint%20x=%221200%22%20y=%22480%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "9e3e71",
+        "hash": "5f32b5dc",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "9e3e71",
+        "hash": "54b5c58d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "9e3e71",
+        "hash": "77a74a7a",
+        "encoded": "%3CmxCell%20id=%22msg6ret%22%20value=%22200%20OK%20+%20JSON%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "9e3e71",
+        "hash": "79e70a90",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "9e3e71",
+        "hash": "af56b66c",
+        "encoded": "%3CmxPoint%20x=%221200%22%20y=%22520%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "9e3e71",
+        "hash": "50aa4067",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22520%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "9e3e71",
+        "hash": "ac306530",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "9e3e71",
+        "hash": "f8d15ae9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "9e3e71",
+        "hash": "d21e93a6",
+        "encoded": "%3CmxCell%20id=%22msg7%22%20value=%22recordSuccess()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "9e3e71",
+        "hash": "7e40ac39",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "9e3e71",
+        "hash": "0b08927b",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22560%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "9e3e71",
+        "hash": "d531ea79",
+        "encoded": "%3CmxPoint%20x=%221020%22%20y=%22560%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "9e3e71",
+        "hash": "cdbef9ad",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "9e3e71",
+        "hash": "7b45c508",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "9e3e71",
+        "hash": "ca385f63",
+        "encoded": "%3CmxCell%20id=%22msg8%22%20value=%22put(key,%20data)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "9e3e71",
+        "hash": "d8b09831",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "9e3e71",
+        "hash": "540ee69b",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22600%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "9e3e71",
+        "hash": "46703286",
+        "encoded": "%3CmxPoint%20x=%22850%22%20y=%22600%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "9e3e71",
+        "hash": "53436cfa",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "9e3e71",
+        "hash": "5c12c78e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "9e3e71",
+        "hash": "2885c0de",
+        "encoded": "%3CmxCell%20id=%22msg9ret%22%20value=%22Result(data,%20FRESH,%200ms)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22facade%22%3E",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "9e3e71",
+        "hash": "a6cc8adb",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "9e3e71",
+        "hash": "6518db4a",
+        "encoded": "%3CmxPoint%20x=%22670%22%20y=%22640%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "9e3e71",
+        "hash": "4e525f06",
+        "encoded": "%3CmxPoint%20x=%22480%22%20y=%22640%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "9e3e71",
+        "hash": "7bfa74c4",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "9e3e71",
+        "hash": "cc7ead6c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "9e3e71",
+        "hash": "afdfcc95",
+        "encoded": "%3CmxCell%20id=%22msg10ret%22%20value=%22IssOverview%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22facade%22%20target=%22controller%22%3E",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "9e3e71",
+        "hash": "5c1b0cf0",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "9e3e71",
+        "hash": "776592ae",
+        "encoded": "%3CmxPoint%20x=%22480%22%20y=%22680%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "9e3e71",
+        "hash": "b0b9b749",
+        "encoded": "%3CmxPoint%20x=%22300%22%20y=%22680%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "9e3e71",
+        "hash": "80a0b54b",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "9e3e71",
+        "hash": "528e649d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "9e3e71",
+        "hash": "a3109a53",
+        "encoded": "%3CmxCell%20id=%22msg11ret%22%20value=%22200%20OK%20%7Bmeta:%20%7Bsource:%20FRESH%7D%7D%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;%22%20edge=%221%22%20parent=%221%22%20source=%22controller%22%20target=%22client%22%3E",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "9e3e71",
+        "hash": "475830c6",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "9e3e71",
+        "hash": "50938545",
+        "encoded": "%3CmxPoint%20x=%22300%22%20y=%22720%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "9e3e71",
+        "hash": "e6838aab",
+        "encoded": "%3CmxPoint%20x=%22130%22%20y=%22720%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "9e3e71",
+        "hash": "0c5209d3",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "9e3e71",
+        "hash": "ad643f98",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "9e3e71",
+        "hash": "d1660417",
+        "encoded": "%3C!--%20Note%20--%3E",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "9e3e71",
+        "hash": "a61badb0",
+        "encoded": "%3CmxCell%20id=%22note1%22%20value=%22%E2%9C%93%20Cache%20MISS%20(first%20request)%3Cbr%3E%E2%9C%93%20Circuit%20breaker%20CLOSED%3Cbr%3E%E2%9C%93%20Upstream%20healthy%3Cbr%3E%E2%9C%93%20Returns%20FRESH%20data%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "9e3e71",
+        "hash": "62123c84",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22800%22%20width=%22280%22%20height=%2280%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "9e3e71",
+        "hash": "7efb01df",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "9e3e71",
+        "hash": "e64a6a27",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "9e3e71",
+        "hash": "3a7fb2c9",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "9e3e71",
+        "hash": "e0d802ed",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "9e3e71",
+        "hash": "11448595",
+        "encoded": "%3Cdiagram%20name=%222-Cache-Hit-STALE%22%20id=%22seq2%22%3E",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "9e3e71",
+        "hash": "ee3d2bc0",
+        "encoded": "%3CmxGraphModel%20dx=%221200%22%20dy=%22800%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221400%22%20pageHeight=%22900%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "9e3e71",
+        "hash": "58133baa",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "9e3e71",
+        "hash": "eca15f72",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "9e3e71",
+        "hash": "387602dd",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "9e3e71",
+        "hash": "7b7c7eab",
+        "encoded": "%3C!--%20Title%20--%3E",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "9e3e71",
+        "hash": "34e5f35c",
+        "encoded": "%3CmxCell%20id=%22title%22%20value=%22Scenario%202:%20Upstream%20Fails%20%E2%86%92%20STALE%20Cache%20Fallback%22%20style=%22text;html=1;strokeColor=none;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "9e3e71",
+        "hash": "be575983",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2220%22%20width=%221120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "9e3e71",
+        "hash": "67537f06",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "9e3e71",
+        "hash": "8eb7a23d",
+        "encoded": "%3C!--%20Actors%20--%3E",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "9e3e71",
+        "hash": "e39835e4",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "9e3e71",
+        "hash": "1e705143",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "9e3e71",
+        "hash": "bbd424d9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "9e3e71",
+        "hash": "b9812ea8",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "9e3e71",
+        "hash": "4fb33ba0",
+        "encoded": "%3CmxGeometry%20x=%22240%22%20y=%2280%22%20width=%22140%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "9e3e71",
+        "hash": "0d1fecad",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "9e3e71",
+        "hash": "da7c1a50",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "9e3e71",
+        "hash": "dbce2367",
+        "encoded": "%3CmxGeometry%20x=%22440%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "9e3e71",
+        "hash": "555a9f3c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "9e3e71",
+        "hash": "fc4ca864",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "9e3e71",
+        "hash": "c99c7895",
+        "encoded": "%3CmxGeometry%20x=%22600%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "9e3e71",
+        "hash": "ad43add8",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "9e3e71",
+        "hash": "9028c3d2",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "9e3e71",
+        "hash": "6838e261",
+        "encoded": "%3CmxGeometry%20x=%22780%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "9e3e71",
+        "hash": "6f6dab16",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "9e3e71",
+        "hash": "2062d390",
+        "encoded": "%3C!--%20Messages%20--%3E",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "9e3e71",
+        "hash": "36e64b46",
+        "encoded": "%3CmxCell%20id=%22msg1%22%20value=%221.%20get(key)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "9e3e71",
+        "hash": "70cca34f",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "9e3e71",
+        "hash": "a2feb93d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "9e3e71",
+        "hash": "30543aa2",
+        "encoded": "%3CmxCell%20id=%22msg1ret%22%20value=%22MISS%20(expired)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "9e3e71",
+        "hash": "64edd471",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "9e3e71",
+        "hash": "fecdf8b0",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "9e3e71",
+        "hash": "e1818e99",
+        "encoded": "%3CmxCell%20id=%22msg2%22%20value=%222.%20isOpen()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "9e3e71",
+        "hash": "70e9addb",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "9e3e71",
+        "hash": "93c39d9a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "9e3e71",
+        "hash": "b6578824",
+        "encoded": "%3CmxCell%20id=%22msg2ret%22%20value=%22false%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "9e3e71",
+        "hash": "cfd02c43",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "9e3e71",
+        "hash": "6ea17146",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "9e3e71",
+        "hash": "604a6e02",
+        "encoded": "%3CmxCell%20id=%22msg3%22%20value=%223.%20HTTP%20GET%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "9e3e71",
+        "hash": "bfbfaf37",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "9e3e71",
+        "hash": "f3df03f8",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "9e3e71",
+        "hash": "936c6355",
+        "encoded": "%3CmxCell%20id=%22msg3ret%22%20value=%22%E2%9C%97%20TIMEOUT%20/%20500%20Error%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "9e3e71",
+        "hash": "42a47dba",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "9e3e71",
+        "hash": "c86f5951",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "9e3e71",
+        "hash": "49388bd8",
+        "encoded": "%3CmxCell%20id=%22msg4%22%20value=%224.%20recordFailure()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "9e3e71",
+        "hash": "720496ab",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "9e3e71",
+        "hash": "5c5b1cee",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "9e3e71",
+        "hash": "f4ef12ad",
+        "encoded": "%3CmxCell%20id=%22msg5%22%20value=%225.%20get(key)%20-%20Fallback%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "9e3e71",
+        "hash": "69c0483b",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "9e3e71",
+        "hash": "e7521e55",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "9e3e71",
+        "hash": "89ea68e8",
+        "encoded": "%3CmxCell%20id=%22msg5ret%22%20value=%22STALE%20(age%20%3E%20TTL,%20%3C%20max-stale)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#d79b00;fillColor=#ffe6cc;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "9e3e71",
+        "hash": "16144432",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "9e3e71",
+        "hash": "1d939c8a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "9e3e71",
+        "hash": "27af2d00",
+        "encoded": "%3CmxCell%20id=%22msg6ret%22%20value=%22Result(data,%20STALE,%20900000ms)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#d79b00;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22client%22%3E",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "9e3e71",
+        "hash": "6aeef486",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "9e3e71",
+        "hash": "cd40a6bf",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "9e3e71",
+        "hash": "6cea8c5c",
+        "encoded": "%3C!--%20Note%20--%3E",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "9e3e71",
+        "hash": "a62b42f2",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22%E2%9C%97%20Upstream%20failed%3Cbr%3E%E2%9C%93%20Cache%20has%20STALE%20entry%3Cbr%3E%E2%9C%93%20Returns%20data%20with%20degraded:%20true%3Cbr%3E%E2%86%92%20UI%20shows%20amber%20badge%20%5C%22Cached%2015%20min%20ago%5C%22%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d6b656;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "9e3e71",
+        "hash": "ab9a0884",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22800%22%20width=%22320%22%20height=%2280%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "9e3e71",
+        "hash": "9578d586",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "9e3e71",
+        "hash": "209060d2",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "9e3e71",
+        "hash": "c8236ca7",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "9e3e71",
+        "hash": "c3221371",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "9e3e71",
+        "hash": "59438f83",
+        "encoded": "%3Cdiagram%20name=%223-MOCK-Fallback%22%20id=%22seq3%22%3E",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "9e3e71",
+        "hash": "38eadd56",
+        "encoded": "%3CmxGraphModel%20dx=%221200%22%20dy=%22800%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221400%22%20pageHeight=%22900%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "9e3e71",
+        "hash": "77d6f257",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "9e3e71",
+        "hash": "1d9adfca",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "9e3e71",
+        "hash": "d186b6e5",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "9e3e71",
+        "hash": "d6a1e943",
+        "encoded": "%3C!--%20Title%20--%3E",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "9e3e71",
+        "hash": "2f9cbc1c",
+        "encoded": "%3CmxCell%20id=%22title%22%20value=%22Scenario%203:%20Upstream%20Fails%20+%20No%20Cache%20%E2%86%92%20MOCK%20Fallback%22%20style=%22text;html=1;strokeColor=none;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "9e3e71",
+        "hash": "d8c4bfe1",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2220%22%20width=%221020%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "9e3e71",
+        "hash": "87d01683",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "9e3e71",
+        "hash": "9cda60e5",
+        "encoded": "%3C!--%20Actors%20--%3E",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "9e3e71",
+        "hash": "7a44caf0",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "9e3e71",
+        "hash": "34f26e1b",
+        "encoded": "%3CmxGeometry%20x=%22120%22%20y=%2280%22%20width=%22140%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "9e3e71",
+        "hash": "348891cd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "9e3e71",
+        "hash": "63da1092",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "9e3e71",
+        "hash": "6778cab1",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "9e3e71",
+        "hash": "e4c770a9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "9e3e71",
+        "hash": "cb50ca07",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "9e3e71",
+        "hash": "d62cae3c",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "9e3e71",
+        "hash": "5bc6555c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "9e3e71",
+        "hash": "4dbf9e6d",
+        "encoded": "%3CmxCell%20id=%22mockdata%22%20value=%22MockData%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f5f5f5;strokeColor=#666666;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "9e3e71",
+        "hash": "ec0c273b",
+        "encoded": "%3CmxGeometry%20x=%22660%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "9e3e71",
+        "hash": "602b9b1d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "9e3e71",
+        "hash": "15d579c4",
+        "encoded": "%3C!--%20Messages%20--%3E",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "9e3e71",
+        "hash": "a9691055",
+        "encoded": "%3CmxCell%20id=%22msg1%22%20value=%221.%20get(key)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "9e3e71",
+        "hash": "2557b783",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "9e3e71",
+        "hash": "efa8065a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "9e3e71",
+        "hash": "ff0d0337",
+        "encoded": "%3CmxCell%20id=%22msg1ret%22%20value=%22MISS%20(no%20cache)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "9e3e71",
+        "hash": "595fd97e",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "9e3e71",
+        "hash": "3fb454f2",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "9e3e71",
+        "hash": "84cccb93",
+        "encoded": "%3CmxCell%20id=%22msg2%22%20value=%222.%20Try%20upstream%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "9e3e71",
+        "hash": "16ee5049",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "9e3e71",
+        "hash": "0af35516",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "9e3e71",
+        "hash": "7f73a6a4",
+        "encoded": "%3CmxCell%20id=%22msg2ret%22%20value=%22%E2%9C%97%20FAIL%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "9e3e71",
+        "hash": "9dc7fab5",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "9e3e71",
+        "hash": "e01beaba",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "9e3e71",
+        "hash": "33ca5772",
+        "encoded": "%3CmxCell%20id=%22msg3%22%20value=%223.%20get(key)%20-%20Fallback%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "9e3e71",
+        "hash": "d2c8041c",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "9e3e71",
+        "hash": "d9b48dbd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "9e3e71",
+        "hash": "beb1d3e8",
+        "encoded": "%3CmxCell%20id=%22msg3ret%22%20value=%22MISS%20(too%20old%20/%20none)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "9e3e71",
+        "hash": "4ef6b2ea",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "9e3e71",
+        "hash": "8577c274",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "9e3e71",
+        "hash": "8e9fcdb5",
+        "encoded": "%3CmxCell%20id=%22msg4%22%20value=%224.%20mockSupplier.get()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22mockdata%22%3E",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "9e3e71",
+        "hash": "219e0903",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "9e3e71",
+        "hash": "aa7eca22",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "9e3e71",
+        "hash": "dabb58b7",
+        "encoded": "%3CmxCell%20id=%22msg4ret%22%20value=%22Static%20JSON%20(time-shifted)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fillColor=#f5f5f5;%22%20edge=%221%22%20parent=%221%22%20source=%22mockdata%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "9e3e71",
+        "hash": "ff25dfed",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "9e3e71",
+        "hash": "db3bfd2f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "9e3e71",
+        "hash": "294773cf",
+        "encoded": "%3CmxCell%20id=%22result%22%20value=%22Result(mockData,%20MOCK,%200ms)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#666666;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "9e3e71",
+        "hash": "1524bfeb",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "9e3e71",
+        "hash": "d3d70cdf",
+        "encoded": "%3CmxPoint%20x=%22190%22%20y=%22640%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "9e3e71",
+        "hash": "eb6f836d",
+        "encoded": "%3CmxPoint%20x=%2280%22%20y=%22640%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "9e3e71",
+        "hash": "b735e25a",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "9e3e71",
+        "hash": "cf1a1966",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "9e3e71",
+        "hash": "1e44ed81",
+        "encoded": "%3C!--%20Note%20--%3E",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "9e3e71",
+        "hash": "7e2a068c",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22%E2%9C%97%20Upstream%20failed%3Cbr%3E%E2%9C%97%20No%20cache%20OR%20cache%20too%20old%3Cbr%3E%E2%9C%93%20Returns%20MOCK%20data%3Cbr%3E%E2%9C%93%20MOCK%20data%20is%20time-shifted%20(alerts%20visible)%3Cbr%3E%E2%86%92%20UI%20shows%20red%20badge%20%5C%22Fallback%20data%5C%22%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "9e3e71",
+        "hash": "938ef3d2",
+        "encoded": "%3CmxGeometry%20x=%22120%22%20y=%22700%22%20width=%22340%22%20height=%22100%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "9e3e71",
+        "hash": "1c51968f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "9e3e71",
+        "hash": "8d3f90bd",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22Important:%20MOCK%20data%20is%20NOT%20written%20to%20cache%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "9e3e71",
+        "hash": "565e18f1",
+        "encoded": "%3CmxGeometry%20x=%22520%22%20y=%22700%22%20width=%22260%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "9e3e71",
+        "hash": "f83558d5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "9e3e71",
+        "hash": "0bf49a8b",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "9e3e71",
+        "hash": "5a789352",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "9e3e71",
+        "hash": "c18407b7",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "9e3e71",
+        "hash": "f612443d",
+        "encoded": "%3Cdiagram%20name=%224-Offline-Mode%22%20id=%22seq4%22%3E",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "9e3e71",
+        "hash": "251eca70",
+        "encoded": "%3CmxGraphModel%20dx=%221200%22%20dy=%22800%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221400%22%20pageHeight=%22900%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "9e3e71",
+        "hash": "ab8dce74",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "9e3e71",
+        "hash": "b8a4bb86",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "9e3e71",
+        "hash": "744a5431",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "9e3e71",
+        "hash": "8068dddd",
+        "encoded": "%3C!--%20Title%20--%3E",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "9e3e71",
+        "hash": "e921d6cc",
+        "encoded": "%3CmxCell%20id=%22title%22%20value=%22Scenario%204:%20Forced%20Offline%20Mode%20(offline=true)%22%20style=%22text;html=1;strokeColor=none;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "9e3e71",
+        "hash": "629565fa",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2220%22%20width=%22920%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "9e3e71",
+        "hash": "4260a37d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "9e3e71",
+        "hash": "783d7692",
+        "encoded": "%3C!--%20Actors%20--%3E",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "9e3e71",
+        "hash": "9d5e42b9",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "9e3e71",
+        "hash": "86812201",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%2280%22%20width=%22100%22%20height=%22600%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "9e3e71",
+        "hash": "fe55d482",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "9e3e71",
+        "hash": "8b12f4fd",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "9e3e71",
+        "hash": "b403c179",
+        "encoded": "%3CmxGeometry%20x=%22260%22%20y=%2280%22%20width=%22140%22%20height=%22600%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "9e3e71",
+        "hash": "1e4e0a75",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "9e3e71",
+        "hash": "2bb28ed3",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "9e3e71",
+        "hash": "c256bee2",
+        "encoded": "%3CmxGeometry%20x=%22460%22%20y=%2280%22%20width=%22100%22%20height=%22600%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "9e3e71",
+        "hash": "8a6cd385",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "9e3e71",
+        "hash": "66aa3b0c",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8%208;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "9e3e71",
+        "hash": "d9cd6f7b",
+        "encoded": "%3CmxGeometry%20x=%22620%22%20y=%2280%22%20width=%22120%22%20height=%22600%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "9e3e71",
+        "hash": "436b544b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "9e3e71",
+        "hash": "70c9ac0c",
+        "encoded": "%3CmxCell%20id=%22label-upstream%22%20value=%22NEVER%20CALLED%22%20style=%22text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "9e3e71",
+        "hash": "201352da",
+        "encoded": "%3CmxGeometry%20x=%22610%22%20y=%22700%22%20width=%22140%22%20height=%2230%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "9e3e71",
+        "hash": "5b5d2528",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "9e3e71",
+        "hash": "cccde69e",
+        "encoded": "%3C!--%20Messages%20--%3E",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "9e3e71",
+        "hash": "a224bbae",
+        "encoded": "%3CmxCell%20id=%22msg1%22%20value=%22fetch(key,%20callable,%20offline=TRUE)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#9673a6;%22%20edge=%221%22%20parent=%221%22%20source=%22client%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "9e3e71",
+        "hash": "03af8678",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "9e3e71",
+        "hash": "d9d728f5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "9e3e71",
+        "hash": "aae55a5a",
+        "encoded": "%3CmxCell%20id=%22check%22%20value=%22if%20(offline)%20%7B%3Cbr%3E%20%20return%20fetchOffline(key);%3Cbr%3E%7D%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;fontFamily=Courier%20New;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "9e3e71",
+        "hash": "1099255a",
+        "encoded": "%3CmxGeometry%20x=%22260%22%20y=%22240%22%20width=%22240%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "9e3e71",
+        "hash": "0862c52e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "9e3e71",
+        "hash": "48c2ff23",
+        "encoded": "%3CmxCell%20id=%22msg2%22%20value=%22get(key)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "9e3e71",
+        "hash": "435d7a33",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "9e3e71",
+        "hash": "a5178c48",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "9e3e71",
+        "hash": "ec2f29ae",
+        "encoded": "%3CmxCell%20id=%22decision%22%20value=%22%22%20style=%22rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "9e3e71",
+        "hash": "6cd5345f",
+        "encoded": "%3CmxGeometry%20x=%22470%22%20y=%22380%22%20width=%2280%22%20height=%2280%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "9e3e71",
+        "hash": "7e0aab7f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "9e3e71",
+        "hash": "9f873119",
+        "encoded": "%3CmxCell%20id=%22decision-label%22%20value=%22Has%3Cbr%3Ecache?%22%20style=%22text;html=1;align=center;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "9e3e71",
+        "hash": "5dabde50",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%22405%22%20width=%2260%22%20height=%2230%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "9e3e71",
+        "hash": "519d24ef",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "9e3e71",
+        "hash": "b2ad564f",
+        "encoded": "%3CmxCell%20id=%22yes-path%22%20value=%22%22%20style=%22endArrow=classic;html=1;strokeColor=#82b366;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "9e3e71",
+        "hash": "73071d5f",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "9e3e71",
+        "hash": "f9c31346",
+        "encoded": "%3CmxPoint%20x=%22470%22%20y=%22420%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "9e3e71",
+        "hash": "243c38b2",
+        "encoded": "%3CmxPoint%20x=%22380%22%20y=%22420%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "9e3e71",
+        "hash": "ac6dd8e0",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "9e3e71",
+        "hash": "9494f48b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "9e3e71",
+        "hash": "2769c30c",
+        "encoded": "%3CmxCell%20id=%22yes-label%22%20value=%22YES%22%20style=%22text;html=1;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "9e3e71",
+        "hash": "226a4ef1",
+        "encoded": "%3CmxGeometry%20x=%22400%22%20y=%22395%22%20width=%2240%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "9e3e71",
+        "hash": "0c74f3ef",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "9e3e71",
+        "hash": "0eda8353",
+        "encoded": "%3CmxCell%20id=%22yes-result%22%20value=%22Return%20STALE%3Cbr%3E(even%20if%20within%20TTL)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "9e3e71",
+        "hash": "4586f3a1",
+        "encoded": "%3CmxGeometry%20x=%22280%22%20y=%22390%22%20width=%22100%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "9e3e71",
+        "hash": "24fa9c0e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "9e3e71",
+        "hash": "8ded9c88",
+        "encoded": "%3CmxCell%20id=%22no-path%22%20value=%22%22%20style=%22endArrow=classic;html=1;strokeColor=#666666;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "9e3e71",
+        "hash": "f1b4c220",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "9e3e71",
+        "hash": "300566a6",
+        "encoded": "%3CmxPoint%20x=%22550%22%20y=%22420%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "9e3e71",
+        "hash": "eec78ad7",
+        "encoded": "%3CmxPoint%20x=%22630%22%20y=%22420%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "9e3e71",
+        "hash": "110ecbad",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "9e3e71",
+        "hash": "5ab4de34",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "9e3e71",
+        "hash": "a4e89887",
+        "encoded": "%3CmxCell%20id=%22no-label%22%20value=%22NO%22%20style=%22text;html=1;align=center;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "9e3e71",
+        "hash": "d11d5c8c",
+        "encoded": "%3CmxGeometry%20x=%22570%22%20y=%22395%22%20width=%2240%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "9e3e71",
+        "hash": "a4a56422",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "9e3e71",
+        "hash": "f0f22c61",
+        "encoded": "%3CmxCell%20id=%22no-result%22%20value=%22Return%20MOCK%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "9e3e71",
+        "hash": "1047b4ae",
+        "encoded": "%3CmxGeometry%20x=%22630%22%20y=%22390%22%20width=%22100%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "9e3e71",
+        "hash": "0d651e1f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "9e3e71",
+        "hash": "a11be49e",
+        "encoded": "%3C!--%20Note%20--%3E",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "9e3e71",
+        "hash": "e02601bf",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Offline%20mode%20behavior:%3Cbr%3E%E2%80%A2%20Upstream%20callable%20is%20NEVER%20invoked%3Cbr%3E%E2%80%A2%20Never%20reports%20FRESH%20(even%20if%20cache%20within%20TTL)%3Cbr%3E%E2%80%A2%20Returns%20STALE%20if%20cache%20exists,%20else%20MOCK%3Cbr%3E%E2%80%A2%20UI%20always%20shows%20degraded%20badge%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "9e3e71",
+        "hash": "4ac776b6",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%22730%22%20width=%22380%22%20height=%22100%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "9e3e71",
+        "hash": "2688e36e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "9e3e71",
+        "hash": "801e1760",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "9e3e71",
+        "hash": "3f7a4df7",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "9e3e71",
+        "hash": "88660e16",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "9e3e71",
+        "hash": "d76dd594",
+        "encoded": "%3Cdiagram%20name=%225-Circuit-Breaker-Open%22%20id=%22seq5%22%3E",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "9e3e71",
+        "hash": "98b7f0c7",
+        "encoded": "%3CmxGraphModel%20dx=%221200%22%20dy=%22800%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221400%22%20pageHeight=%22900%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "9e3e71",
+        "hash": "a823c2fa",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "9e3e71",
+        "hash": "75bf550f",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "9e3e71",
+        "hash": "be7f7844",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "9e3e71",
+        "hash": "62e179f3",
+        "encoded": "%3C!--%20Title%20--%3E",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "9e3e71",
+        "hash": "a105e7f5",
+        "encoded": "%3CmxCell%20id=%22title%22%20value=%22Scenario%205:%20Circuit%20Breaker%20OPEN%20(3+%20failures,%20within%2030s%20cooldown)%22%20style=%22text;html=1;strokeColor=none;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "9e3e71",
+        "hash": "9e1dbed6",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2220%22%20width=%221020%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "9e3e71",
+        "hash": "11378a2c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "9e3e71",
+        "hash": "c6c9d082",
+        "encoded": "%3C!--%20Actors%20--%3E",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "9e3e71",
+        "hash": "6bc87b98",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "9e3e71",
+        "hash": "056d73cb",
+        "encoded": "%3CmxGeometry%20x=%22120%22%20y=%2280%22%20width=%22140%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "9e3e71",
+        "hash": "c4f06a2b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "9e3e71",
+        "hash": "f8a43b53",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "9e3e71",
+        "hash": "54169eeb",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%2280%22%20width=%22100%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "9e3e71",
+        "hash": "390c7808",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "9e3e71",
+        "hash": "3c76de81",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "9e3e71",
+        "hash": "486e0b6e",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "9e3e71",
+        "hash": "8f0727b7",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "9e3e71",
+        "hash": "72ba6015",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8%208;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "9e3e71",
+        "hash": "3ea16fdc",
+        "encoded": "%3CmxGeometry%20x=%22660%22%20y=%2280%22%20width=%22120%22%20height=%22700%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "9e3e71",
+        "hash": "eb3a8df5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "9e3e71",
+        "hash": "389ba254",
+        "encoded": "%3CmxCell%20id=%22label-upstream%22%20value=%22NOT%20CALLED%3Cbr%3E(circuit%20OPEN)%22%20style=%22text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "9e3e71",
+        "hash": "fd922fbd",
+        "encoded": "%3CmxGeometry%20x=%22645%22%20y=%22800%22%20width=%22150%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "9e3e71",
+        "hash": "0e42393e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "9e3e71",
+        "hash": "eac7fad4",
+        "encoded": "%3C!--%20Messages%20--%3E",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "9e3e71",
+        "hash": "5f73ba57",
+        "encoded": "%3CmxCell%20id=%22msg1%22%20value=%221.%20get(key)%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "9e3e71",
+        "hash": "649c86ce",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "9e3e71",
+        "hash": "75e687c1",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "9e3e71",
+        "hash": "88cd4321",
+        "encoded": "%3CmxCell%20id=%22msg1ret%22%20value=%22MISS%20(or%20expired)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "9e3e71",
+        "hash": "0c1191ac",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "9e3e71",
+        "hash": "77657562",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "9e3e71",
+        "hash": "04d8d661",
+        "encoded": "%3CmxCell%20id=%22msg2%22%20value=%222.%20isOpen()%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "9e3e71",
+        "hash": "c7f5b658",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "9e3e71",
+        "hash": "489cd6c8",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "9e3e71",
+        "hash": "ee6f0a70",
+        "encoded": "%3CmxCell%20id=%22msg2ret%22%20value=%22%E2%9C%97%20TRUE%20(OPEN)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "9e3e71",
+        "hash": "314af617",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "9e3e71",
+        "hash": "9d831bc9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "9e3e71",
+        "hash": "4bb26422",
+        "encoded": "%3CmxCell%20id=%22skip%22%20value=%22Skip%20upstream,%3Cbr%3Ego%20straight%20to%20fallback%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;fontStyle=1%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "9e3e71",
+        "hash": "79b38bb0",
+        "encoded": "%3CmxGeometry%20x=%22120%22%20y=%22400%22%20width=%22140%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "9e3e71",
+        "hash": "d5613d98",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "9e3e71",
+        "hash": "14e80427",
+        "encoded": "%3CmxCell%20id=%22msg3%22%20value=%223.%20get(key)%20-%20Fallback%22%20style=%22html=1;verticalAlign=bottom;endArrow=block;rounded=0;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "9e3e71",
+        "hash": "0c6bd4d3",
+        "encoded": "%3CmxGeometry%20width=%2280%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "9e3e71",
+        "hash": "07a1b147",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "9e3e71",
+        "hash": "21ecb752",
+        "encoded": "%3CmxCell%20id=%22msg3ret%22%20value=%22STALE%20(or%20MOCK%20if%20no%20cache)%22%20style=%22html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#d79b00;fillColor=#ffe6cc;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "9e3e71",
+        "hash": "419b5a60",
+        "encoded": "%3CmxGeometry%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "9e3e71",
+        "hash": "e8e56c85",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "9e3e71",
+        "hash": "70e55167",
+        "encoded": "%3C!--%20Note%20--%3E",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "9e3e71",
+        "hash": "5bd841d3",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Circuit%20Breaker%20behavior:%3Cbr%3E%E2%80%A2%20Opens%20after%203%20consecutive%20failures%3Cbr%3E%E2%80%A2%20Stays%20OPEN%20for%2030%20seconds%20(cooldown)%3Cbr%3E%E2%80%A2%20All%20requests%20fail-fast%20(no%20upstream%20calls)%3Cbr%3E%E2%80%A2%20After%20cooldown:%20closes%20&%20resumes%20upstream%20calls%3Cbr%3E%E2%80%A2%20Prevents%20cascading%20failures%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "9e3e71",
+        "hash": "cbbe48e6",
+        "encoded": "%3CmxGeometry%20x=%22120%22%20y=%22600%22%20width=%22340%22%20height=%22120%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "9e3e71",
+        "hash": "2cc34d67",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "9e3e71",
+        "hash": "967ee3d5",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22After%2030s%20cooldown:%3Cbr%3ECircuit%20CLOSES%20%E2%86%92%20Upstream%20calls%20resume%22%20style=%22shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "9e3e71",
+        "hash": "998c5750",
+        "encoded": "%3CmxGeometry%20x=%22500%22%20y=%22600%22%20width=%22280%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "9e3e71",
+        "hash": "54ab7e71",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "9e3e71",
+        "hash": "6aece75b",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "9e3e71",
+        "hash": "21982fbe",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "9e3e71",
+        "hash": "4502a313",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "9e3e71",
+        "hash": "d1af1f90",
+        "encoded": "%3C/mxfile%3E",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "ff60e6",
+        "hash": "162b183c",
+        "encoded": "%3Cdiagram%20name=%221.%20Happy%20Path%20(All%20FRESH)%22%20id=%22happy-path%22%3E",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "ff60e6",
+        "hash": "a1219ff2",
+        "encoded": "%3CmxGraphModel%20dx=%221422%22%20dy=%22794%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221100%22%20pageHeight=%22850%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "ff60e6",
+        "hash": "7ac12fea",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "ff60e6",
+        "hash": "55d5b76b",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "ff60e6",
+        "hash": "ca063f37",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "ff60e6",
+        "hash": "f6ee72db",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "ff60e6",
+        "hash": "ccae932b",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2240%22%20width=%2230%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "ff60e6",
+        "hash": "b838f84f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "ff60e6",
+        "hash": "452791c9",
+        "encoded": "%3CmxCell%20id=%22controller%22%20value=%22IssController%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "ff60e6",
+        "hash": "c2f6b82d",
+        "encoded": "%3CmxGeometry%20x=%22140%22%20y=%2240%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "ff60e6",
+        "hash": "689f08e0",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "ff60e6",
+        "hash": "266f19b0",
+        "encoded": "%3CmxCell%20id=%22facade%22%20value=%22IssFacade%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "ff60e6",
+        "hash": "be3bc4da",
+        "encoded": "%3CmxGeometry%20x=%22300%22%20y=%2240%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "ff60e6",
+        "hash": "033ddbbc",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "ff60e6",
+        "hash": "452400ac",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "ff60e6",
+        "hash": "13902d0e",
+        "encoded": "%3CmxGeometry%20x=%22460%22%20y=%2240%22%20width=%22120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "ff60e6",
+        "hash": "6ec58f7f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "ff60e6",
+        "hash": "7afa8e7d",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "ff60e6",
+        "hash": "70bdc794",
+        "encoded": "%3CmxGeometry%20x=%22640%22%20y=%2240%22%20width=%2280%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "ff60e6",
+        "hash": "e7b09914",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "ff60e6",
+        "hash": "45810272",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "ff60e6",
+        "hash": "db748ede",
+        "encoded": "%3CmxGeometry%20x=%22780%22%20y=%2240%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "ff60e6",
+        "hash": "ebcd574b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "ff60e6",
+        "hash": "b7da6c8b",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "ff60e6",
+        "hash": "c572febd",
+        "encoded": "%3CmxGeometry%20x=%22940%22%20y=%2240%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "ff60e6",
+        "hash": "be8ffee3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "ff60e6",
+        "hash": "aebc31e0",
+        "encoded": "%3CmxCell%20id=%22line1%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22client%22%20target=%22controller%22%3E",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "ff60e6",
+        "hash": "668b2bb2",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "ff60e6",
+        "hash": "a39b6966",
+        "encoded": "%3CmxPoint%20x=%2280%22%20y=%22120%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "ff60e6",
+        "hash": "3877034f",
+        "encoded": "%3CmxPoint%20x=%22130%22%20y=%2270%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "ff60e6",
+        "hash": "f20557e3",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "ff60e6",
+        "hash": "71e67780",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "ff60e6",
+        "hash": "372fe772",
+        "encoded": "%3CmxCell%20id=%22label1%22%20value=%22GET%20/api/v1/iss/overview?lat=0&lon=0&offline=false%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "ff60e6",
+        "hash": "6ecad4ac",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22100%22%20width=%22300%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "ff60e6",
+        "hash": "e081ea07",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "ff60e6",
+        "hash": "5c8e88b6",
+        "encoded": "%3CmxCell%20id=%22line2%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22controller%22%20target=%22facade%22%3E",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "ff60e6",
+        "hash": "cad2a46f",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "ff60e6",
+        "hash": "e2b8be5d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "ff60e6",
+        "hash": "00f4eca3",
+        "encoded": "%3CmxCell%20id=%22label2%22%20value=%22getOverview(lat,%20lon,%20offline)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "ff60e6",
+        "hash": "bd009a9d",
+        "encoded": "%3CmxGeometry%20x=%22140%22%20y=%22140%22%20width=%22200%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "ff60e6",
+        "hash": "1948da26",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "ff60e6",
+        "hash": "16df744f",
+        "encoded": "%3CmxCell%20id=%22line3%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22facade%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "ff60e6",
+        "hash": "fb307173",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "ff60e6",
+        "hash": "ad6e3d2f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "ff60e6",
+        "hash": "c02a3475",
+        "encoded": "%3CmxCell%20id=%22label3%22%20value=%22fetch(key,%20upstreamCallable,%20offline=false)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "ff60e6",
+        "hash": "a9076b18",
+        "encoded": "%3CmxGeometry%20x=%22300%22%20y=%22180%22%20width=%22250%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "ff60e6",
+        "hash": "64e3b1eb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "ff60e6",
+        "hash": "8020ab87",
+        "encoded": "%3CmxCell%20id=%22line4%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "ff60e6",
+        "hash": "8d70d45b",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "ff60e6",
+        "hash": "525ee12b",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "ff60e6",
+        "hash": "0e04a11b",
+        "encoded": "%3CmxCell%20id=%22label4%22%20value=%22get(key)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "ff60e6",
+        "hash": "36f4dd84",
+        "encoded": "%3CmxGeometry%20x=%22580%22%20y=%22220%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "ff60e6",
+        "hash": "1ad2f0eb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "ff60e6",
+        "hash": "bf73bc5c",
+        "encoded": "%3CmxCell%20id=%22line4b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "ff60e6",
+        "hash": "d640bd21",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "ff60e6",
+        "hash": "c589c1ae",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "ff60e6",
+        "hash": "61642750",
+        "encoded": "%3CmxCell%20id=%22label4b%22%20value=%22MISS%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "ff60e6",
+        "hash": "0320c133",
+        "encoded": "%3CmxGeometry%20x=%22580%22%20y=%22240%22%20width=%2260%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "ff60e6",
+        "hash": "3a729dd0",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "ff60e6",
+        "hash": "8bbdfd78",
+        "encoded": "%3CmxCell%20id=%22line5%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "ff60e6",
+        "hash": "c12ca8be",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "ff60e6",
+        "hash": "0df4427a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "ff60e6",
+        "hash": "aad1d15e",
+        "encoded": "%3CmxCell%20id=%22label5%22%20value=%22isOpen()%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "ff60e6",
+        "hash": "25522d34",
+        "encoded": "%3CmxGeometry%20x=%22700%22%20y=%22280%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "ff60e6",
+        "hash": "dde668dd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "ff60e6",
+        "hash": "70805b16",
+        "encoded": "%3CmxCell%20id=%22line5b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "ff60e6",
+        "hash": "00f294dd",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "ff60e6",
+        "hash": "be92dee3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "ff60e6",
+        "hash": "a53a8d4a",
+        "encoded": "%3CmxCell%20id=%22label5b%22%20value=%22false%20(CLOSED)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "ff60e6",
+        "hash": "31a36c92",
+        "encoded": "%3CmxGeometry%20x=%22700%22%20y=%22300%22%20width=%22100%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "ff60e6",
+        "hash": "d73dc499",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "ff60e6",
+        "hash": "173fe8e3",
+        "encoded": "%3CmxCell%20id=%22line6%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "ff60e6",
+        "hash": "d694d68c",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "ff60e6",
+        "hash": "faf42601",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "ff60e6",
+        "hash": "86dff8f8",
+        "encoded": "%3CmxCell%20id=%22label6%22%20value=%22HTTP%20GET%20(upstreamCallable.call())%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "ff60e6",
+        "hash": "e275aa1c",
+        "encoded": "%3CmxGeometry%20x=%22780%22%20y=%22340%22%20width=%22200%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "ff60e6",
+        "hash": "886570c3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "ff60e6",
+        "hash": "863dfb23",
+        "encoded": "%3CmxCell%20id=%22line6b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "ff60e6",
+        "hash": "1ee9fd0e",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "ff60e6",
+        "hash": "4e87fa77",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "ff60e6",
+        "hash": "25c14968",
+        "encoded": "%3CmxCell%20id=%22label6b%22%20value=%22200%20OK%20+%20JSON%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "ff60e6",
+        "hash": "90957a94",
+        "encoded": "%3CmxGeometry%20x=%22780%22%20y=%22360%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "ff60e6",
+        "hash": "72d402d3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "ff60e6",
+        "hash": "362bd119",
+        "encoded": "%3CmxCell%20id=%22line7%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "ff60e6",
+        "hash": "19aeb07f",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "ff60e6",
+        "hash": "a3c4fecd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "ff60e6",
+        "hash": "56349126",
+        "encoded": "%3CmxCell%20id=%22label7%22%20value=%22recordSuccess()%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "ff60e6",
+        "hash": "e1072302",
+        "encoded": "%3CmxGeometry%20x=%22700%22%20y=%22400%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "ff60e6",
+        "hash": "1899d8d2",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "ff60e6",
+        "hash": "4e748fd7",
+        "encoded": "%3CmxCell%20id=%22line8%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "ff60e6",
+        "hash": "e5018399",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "ff60e6",
+        "hash": "642bb09c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "ff60e6",
+        "hash": "74b07836",
+        "encoded": "%3CmxCell%20id=%22label8%22%20value=%22put(key,%20data)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "ff60e6",
+        "hash": "817d22fc",
+        "encoded": "%3CmxGeometry%20x=%22580%22%20y=%22440%22%20width=%22100%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "ff60e6",
+        "hash": "f0ed81b5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "ff60e6",
+        "hash": "d69602ef",
+        "encoded": "%3CmxCell%20id=%22line9%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22facade%22%3E",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "ff60e6",
+        "hash": "d99b5e52",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "ff60e6",
+        "hash": "6294158e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "ff60e6",
+        "hash": "b6d60fe8",
+        "encoded": "%3CmxCell%20id=%22label9%22%20value=%22Result(data,%20Source.FRESH,%20ageMs=0)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "ff60e6",
+        "hash": "28d2f711",
+        "encoded": "%3CmxGeometry%20x=%22300%22%20y=%22480%22%20width=%22220%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "ff60e6",
+        "hash": "a7968248",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "551": {
+        "chunkId": "ff60e6",
+        "hash": "cd09151d",
+        "encoded": "%3CmxCell%20id=%22line10%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22facade%22%20target=%22controller%22%3E",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "ff60e6",
+        "hash": "11a05e24",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "ff60e6",
+        "hash": "9a08b7ef",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "ff60e6",
+        "hash": "e7f5539b",
+        "encoded": "%3CmxCell%20id=%22label10%22%20value=%22IssOverview(position,%20passes,%20meta)%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "ff60e6",
+        "hash": "a2c6d58b",
+        "encoded": "%3CmxGeometry%20x=%22140%22%20y=%22520%22%20width=%22220%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "ff60e6",
+        "hash": "375c72d4",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "ff60e6",
+        "hash": "b07afa37",
+        "encoded": "%3CmxCell%20id=%22line11%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22controller%22%20target=%22client%22%3E",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "ff60e6",
+        "hash": "f599043b",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "ff60e6",
+        "hash": "a8570859",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "ff60e6",
+        "hash": "8ba467e6",
+        "encoded": "%3CmxCell%20id=%22label11%22%20value=%22200%20OK%20+%20JSON%20%7Bmeta:%20%7Bsource:%20FRESH%7D%7D%22%20style=%22text;html=1;align=left;verticalAlign=middle;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "ff60e6",
+        "hash": "e4065c5d",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22560%22%20width=%22280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "ff60e6",
+        "hash": "d663296c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "ff60e6",
+        "hash": "38d204f4",
+        "encoded": "%3CmxCell%20id=%22note1%22%20value=%22Scenario:%20First%20request,%20cache%20MISS,%20upstream%20healthy%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "ff60e6",
+        "hash": "d6436283",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22620%22%20width=%22300%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "ff60e6",
+        "hash": "7c149f83",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "566": {
+        "chunkId": "ff60e6",
+        "hash": "6f2da661",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "ff60e6",
+        "hash": "0e4fcbf1",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "568": {
+        "chunkId": "ff60e6",
+        "hash": "50f997d4",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "ff60e6",
+        "hash": "25a747f0",
+        "encoded": "%3Cdiagram%20name=%222.%20Cache%20Hit%20(STALE)%22%20id=%22cache-hit%22%3E",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "ff60e6",
+        "hash": "60df252d",
+        "encoded": "%3CmxGraphModel%20dx=%221422%22%20dy=%22794%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221100%22%20pageHeight=%22850%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "ff60e6",
+        "hash": "31fbcb31",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "573": {
+        "chunkId": "ff60e6",
+        "hash": "c3522c5e",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "ff60e6",
+        "hash": "efcafe3a",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "ff60e6",
+        "hash": "b95cf44a",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Scenario:%20Upstream%20fails,%20cache%20has%20STALE%20entry%20(expired%20TTL%20but%20within%20max-stale)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "ff60e6",
+        "hash": "2c24cf9b",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2240%22%20width=%22400%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "ff60e6",
+        "hash": "d7cfa483",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "ff60e6",
+        "hash": "8118db66",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "579": {
+        "chunkId": "ff60e6",
+        "hash": "da94880a",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22120%22%20width=%2230%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "ff60e6",
+        "hash": "e1c9339f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "581": {
+        "chunkId": "ff60e6",
+        "hash": "90a4c52f",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "ff60e6",
+        "hash": "beb55ccf",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22120%22%20width=%22120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "ff60e6",
+        "hash": "607e4421",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "ff60e6",
+        "hash": "eeff8527",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "ff60e6",
+        "hash": "db7208ed",
+        "encoded": "%3CmxGeometry%20x=%22380%22%20y=%22120%22%20width=%2280%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "ff60e6",
+        "hash": "f38345b3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "587": {
+        "chunkId": "ff60e6",
+        "hash": "1db449f9",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "ff60e6",
+        "hash": "ccc69c50",
+        "encoded": "%3CmxGeometry%20x=%22520%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "ff60e6",
+        "hash": "1b253635",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "ff60e6",
+        "hash": "7539e952",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "ff60e6",
+        "hash": "e16d728d",
+        "encoded": "%3CmxGeometry%20x=%22680%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "ff60e6",
+        "hash": "eaf1cf27",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "ff60e6",
+        "hash": "5892cd39",
+        "encoded": "%3CmxCell%20id=%22step1%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "ff60e6",
+        "hash": "6935daee",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "ff60e6",
+        "hash": "add01e65",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "596": {
+        "chunkId": "ff60e6",
+        "hash": "c85229e0",
+        "encoded": "%3CmxCell%20id=%22label1%22%20value=%221.%20get(key)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "ff60e6",
+        "hash": "a9ce2ca0",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%22200%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "ff60e6",
+        "hash": "d9a79af2",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "ff60e6",
+        "hash": "8d31391f",
+        "encoded": "%3CmxCell%20id=%22step1b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "ff60e6",
+        "hash": "5d39d17c",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "601": {
+        "chunkId": "ff60e6",
+        "hash": "2e4aa6dd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "ff60e6",
+        "hash": "b1106c40",
+        "encoded": "%3CmxCell%20id=%22label1b%22%20value=%22MISS%20(or%20expired)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "603": {
+        "chunkId": "ff60e6",
+        "hash": "09576410",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%22220%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "604": {
+        "chunkId": "ff60e6",
+        "hash": "29e0eb10",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "605": {
+        "chunkId": "ff60e6",
+        "hash": "b42d0f13",
+        "encoded": "%3CmxCell%20id=%22step2%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "606": {
+        "chunkId": "ff60e6",
+        "hash": "83e388cd",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "607": {
+        "chunkId": "ff60e6",
+        "hash": "4db612ea",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "ff60e6",
+        "hash": "10f554c2",
+        "encoded": "%3CmxCell%20id=%22label2%22%20value=%222.%20isOpen()%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "609": {
+        "chunkId": "ff60e6",
+        "hash": "0f524999",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%22260%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "610": {
+        "chunkId": "ff60e6",
+        "hash": "0ab591fa",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "611": {
+        "chunkId": "ff60e6",
+        "hash": "dc1e32e8",
+        "encoded": "%3CmxCell%20id=%22step2b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "612": {
+        "chunkId": "ff60e6",
+        "hash": "4a9126b6",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "ff60e6",
+        "hash": "7e1bf60e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "614": {
+        "chunkId": "ff60e6",
+        "hash": "2af69527",
+        "encoded": "%3CmxCell%20id=%22label2b%22%20value=%22false%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "615": {
+        "chunkId": "ff60e6",
+        "hash": "7cdc9065",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%22280%22%20width=%2260%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "ff60e6",
+        "hash": "73e231e1",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "617": {
+        "chunkId": "ff60e6",
+        "hash": "02bd0a9a",
+        "encoded": "%3CmxCell%20id=%22step3%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "618": {
+        "chunkId": "ff60e6",
+        "hash": "6b246ac4",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "619": {
+        "chunkId": "ff60e6",
+        "hash": "7548f678",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "620": {
+        "chunkId": "ff60e6",
+        "hash": "e7ab63e6",
+        "encoded": "%3CmxCell%20id=%22label3%22%20value=%223.%20HTTP%20GET%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "621": {
+        "chunkId": "ff60e6",
+        "hash": "e44ffcf8",
+        "encoded": "%3CmxGeometry%20x=%22620%22%20y=%22320%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "622": {
+        "chunkId": "ff60e6",
+        "hash": "e17a101c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "623": {
+        "chunkId": "ff60e6",
+        "hash": "bbc3a1c8",
+        "encoded": "%3CmxCell%20id=%22step3b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;strokeColor=#cc0000;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "624": {
+        "chunkId": "ff60e6",
+        "hash": "d6e1e782",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "625": {
+        "chunkId": "ff60e6",
+        "hash": "3dced6b2",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "626": {
+        "chunkId": "ff60e6",
+        "hash": "3ab301d8",
+        "encoded": "%3CmxCell%20id=%22label3b%22%20value=%22TIMEOUT%20/%20500%20Error%22%20style=%22text;html=1;strokeColor=#cc0000;fillColor=#f8cecc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "627": {
+        "chunkId": "ff60e6",
+        "hash": "551d8d1e",
+        "encoded": "%3CmxGeometry%20x=%22620%22%20y=%22340%22%20width=%22140%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "628": {
+        "chunkId": "ff60e6",
+        "hash": "79def575",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "629": {
+        "chunkId": "ff60e6",
+        "hash": "dc6f447c",
+        "encoded": "%3CmxCell%20id=%22step4%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "630": {
+        "chunkId": "ff60e6",
+        "hash": "c46b696c",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "631": {
+        "chunkId": "ff60e6",
+        "hash": "bbdc0bfe",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "632": {
+        "chunkId": "ff60e6",
+        "hash": "def27fd2",
+        "encoded": "%3CmxCell%20id=%22label4%22%20value=%224.%20recordFailure()%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "633": {
+        "chunkId": "ff60e6",
+        "hash": "8cb82fa2",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%22380%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "634": {
+        "chunkId": "ff60e6",
+        "hash": "710ac746",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "635": {
+        "chunkId": "ff60e6",
+        "hash": "98ecc810",
+        "encoded": "%3CmxCell%20id=%22step5%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "636": {
+        "chunkId": "ff60e6",
+        "hash": "ac9e34bc",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "637": {
+        "chunkId": "ff60e6",
+        "hash": "6af8ec4e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "638": {
+        "chunkId": "ff60e6",
+        "hash": "4917a7eb",
+        "encoded": "%3CmxCell%20id=%22label5%22%20value=%225.%20get(key)%20again%20(fallback)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "639": {
+        "chunkId": "ff60e6",
+        "hash": "d1306af8",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%22420%22%20width=%22160%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "640": {
+        "chunkId": "ff60e6",
+        "hash": "dd5841f6",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "641": {
+        "chunkId": "ff60e6",
+        "hash": "fd743ba7",
+        "encoded": "%3CmxCell%20id=%22step5b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;fillColor=#ffe6cc;strokeColor=#d79b00;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "642": {
+        "chunkId": "ff60e6",
+        "hash": "de342c61",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "643": {
+        "chunkId": "ff60e6",
+        "hash": "c151653a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "644": {
+        "chunkId": "ff60e6",
+        "hash": "4cbff9ec",
+        "encoded": "%3CmxCell%20id=%22label5b%22%20value=%22STALE%20(age%20%3E%20TTL%20but%20%3C%20max-stale)%22%20style=%22text;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "645": {
+        "chunkId": "ff60e6",
+        "hash": "4e024797",
+        "encoded": "%3CmxGeometry%20x=%22280%22%20y=%22440%22%20width=%22200%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "646": {
+        "chunkId": "ff60e6",
+        "hash": "0e54e424",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "647": {
+        "chunkId": "ff60e6",
+        "hash": "6ff4f6a2",
+        "encoded": "%3CmxCell%20id=%22step6%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22client%22%3E",
+        "prevChunkIds": []
+      },
+      "648": {
+        "chunkId": "ff60e6",
+        "hash": "2fc543bc",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "649": {
+        "chunkId": "ff60e6",
+        "hash": "ef9baa16",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "650": {
+        "chunkId": "ff60e6",
+        "hash": "93ca9b47",
+        "encoded": "%3CmxCell%20id=%22label6%22%20value=%22Result(data,%20Source.STALE,%20ageMs=900000)%22%20style=%22text;html=1;fillColor=#ffe6cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "651": {
+        "chunkId": "ff60e6",
+        "hash": "48694b05",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22500%22%20width=%22280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "652": {
+        "chunkId": "ff60e6",
+        "hash": "247b5586",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "653": {
+        "chunkId": "ff60e6",
+        "hash": "888a305b",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22User%20sees:%20Amber%20badge%20%5C%22Cached%2015%20min%20ago%5C%22%20+%20degraded%20banner%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "654": {
+        "chunkId": "ff60e6",
+        "hash": "863fd58d",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22560%22%20width=%22360%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "655": {
+        "chunkId": "ff60e6",
+        "hash": "d3bc7e82",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "656": {
+        "chunkId": "ff60e6",
+        "hash": "a1a1cbf2",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "657": {
+        "chunkId": "ff60e6",
+        "hash": "51c0426a",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "658": {
+        "chunkId": "ff60e6",
+        "hash": "b9ecba97",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "660": {
+        "chunkId": "ff60e6",
+        "hash": "5ec4acc3",
+        "encoded": "%3Cdiagram%20name=%223.%20MOCK%20Fallback%22%20id=%22mock-fallback%22%3E",
+        "prevChunkIds": []
+      },
+      "661": {
+        "chunkId": "ff60e6",
+        "hash": "db34538a",
+        "encoded": "%3CmxGraphModel%20dx=%221422%22%20dy=%22794%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221100%22%20pageHeight=%22850%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "662": {
+        "chunkId": "ff60e6",
+        "hash": "343e6366",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "663": {
+        "chunkId": "ff60e6",
+        "hash": "2ba1e807",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "664": {
+        "chunkId": "ff60e6",
+        "hash": "81ab7d91",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "665": {
+        "chunkId": "ff60e6",
+        "hash": "d69a1444",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Scenario:%20Upstream%20fails%20AND%20no%20cache%20(or%20cache%20too%20old)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "666": {
+        "chunkId": "ff60e6",
+        "hash": "e0105f05",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2240%22%20width=%22400%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "667": {
+        "chunkId": "ff60e6",
+        "hash": "1cb9d3b7",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "668": {
+        "chunkId": "ff60e6",
+        "hash": "ee68b112",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "669": {
+        "chunkId": "ff60e6",
+        "hash": "96c9a9b7",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%22120%22%20width=%22120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "670": {
+        "chunkId": "ff60e6",
+        "hash": "ce91af1d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "671": {
+        "chunkId": "ff60e6",
+        "hash": "3cd6a5c6",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "672": {
+        "chunkId": "ff60e6",
+        "hash": "7b2be216",
+        "encoded": "%3CmxGeometry%20x=%22280%22%20y=%22120%22%20width=%2280%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "673": {
+        "chunkId": "ff60e6",
+        "hash": "e4912128",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "674": {
+        "chunkId": "ff60e6",
+        "hash": "41136e0c",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "675": {
+        "chunkId": "ff60e6",
+        "hash": "c303361b",
+        "encoded": "%3CmxGeometry%20x=%22420%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "676": {
+        "chunkId": "ff60e6",
+        "hash": "48fbb083",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "677": {
+        "chunkId": "ff60e6",
+        "hash": "098b4923",
+        "encoded": "%3CmxCell%20id=%22mockdata%22%20value=%22MockData%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "678": {
+        "chunkId": "ff60e6",
+        "hash": "cfa51c0f",
+        "encoded": "%3CmxGeometry%20x=%22580%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "679": {
+        "chunkId": "ff60e6",
+        "hash": "76194533",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "680": {
+        "chunkId": "ff60e6",
+        "hash": "aacf08a3",
+        "encoded": "%3CmxCell%20id=%22step1%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "681": {
+        "chunkId": "ff60e6",
+        "hash": "ca771a07",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "682": {
+        "chunkId": "ff60e6",
+        "hash": "a44c0d0c",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "683": {
+        "chunkId": "ff60e6",
+        "hash": "863a1de1",
+        "encoded": "%3CmxCell%20id=%22label1%22%20value=%221.%20get(key)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "684": {
+        "chunkId": "ff60e6",
+        "hash": "31f242fc",
+        "encoded": "%3CmxGeometry%20x=%22220%22%20y=%22200%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "685": {
+        "chunkId": "ff60e6",
+        "hash": "b67a74c1",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "686": {
+        "chunkId": "ff60e6",
+        "hash": "bb5b391f",
+        "encoded": "%3CmxCell%20id=%22step1b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "687": {
+        "chunkId": "ff60e6",
+        "hash": "ee481196",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "688": {
+        "chunkId": "ff60e6",
+        "hash": "7dcfe7cf",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "689": {
+        "chunkId": "ff60e6",
+        "hash": "f15d8a0f",
+        "encoded": "%3CmxCell%20id=%22label1b%22%20value=%22MISS%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "690": {
+        "chunkId": "ff60e6",
+        "hash": "07369d40",
+        "encoded": "%3CmxGeometry%20x=%22220%22%20y=%22220%22%20width=%2260%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "691": {
+        "chunkId": "ff60e6",
+        "hash": "50bda2bb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "692": {
+        "chunkId": "ff60e6",
+        "hash": "5cd93d5b",
+        "encoded": "%3CmxCell%20id=%22step2%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22upstream%22%3E",
+        "prevChunkIds": []
+      },
+      "693": {
+        "chunkId": "ff60e6",
+        "hash": "f290185b",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "694": {
+        "chunkId": "ff60e6",
+        "hash": "509b5dd7",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "695": {
+        "chunkId": "ff60e6",
+        "hash": "ec1e5e73",
+        "encoded": "%3CmxCell%20id=%22label2%22%20value=%222.%20Try%20upstream%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "696": {
+        "chunkId": "ff60e6",
+        "hash": "d713faf8",
+        "encoded": "%3CmxGeometry%20x=%22340%22%20y=%22260%22%20width=%22100%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "697": {
+        "chunkId": "ff60e6",
+        "hash": "50341253",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "698": {
+        "chunkId": "ff60e6",
+        "hash": "2289bdc0",
+        "encoded": "%3CmxCell%20id=%22step2b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;strokeColor=#cc0000;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22upstream%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "699": {
+        "chunkId": "ff60e6",
+        "hash": "b998beeb",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "700": {
+        "chunkId": "ff60e6",
+        "hash": "dfde4cda",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "701": {
+        "chunkId": "ff60e6",
+        "hash": "447f71cb",
+        "encoded": "%3CmxCell%20id=%22label2b%22%20value=%22FAIL%22%20style=%22text;html=1;strokeColor=#cc0000;fillColor=#f8cecc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "702": {
+        "chunkId": "ff60e6",
+        "hash": "dcb4deb9",
+        "encoded": "%3CmxGeometry%20x=%22360%22%20y=%22280%22%20width=%2260%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "703": {
+        "chunkId": "ff60e6",
+        "hash": "bfb236e3",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "704": {
+        "chunkId": "ff60e6",
+        "hash": "38cd7f46",
+        "encoded": "%3CmxCell%20id=%22step3%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "705": {
+        "chunkId": "ff60e6",
+        "hash": "ff55e874",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "706": {
+        "chunkId": "ff60e6",
+        "hash": "cd235d65",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "707": {
+        "chunkId": "ff60e6",
+        "hash": "fb3fb28c",
+        "encoded": "%3CmxCell%20id=%22label3%22%20value=%223.%20get(key)%20again%20(fallback)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "708": {
+        "chunkId": "ff60e6",
+        "hash": "454e3059",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22320%22%20width=%22180%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "709": {
+        "chunkId": "ff60e6",
+        "hash": "aa0472bb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "710": {
+        "chunkId": "ff60e6",
+        "hash": "db881223",
+        "encoded": "%3CmxCell%20id=%22step3b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "711": {
+        "chunkId": "ff60e6",
+        "hash": "e17d5791",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "712": {
+        "chunkId": "ff60e6",
+        "hash": "a5aa1b91",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "713": {
+        "chunkId": "ff60e6",
+        "hash": "1675b83e",
+        "encoded": "%3CmxCell%20id=%22label3b%22%20value=%22MISS%20(no%20cache%20OR%20too%20old)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "714": {
+        "chunkId": "ff60e6",
+        "hash": "ef42983a",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22340%22%20width=%22180%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "715": {
+        "chunkId": "ff60e6",
+        "hash": "b969fdeb",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "716": {
+        "chunkId": "ff60e6",
+        "hash": "98d75808",
+        "encoded": "%3CmxCell%20id=%22step4%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22mockdata%22%3E",
+        "prevChunkIds": []
+      },
+      "717": {
+        "chunkId": "ff60e6",
+        "hash": "bd1116c6",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "718": {
+        "chunkId": "ff60e6",
+        "hash": "16904b5f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "719": {
+        "chunkId": "ff60e6",
+        "hash": "32516077",
+        "encoded": "%3CmxCell%20id=%22label4%22%20value=%224.%20mockSupplier.get()%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "720": {
+        "chunkId": "ff60e6",
+        "hash": "30f93531",
+        "encoded": "%3CmxGeometry%20x=%22460%22%20y=%22380%22%20width=%22140%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "721": {
+        "chunkId": "ff60e6",
+        "hash": "deba7413",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "722": {
+        "chunkId": "ff60e6",
+        "hash": "c4bd7f5b",
+        "encoded": "%3CmxCell%20id=%22step4b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;fillColor=#f5f5f5;%22%20edge=%221%22%20parent=%221%22%20source=%22mockdata%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "723": {
+        "chunkId": "ff60e6",
+        "hash": "6a1f83ed",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "724": {
+        "chunkId": "ff60e6",
+        "hash": "2d4c5f73",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "725": {
+        "chunkId": "ff60e6",
+        "hash": "3f4e5ded",
+        "encoded": "%3CmxCell%20id=%22label4b%22%20value=%22Static%20JSON%20(time-shifted)%22%20style=%22text;html=1;fillColor=#f5f5f5;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "726": {
+        "chunkId": "ff60e6",
+        "hash": "b9c18e30",
+        "encoded": "%3CmxGeometry%20x=%22460%22%20y=%22400%22%20width=%22160%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "727": {
+        "chunkId": "ff60e6",
+        "hash": "27559dff",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "728": {
+        "chunkId": "ff60e6",
+        "hash": "edf8355e",
+        "encoded": "%3CmxCell%20id=%22result%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "729": {
+        "chunkId": "ff60e6",
+        "hash": "08633f00",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "730": {
+        "chunkId": "ff60e6",
+        "hash": "1b0847a5",
+        "encoded": "%3CmxPoint%20x=%22160%22%20y=%22460%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "731": {
+        "chunkId": "ff60e6",
+        "hash": "3d1fd1ad",
+        "encoded": "%3CmxPoint%20x=%2240%22%20y=%22460%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "732": {
+        "chunkId": "ff60e6",
+        "hash": "6a779d28",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "733": {
+        "chunkId": "ff60e6",
+        "hash": "d7f0b078",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "734": {
+        "chunkId": "ff60e6",
+        "hash": "bdc9be81",
+        "encoded": "%3CmxCell%20id=%22labelr%22%20value=%22Result(mockData,%20Source.MOCK,%20ageMs=0)%22%20style=%22text;html=1;fillColor=#f5f5f5;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "735": {
+        "chunkId": "ff60e6",
+        "hash": "ac93e69a",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%22440%22%20width=%22260%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "736": {
+        "chunkId": "ff60e6",
+        "hash": "5fc18dad",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "737": {
+        "chunkId": "ff60e6",
+        "hash": "7f3b0bf2",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22User%20sees:%20Red%20badge%20%5C%22Fallback%20data%5C%22%20+%20degraded%20banner%20+%20alerts%20(mocks%20time-shifted%20to%20trigger%20them)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "738": {
+        "chunkId": "ff60e6",
+        "hash": "4a9d20e3",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22520%22%20width=%22500%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "739": {
+        "chunkId": "ff60e6",
+        "hash": "fcbadeed",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "740": {
+        "chunkId": "ff60e6",
+        "hash": "c3990c2d",
+        "encoded": "%3CmxCell%20id=%22note3%22%20value=%22MOCK%20data%20is%20NOT%20written%20to%20cache%20(per%20design)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "741": {
+        "chunkId": "ff60e6",
+        "hash": "6469af3e",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22580%22%20width=%22300%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "742": {
+        "chunkId": "ff60e6",
+        "hash": "c788fb41",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "743": {
+        "chunkId": "ff60e6",
+        "hash": "ad137644",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "744": {
+        "chunkId": "ff60e6",
+        "hash": "5d141dd1",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "745": {
+        "chunkId": "ff60e6",
+        "hash": "6c0d2a10",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "747": {
+        "chunkId": "ff60e6",
+        "hash": "ff5672e9",
+        "encoded": "%3Cdiagram%20name=%224.%20Offline%20Mode%22%20id=%22offline-mode%22%3E",
+        "prevChunkIds": []
+      },
+      "748": {
+        "chunkId": "ff60e6",
+        "hash": "c21b1090",
+        "encoded": "%3CmxGraphModel%20dx=%221422%22%20dy=%22794%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221100%22%20pageHeight=%22850%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "749": {
+        "chunkId": "ff60e6",
+        "hash": "2b3f7e34",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "750": {
+        "chunkId": "ff60e6",
+        "hash": "f98d9629",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "751": {
+        "chunkId": "ff60e6",
+        "hash": "385b97d2",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "752": {
+        "chunkId": "ff60e6",
+        "hash": "ca535b3d",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Scenario:%20User%20toggles%20offline=true%20(network%20fully%20disabled)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "753": {
+        "chunkId": "ff60e6",
+        "hash": "8b40d266",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2240%22%20width=%22400%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "754": {
+        "chunkId": "ff60e6",
+        "hash": "af03e1db",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "755": {
+        "chunkId": "ff60e6",
+        "hash": "2c4f71df",
+        "encoded": "%3CmxCell%20id=%22client%22%20value=%22Client%22%20style=%22shape=umlActor;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "756": {
+        "chunkId": "ff60e6",
+        "hash": "1f7ce8bf",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22120%22%20width=%2230%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "757": {
+        "chunkId": "ff60e6",
+        "hash": "e9d2cb5a",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "758": {
+        "chunkId": "ff60e6",
+        "hash": "bc2be30c",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "759": {
+        "chunkId": "ff60e6",
+        "hash": "9e5729bc",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22120%22%20width=%22120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "760": {
+        "chunkId": "ff60e6",
+        "hash": "908019f4",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "761": {
+        "chunkId": "ff60e6",
+        "hash": "771cc036",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "762": {
+        "chunkId": "ff60e6",
+        "hash": "7260b1d4",
+        "encoded": "%3CmxGeometry%20x=%22380%22%20y=%22120%22%20width=%2280%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "763": {
+        "chunkId": "ff60e6",
+        "hash": "801b8703",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "764": {
+        "chunkId": "ff60e6",
+        "hash": "8cb23933",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;dashed=1;dashPattern=8%208;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "765": {
+        "chunkId": "ff60e6",
+        "hash": "7ee4b5d2",
+        "encoded": "%3CmxGeometry%20x=%22520%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "766": {
+        "chunkId": "ff60e6",
+        "hash": "fa4be403",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "767": {
+        "chunkId": "ff60e6",
+        "hash": "74d922e0",
+        "encoded": "%3CmxCell%20id=%22label-upstream%22%20value=%22NEVER%20CALLED%22%20style=%22text;html=1;fillColor=#ffcccc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "768": {
+        "chunkId": "ff60e6",
+        "hash": "99be71f9",
+        "encoded": "%3CmxGeometry%20x=%22510%22%20y=%22170%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "769": {
+        "chunkId": "ff60e6",
+        "hash": "ba21b1a9",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "770": {
+        "chunkId": "ff60e6",
+        "hash": "d3815053",
+        "encoded": "%3CmxCell%20id=%22step1%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22client%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "771": {
+        "chunkId": "ff60e6",
+        "hash": "d334a48d",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "772": {
+        "chunkId": "ff60e6",
+        "hash": "20271126",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "773": {
+        "chunkId": "ff60e6",
+        "hash": "08b12d96",
+        "encoded": "%3CmxCell%20id=%22label1%22%20value=%22fetch(key,%20callable,%20offline=TRUE)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "774": {
+        "chunkId": "ff60e6",
+        "hash": "1203cab6",
+        "encoded": "%3CmxGeometry%20x=%2280%22%20y=%22200%22%20width=%22220%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "775": {
+        "chunkId": "ff60e6",
+        "hash": "37dcd4ae",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "776": {
+        "chunkId": "ff60e6",
+        "hash": "b03c985b",
+        "encoded": "%3CmxCell%20id=%22check%22%20value=%22if%20(offline)%20%7B%20return%20fetchOffline(key);%20%7D%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "777": {
+        "chunkId": "ff60e6",
+        "hash": "b4f32f3a",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22240%22%20width=%22240%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "778": {
+        "chunkId": "ff60e6",
+        "hash": "e9433aa4",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "779": {
+        "chunkId": "ff60e6",
+        "hash": "3dde7e8d",
+        "encoded": "%3CmxCell%20id=%22step2%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "780": {
+        "chunkId": "ff60e6",
+        "hash": "887b27e0",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "781": {
+        "chunkId": "ff60e6",
+        "hash": "b38e95f5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "782": {
+        "chunkId": "ff60e6",
+        "hash": "12858810",
+        "encoded": "%3CmxCell%20id=%22label2%22%20value=%22get(key)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "783": {
+        "chunkId": "ff60e6",
+        "hash": "29ae6ec9",
+        "encoded": "%3CmxGeometry%20x=%22320%22%20y=%22300%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "784": {
+        "chunkId": "ff60e6",
+        "hash": "98311cc6",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "785": {
+        "chunkId": "ff60e6",
+        "hash": "2dc43632",
+        "encoded": "%3CmxCell%20id=%22branch%22%20value=%22%22%20style=%22shape=rhombus;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "786": {
+        "chunkId": "ff60e6",
+        "hash": "d4750c80",
+        "encoded": "%3CmxGeometry%20x=%22380%22%20y=%22340%22%20width=%2280%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "787": {
+        "chunkId": "ff60e6",
+        "hash": "686fdd82",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "788": {
+        "chunkId": "ff60e6",
+        "hash": "73d9c5f6",
+        "encoded": "%3CmxCell%20id=%22label-branch%22%20value=%22Cache%20has%5Cnentry?%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "789": {
+        "chunkId": "ff60e6",
+        "hash": "b14b340e",
+        "encoded": "%3CmxGeometry%20x=%22385%22%20y=%22355%22%20width=%2270%22%20height=%2230%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "790": {
+        "chunkId": "ff60e6",
+        "hash": "3fc615f1",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "791": {
+        "chunkId": "ff60e6",
+        "hash": "372d0eaf",
+        "encoded": "%3CmxCell%20id=%22yes-arrow%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "792": {
+        "chunkId": "ff60e6",
+        "hash": "d5b66d7d",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "793": {
+        "chunkId": "ff60e6",
+        "hash": "02be892f",
+        "encoded": "%3CmxPoint%20x=%22340%22%20y=%22370%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "794": {
+        "chunkId": "ff60e6",
+        "hash": "edad0bd5",
+        "encoded": "%3CmxPoint%20x=%22260%22%20y=%22370%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "795": {
+        "chunkId": "ff60e6",
+        "hash": "ced3dc4d",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "796": {
+        "chunkId": "ff60e6",
+        "hash": "6b180213",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "797": {
+        "chunkId": "ff60e6",
+        "hash": "066a2d39",
+        "encoded": "%3CmxCell%20id=%22yes-label%22%20value=%22YES%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "798": {
+        "chunkId": "ff60e6",
+        "hash": "12258000",
+        "encoded": "%3CmxGeometry%20x=%22280%22%20y=%22350%22%20width=%2240%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "799": {
+        "chunkId": "ff60e6",
+        "hash": "5c809217",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "800": {
+        "chunkId": "ff60e6",
+        "hash": "57edb3ee",
+        "encoded": "%3CmxCell%20id=%22yes-result%22%20value=%22Return%20STALE%5Cn(even%20if%20within%20TTL)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "801": {
+        "chunkId": "ff60e6",
+        "hash": "17b889f9",
+        "encoded": "%3CmxGeometry%20x=%22140%22%20y=%22340%22%20width=%22120%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "802": {
+        "chunkId": "ff60e6",
+        "hash": "ff1caa4d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "803": {
+        "chunkId": "ff60e6",
+        "hash": "5f3d067d",
+        "encoded": "%3CmxCell%20id=%22no-arrow%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "804": {
+        "chunkId": "ff60e6",
+        "hash": "d30a106f",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%3E",
+        "prevChunkIds": []
+      },
+      "805": {
+        "chunkId": "ff60e6",
+        "hash": "b1b8774a",
+        "encoded": "%3CmxPoint%20x=%22460%22%20y=%22370%22%20as=%22sourcePoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "806": {
+        "chunkId": "ff60e6",
+        "hash": "001f0478",
+        "encoded": "%3CmxPoint%20x=%22540%22%20y=%22370%22%20as=%22targetPoint%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "807": {
+        "chunkId": "ff60e6",
+        "hash": "2abe17ce",
+        "encoded": "%3C/mxGeometry%3E",
+        "prevChunkIds": []
+      },
+      "808": {
+        "chunkId": "ff60e6",
+        "hash": "edf9de70",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "809": {
+        "chunkId": "ff60e6",
+        "hash": "8ac8e544",
+        "encoded": "%3CmxCell%20id=%22no-label%22%20value=%22NO%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "810": {
+        "chunkId": "ff60e6",
+        "hash": "4a372e03",
+        "encoded": "%3CmxGeometry%20x=%22480%22%20y=%22350%22%20width=%2240%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "811": {
+        "chunkId": "ff60e6",
+        "hash": "d74a8940",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "812": {
+        "chunkId": "ff60e6",
+        "hash": "9d35c9af",
+        "encoded": "%3CmxCell%20id=%22no-result%22%20value=%22Return%20MOCK%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "813": {
+        "chunkId": "ff60e6",
+        "hash": "5ae528ea",
+        "encoded": "%3CmxGeometry%20x=%22540%22%20y=%22340%22%20width=%22100%22%20height=%2260%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "814": {
+        "chunkId": "ff60e6",
+        "hash": "bbf17b51",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "815": {
+        "chunkId": "ff60e6",
+        "hash": "3a3ae339",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22Offline%20mode%20NEVER%20reports%20FRESH,%20even%20if%20cache%20is%20within%20TTL%20(per%20design)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "816": {
+        "chunkId": "ff60e6",
+        "hash": "e8ac6afa",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22460%22%20width=%22440%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "817": {
+        "chunkId": "ff60e6",
+        "hash": "a6c87f65",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "818": {
+        "chunkId": "ff60e6",
+        "hash": "9d1fc614",
+        "encoded": "%3CmxCell%20id=%22note3%22%20value=%22Upstream%20callable%20is%20NEVER%20invoked%20when%20offline=true%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "819": {
+        "chunkId": "ff60e6",
+        "hash": "78abe740",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22520%22%20width=%22340%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "820": {
+        "chunkId": "ff60e6",
+        "hash": "7beb508d",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "821": {
+        "chunkId": "ff60e6",
+        "hash": "f1a93910",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "822": {
+        "chunkId": "ff60e6",
+        "hash": "b9a7cfbe",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "823": {
+        "chunkId": "ff60e6",
+        "hash": "3db61ed7",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "825": {
+        "chunkId": "ff60e6",
+        "hash": "eeaf1d13",
+        "encoded": "%3Cdiagram%20name=%225.%20Circuit%20Breaker%20Open%22%20id=%22circuit-open%22%3E",
+        "prevChunkIds": []
+      },
+      "826": {
+        "chunkId": "ff60e6",
+        "hash": "6786dd68",
+        "encoded": "%3CmxGraphModel%20dx=%221422%22%20dy=%22794%22%20grid=%221%22%20gridSize=%2210%22%20guides=%221%22%20tooltips=%221%22%20connect=%221%22%20arrows=%221%22%20fold=%221%22%20page=%221%22%20pageScale=%221%22%20pageWidth=%221100%22%20pageHeight=%22850%22%20math=%220%22%20shadow=%220%22%3E",
+        "prevChunkIds": []
+      },
+      "827": {
+        "chunkId": "ff60e6",
+        "hash": "910ac1ae",
+        "encoded": "%3Croot%3E",
+        "prevChunkIds": []
+      },
+      "828": {
+        "chunkId": "ff60e6",
+        "hash": "2cb44c7b",
+        "encoded": "%3CmxCell%20id=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "829": {
+        "chunkId": "ff60e6",
+        "hash": "c4bf190a",
+        "encoded": "%3CmxCell%20id=%221%22%20parent=%220%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "830": {
+        "chunkId": "ff60e6",
+        "hash": "e0f74adc",
+        "encoded": "%3CmxCell%20id=%22note%22%20value=%22Scenario:%20Circuit%20breaker%20is%20OPEN%20(3+%20failures,%20within%2030s%20cooldown)%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "831": {
+        "chunkId": "ff60e6",
+        "hash": "ff4388ea",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%2240%22%20width=%22400%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "832": {
+        "chunkId": "ff60e6",
+        "hash": "0229a51e",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "833": {
+        "chunkId": "ff60e6",
+        "hash": "54a288bf",
+        "encoded": "%3CmxCell%20id=%22fetcher%22%20value=%22ResilientFetcher%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "834": {
+        "chunkId": "ff60e6",
+        "hash": "c20e6373",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%22120%22%20width=%22120%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "835": {
+        "chunkId": "ff60e6",
+        "hash": "fecf1dca",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "836": {
+        "chunkId": "ff60e6",
+        "hash": "5ea51643",
+        "encoded": "%3CmxCell%20id=%22cache%22%20value=%22TtlCache%22%20style=%22rounded=0;whiteSpace=wrap;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "837": {
+        "chunkId": "ff60e6",
+        "hash": "27ba19ac",
+        "encoded": "%3CmxGeometry%20x=%22280%22%20y=%22120%22%20width=%2280%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "838": {
+        "chunkId": "ff60e6",
+        "hash": "68b280cd",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "839": {
+        "chunkId": "ff60e6",
+        "hash": "4177d1fb",
+        "encoded": "%3CmxCell%20id=%22breaker%22%20value=%22CircuitBreaker%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "840": {
+        "chunkId": "ff60e6",
+        "hash": "9d37db24",
+        "encoded": "%3CmxGeometry%20x=%22420%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "841": {
+        "chunkId": "ff60e6",
+        "hash": "3707665f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "842": {
+        "chunkId": "ff60e6",
+        "hash": "1712cb67",
+        "encoded": "%3CmxCell%20id=%22upstream%22%20value=%22Upstream%20API%22%20style=%22rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;dashed=1;dashPattern=8%208;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "843": {
+        "chunkId": "ff60e6",
+        "hash": "01301d5f",
+        "encoded": "%3CmxGeometry%20x=%22580%22%20y=%22120%22%20width=%22100%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "844": {
+        "chunkId": "ff60e6",
+        "hash": "4636f8a5",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "845": {
+        "chunkId": "ff60e6",
+        "hash": "8eff827b",
+        "encoded": "%3CmxCell%20id=%22label-upstream%22%20value=%22NOT%20CALLED%5Cn(circuit%20OPEN)%22%20style=%22text;html=1;fillColor=#ffcccc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "846": {
+        "chunkId": "ff60e6",
+        "hash": "0bfba728",
+        "encoded": "%3CmxGeometry%20x=%22575%22%20y=%22170%22%20width=%22110%22%20height=%2230%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "847": {
+        "chunkId": "ff60e6",
+        "hash": "cc6dc506",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "848": {
+        "chunkId": "ff60e6",
+        "hash": "28806e9c",
+        "encoded": "%3CmxCell%20id=%22step1%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "849": {
+        "chunkId": "ff60e6",
+        "hash": "1cdc062b",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "850": {
+        "chunkId": "ff60e6",
+        "hash": "2119bc69",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "851": {
+        "chunkId": "ff60e6",
+        "hash": "cac137e4",
+        "encoded": "%3CmxCell%20id=%22label1%22%20value=%221.%20get(key)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "852": {
+        "chunkId": "ff60e6",
+        "hash": "f68da536",
+        "encoded": "%3CmxGeometry%20x=%22220%22%20y=%22220%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "853": {
+        "chunkId": "ff60e6",
+        "hash": "c88102d0",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "854": {
+        "chunkId": "ff60e6",
+        "hash": "c81309a4",
+        "encoded": "%3CmxCell%20id=%22step1b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "855": {
+        "chunkId": "ff60e6",
+        "hash": "414d636d",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "856": {
+        "chunkId": "ff60e6",
+        "hash": "46296ee7",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "857": {
+        "chunkId": "ff60e6",
+        "hash": "18fb3ec9",
+        "encoded": "%3CmxCell%20id=%22label1b%22%20value=%22MISS%20(or%20expired)%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "858": {
+        "chunkId": "ff60e6",
+        "hash": "0a254955",
+        "encoded": "%3CmxGeometry%20x=%22220%22%20y=%22240%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "859": {
+        "chunkId": "ff60e6",
+        "hash": "c9a3e085",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "860": {
+        "chunkId": "ff60e6",
+        "hash": "881f03c7",
+        "encoded": "%3CmxCell%20id=%22step2%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22breaker%22%3E",
+        "prevChunkIds": []
+      },
+      "861": {
+        "chunkId": "ff60e6",
+        "hash": "eafb4010",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "862": {
+        "chunkId": "ff60e6",
+        "hash": "f8d08ee0",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "863": {
+        "chunkId": "ff60e6",
+        "hash": "89a3e770",
+        "encoded": "%3CmxCell%20id=%22label2%22%20value=%222.%20isOpen()%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "864": {
+        "chunkId": "ff60e6",
+        "hash": "cb82f688",
+        "encoded": "%3CmxGeometry%20x=%22360%22%20y=%22280%22%20width=%2280%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "865": {
+        "chunkId": "ff60e6",
+        "hash": "73e5caab",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "866": {
+        "chunkId": "ff60e6",
+        "hash": "dba76eac",
+        "encoded": "%3CmxCell%20id=%22step2b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;strokeColor=#cc0000;strokeWidth=2;%22%20edge=%221%22%20parent=%221%22%20source=%22breaker%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "867": {
+        "chunkId": "ff60e6",
+        "hash": "020981e9",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "868": {
+        "chunkId": "ff60e6",
+        "hash": "88c16933",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "869": {
+        "chunkId": "ff60e6",
+        "hash": "8d49ba0e",
+        "encoded": "%3CmxCell%20id=%22label2b%22%20value=%22TRUE%20(OPEN)%22%20style=%22text;html=1;strokeColor=#cc0000;fillColor=#f8cecc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "870": {
+        "chunkId": "ff60e6",
+        "hash": "768f4f63",
+        "encoded": "%3CmxGeometry%20x=%22360%22%20y=%22300%22%20width=%22100%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "871": {
+        "chunkId": "ff60e6",
+        "hash": "3a1999ec",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "872": {
+        "chunkId": "ff60e6",
+        "hash": "7e8f2a3c",
+        "encoded": "%3CmxCell%20id=%22skip%22%20value=%22Skip%20upstream,%5Cngo%20straight%20to%20fallback%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "873": {
+        "chunkId": "ff60e6",
+        "hash": "192be986",
+        "encoded": "%3CmxGeometry%20x=%22100%22%20y=%22340%22%20width=%22140%22%20height=%2250%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "874": {
+        "chunkId": "ff60e6",
+        "hash": "46031331",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "875": {
+        "chunkId": "ff60e6",
+        "hash": "457d1dc2",
+        "encoded": "%3CmxCell%20id=%22step3%22%20value=%22%22%20style=%22endArrow=classic;html=1;%22%20edge=%221%22%20parent=%221%22%20source=%22fetcher%22%20target=%22cache%22%3E",
+        "prevChunkIds": []
+      },
+      "876": {
+        "chunkId": "ff60e6",
+        "hash": "91931f34",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "877": {
+        "chunkId": "ff60e6",
+        "hash": "567f9f45",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "878": {
+        "chunkId": "ff60e6",
+        "hash": "ec93756c",
+        "encoded": "%3CmxCell%20id=%22label3%22%20value=%223.%20get(key)%20again%22%20style=%22text;html=1;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "879": {
+        "chunkId": "ff60e6",
+        "hash": "e6961fab",
+        "encoded": "%3CmxGeometry%20x=%22220%22%20y=%22420%22%20width=%22120%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "880": {
+        "chunkId": "ff60e6",
+        "hash": "b8beb41f",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "881": {
+        "chunkId": "ff60e6",
+        "hash": "9b1795b9",
+        "encoded": "%3CmxCell%20id=%22step3b%22%20value=%22%22%20style=%22endArrow=classic;html=1;dashed=1;fillColor=#ffe6cc;strokeColor=#d79b00;%22%20edge=%221%22%20parent=%221%22%20source=%22cache%22%20target=%22fetcher%22%3E",
+        "prevChunkIds": []
+      },
+      "882": {
+        "chunkId": "ff60e6",
+        "hash": "59e1dc51",
+        "encoded": "%3CmxGeometry%20width=%2250%22%20height=%2250%22%20relative=%221%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "883": {
+        "chunkId": "ff60e6",
+        "hash": "45a0ed34",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "884": {
+        "chunkId": "ff60e6",
+        "hash": "ca6bb4a3",
+        "encoded": "%3CmxCell%20id=%22label3b%22%20value=%22STALE%20(or%20MOCK%20if%20no%20cache)%22%20style=%22text;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "885": {
+        "chunkId": "ff60e6",
+        "hash": "8fbb971a",
+        "encoded": "%3CmxGeometry%20x=%22200%22%20y=%22440%22%20width=%22180%22%20height=%2220%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "886": {
+        "chunkId": "ff60e6",
+        "hash": "1e139c15",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "887": {
+        "chunkId": "ff60e6",
+        "hash": "1bc378f8",
+        "encoded": "%3CmxCell%20id=%22note2%22%20value=%22Circuit%20breaker%20opens%20after%203%20consecutive%20failures,%20stays%20open%20for%2030%20seconds%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "888": {
+        "chunkId": "ff60e6",
+        "hash": "1730216c",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22520%22%20width=%22400%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "889": {
+        "chunkId": "ff60e6",
+        "hash": "289ce4ca",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "890": {
+        "chunkId": "ff60e6",
+        "hash": "a7c55454",
+        "encoded": "%3CmxCell%20id=%22note3%22%20value=%22After%2030s%20cooldown,%20breaker%20closes%20and%20upstream%20calls%20resume%22%20style=%22rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;%22%20vertex=%221%22%20parent=%221%22%3E",
+        "prevChunkIds": []
+      },
+      "891": {
+        "chunkId": "ff60e6",
+        "hash": "ed617b79",
+        "encoded": "%3CmxGeometry%20x=%2240%22%20y=%22580%22%20width=%22360%22%20height=%2240%22%20as=%22geometry%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "892": {
+        "chunkId": "ff60e6",
+        "hash": "69e706e7",
+        "encoded": "%3C/mxCell%3E",
+        "prevChunkIds": []
+      },
+      "893": {
+        "chunkId": "ff60e6",
+        "hash": "60e98e4e",
+        "encoded": "%3C/root%3E",
+        "prevChunkIds": []
+      },
+      "894": {
+        "chunkId": "ff60e6",
+        "hash": "934335f1",
+        "encoded": "%3C/mxGraphModel%3E",
+        "prevChunkIds": []
+      },
+      "895": {
+        "chunkId": "ff60e6",
+        "hash": "6ef28679",
+        "encoded": "%3C/diagram%3E",
+        "prevChunkIds": []
+      },
+      "896": {
+        "chunkId": "ff60e6",
+        "hash": "7a2789a2",
+        "encoded": "%3C/mxfile%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "backend/src/main/resources/mocks/passes.json": {
+    "filename": "passes.json",
+    "path": "backend/src/main/resources/mocks/passes.json",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "9c8b2a": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793536321,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "c6886f48",
+          "files": "1bde2dc3"
+        },
+        "hash": "8fc8d9cf",
+        "messageId": "system_116ad4b0-d5ef-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:02:01\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9c8b2a",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9c8b2a",
+        "hash": "44e2d554",
+        "encoded": "%22_label%22:%20%22MOCK%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9c8b2a",
+        "hash": "11bd80da",
+        "encoded": "%22_comment%22:%20%22Static%20fallback%20for%20Pollux%20Labs%20pass%20predictions.%20Shape%20mirrors%20the%20real%20iss-api.polluxlabs.io/iss-pass%20contract%20so%20PolluxClient.parse(JsonNode)%20can%20parse%20it%20unchanged.%20At%20load%20time%20(Step%205,%20MockData/PassMock),%20all%20rise/culmination/set/visible_start/visible_end%20timestamps%20are%20TIME-SHIFTED%20relative%20to%20Clock.now()%20so%20the%20first%20visible%20pass%20(passes%5B1%5D)%20starts%20~90%20minutes%20from%20now,%20duration%20343s%20(%3E5%20min,%20triggers%20Alert%203),%20culmination%20elevation%2083.8%20deg%20(magnitude%20%3C-2,%20triggers%20Alert%204).%20Absolute%20timestamps%20below%20are%20placeholders%20only.%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "9c8b2a",
+        "hash": "540d8a9f",
+        "encoded": "%22satellite%22:%20%22ISS%20(ZARYA)%20MOCK%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9c8b2a",
+        "hash": "f2bad70e",
+        "encoded": "%22tle_epoch%22:%20%222026-11-01T05:00:23Z%22,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9c8b2a",
+        "hash": "d1b9e104",
+        "encoded": "%22tle_age_hours%22:%207.4,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9c8b2a",
+        "hash": "241b8939",
+        "encoded": "%22tle_stale%22:%20false,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9c8b2a",
+        "hash": "4be7b48b",
+        "encoded": "%22observer%22:%20%7B%20%22lat%22:%2028.6139,%20%22lon%22:%2077.209,%20%22elevation_m%22:%200.0%20%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "9c8b2a",
+        "hash": "5f44e901",
+        "encoded": "%22generated_at%22:%20%222026-11-01T12:23:58Z%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9c8b2a",
+        "hash": "19278675",
+        "encoded": "%22params%22:%20%7B%20%22min_elevation_deg%22:%2010.0,%20%22visible_only%22:%20false,%20%22sun_alt_max_deg%22:%20-6.0,%20%22days_ahead%22:%2010,%20%22days_ahead_capped%22:%20false%20%7D,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "9c8b2a",
+        "hash": "865d720d",
+        "encoded": "%22passes%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9c8b2a",
+        "hash": "6aee126d",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9c8b2a",
+        "hash": "fbe741b7",
+        "encoded": "%22rise%22:%20%7B%20%22time%22:%20%222026-11-01T15:56:08Z%22,%20%22azimuth_deg%22:%20197.1,%20%22compass%22:%20%22SSW%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9c8b2a",
+        "hash": "3cd29722",
+        "encoded": "%22culmination%22:%20%7B%20%22time%22:%20%222026-11-01T15:59:13Z%22,%20%22elevation_deg%22:%2035.7%20%7D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "9c8b2a",
+        "hash": "b953f055",
+        "encoded": "%22set%22:%20%7B%20%22time%22:%20%222026-11-01T16:02:19Z%22,%20%22azimuth_deg%22:%2060.9,%20%22compass%22:%20%22ENE%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9c8b2a",
+        "hash": "99c09d5e",
+        "encoded": "%22duration_sec%22:%20371,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9c8b2a",
+        "hash": "b49d1ff1",
+        "encoded": "%22above_horizon%22:%20true,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9c8b2a",
+        "hash": "8a6cbbf9",
+        "encoded": "%22visible%22:%20false",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9c8b2a",
+        "hash": "1cba0cb6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9c8b2a",
+        "hash": "5e8aef52",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "9c8b2a",
+        "hash": "d65b6d52",
+        "encoded": "%22rise%22:%20%7B%20%22time%22:%20%222026-11-04T00:08:12Z%22,%20%22azimuth_deg%22:%20315.6,%20%22compass%22:%20%22NW%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "9c8b2a",
+        "hash": "0bd167c3",
+        "encoded": "%22culmination%22:%20%7B%20%22time%22:%20%222026-11-04T00:11:35Z%22,%20%22elevation_deg%22:%2083.8%20%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9c8b2a",
+        "hash": "4496f090",
+        "encoded": "%22set%22:%20%7B%20%22time%22:%20%222026-11-04T00:14:57Z%22,%20%22azimuth_deg%22:%20139.9,%20%22compass%22:%20%22SE%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9c8b2a",
+        "hash": "1639ae38",
+        "encoded": "%22duration_sec%22:%20406,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "9c8b2a",
+        "hash": "04541ca7",
+        "encoded": "%22above_horizon%22:%20true,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "9c8b2a",
+        "hash": "4f63a173",
+        "encoded": "%22visible%22:%20true,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9c8b2a",
+        "hash": "96e80148",
+        "encoded": "%22visible_start%22:%20%222026-11-04T00:09:12Z%22,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "9c8b2a",
+        "hash": "78a4e461",
+        "encoded": "%22visible_end%22:%20%222026-11-04T00:14:57Z%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9c8b2a",
+        "hash": "791def23",
+        "encoded": "%22visible_duration_sec%22:%20343",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9c8b2a",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9c8b2a",
+        "hash": "a508025f",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "9c8b2a",
+        "hash": "cb9af783",
+        "encoded": "%22rise%22:%20%7B%20%22time%22:%20%222026-11-04T15:09:49Z%22,%20%22azimuth_deg%22:%20218.3,%20%22compass%22:%20%22SW%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "9c8b2a",
+        "hash": "7f9100e8",
+        "encoded": "%22culmination%22:%20%7B%20%22time%22:%20%222026-11-04T15:13:08Z%22,%20%22elevation_deg%22:%2078.5%20%7D,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "9c8b2a",
+        "hash": "82b60a9b",
+        "encoded": "%22set%22:%20%7B%20%22time%22:%20%222026-11-04T15:16:28Z%22,%20%22azimuth_deg%22:%2045.6,%20%22compass%22:%20%22NE%22%20%7D,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "9c8b2a",
+        "hash": "f276f36a",
+        "encoded": "%22duration_sec%22:%20399,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "9c8b2a",
+        "hash": "fc453884",
+        "encoded": "%22above_horizon%22:%20true,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "9c8b2a",
+        "hash": "46cb2978",
+        "encoded": "%22visible%22:%20false",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "9c8b2a",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "9c8b2a",
+        "hash": "70c56bef",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "9c8b2a",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

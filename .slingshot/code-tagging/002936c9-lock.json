@@ -1,0 +1,253 @@
+{
+  "frontend/src/components/PositionCard.jsx": {
+    "filename": "PositionCard.jsx",
+    "path": "frontend/src/components/PositionCard.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "697f81": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546023,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "f7847341",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:43\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "697f81",
+        "hash": "c438e239",
+        "encoded": "import%20SourceBadge%20from%20'./SourceBadge.jsx';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "697f81",
+        "hash": "7119cbd2",
+        "encoded": "import%20%7B%20formatLocalTime,%20formatUtcTooltip%20%7D%20from%20'../utils/time.js';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "697f81",
+        "hash": "2336cf6c",
+        "encoded": "//%20Current%20ISS%20position%20card,%20polled%20every%205-10s%20by%20usePositionPolling",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "697f81",
+        "hash": "fbc774ff",
+        "encoded": "//%20(PROMPT.md%20section%207).%20Null-safe:%20position%20may%20not%20have%20loaded%20yet.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "697f81",
+        "hash": "53b7f821",
+        "encoded": "export%20default%20function%20PositionCard(%7B%20position,%20meta%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "697f81",
+        "hash": "b7b26d56",
+        "encoded": "if%20(!position)%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "697f81",
+        "hash": "6e738b41",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "697f81",
+        "hash": "23ba93df",
+        "encoded": "%3Csection%20className=%22card%20position-card%22%20aria-label=%22ISS%20position%22%3E",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "697f81",
+        "hash": "5866b7e5",
+        "encoded": "%3Cp%3EPosition%20not%20available%20yet.%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "697f81",
+        "hash": "d9cc5cab",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "697f81",
+        "hash": "0adc91c5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "697f81",
+        "hash": "6a3f2143",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "697f81",
+        "hash": "d4d8b398",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "697f81",
+        "hash": "8741c374",
+        "encoded": "%3Csection%20className=%22card%20position-card%22%20aria-label=%22ISS%20position%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "697f81",
+        "hash": "3b69fee7",
+        "encoded": "%3Cheader%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "697f81",
+        "hash": "372a27e3",
+        "encoded": "%3Ch2%3ECurrent%20position%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "697f81",
+        "hash": "f9be2b92",
+        "encoded": "%7Bmeta%20&&%20%3CSourceBadge%20source=%7Bmeta.source%7D%20ageMs=%7Bmeta.ageMs%7D%20/%3E%7D",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "697f81",
+        "hash": "dda58280",
+        "encoded": "%3C/header%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "697f81",
+        "hash": "4b34639a",
+        "encoded": "%3Cdl%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "697f81",
+        "hash": "581ba829",
+        "encoded": "%3Cdt%3ELatitude%3C/dt%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "697f81",
+        "hash": "8c0e888d",
+        "encoded": "%3Cdd%3E%7Bposition.latitude%7D%C2%B0%3C/dd%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "697f81",
+        "hash": "c04259b5",
+        "encoded": "%3Cdt%3ELongitude%3C/dt%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "697f81",
+        "hash": "dd6a33fd",
+        "encoded": "%3Cdd%3E%7Bposition.longitude%7D%C2%B0%3C/dd%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "697f81",
+        "hash": "40feb90e",
+        "encoded": "%3Cdt%3EAltitude%3C/dt%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "697f81",
+        "hash": "255707e8",
+        "encoded": "%3Cdd%3E%7Bposition.altitudeKm%7D%20km%3C/dd%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "697f81",
+        "hash": "39807baf",
+        "encoded": "%3Cdt%3EVelocity%3C/dt%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "697f81",
+        "hash": "0c300095",
+        "encoded": "%3Cdd%3E%7Bposition.velocityKmh%7D%20km/h%3C/dd%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "697f81",
+        "hash": "e0af7a08",
+        "encoded": "%3C/dl%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "697f81",
+        "hash": "f66dfba4",
+        "encoded": "%7Bposition.observedAt%20&&%20(",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "697f81",
+        "hash": "00cce236",
+        "encoded": "%3Cp%20className=%22observed-at%22%20title=%7BformatUtcTooltip(position.observedAt)%7D%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "697f81",
+        "hash": "42f3089b",
+        "encoded": "Observed%20at%20%7BformatLocalTime(position.observedAt)%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "697f81",
+        "hash": "d766fda8",
+        "encoded": "%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "697f81",
+        "hash": "29ecd3a0",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "697f81",
+        "hash": "f450ba52",
+        "encoded": "%7Bposition.note%20&&%20%3Cp%20className=%22note%22%3E%7Bposition.note%7D%3C/p%3E%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "697f81",
+        "hash": "3c906aa8",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "697f81",
+        "hash": "8d0d6d9d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "697f81",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

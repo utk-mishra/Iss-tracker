@@ -1,0 +1,373 @@
+{
+  "backend/src/main/java/com/example/iss/domain/AlertService.java": {
+    "filename": "AlertService.java",
+    "path": "backend/src/main/java/com/example/iss/domain/AlertService.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "43f4db": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538968,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "e40f2ecf",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:08\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "43f4db",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "43f4db",
+        "hash": "2b51177c",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "43f4db",
+        "hash": "99fe1c67",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "43f4db",
+        "hash": "bb9499c8",
+        "encoded": "import%20java.util.ArrayList;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "43f4db",
+        "hash": "781e5b9c",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "43f4db",
+        "hash": "6aab29d8",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "43f4db",
+        "hash": "68c4b1b0",
+        "encoded": "*%20Pure%20function%20producing%20the%20conditional%20alert%20strings%20for%20a%20single%20pass",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "43f4db",
+        "hash": "6fdd4049",
+        "encoded": "*%20(PROMPT.md%20sections%201,%205,%209).%20Only%20OBSERVABLE%20passes%20(see%20%7B@link%20Pass#isObservable()%7D)",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "43f4db",
+        "hash": "6b586f36",
+        "encoded": "*%20can%20ever%20produce%20alerts;%20a%20non-observable%20pass%20always%20yields%20an%20empty%20list.",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "43f4db",
+        "hash": "5238ebae",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "43f4db",
+        "hash": "10266cef",
+        "encoded": "*%20%3Cp%3EAlert%20text%20is%20character-for-character%20as%20specified,%20evaluated%20and%20appended%20in",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "43f4db",
+        "hash": "1bee9ed6",
+        "encoded": "*%20order%201,%202,%203,%204,%20with%20one%20%7B@code%20if%7D%20per%20rule.",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "43f4db",
+        "hash": "8080ad43",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "43f4db",
+        "hash": "79425d76",
+        "encoded": "public%20final%20class%20AlertService%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "43f4db",
+        "hash": "ba332b6c",
+        "encoded": "private%20static%20final%20String%20ALERT_1_TEMPLATE%20=%20%22ISS%20visible%20soon%20-%20Check%20sky%20in%20%25s%22;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "43f4db",
+        "hash": "1f5bf09e",
+        "encoded": "private%20static%20final%20String%20ALERT_2%20=%20%22Clear%20skies%20predicted%20-%20Excellent%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "43f4db",
+        "hash": "c3af74d8",
+        "encoded": "private%20static%20final%20String%20ALERT_3%20=%20%22Extended%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "43f4db",
+        "hash": "04a22bdf",
+        "encoded": "private%20static%20final%20String%20ALERT_4%20=%20%22Exceptionally%20bright%20pass%20-%20Easily%20visible%22;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "43f4db",
+        "hash": "1abc79ab",
+        "encoded": "private%20static%20final%20Duration%20ALERT_1_WINDOW%20=%20Duration.ofHours(2);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "43f4db",
+        "hash": "fd449335",
+        "encoded": "private%20static%20final%20double%20CLOUD_THRESHOLD_PCT%20=%2020.0;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "43f4db",
+        "hash": "2a4fac99",
+        "encoded": "private%20static%20final%20long%20DURATION_THRESHOLD_SEC%20=%20300;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "43f4db",
+        "hash": "5bc64b85",
+        "encoded": "private%20static%20final%20double%20MAGNITUDE_THRESHOLD%20=%20-2.0;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "43f4db",
+        "hash": "accdc651",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "43f4db",
+        "hash": "3985f552",
+        "encoded": "*%20@param%20pass%20%20%20%20%20%20the%20pass%20to%20evaluate;%20alerts%20never%20fire%20for%20a%20non-observable%20pass",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "43f4db",
+        "hash": "6ab6e8d7",
+        "encoded": "*%20@param%20cloudPct%20%20cloud%20cover%20percentage%20at%20the%20pass%20time,%20or%20null%20if%20unknown",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "43f4db",
+        "hash": "cfa0d6fd",
+        "encoded": "*%20@param%20magnitude%20approximate%20brightness%20magnitude%20for%20this%20pass",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "43f4db",
+        "hash": "20ee4a48",
+        "encoded": "*%20@param%20now%20%20%20%20%20%20%20current%20instant,%20used%20for%20the%202-hour%20%22visible%20soon%22%20window",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "43f4db",
+        "hash": "08e0ab7a",
+        "encoded": "*%20@return%20alert%20strings%20in%20order%201,2,3,4;%20empty%20if%20none%20fire",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "43f4db",
+        "hash": "25af1a60",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "43f4db",
+        "hash": "0802ed37",
+        "encoded": "public%20List%3CString%3E%20build(Pass%20pass,%20Double%20cloudPct,%20double%20magnitude,%20Instant%20now)%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "43f4db",
+        "hash": "cb7006e7",
+        "encoded": "List%3CString%3E%20alerts%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "43f4db",
+        "hash": "2ed78472",
+        "encoded": "if%20(!pass.isObservable())%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "43f4db",
+        "hash": "c356232f",
+        "encoded": "return%20alerts;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "43f4db",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "43f4db",
+        "hash": "3b6c946c",
+        "encoded": "boolean%20alert1Condition%20=%20isWithinVisibleSoonWindow(pass.visibleStart(),%20now);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "43f4db",
+        "hash": "717a4aa4",
+        "encoded": "if%20(alert1Condition)%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "43f4db",
+        "hash": "04ae35ac",
+        "encoded": "alerts.add(String.format(ALERT_1_TEMPLATE,%20pass.riseDirection()));",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "43f4db",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "43f4db",
+        "hash": "a7101f1e",
+        "encoded": "if%20(alert1Condition%20&&%20cloudPct%20!=%20null%20&&%20cloudPct%20%3C%20CLOUD_THRESHOLD_PCT)%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "43f4db",
+        "hash": "f44bf55b",
+        "encoded": "alerts.add(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "43f4db",
+        "hash": "57c5213d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "43f4db",
+        "hash": "60cba834",
+        "encoded": "if%20(pass.durationSec()%20%3E%20DURATION_THRESHOLD_SEC)%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "43f4db",
+        "hash": "b368ab66",
+        "encoded": "alerts.add(ALERT_3);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "43f4db",
+        "hash": "6a5bdc1a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "43f4db",
+        "hash": "abc714bc",
+        "encoded": "if%20(magnitude%20%3C%20MAGNITUDE_THRESHOLD)%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "43f4db",
+        "hash": "d284e465",
+        "encoded": "alerts.add(ALERT_4);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "43f4db",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "43f4db",
+        "hash": "625a1d0a",
+        "encoded": "return%20alerts;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "43f4db",
+        "hash": "2ef1d392",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "43f4db",
+        "hash": "24f2384f",
+        "encoded": "private%20boolean%20isWithinVisibleSoonWindow(Instant%20visibleStart,%20Instant%20now)%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "43f4db",
+        "hash": "77633126",
+        "encoded": "if%20(visibleStart.isBefore(now))%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "43f4db",
+        "hash": "59b3468f",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "43f4db",
+        "hash": "42f7c135",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "43f4db",
+        "hash": "6797939c",
+        "encoded": "Instant%20windowEnd%20=%20now.plus(ALERT_1_WINDOW);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "43f4db",
+        "hash": "f84a1a5c",
+        "encoded": "return%20!visibleStart.isAfter(windowEnd);",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "43f4db",
+        "hash": "78db855a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "43f4db",
+        "hash": "48dc6fe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

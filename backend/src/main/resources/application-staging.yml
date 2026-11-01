@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: INFO
+    com.example.iss: INFO
+
+management:
+  endpoint:
+    health:
+      show-details: when-authorized

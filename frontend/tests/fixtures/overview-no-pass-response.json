@@ -1,0 +1,26 @@
+{
+  "position": {
+    "latitude": 20.0,
+    "longitude": 0.0,
+    "altitudeKm": 408.0,
+    "velocityKmh": 27600.0,
+    "observedAt": "2026-10-31T09:46:40Z",
+    "note": "Altitude is a constant approximation (408 km); Open-Notify does not report altitude."
+  },
+  "passes": [],
+  "nextVisiblePass": null,
+  "message": "No visible pass in the returned predictions",
+  "alerts": [],
+  "meta": {
+    "position": { "source": "FRESH", "degraded": false, "ageMs": 0 },
+    "passes": { "meta": { "source": "FRESH", "degraded": false, "ageMs": 0 }, "tleAgeHours": 5.0, "tleStale": true },
+    "cloud": { "source": "STALE", "degraded": true, "ageMs": 1820000 }
+  },
+  "_links": {
+    "self": "/api/v1/iss/overview",
+    "position": "/api/v1/iss/position",
+    "passes": "/api/v1/iss/passes",
+    "health": "/actuator/health",
+    "docs": "/docs"
+  }
+}

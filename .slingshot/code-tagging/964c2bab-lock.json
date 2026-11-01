@@ -1,0 +1,301 @@
+{
+  "frontend/tests/components/PassTable.test.jsx": {
+    "filename": "PassTable.test.jsx",
+    "path": "frontend/tests/components/PassTable.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "22a78b": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "3602b61b",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "22a78b",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "22a78b",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "22a78b",
+        "hash": "74891e06",
+        "encoded": "import%20PassTable%20from%20'../../src/components/PassTable.jsx';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "22a78b",
+        "hash": "5322c3ac",
+        "encoded": "import%20fixture%20from%20'../fixtures/overview-response.json';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "22a78b",
+        "hash": "292da9b6",
+        "encoded": "describe('PassTable',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "22a78b",
+        "hash": "0ce52f5f",
+        "encoded": "it('given%20passes%20from%20the%20real%20fixture,%20when%20rendered,%20then%20both%20rows%20are%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "22a78b",
+        "hash": "74aeaa21",
+        "encoded": "render(%3CPassTable%20passes=%7Bfixture.passes%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "22a78b",
+        "hash": "8886e28d",
+        "encoded": "expect(screen.getAllByRole('row')).toHaveLength(fixture.passes.length%20+%201);%20//%20+1%20header%20row",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "22a78b",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "22a78b",
+        "hash": "cc527a0f",
+        "encoded": "it('given%20an%20observable%20pass,%20when%20rendered,%20then%20its%20row%20is%20highlighted',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "22a78b",
+        "hash": "23671eba",
+        "encoded": "render(%3CPassTable%20passes=%7Bfixture.passes%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "22a78b",
+        "hash": "9487264a",
+        "encoded": "const%20rows%20=%20screen.getAllByRole('row');",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "22a78b",
+        "hash": "2eb58234",
+        "encoded": "expect(rows%5B1%5D).toHaveClass('pass-observable');",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "22a78b",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "22a78b",
+        "hash": "466b77a2",
+        "encoded": "it('given%20a%20non-observable%20pass,%20when%20rendered,%20then%20its%20row%20is%20muted%20and%20not%20highlighted',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "22a78b",
+        "hash": "fdacde59",
+        "encoded": "render(%3CPassTable%20passes=%7Bfixture.passes%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "22a78b",
+        "hash": "e60bbbac",
+        "encoded": "const%20rows%20=%20screen.getAllByRole('row');",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "22a78b",
+        "hash": "69a8fb90",
+        "encoded": "expect(rows%5B2%5D).toHaveClass('pass-muted');",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "22a78b",
+        "hash": "62b1e22d",
+        "encoded": "expect(rows%5B2%5D).not.toHaveClass('pass-observable');",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "22a78b",
+        "hash": "6b97514d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "22a78b",
+        "hash": "5eed727c",
+        "encoded": "it('given%20a%20pass%20with%20null%20magnitude%20and%20visibleStart,%20when%20rendered,%20then%20it%20does%20not%20crash%20and%20shows%20placeholders',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "22a78b",
+        "hash": "f4db313c",
+        "encoded": "const%20nonObservablePass%20=%20fixture.passes%5B1%5D;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "22a78b",
+        "hash": "df4fb010",
+        "encoded": "expect(nonObservablePass.magnitude).toBeNull();",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "22a78b",
+        "hash": "14b46a59",
+        "encoded": "expect(nonObservablePass.visibleStart).toBeNull();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "22a78b",
+        "hash": "946dd24c",
+        "encoded": "expect(()%20=%3E%20render(%3CPassTable%20passes=%7B%5BnonObservablePass%5D%7D%20/%3E)).not.toThrow();",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "22a78b",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "22a78b",
+        "hash": "e18400a6",
+        "encoded": "it('given%20a%20visible%20pass%20with%20zero%20visible%20duration,%20when%20rendered,%20then%20it%20is%20labelled%20%22visible%20(instant)%22%20and%20not%20highlighted%20as%20observable',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "22a78b",
+        "hash": "29803db0",
+        "encoded": "const%20zeroDurationPass%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "22a78b",
+        "hash": "c1e7479a",
+        "encoded": "...fixture.passes%5B0%5D,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "22a78b",
+        "hash": "020ccfa7",
+        "encoded": "visible:%20true,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "22a78b",
+        "hash": "da5d76be",
+        "encoded": "observable:%20false,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "22a78b",
+        "hash": "fc282a60",
+        "encoded": "visibleDurationSec:%200,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "22a78b",
+        "hash": "a5ccce44",
+        "encoded": "visibleStart:%20fixture.passes%5B0%5D.set,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "22a78b",
+        "hash": "a13180f9",
+        "encoded": "visibleEnd:%20fixture.passes%5B0%5D.set,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "22a78b",
+        "hash": "ebf5e4a4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "22a78b",
+        "hash": "7ad62aef",
+        "encoded": "render(%3CPassTable%20passes=%7B%5BzeroDurationPass%5D%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "22a78b",
+        "hash": "1b774ff1",
+        "encoded": "expect(screen.getByText(/visible%20%5C(instant%5C)/i)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "22a78b",
+        "hash": "b0a42ba2",
+        "encoded": "const%20rows%20=%20screen.getAllByRole('row');",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "22a78b",
+        "hash": "4430cb05",
+        "encoded": "expect(rows%5B1%5D).not.toHaveClass('pass-observable');",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "22a78b",
+        "hash": "d4fc8746",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "22a78b",
+        "hash": "33b00f3a",
+        "encoded": "it('given%20an%20empty%20passes%20array,%20when%20rendered,%20then%20no%20data%20rows%20are%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "22a78b",
+        "hash": "b75dd64a",
+        "encoded": "render(%3CPassTable%20passes=%7B%5B%5D%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "22a78b",
+        "hash": "90031cec",
+        "encoded": "expect(screen.getAllByRole('row')).toHaveLength(1);%20//%20header%20row%20only",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "22a78b",
+        "hash": "4f8dfc51",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "22a78b",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "frontend/package.json": {
+    "filename": "package.json",
+    "path": "frontend/package.json",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "cc87a1": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793544850,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "7ed5ec85",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:24:10\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "cc87a1",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "cc87a1",
+        "hash": "d88b4fd7",
+        "encoded": "%22name%22:%20%22iss-tracker-frontend%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "cc87a1",
+        "hash": "83ab1bde",
+        "encoded": "%22private%22:%20true,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "cc87a1",
+        "hash": "1a60314d",
+        "encoded": "%22version%22:%20%220.1.0%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "cc87a1",
+        "hash": "5a95088f",
+        "encoded": "%22type%22:%20%22module%22,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "cc87a1",
+        "hash": "f4278672",
+        "encoded": "%22scripts%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "cc87a1",
+        "hash": "d745c07d",
+        "encoded": "%22dev%22:%20%22vite%22,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "cc87a1",
+        "hash": "21d7b66c",
+        "encoded": "%22build%22:%20%22vite%20build%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "cc87a1",
+        "hash": "d316c1a9",
+        "encoded": "%22preview%22:%20%22vite%20preview%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "cc87a1",
+        "hash": "3009fded",
+        "encoded": "%22test%22:%20%22vitest%20run%22,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "cc87a1",
+        "hash": "e4523a0e",
+        "encoded": "%22test:watch%22:%20%22vitest%22",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "cc87a1",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "cc87a1",
+        "hash": "6225cc2b",
+        "encoded": "%22dependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "cc87a1",
+        "hash": "9f500eae",
+        "encoded": "%22react%22:%20%22%5E18.3.1%22,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "cc87a1",
+        "hash": "50894abc",
+        "encoded": "%22react-dom%22:%20%22%5E18.3.1%22",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "cc87a1",
+        "hash": "e682a066",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "cc87a1",
+        "hash": "fc2dbad5",
+        "encoded": "%22devDependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "cc87a1",
+        "hash": "01bb182d",
+        "encoded": "%22@testing-library/jest-dom%22:%20%22%5E6.5.0%22,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "cc87a1",
+        "hash": "f83b9d3a",
+        "encoded": "%22@testing-library/react%22:%20%22%5E16.0.1%22,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "cc87a1",
+        "hash": "4693f424",
+        "encoded": "%22@testing-library/user-event%22:%20%22%5E14.5.2%22,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "cc87a1",
+        "hash": "2e2429f8",
+        "encoded": "%22@vitejs/plugin-react%22:%20%22%5E4.3.2%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "cc87a1",
+        "hash": "8b925449",
+        "encoded": "%22jsdom%22:%20%22%5E25.0.1%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "cc87a1",
+        "hash": "e3c023d1",
+        "encoded": "%22vite%22:%20%22%5E5.4.9%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "cc87a1",
+        "hash": "75d83130",
+        "encoded": "%22vitest%22:%20%22%5E2.1.3%22",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "cc87a1",
+        "hash": "71870443",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "cc87a1",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

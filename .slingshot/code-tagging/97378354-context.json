@@ -1,0 +1,49 @@
+{
+  "filename": "ApiExceptionHandler.java",
+  "path": "backend/src/main/java/com/example/iss/api/ApiExceptionHandler.java",
+  "version": "1.1",
+  "files": {
+    "59080d46": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            210
+          ]
+        }
+      ]
+    },
+    "30db33c1": {
+      "value": [
+        {
+          "programming_language": "Java",
+          "fileName": "ApiExceptionHandler.java",
+          "relativeFilePath": "backend/src/main/java/com/example/iss/api/ApiExceptionHandler.java",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            37
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "0f2fece0": {
+      "value": "Plan approved with these decisions and additions. Write tests first and show me the failing run before implementing each class. Do not touch resilience/, domain/, client/ unless you find a real bug (tell me first).\n\nDECISIONS\n1. Docs: NO new dependency and NO CDN. Serve openapi.yaml at /openapi.yaml and a small self-contained static /docs page (endpoint list, example curl commands, link to the spec). Offline mode must work.\n2. Rate limit: 120 requests/minute per IP, configurable (RATE_LIMIT_PER_"
+    },
+    "2af341d1": {
+      "value": "One test fails: IssControllerTest$Validation.givenMissingLat_whenOverviewRequested_then400 expects 400 but gets 500. Do NOT weaken or change that test. Fix the cause only; this is a bug fix inside Step 6, not a new step.\n\nCause (confirm by reading the surefire report): the catch-all @ExceptionHandler(Exception.class) in ApiExceptionHandler is swallowing Spring MVC's own exceptions.\n\nFix in ApiExceptionHandler, keeping the single ErrorDto shape and never leaking stack traces or internal messages:"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,661 @@
+{
+  "backend/src/main/java/com/example/iss/api/RateLimitFilter.java": {
+    "filename": "RateLimitFilter.java",
+    "path": "backend/src/main/java/com/example/iss/api/RateLimitFilter.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "cecbb5": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "d2ec76c6",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "cecbb5",
+        "hash": "d10dddef",
+        "encoded": "package%20com.example.iss.api;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "cecbb5",
+        "hash": "927c67e2",
+        "encoded": "import%20jakarta.servlet.FilterChain;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "cecbb5",
+        "hash": "814e811f",
+        "encoded": "import%20jakarta.servlet.ServletException;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "cecbb5",
+        "hash": "397175ba",
+        "encoded": "import%20jakarta.servlet.http.HttpFilter;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "cecbb5",
+        "hash": "f0c045ac",
+        "encoded": "import%20jakarta.servlet.http.HttpServletRequest;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "cecbb5",
+        "hash": "5f0484de",
+        "encoded": "import%20jakarta.servlet.http.HttpServletResponse;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "cecbb5",
+        "hash": "ffba2a99",
+        "encoded": "import%20java.io.IOException;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "cecbb5",
+        "hash": "a34e8a6e",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "cecbb5",
+        "hash": "134b7601",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "cecbb5",
+        "hash": "282f460a",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "cecbb5",
+        "hash": "5b78fbfb",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "cecbb5",
+        "hash": "8ad67293",
+        "encoded": "import%20java.util.concurrent.ConcurrentHashMap;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "cecbb5",
+        "hash": "014b98f0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "cecbb5",
+        "hash": "6dc96734",
+        "encoded": "*%20Hand-written%20per-IP%20token%20bucket%20rate%20limiter%20(PROMPT.md%20section%208;%20Step%206%20decisions",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "cecbb5",
+        "hash": "393ea06b",
+        "encoded": "*%202/7%20and%20addition%20a).%20Applies%20to%20/api/**%20only.%20Keyed%20by%20%7B@code%20request.getRemoteAddr()%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "cecbb5",
+        "hash": "3fe97255",
+        "encoded": "*%20by%20default;%20X-Forwarded-For%20is%20honoured%20ONLY%20when%20%7B@code%20trustedProxy=true%7D,%20in%20which",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "cecbb5",
+        "hash": "2434f07c",
+        "encoded": "*%20case%20the%20right-most%20entry%20is%20used%20(the%20one%20closest%20to%20our%20server,%20i.e.%20the%20one%20a",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "cecbb5",
+        "hash": "60d8a72c",
+        "encoded": "*%20trusted%20immediate%20proxy%20actually%20set%20-%20earlier%20entries%20can%20be%20spoofed%20by%20the%20client).",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "cecbb5",
+        "hash": "ab738ab9",
+        "encoded": "*%20The%20bucket%20map%20is%20bounded%20(~10,000%20entries)%20with%20idle-bucket%20eviction%20on%20every%20write",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "cecbb5",
+        "hash": "27194d12",
+        "encoded": "*%20to%20avoid%20unbounded%20memory%20growth.%20Always%20sends%20%7B@code%20Retry-After%7D%20on%20429.",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "cecbb5",
+        "hash": "93865dfa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "cecbb5",
+        "hash": "e4fd8960",
+        "encoded": "public%20final%20class%20RateLimitFilter%20extends%20HttpFilter%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "cecbb5",
+        "hash": "3bd47ef0",
+        "encoded": "private%20static%20final%20int%20MAX_BUCKETS%20=%2010_000;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "cecbb5",
+        "hash": "1e495964",
+        "encoded": "private%20static%20final%20Duration%20IDLE_EVICTION_AGE%20=%20Duration.ofMinutes(5);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "cecbb5",
+        "hash": "a2720e66",
+        "encoded": "private%20static%20final%20String%20API_PATH_PREFIX%20=%20%22/api/%22;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "cecbb5",
+        "hash": "49dec3df",
+        "encoded": "private%20static%20final%20class%20Bucket%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "cecbb5",
+        "hash": "c203bc62",
+        "encoded": "double%20tokens;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "cecbb5",
+        "hash": "d6de0026",
+        "encoded": "Instant%20lastRefill;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "cecbb5",
+        "hash": "a8015171",
+        "encoded": "volatile%20Instant%20lastAccess;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "cecbb5",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "cecbb5",
+        "hash": "05e3a08f",
+        "encoded": "private%20final%20Clock%20clock;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "cecbb5",
+        "hash": "417f3631",
+        "encoded": "private%20final%20int%20limitPerMinute;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "cecbb5",
+        "hash": "4e71deca",
+        "encoded": "private%20final%20boolean%20trustedProxy;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "cecbb5",
+        "hash": "23a20330",
+        "encoded": "private%20final%20Map%3CString,%20Bucket%3E%20buckets%20=%20new%20ConcurrentHashMap%3C%3E();",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "cecbb5",
+        "hash": "5242bcbe",
+        "encoded": "public%20RateLimitFilter(Clock%20clock,%20int%20limitPerMinute,%20boolean%20trustedProxy)%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "cecbb5",
+        "hash": "d2c42a6a",
+        "encoded": "this.clock%20=%20clock;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "cecbb5",
+        "hash": "dde11930",
+        "encoded": "this.limitPerMinute%20=%20limitPerMinute;",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "cecbb5",
+        "hash": "fb7c45e4",
+        "encoded": "this.trustedProxy%20=%20trustedProxy;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "cecbb5",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "cecbb5",
+        "hash": "697211b0",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "cecbb5",
+        "hash": "caa378eb",
+        "encoded": "protected%20void%20doFilter(HttpServletRequest%20request,%20HttpServletResponse%20response,%20FilterChain%20chain)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "cecbb5",
+        "hash": "4f8dd082",
+        "encoded": "throws%20IOException,%20ServletException%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "cecbb5",
+        "hash": "bf178d92",
+        "encoded": "if%20(!request.getRequestURI().startsWith(API_PATH_PREFIX))%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "cecbb5",
+        "hash": "5b15fd89",
+        "encoded": "chain.doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "cecbb5",
+        "hash": "cdcf746c",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "cecbb5",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "cecbb5",
+        "hash": "06f8f06b",
+        "encoded": "String%20key%20=%20resolveClientKey(request);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "cecbb5",
+        "hash": "50adf65c",
+        "encoded": "if%20(tryConsume(key))%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "cecbb5",
+        "hash": "309cd731",
+        "encoded": "chain.doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "cecbb5",
+        "hash": "9da34ae9",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "cecbb5",
+        "hash": "46e8cd3a",
+        "encoded": "response.setStatus(429);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "cecbb5",
+        "hash": "58096a36",
+        "encoded": "response.setHeader(%22Retry-After%22,%20%2260%22);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "cecbb5",
+        "hash": "30889206",
+        "encoded": "response.setContentType(%22application/json%22);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "cecbb5",
+        "hash": "90aa3865",
+        "encoded": "response.getWriter().write(",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "cecbb5",
+        "hash": "78c38296",
+        "encoded": "%22%7B%5C%22error%5C%22:%5C%22Rate%20limit%20exceeded%5C%22,%5C%22status%5C%22:429%7D%22);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "cecbb5",
+        "hash": "48dc6fe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "cecbb5",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "cecbb5",
+        "hash": "b730928c",
+        "encoded": "private%20String%20resolveClientKey(HttpServletRequest%20request)%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "cecbb5",
+        "hash": "6e6e0d71",
+        "encoded": "if%20(trustedProxy)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "cecbb5",
+        "hash": "e95b5946",
+        "encoded": "String%20forwardedFor%20=%20request.getHeader(%22X-Forwarded-For%22);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "cecbb5",
+        "hash": "0a4fa32b",
+        "encoded": "if%20(forwardedFor%20!=%20null%20&&%20!forwardedFor.isBlank())%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "cecbb5",
+        "hash": "b4c60bef",
+        "encoded": "String%5B%5D%20parts%20=%20forwardedFor.split(%22,%22);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "cecbb5",
+        "hash": "97a75a5a",
+        "encoded": "return%20parts%5Bparts.length%20-%201%5D.trim();",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "cecbb5",
+        "hash": "3654c6d8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "cecbb5",
+        "hash": "6387e751",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "cecbb5",
+        "hash": "c6bc48a9",
+        "encoded": "return%20request.getRemoteAddr();",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "cecbb5",
+        "hash": "88f18366",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "cecbb5",
+        "hash": "5de0ab86",
+        "encoded": "private%20synchronized%20boolean%20tryConsume(String%20key)%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "cecbb5",
+        "hash": "65fbcd1c",
+        "encoded": "evictIdleBucketsIfNeeded();",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "cecbb5",
+        "hash": "dd27e427",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "cecbb5",
+        "hash": "8b7ef509",
+        "encoded": "Bucket%20bucket%20=%20buckets.computeIfAbsent(key,%20k%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "cecbb5",
+        "hash": "fae39973",
+        "encoded": "Bucket%20b%20=%20new%20Bucket();",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "cecbb5",
+        "hash": "46cf6639",
+        "encoded": "b.tokens%20=%20limitPerMinute;",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "cecbb5",
+        "hash": "049bfb82",
+        "encoded": "b.lastRefill%20=%20now;",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "cecbb5",
+        "hash": "eb2650a6",
+        "encoded": "b.lastAccess%20=%20now;",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "cecbb5",
+        "hash": "c77dbddc",
+        "encoded": "return%20b;",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "cecbb5",
+        "hash": "aa5a1e4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "cecbb5",
+        "hash": "4c9c7203",
+        "encoded": "refill(bucket,%20now);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "cecbb5",
+        "hash": "0ef14e9a",
+        "encoded": "bucket.lastAccess%20=%20now;",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "cecbb5",
+        "hash": "a1bd794f",
+        "encoded": "if%20(bucket.tokens%20%3E=%201.0)%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "cecbb5",
+        "hash": "ccca8839",
+        "encoded": "bucket.tokens%20-=%201.0;",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "cecbb5",
+        "hash": "35f94e93",
+        "encoded": "return%20true;",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "cecbb5",
+        "hash": "4cb4c387",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "cecbb5",
+        "hash": "a94da675",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "cecbb5",
+        "hash": "21cc0f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "cecbb5",
+        "hash": "7ba7c4ad",
+        "encoded": "private%20void%20refill(Bucket%20bucket,%20Instant%20now)%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "cecbb5",
+        "hash": "91455ee1",
+        "encoded": "Duration%20elapsed%20=%20Duration.between(bucket.lastRefill,%20now);",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "cecbb5",
+        "hash": "52beba27",
+        "encoded": "if%20(elapsed.isNegative()%20%7C%7C%20elapsed.isZero())%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "cecbb5",
+        "hash": "69e1e64a",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "cecbb5",
+        "hash": "34001782",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "cecbb5",
+        "hash": "1e8b4426",
+        "encoded": "double%20tokensToAdd%20=%20(elapsed.toMillis()%20/%2060_000.0)%20*%20limitPerMinute;",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "cecbb5",
+        "hash": "c81da9cf",
+        "encoded": "if%20(tokensToAdd%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "cecbb5",
+        "hash": "76d281f1",
+        "encoded": "bucket.tokens%20=%20Math.min(limitPerMinute,%20bucket.tokens%20+%20tokensToAdd);",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "cecbb5",
+        "hash": "b821e1fb",
+        "encoded": "bucket.lastRefill%20=%20now;",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "cecbb5",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "cecbb5",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "cecbb5",
+        "hash": "3f6ce28b",
+        "encoded": "private%20void%20evictIdleBucketsIfNeeded()%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "cecbb5",
+        "hash": "6702d862",
+        "encoded": "if%20(buckets.size()%20%3C%20MAX_BUCKETS)%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "cecbb5",
+        "hash": "baad5241",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "cecbb5",
+        "hash": "d750d26f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "cecbb5",
+        "hash": "70d1a652",
+        "encoded": "Instant%20now%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "cecbb5",
+        "hash": "0b4cf771",
+        "encoded": "buckets.entrySet().removeIf(entry%20-%3E",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "cecbb5",
+        "hash": "8762fde2",
+        "encoded": "Duration.between(entry.getValue().lastAccess,%20now).compareTo(IDLE_EVICTION_AGE)%20%3E%200);",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "cecbb5",
+        "hash": "715028b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "cecbb5",
+        "hash": "beea77ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

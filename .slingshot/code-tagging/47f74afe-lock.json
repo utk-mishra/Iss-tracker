@@ -1,0 +1,403 @@
+{
+  "backend/src/main/resources/static/docs/index.html": {
+    "filename": "index.html",
+    "path": "backend/src/main/resources/static/docs/index.html",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "9c56d6": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "6692ea3c",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9c56d6",
+        "hash": "e7340e15",
+        "encoded": "%3C!DOCTYPE%20html%3E",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9c56d6",
+        "hash": "43684ad9",
+        "encoded": "%3Chtml%20lang=%22en%22%3E",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9c56d6",
+        "hash": "8bf19007",
+        "encoded": "%3Chead%3E",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "9c56d6",
+        "hash": "7d42fc9d",
+        "encoded": "%3Cmeta%20charset=%22UTF-8%22%3E",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9c56d6",
+        "hash": "928a292e",
+        "encoded": "%3Ctitle%3EISS%20Location%20&%20Pass%20Predictor%20API%20Docs%3C/title%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9c56d6",
+        "hash": "d83203c9",
+        "encoded": "%3Cmeta%20name=%22viewport%22%20content=%22width=device-width,%20initial-scale=1%22%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9c56d6",
+        "hash": "3c6022f7",
+        "encoded": "%3Cstyle%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9c56d6",
+        "hash": "f89eb714",
+        "encoded": "body%20%7B%20font-family:%20-apple-system,%20Segoe%20UI,%20sans-serif;%20max-width:%20860px;%20margin:%202rem%20auto;%20padding:%200%201rem;%20line-height:%201.5;%20color:%20#1a1a1a;%20%7D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "9c56d6",
+        "hash": "be16b1f1",
+        "encoded": "h1%20%7B%20font-size:%201.6rem;%20%7D",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9c56d6",
+        "hash": "2abc73ef",
+        "encoded": "h2%20%7B%20font-size:%201.2rem;%20margin-top:%202rem;%20border-bottom:%201px%20solid%20#ddd;%20padding-bottom:%20.3rem;%20%7D",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "9c56d6",
+        "hash": "4adb3599",
+        "encoded": "code,%20pre%20%7B%20background:%20#f4f4f4;%20border-radius:%204px;%20%7D",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9c56d6",
+        "hash": "98eb2719",
+        "encoded": "pre%20%7B%20padding:%20.75rem%201rem;%20overflow-x:%20auto;%20%7D",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9c56d6",
+        "hash": "49e7d272",
+        "encoded": "table%20%7B%20border-collapse:%20collapse;%20width:%20100%25;%20margin:%201rem%200;%20%7D",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9c56d6",
+        "hash": "32563b69",
+        "encoded": "th,%20td%20%7B%20border:%201px%20solid%20#ddd;%20padding:%20.5rem%20.75rem;%20text-align:%20left;%20font-size:%20.92rem;%20%7D",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "9c56d6",
+        "hash": "c81e4d6e",
+        "encoded": "th%20%7B%20background:%20#f0f0f0;%20%7D",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9c56d6",
+        "hash": "61ed6b3b",
+        "encoded": "a%20%7B%20color:%20#0a58ca;%20%7D",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9c56d6",
+        "hash": "51223687",
+        "encoded": ".badge%20%7B%20display:%20inline-block;%20padding:%20.1rem%20.5rem;%20border-radius:%204px;%20font-size:%20.8rem;%20font-weight:%20600;%20%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9c56d6",
+        "hash": "e00ab66e",
+        "encoded": ".get%20%7B%20background:%20#e7f3ff;%20color:%20#0a58ca;%20%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9c56d6",
+        "hash": "cb571148",
+        "encoded": "%3C/style%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9c56d6",
+        "hash": "d28601a2",
+        "encoded": "%3C/head%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "9c56d6",
+        "hash": "643a121b",
+        "encoded": "%3Cbody%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "9c56d6",
+        "hash": "45e5ae82",
+        "encoded": "%3Ch1%3EISS%20Location%20&%20Pass%20Predictor%20API%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9c56d6",
+        "hash": "19fd8940",
+        "encoded": "%3Cp%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9c56d6",
+        "hash": "c63e3360",
+        "encoded": "This%20is%20a%20small,%20self-contained%20documentation%20page%20(no%20CDN,%20no%20external%20dependency).",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "9c56d6",
+        "hash": "257aec57",
+        "encoded": "The%20full%20machine-readable%20contract%20is%20at%20%3Ca%20href=%22/openapi.yaml%22%3E/openapi.yaml%3C/a%3E.",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "9c56d6",
+        "hash": "552d81d4",
+        "encoded": "This%20page%20works%20fully%20offline%20-%20it%20is%20a%20static%20file%20served%20by%20the%20same%20app.",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9c56d6",
+        "hash": "8de2cc32",
+        "encoded": "%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9c56d6",
+        "hash": "bfaa51c2",
+        "encoded": "%3Ch2%3EEndpoints%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9c56d6",
+        "hash": "aa2c0719",
+        "encoded": "%3Ctable%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9c56d6",
+        "hash": "6832e7db",
+        "encoded": "%3Ctr%3E%3Cth%3EMethod%3C/th%3E%3Cth%3EPath%3C/th%3E%3Cth%3EDescription%3C/th%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "9c56d6",
+        "hash": "452c9156",
+        "encoded": "%3Ctr%3E%3Ctd%3E%3Cspan%20class=%22badge%20get%22%3EGET%3C/span%3E%3C/td%3E%3Ctd%3E/api/v1/iss/overview?lat=&lon=&offline=%3C/td%3E%3Ctd%3EPosition,%20passes,%20next%20visible%20pass,%20alerts,%20per-upstream%20meta%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "9c56d6",
+        "hash": "80594cf4",
+        "encoded": "%3Ctr%3E%3Ctd%3E%3Cspan%20class=%22badge%20get%22%3EGET%3C/span%3E%3C/td%3E%3Ctd%3E/api/v1/iss/position?offline=%3C/td%3E%3Ctd%3ECurrent%20ISS%20position%20only%20(poll%20every%205-10s)%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "9c56d6",
+        "hash": "cdfe633c",
+        "encoded": "%3Ctr%3E%3Ctd%3E%3Cspan%20class=%22badge%20get%22%3EGET%3C/span%3E%3C/td%3E%3Ctd%3E/api/v1/iss/passes?lat=&lon=&offline=%3C/td%3E%3Ctd%3EPass%20predictions%20for%20an%20observer%20location%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "9c56d6",
+        "hash": "1072a9b3",
+        "encoded": "%3Ctr%3E%3Ctd%3E%3Cspan%20class=%22badge%20get%22%3EGET%3C/span%3E%3C/td%3E%3Ctd%3E/actuator/health%3C/td%3E%3Ctd%3EBasic%20liveness%20check%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "9c56d6",
+        "hash": "d810710a",
+        "encoded": "%3C/table%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "9c56d6",
+        "hash": "31567bb7",
+        "encoded": "%3Ch2%3EQuery%20parameters%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "9c56d6",
+        "hash": "757bdf19",
+        "encoded": "%3Ctable%3E",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "9c56d6",
+        "hash": "a6699839",
+        "encoded": "%3Ctr%3E%3Cth%3EName%3C/th%3E%3Cth%3EType%3C/th%3E%3Cth%3ERequired%3C/th%3E%3Cth%3ENotes%3C/th%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "9c56d6",
+        "hash": "909e1906",
+        "encoded": "%3Ctr%3E%3Ctd%3Elat%3C/td%3E%3Ctd%3Enumber%3C/td%3E%3Ctd%3Eoverview,%20passes%3C/td%3E%3Ctd%3EMust%20be%20finite,%20in%20%5B-90,%2090%5D%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "9c56d6",
+        "hash": "5403479c",
+        "encoded": "%3Ctr%3E%3Ctd%3Elon%3C/td%3E%3Ctd%3Enumber%3C/td%3E%3Ctd%3Eoverview,%20passes%3C/td%3E%3Ctd%3EMust%20be%20finite,%20in%20%5B-180,%20180%5D%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "9c56d6",
+        "hash": "aff0ba61",
+        "encoded": "%3Ctr%3E%3Ctd%3Eoffline%3C/td%3E%3Ctd%3Estring%3C/td%3E%3Ctd%3Eno%3C/td%3E%3Ctd%3EMust%20be%20exactly%20%22true%22%20or%20%22false%22%20(default%20%22false%22)%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "9c56d6",
+        "hash": "b76d583f",
+        "encoded": "%3C/table%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "9c56d6",
+        "hash": "47ba3ade",
+        "encoded": "%3Ch2%3EExample%20curl%20commands%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "9c56d6",
+        "hash": "75399258",
+        "encoded": "%3Cpre%3E%3Ccode%3Ecurl%20%22http://localhost:8080/api/v1/iss/overview?lat=28.6139&lon=77.2090%22",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "9c56d6",
+        "hash": "7a9aee6c",
+        "encoded": "curl%20%22http://localhost:8080/api/v1/iss/overview?lat=28.6139&lon=77.2090&offline=true%22",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "9c56d6",
+        "hash": "9aaad689",
+        "encoded": "curl%20%22http://localhost:8080/api/v1/iss/position%22",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "9c56d6",
+        "hash": "e14d91fb",
+        "encoded": "curl%20%22http://localhost:8080/api/v1/iss/passes?lat=28.6139&lon=77.2090%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "9c56d6",
+        "hash": "2515934a",
+        "encoded": "curl%20-i%20%22http://localhost:8080/api/v1/iss/overview?lat=91&lon=0%22%20%20%20#%20400%20example",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "9c56d6",
+        "hash": "6df4c5d9",
+        "encoded": "%3C/code%3E%3C/pre%3E",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "9c56d6",
+        "hash": "ab583107",
+        "encoded": "%3Ch2%3EDegradation%20levels%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "9c56d6",
+        "hash": "4f242203",
+        "encoded": "%3Ctable%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "9c56d6",
+        "hash": "0c1590bc",
+        "encoded": "%3Ctr%3E%3Cth%3ESource%3C/th%3E%3Cth%3EMeaning%3C/th%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "9c56d6",
+        "hash": "072daeb6",
+        "encoded": "%3Ctr%3E%3Ctd%3EFRESH%3C/td%3E%3Ctd%3ELive%20upstream%20data,%20or%20a%20cache%20entry%20still%20within%20its%20TTL%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "9c56d6",
+        "hash": "6e2becb3",
+        "encoded": "%3Ctr%3E%3Ctd%3ESTALE%3C/td%3E%3Ctd%3EExpired%20cache%20entry%20served%20because%20the%20upstream%20failed%20or%20is%20offline%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "9c56d6",
+        "hash": "2b2e625d",
+        "encoded": "%3Ctr%3E%3Ctd%3EMOCK%3C/td%3E%3Ctd%3EStatic%20labelled%20fallback%20data;%20nothing%20usable%20was%20cached%3C/td%3E%3C/tr%3E",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "9c56d6",
+        "hash": "862c32bc",
+        "encoded": "%3C/table%3E",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "9c56d6",
+        "hash": "ad06ec54",
+        "encoded": "%3Ch2%3ERate%20limiting%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "9c56d6",
+        "hash": "4cc94b9f",
+        "encoded": "%3Cp%3ERequests%20to%20%3Ccode%3E/api/**%3C/code%3E%20are%20limited%20per%20client%20IP%20(default%20120/minute,%20configurable%20via%20%3Ccode%3ERATE_LIMIT_PER_MINUTE%3C/code%3E).%20Exceeding%20the%20limit%20returns%20HTTP%20429%20with%20a%20%3Ccode%3ERetry-After%3C/code%3E%20header.%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "9c56d6",
+        "hash": "91daa9ec",
+        "encoded": "%3Ch2%3EFull%20spec%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "9c56d6",
+        "hash": "ad64567e",
+        "encoded": "%3Cp%3ESee%20%3Ca%20href=%22/openapi.yaml%22%3E/openapi.yaml%3C/a%3E%20for%20the%20complete%20OpenAPI%203.0%20contract,%20including%20all%20schemas%20and%20example%20responses.%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "9c56d6",
+        "hash": "c2ada885",
+        "encoded": "%3C/body%3E",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "9c56d6",
+        "hash": "d172587e",
+        "encoded": "%3C/html%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

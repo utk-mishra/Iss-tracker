@@ -1,0 +1,2558 @@
+{
+  "backend/src/test/java/com/example/iss/domain/AlertServiceTest.java": {
+    "filename": "AlertServiceTest.java",
+    "path": "backend/src/test/java/com/example/iss/domain/AlertServiceTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a7600e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538968,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "1f036e47",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:08\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "eff440": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793540406,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "4ebaf7ba",
+          "files": "e52f8671"
+        },
+        "hash": "a41202be",
+        "messageId": "system_57650540-d5f8-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:10:06\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "eff440",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "eff440",
+        "hash": "f59763bd",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "eff440",
+        "hash": "6bcd10dc",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "eff440",
+        "hash": "a29e8092",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "eff440",
+        "hash": "7854db2c",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "eff440",
+        "hash": "9c209b62",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "eff440",
+        "hash": "71a81c76",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "eff440",
+        "hash": "6226e352",
+        "encoded": "import%20java.io.File;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "eff440",
+        "hash": "134b7601",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "eff440",
+        "hash": "282f460a",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "eff440",
+        "hash": "87cf86b9",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "eff440",
+        "hash": "784ea709",
+        "encoded": "import%20static%20com.example.iss.domain.PassTestFactory.nonVisiblePass;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "eff440",
+        "hash": "ff305a39",
+        "encoded": "import%20static%20com.example.iss.domain.PassTestFactory.observablePass;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "eff440",
+        "hash": "d14c3460",
+        "encoded": "import%20static%20com.example.iss.domain.PassTestFactory.observablePassWithRiseDirection;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "eff440",
+        "hash": "e8e26ff0",
+        "encoded": "import%20static%20com.example.iss.domain.PassTestFactory.visiblePassWithZeroDuration;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "eff440",
+        "hash": "900358bb",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "eff440",
+        "hash": "6fcead9b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "eff440",
+        "hash": "ce086e34",
+        "encoded": "*%20AlertService.build(Pass,%20Double%20cloudPct,%20double%20magnitude,%20Instant%20now)%20-%3E%20List%3CString%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "eff440",
+        "hash": "6854c640",
+        "encoded": "*%20Exact%20strings,%20in%20order%201,2,3,4%20(PROMPT.md%20sections%201,%205,%209).",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "eff440",
+        "hash": "93865dfa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "eff440",
+        "hash": "f42cd5de",
+        "encoded": "class%20AlertServiceTest%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "eff440",
+        "hash": "339b3c0a",
+        "encoded": "private%20static%20final%20String%20ALERT_1_TEMPLATE%20=%20%22ISS%20visible%20soon%20-%20Check%20sky%20in%20%25s%22;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "eff440",
+        "hash": "f8a71322",
+        "encoded": "private%20static%20final%20String%20ALERT_2%20=%20%22Clear%20skies%20predicted%20-%20Excellent%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "eff440",
+        "hash": "12774193",
+        "encoded": "private%20static%20final%20String%20ALERT_3%20=%20%22Extended%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "eff440",
+        "hash": "7800ce4a",
+        "encoded": "private%20static%20final%20String%20ALERT_4%20=%20%22Exceptionally%20bright%20pass%20-%20Easily%20visible%22;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "eff440",
+        "hash": "2e0ac595",
+        "encoded": "private%20AlertService%20alertService;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "eff440",
+        "hash": "6e3eb0bd",
+        "encoded": "private%20Instant%20now;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "eff440",
+        "hash": "0bf54301",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "eff440",
+        "hash": "a78f4382",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "eff440",
+        "hash": "43e0fd14",
+        "encoded": "alertService%20=%20new%20AlertService();",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "eff440",
+        "hash": "7f1575f5",
+        "encoded": "now%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "eff440",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "eff440",
+        "hash": "9454080c",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "eff440",
+        "hash": "9b1b2a5b",
+        "encoded": "@DisplayName(%22observable-pass%20rule%22)",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "eff440",
+        "hash": "57929d2c",
+        "encoded": "class%20ObservablePassRule%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "eff440",
+        "hash": "5544cf8d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "eff440",
+        "hash": "ab45889a",
+        "encoded": "@DisplayName(%22given%20a%20non-observable%20pass%20(visible=false),%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "eff440",
+        "hash": "975f69f4",
+        "encoded": "void%20givenNonObservablePassVisibleFalse_whenBuilt_thenNoAlerts()%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "eff440",
+        "hash": "21a0c539",
+        "encoded": "Pass%20nonVisible%20=%20nonVisiblePass(",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "eff440",
+        "hash": "7538a764",
+        "encoded": "now.minusSeconds(120),%20180.0,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "eff440",
+        "hash": "e9ca192d",
+        "encoded": "now.minusSeconds(60),%2050.0,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "eff440",
+        "hash": "7908ab2a",
+        "encoded": "now.plusSeconds(60),%2090.0,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "eff440",
+        "hash": "e857b3f5",
+        "encoded": "371",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "eff440",
+        "hash": "977fc674",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "eff440",
+        "hash": "49b71bb7",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(nonVisible,%2010.0,%20-3.0,%20now);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "eff440",
+        "hash": "83c2f1dc",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "eff440",
+        "hash": "17837346",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "eff440",
+        "hash": "a9f7720d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "eff440",
+        "hash": "dba17697",
+        "encoded": "@DisplayName(%22given%20a%20visible%20pass%20with%20zero%20visible%20duration,%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "eff440",
+        "hash": "1103bc12",
+        "encoded": "void%20givenVisiblePassWithZeroVisibleDuration_whenBuilt_thenNoAlerts()%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "eff440",
+        "hash": "62a46733",
+        "encoded": "Instant%20visibleStart%20=%20now.plusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "eff440",
+        "hash": "0fb3d289",
+        "encoded": "Pass%20zeroDuration%20=%20visiblePassWithZeroDuration(visibleStart,%20180.0,%20300);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "eff440",
+        "hash": "d5185e11",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(zeroDuration,%2010.0,%20-3.0,%20now);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "eff440",
+        "hash": "fe5ee6e2",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "eff440",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "eff440",
+        "hash": "f84e34c4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "eff440",
+        "hash": "c99e65cc",
+        "encoded": "@DisplayName(%22given%20the%20real%20zero-duration%20visible%20pass%20from%20pollux-passes-n20.json,%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "eff440",
+        "hash": "e12512f8",
+        "encoded": "void%20givenRealZeroDurationVisiblePassFromFixture_whenBuilt_thenNoAlerts()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "eff440",
+        "hash": "f286f0b9",
+        "encoded": "File%20fixture%20=%20new%20File(%22src/test/resources/fixtures/pollux-passes-n20.json%22);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "eff440",
+        "hash": "4aea80e3",
+        "encoded": "ObjectMapper%20mapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "eff440",
+        "hash": "51cfc63a",
+        "encoded": "JsonNode%20root%20=%20mapper.readTree(fixture);",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "eff440",
+        "hash": "d41c3324",
+        "encoded": "JsonNode%20zeroDurationNode%20=%20null;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "eff440",
+        "hash": "e47c8ba4",
+        "encoded": "for%20(JsonNode%20passNode%20:%20root.get(%22passes%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "eff440",
+        "hash": "532772f2",
+        "encoded": "if%20(passNode.path(%22visible%22).asBoolean(false)",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "eff440",
+        "hash": "b372e53c",
+        "encoded": "&&%20passNode.path(%22visible_duration_sec%22).asLong(-1)%20==%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "eff440",
+        "hash": "9c88c09c",
+        "encoded": "zeroDurationNode%20=%20passNode;",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "eff440",
+        "hash": "5148459a",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "eff440",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "eff440",
+        "hash": "e4b921c6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "eff440",
+        "hash": "1fe9e8a9",
+        "encoded": "assertThat(zeroDurationNode).as(%22real%20zero-duration%20visible%20pass%20must%20exist%20in%20the%20fixture%22).isNotNull();",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "eff440",
+        "hash": "7a7307bd",
+        "encoded": "Instant%20visibleStart%20=%20Instant.parse(zeroDurationNode.get(%22visible_start%22).asText());",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "eff440",
+        "hash": "3c5154da",
+        "encoded": "Instant%20visibleEnd%20=%20Instant.parse(zeroDurationNode.get(%22visible_end%22).asText());",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "eff440",
+        "hash": "1d4617a5",
+        "encoded": "long%20visibleDurationSec%20=%20zeroDurationNode.get(%22visible_duration_sec%22).asLong();",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "eff440",
+        "hash": "0f87d798",
+        "encoded": "Pass%20realZeroDurationPass%20=%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "eff440",
+        "hash": "adafbd55",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22rise%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "eff440",
+        "hash": "e8cc4be7",
+        "encoded": "zeroDurationNode.get(%22rise%22).get(%22azimuth_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "eff440",
+        "hash": "82f1a5f7",
+        "encoded": "zeroDurationNode.get(%22rise%22).get(%22compass%22).asText(),",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "eff440",
+        "hash": "64ab91c5",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22culmination%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "eff440",
+        "hash": "39be121d",
+        "encoded": "zeroDurationNode.get(%22culmination%22).get(%22elevation_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "eff440",
+        "hash": "ed72d083",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22set%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "eff440",
+        "hash": "25534255",
+        "encoded": "zeroDurationNode.get(%22set%22).get(%22azimuth_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "eff440",
+        "hash": "6498fddb",
+        "encoded": "zeroDurationNode.get(%22set%22).get(%22compass%22).asText(),",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "eff440",
+        "hash": "3a34f71d",
+        "encoded": "zeroDurationNode.get(%22duration_sec%22).asLong(),",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "eff440",
+        "hash": "6766a1b7",
+        "encoded": "true,%20visibleStart,%20visibleEnd,%20visibleDurationSec",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "eff440",
+        "hash": "b7ca5797",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "eff440",
+        "hash": "2dae0858",
+        "encoded": "assertThat(realZeroDurationPass.isObservable()).isFalse();",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "eff440",
+        "hash": "ef4fc498",
+        "encoded": "Instant%20nowForThisFixture%20=%20visibleStart.minusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "eff440",
+        "hash": "ca6e1c6c",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(realZeroDurationPass,%205.0,%20-4.0,%20nowForThisFixture);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "eff440",
+        "hash": "ae97e246",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "eff440",
+        "hash": "8c67c4cf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "eff440",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "eff440",
+        "hash": "f53ab6f2",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "eff440",
+        "hash": "2ddf5d71",
+        "encoded": "@DisplayName(%22alert%201:%20ISS%20visible%20soon%20(exactly%202%20hour%20boundary)%22)",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "eff440",
+        "hash": "fe81596c",
+        "encoded": "class%20Alert1TwoHourBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "eff440",
+        "hash": "d62f96c2",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "eff440",
+        "hash": "356cf52e",
+        "encoded": "@DisplayName(%22given%20visible_start%20exactly%20now+2h,%20when%20alerts%20are%20built,%20then%20alert%201%20fires%20with%20the%20rise%20compass%22)",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "eff440",
+        "hash": "9de1f4ac",
+        "encoded": "void%20givenVisibleStartExactlyNowPlus2h_whenBuilt_thenAlert1Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "eff440",
+        "hash": "7fa737d1",
+        "encoded": "Instant%20visibleStart%20=%20now.plus(Duration.ofHours(2));",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "eff440",
+        "hash": "5ab33ae5",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "eff440",
+        "hash": "630a4d42",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "eff440",
+        "hash": "fc1cd86b",
+        "encoded": "assertThat(alerts).contains(String.format(ALERT_1_TEMPLATE,%20%22N%22));",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "eff440",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "eff440",
+        "hash": "ef687547",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "eff440",
+        "hash": "37a55f68",
+        "encoded": "@DisplayName(%22given%20visible_start%20at%20now+2h+1s,%20when%20alerts%20are%20built,%20then%20alert%201%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "eff440",
+        "hash": "8937304d",
+        "encoded": "void%20givenVisibleStartNowPlus2hPlus1s_whenBuilt_thenAlert1DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "eff440",
+        "hash": "23d25d57",
+        "encoded": "Instant%20visibleStart%20=%20now.plus(Duration.ofHours(2)).plusSeconds(1);",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "eff440",
+        "hash": "b8bf9abd",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "eff440",
+        "hash": "0f4c439c",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "eff440",
+        "hash": "89787315",
+        "encoded": "assertThat(alerts).noneMatch(a%20-%3E%20a.startsWith(%22ISS%20visible%20soon%22));",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "eff440",
+        "hash": "59c23335",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "eff440",
+        "hash": "c8402053",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "eff440",
+        "hash": "04653f30",
+        "encoded": "@DisplayName(%22given%20visible_start%20already%20in%20the%20past,%20when%20alerts%20are%20built,%20then%20alert%201%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "eff440",
+        "hash": "86945636",
+        "encoded": "void%20givenVisibleStartInThePast_whenBuilt_thenAlert1DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "eff440",
+        "hash": "231f7465",
+        "encoded": "Instant%20visibleStart%20=%20now.minusSeconds(10);",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "eff440",
+        "hash": "57bbb3ec",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "eff440",
+        "hash": "4c0c3422",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "eff440",
+        "hash": "2890b5ce",
+        "encoded": "assertThat(alerts).noneMatch(a%20-%3E%20a.startsWith(%22ISS%20visible%20soon%22));",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "eff440",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "eff440",
+        "hash": "dd7ba12f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "eff440",
+        "hash": "1ac9e305",
+        "encoded": "@DisplayName(%22given%20visible_start%20exactly%20now,%20when%20alerts%20are%20built,%20then%20alert%201%20fires%22)",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "eff440",
+        "hash": "e94bd4dd",
+        "encoded": "void%20givenVisibleStartExactlyNow_whenBuilt_thenAlert1Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "eff440",
+        "hash": "851bf1db",
+        "encoded": "Pass%20pass%20=%20observablePassWithRiseDirection(now,%20now.plusSeconds(120),%20300,%2090.0,%20%22E%22);",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "eff440",
+        "hash": "5c3cd694",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "eff440",
+        "hash": "836593ed",
+        "encoded": "assertThat(alerts).contains(String.format(ALERT_1_TEMPLATE,%20%22E%22));",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "eff440",
+        "hash": "0b3cc65a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "eff440",
+        "hash": "c2938672",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "eff440",
+        "hash": "1c7c07e0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "eff440",
+        "hash": "19d1f032",
+        "encoded": "@DisplayName(%22alert%202:%20clear%20skies%20(cloud%20cover%20exactly%2020)%22)",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "eff440",
+        "hash": "9df7d489",
+        "encoded": "class%20Alert2CloudBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "eff440",
+        "hash": "badf1417",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "eff440",
+        "hash": "b2f42914",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20cloud%20cover%20exactly%2020,%20when%20alerts%20are%20built,%20then%20alert%202%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "eff440",
+        "hash": "618c6a95",
+        "encoded": "void%20givenCloudExactly20_whenBuilt_thenAlert2DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "eff440",
+        "hash": "2f926f0e",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "eff440",
+        "hash": "52fa280d",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2020.0,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "eff440",
+        "hash": "fc88cb1f",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "eff440",
+        "hash": "2ec69243",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "eff440",
+        "hash": "f5811e13",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "eff440",
+        "hash": "e7af7a90",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20cloud%20cover%2019.9,%20when%20alerts%20are%20built,%20then%20alert%202%20fires%22)",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "eff440",
+        "hash": "ee349591",
+        "encoded": "void%20givenCloud19_9_whenBuilt_thenAlert2Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "eff440",
+        "hash": "a2497e7d",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "eff440",
+        "hash": "59aa3912",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2019.9,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "eff440",
+        "hash": "d38f5af9",
+        "encoded": "assertThat(alerts).contains(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "eff440",
+        "hash": "b42e774a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "eff440",
+        "hash": "5717cfee",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "eff440",
+        "hash": "42cc8b61",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20null%20cloud%20cover,%20when%20alerts%20are%20built,%20then%20alert%202%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "eff440",
+        "hash": "d3fa1afc",
+        "encoded": "void%20givenNullCloud_whenBuilt_thenAlert2DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "eff440",
+        "hash": "3d6ae350",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "eff440",
+        "hash": "a71d2c72",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "eff440",
+        "hash": "37358061",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "eff440",
+        "hash": "6e59ae01",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "eff440",
+        "hash": "0e2a48cb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "eff440",
+        "hash": "713e2609",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "eff440",
+        "hash": "13a7e33e",
+        "encoded": "@DisplayName(%22alert%203:%20extended%20viewing%20(duration%20exactly%20300)%22)",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "eff440",
+        "hash": "f1463898",
+        "encoded": "class%20Alert3DurationBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "eff440",
+        "hash": "47c22738",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "eff440",
+        "hash": "b6d700a5",
+        "encoded": "@DisplayName(%22given%20duration_sec%20exactly%20300,%20when%20alerts%20are%20built,%20then%20alert%203%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "eff440",
+        "hash": "92c3ba24",
+        "encoded": "void%20givenDurationExactly300_whenBuilt_thenAlert3DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "eff440",
+        "hash": "33fe1479",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "eff440",
+        "hash": "4f6ce639",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "eff440",
+        "hash": "3ccfea2a",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_3);",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "eff440",
+        "hash": "699b62c2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "eff440",
+        "hash": "22eb3933",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "eff440",
+        "hash": "689a1be2",
+        "encoded": "@DisplayName(%22given%20duration_sec%20301,%20when%20alerts%20are%20built,%20then%20alert%203%20fires%22)",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "eff440",
+        "hash": "9e8308f7",
+        "encoded": "void%20givenDuration301_whenBuilt_thenAlert3Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "eff440",
+        "hash": "25e2c8c7",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20301,%200.0);",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "eff440",
+        "hash": "5ba94301",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "eff440",
+        "hash": "98b75ed2",
+        "encoded": "assertThat(alerts).contains(ALERT_3);",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "eff440",
+        "hash": "8da2b88b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "eff440",
+        "hash": "84f00426",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "eff440",
+        "hash": "045c950f",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "eff440",
+        "hash": "9b482b30",
+        "encoded": "@DisplayName(%22alert%204:%20exceptionally%20bright%20(magnitude%20exactly%20-2.0)%22)",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "eff440",
+        "hash": "f7baec48",
+        "encoded": "class%20Alert4MagnitudeBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "eff440",
+        "hash": "e2b1552e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "eff440",
+        "hash": "91563f15",
+        "encoded": "@DisplayName(%22given%20magnitude%20exactly%20-2.0,%20when%20alerts%20are%20built,%20then%20alert%204%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "eff440",
+        "hash": "94077dbe",
+        "encoded": "void%20givenMagnitudeExactlyMinus2_whenBuilt_thenAlert4DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "eff440",
+        "hash": "1c9d1ae4",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "eff440",
+        "hash": "053addbb",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-2.0,%20now);",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "eff440",
+        "hash": "e6633d4b",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_4);",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "eff440",
+        "hash": "6f19d2d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "eff440",
+        "hash": "032e6a25",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "eff440",
+        "hash": "4d21417c",
+        "encoded": "@DisplayName(%22given%20magnitude%20-2.1,%20when%20alerts%20are%20built,%20then%20alert%204%20fires%22)",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "eff440",
+        "hash": "118e0fe2",
+        "encoded": "void%20givenMagnitudeMinus2_1_whenBuilt_thenAlert4Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "eff440",
+        "hash": "3d570d85",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "eff440",
+        "hash": "e11ce946",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-2.1,%20now);",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "eff440",
+        "hash": "f8a00587",
+        "encoded": "assertThat(alerts).contains(ALERT_4);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "eff440",
+        "hash": "b7fe04d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "eff440",
+        "hash": "d5bc439e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "eff440",
+        "hash": "190b3cd0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "eff440",
+        "hash": "51ad2365",
+        "encoded": "@DisplayName(%22alert%20ordering%22)",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "eff440",
+        "hash": "fd053798",
+        "encoded": "class%20AlertOrdering%20%7B",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "eff440",
+        "hash": "0c33cfa7",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "eff440",
+        "hash": "1f724296",
+        "encoded": "@DisplayName(%22given%20all%20four%20alert%20conditions%20are%20met,%20when%20alerts%20are%20built,%20then%20they%20appear%20in%20order%201,2,3,4%22)",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "eff440",
+        "hash": "87772360",
+        "encoded": "void%20givenAllFourConditionsMet_whenBuilt_thenOrderedOneToFour()%20%7B",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "eff440",
+        "hash": "b8b61a8c",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(301),%20301,%200.0);",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "eff440",
+        "hash": "e5345c1b",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2010.0,%20-2.1,%20now);",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "eff440",
+        "hash": "ed258d45",
+        "encoded": "assertThat(alerts).containsExactly(",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "eff440",
+        "hash": "12bc0edf",
+        "encoded": "String.format(ALERT_1_TEMPLATE,%20%22N%22),",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "eff440",
+        "hash": "6d5eaf34",
+        "encoded": "ALERT_2,",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "eff440",
+        "hash": "37be98db",
+        "encoded": "ALERT_3,",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "eff440",
+        "hash": "01136e2c",
+        "encoded": "ALERT_4",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "eff440",
+        "hash": "2b96234b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "eff440",
+        "hash": "e40a7bcd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "eff440",
+        "hash": "d163128b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "eff440",
+        "hash": "9ab1d225",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "a7600e",
+        "hash": "cf996c46",
+        "encoded": "import%20com.fasterxml.jackson.databind.JsonNode;",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "a7600e",
+        "hash": "1a13a9db",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "a7600e",
+        "hash": "02ef399f",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "a7600e",
+        "hash": "427184f9",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "a7600e",
+        "hash": "24dab015",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "a7600e",
+        "hash": "bd9b0672",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "a7600e",
+        "hash": "8f23379d",
+        "encoded": "import%20java.io.File;",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "a7600e",
+        "hash": "8afd859d",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "a7600e",
+        "hash": "8be947ad",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "a7600e",
+        "hash": "f76ede98",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "a7600e",
+        "hash": "fbf3379e",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "a7600e",
+        "hash": "c121bcf1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "a7600e",
+        "hash": "50c49f3c",
+        "encoded": "*%20AlertService.build(Pass,%20Double%20cloudPct,%20double%20magnitude,%20Instant%20now)%20-%3E%20List%3CString%3E",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "a7600e",
+        "hash": "6d11d24b",
+        "encoded": "*%20Exact%20strings,%20in%20order%201,2,3,4%20(PROMPT.md%20sections%201,%205,%209).",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "a7600e",
+        "hash": "e72d0642",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "a7600e",
+        "hash": "cd3e6128",
+        "encoded": "class%20AlertServiceTest%20%7B",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "a7600e",
+        "hash": "1ec42a96",
+        "encoded": "private%20static%20final%20String%20ALERT_1_TEMPLATE%20=%20%22ISS%20visible%20soon%20-%20Check%20sky%20in%20%25s%22;",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "a7600e",
+        "hash": "48999990",
+        "encoded": "private%20static%20final%20String%20ALERT_2%20=%20%22Clear%20skies%20predicted%20-%20Excellent%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "a7600e",
+        "hash": "b7bb664e",
+        "encoded": "private%20static%20final%20String%20ALERT_3%20=%20%22Extended%20viewing%20opportunity%22;",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "a7600e",
+        "hash": "5ab90f9c",
+        "encoded": "private%20static%20final%20String%20ALERT_4%20=%20%22Exceptionally%20bright%20pass%20-%20Easily%20visible%22;",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "a7600e",
+        "hash": "5117e991",
+        "encoded": "private%20AlertService%20alertService;",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "a7600e",
+        "hash": "45eeedfb",
+        "encoded": "private%20Instant%20now;",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "a7600e",
+        "hash": "15c4b542",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "a7600e",
+        "hash": "e7f1f659",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "a7600e",
+        "hash": "9b97c59c",
+        "encoded": "alertService%20=%20new%20AlertService();",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "a7600e",
+        "hash": "7a26437a",
+        "encoded": "now%20=%20Instant.parse(%222026-11-01T00:00:00Z%22);",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "a7600e",
+        "hash": "24d7719a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "a7600e",
+        "hash": "2c6acf39",
+        "encoded": "private%20Pass%20observablePass(Instant%20visibleStart,%20Instant%20visibleEnd,%20long%20durationSec,%20double%20riseAzimuthDeg)%20%7B",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "a7600e",
+        "hash": "2fe89e87",
+        "encoded": "return%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "a7600e",
+        "hash": "7a8f44c3",
+        "encoded": "visibleStart.minusSeconds(60),%20riseAzimuthDeg,",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "a7600e",
+        "hash": "5e5d3a97",
+        "encoded": "visibleStart,%2050.0,",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "a7600e",
+        "hash": "ca9203e3",
+        "encoded": "visibleEnd.plusSeconds(60),%2090.0,",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "a7600e",
+        "hash": "cd313ab1",
+        "encoded": "durationSec,",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "a7600e",
+        "hash": "66a0e2af",
+        "encoded": "true,%20visibleStart,%20visibleEnd,",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "a7600e",
+        "hash": "f44ffb9f",
+        "encoded": "Duration.between(visibleStart,%20visibleEnd).getSeconds()",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "a7600e",
+        "hash": "595cee9f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "a7600e",
+        "hash": "759cd168",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "a7600e",
+        "hash": "e1135201",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "a7600e",
+        "hash": "51f2f838",
+        "encoded": "@DisplayName(%22observable-pass%20rule%22)",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "a7600e",
+        "hash": "5a8a5e57",
+        "encoded": "class%20ObservablePassRule%20%7B",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "a7600e",
+        "hash": "0ec06816",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "a7600e",
+        "hash": "4fbb3b80",
+        "encoded": "@DisplayName(%22given%20a%20non-observable%20pass%20(visible=false),%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "a7600e",
+        "hash": "72601777",
+        "encoded": "void%20givenNonObservablePassVisibleFalse_whenBuilt_thenNoAlerts()%20%7B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "a7600e",
+        "hash": "4ce5e7a1",
+        "encoded": "Pass%20nonVisible%20=%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "a7600e",
+        "hash": "572374d6",
+        "encoded": "now.minusSeconds(120),%20180.0,",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "a7600e",
+        "hash": "c19f02a4",
+        "encoded": "now.minusSeconds(60),%2050.0,",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "a7600e",
+        "hash": "d189afd7",
+        "encoded": "now.plusSeconds(60),%2090.0,",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "a7600e",
+        "hash": "96e02401",
+        "encoded": "371,",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "a7600e",
+        "hash": "46a13140",
+        "encoded": "false,%20null,%20null,%200",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "a7600e",
+        "hash": "07a62c06",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "a7600e",
+        "hash": "ca5e74f3",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(nonVisible,%2010.0,%20-3.0,%20now);",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "a7600e",
+        "hash": "b9e0f703",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "a7600e",
+        "hash": "869f71d8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "a7600e",
+        "hash": "b7e05289",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "a7600e",
+        "hash": "ee64aa08",
+        "encoded": "@DisplayName(%22given%20a%20visible%20pass%20with%20zero%20visible%20duration,%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "a7600e",
+        "hash": "48ec99a3",
+        "encoded": "void%20givenVisiblePassWithZeroVisibleDuration_whenBuilt_thenNoAlerts()%20%7B",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "a7600e",
+        "hash": "01547034",
+        "encoded": "Instant%20visibleStart%20=%20now.plusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "a7600e",
+        "hash": "e1943835",
+        "encoded": "Pass%20zeroDuration%20=%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "a7600e",
+        "hash": "7e2c1929",
+        "encoded": "visibleStart.minusSeconds(60),%20180.0,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "a7600e",
+        "hash": "35e31705",
+        "encoded": "visibleStart,%2050.0,",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "a7600e",
+        "hash": "89bfabb0",
+        "encoded": "visibleStart.plusSeconds(60),%2090.0,",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "a7600e",
+        "hash": "cfc3c046",
+        "encoded": "300,",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "a7600e",
+        "hash": "7b78070f",
+        "encoded": "true,%20visibleStart,%20visibleStart,%200",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "a7600e",
+        "hash": "9f859f97",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "a7600e",
+        "hash": "34bc71fc",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(zeroDuration,%2010.0,%20-3.0,%20now);",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "a7600e",
+        "hash": "2a084a5b",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "a7600e",
+        "hash": "992696b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "a7600e",
+        "hash": "27bc3ba2",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "a7600e",
+        "hash": "703b0b6e",
+        "encoded": "@DisplayName(%22given%20the%20real%20zero-duration%20visible%20pass%20from%20pollux-passes-n20.json,%20when%20alerts%20are%20built,%20then%20no%20alerts%20are%20returned%22)",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "a7600e",
+        "hash": "30f86e69",
+        "encoded": "void%20givenRealZeroDurationVisiblePassFromFixture_whenBuilt_thenNoAlerts()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "a7600e",
+        "hash": "5ab3241e",
+        "encoded": "File%20fixture%20=%20new%20File(%22src/test/resources/fixtures/pollux-passes-n20.json%22);",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "a7600e",
+        "hash": "ca64d153",
+        "encoded": "ObjectMapper%20mapper%20=%20new%20ObjectMapper();",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "a7600e",
+        "hash": "e028b776",
+        "encoded": "JsonNode%20root%20=%20mapper.readTree(fixture);",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "a7600e",
+        "hash": "c9bc8d2f",
+        "encoded": "JsonNode%20zeroDurationNode%20=%20null;",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "a7600e",
+        "hash": "d43103f5",
+        "encoded": "for%20(JsonNode%20passNode%20:%20root.get(%22passes%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "a7600e",
+        "hash": "724af44a",
+        "encoded": "if%20(passNode.path(%22visible%22).asBoolean(false)",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "a7600e",
+        "hash": "80d2347b",
+        "encoded": "&&%20passNode.path(%22visible_duration_sec%22).asLong(-1)%20==%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "a7600e",
+        "hash": "74c95908",
+        "encoded": "zeroDurationNode%20=%20passNode;",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "a7600e",
+        "hash": "6a919558",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "a7600e",
+        "hash": "3f322845",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "a7600e",
+        "hash": "65468654",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "a7600e",
+        "hash": "4b9a75ab",
+        "encoded": "assertThat(zeroDurationNode).as(%22real%20zero-duration%20visible%20pass%20must%20exist%20in%20the%20fixture%22).isNotNull();",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "a7600e",
+        "hash": "f7a9e881",
+        "encoded": "Instant%20visibleStart%20=%20Instant.parse(zeroDurationNode.get(%22visible_start%22).asText());",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "a7600e",
+        "hash": "bd173a06",
+        "encoded": "Instant%20visibleEnd%20=%20Instant.parse(zeroDurationNode.get(%22visible_end%22).asText());",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "a7600e",
+        "hash": "ba0900e7",
+        "encoded": "long%20visibleDurationSec%20=%20zeroDurationNode.get(%22visible_duration_sec%22).asLong();",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "a7600e",
+        "hash": "265a4615",
+        "encoded": "Pass%20realZeroDurationPass%20=%20new%20Pass(",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "a7600e",
+        "hash": "6977b927",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22rise%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "a7600e",
+        "hash": "3cb7389d",
+        "encoded": "zeroDurationNode.get(%22rise%22).get(%22azimuth_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "a7600e",
+        "hash": "d7be5338",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22culmination%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "a7600e",
+        "hash": "02f70f69",
+        "encoded": "zeroDurationNode.get(%22culmination%22).get(%22elevation_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "a7600e",
+        "hash": "a1217d8b",
+        "encoded": "Instant.parse(zeroDurationNode.get(%22set%22).get(%22time%22).asText()),",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "a7600e",
+        "hash": "0fa56ce6",
+        "encoded": "zeroDurationNode.get(%22set%22).get(%22azimuth_deg%22).asDouble(),",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "a7600e",
+        "hash": "a6dff96f",
+        "encoded": "zeroDurationNode.get(%22duration_sec%22).asLong(),",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "a7600e",
+        "hash": "8e97ab3c",
+        "encoded": "true,%20visibleStart,%20visibleEnd,%20visibleDurationSec",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "a7600e",
+        "hash": "c8d26f84",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "a7600e",
+        "hash": "6771a0ed",
+        "encoded": "assertThat(realZeroDurationPass.isObservable()).isFalse();",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "a7600e",
+        "hash": "5351302e",
+        "encoded": "Instant%20nowForThisFixture%20=%20visibleStart.minusSeconds(3600);",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "a7600e",
+        "hash": "6529f7f1",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(realZeroDurationPass,%205.0,%20-4.0,%20nowForThisFixture);",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "a7600e",
+        "hash": "2ee15143",
+        "encoded": "assertThat(alerts).isEmpty();",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "a7600e",
+        "hash": "ecce4d1d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "a7600e",
+        "hash": "94e63a84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "a7600e",
+        "hash": "cc64a2d4",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "a7600e",
+        "hash": "5045bca2",
+        "encoded": "@DisplayName(%22alert%201:%20ISS%20visible%20soon%20(exactly%202%20hour%20boundary)%22)",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "a7600e",
+        "hash": "9c66fee2",
+        "encoded": "class%20Alert1TwoHourBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "a7600e",
+        "hash": "c661f75f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "a7600e",
+        "hash": "124e4427",
+        "encoded": "@DisplayName(%22given%20visible_start%20exactly%20now+2h,%20when%20alerts%20are%20built,%20then%20alert%201%20fires%20with%20the%20rise%20compass%22)",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "a7600e",
+        "hash": "579cf6c1",
+        "encoded": "void%20givenVisibleStartExactlyNowPlus2h_whenBuilt_thenAlert1Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "a7600e",
+        "hash": "66494d62",
+        "encoded": "Instant%20visibleStart%20=%20now.plus(Duration.ofHours(2));",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "a7600e",
+        "hash": "e059a8c0",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "a7600e",
+        "hash": "b46b508c",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "a7600e",
+        "hash": "49074288",
+        "encoded": "assertThat(alerts).contains(String.format(ALERT_1_TEMPLATE,%20Compass.N));",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "a7600e",
+        "hash": "5272bb64",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "a7600e",
+        "hash": "613fe844",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "a7600e",
+        "hash": "3b6e0bca",
+        "encoded": "@DisplayName(%22given%20visible_start%20at%20now+2h+1s,%20when%20alerts%20are%20built,%20then%20alert%201%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "a7600e",
+        "hash": "69d80bbc",
+        "encoded": "void%20givenVisibleStartNowPlus2hPlus1s_whenBuilt_thenAlert1DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "a7600e",
+        "hash": "e0cf6204",
+        "encoded": "Instant%20visibleStart%20=%20now.plus(Duration.ofHours(2)).plusSeconds(1);",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "a7600e",
+        "hash": "751a80e1",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "a7600e",
+        "hash": "9cfa9392",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "a7600e",
+        "hash": "752a97ff",
+        "encoded": "assertThat(alerts).noneMatch(a%20-%3E%20a.startsWith(%22ISS%20visible%20soon%22));",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "a7600e",
+        "hash": "b5bb78a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "a7600e",
+        "hash": "a01693a4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "a7600e",
+        "hash": "68453519",
+        "encoded": "@DisplayName(%22given%20visible_start%20already%20in%20the%20past,%20when%20alerts%20are%20built,%20then%20alert%201%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "a7600e",
+        "hash": "646d590f",
+        "encoded": "void%20givenVisibleStartInThePast_whenBuilt_thenAlert1DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "a7600e",
+        "hash": "61d7785a",
+        "encoded": "Instant%20visibleStart%20=%20now.minusSeconds(10);",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "a7600e",
+        "hash": "481c96ec",
+        "encoded": "Pass%20pass%20=%20observablePass(visibleStart,%20visibleStart.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "a7600e",
+        "hash": "1ce2dcb4",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "a7600e",
+        "hash": "b31036cc",
+        "encoded": "assertThat(alerts).noneMatch(a%20-%3E%20a.startsWith(%22ISS%20visible%20soon%22));",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "a7600e",
+        "hash": "1ab0ee95",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "a7600e",
+        "hash": "e870f17a",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "a7600e",
+        "hash": "05534770",
+        "encoded": "@DisplayName(%22given%20visible_start%20exactly%20now,%20when%20alerts%20are%20built,%20then%20alert%201%20fires%22)",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "a7600e",
+        "hash": "bd77135b",
+        "encoded": "void%20givenVisibleStartExactlyNow_whenBuilt_thenAlert1Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "a7600e",
+        "hash": "fc963517",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%2090.0);",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "a7600e",
+        "hash": "d4894469",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "a7600e",
+        "hash": "a257cf09",
+        "encoded": "assertThat(alerts).contains(String.format(ALERT_1_TEMPLATE,%20Compass.E));",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "a7600e",
+        "hash": "e6b71ac1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "a7600e",
+        "hash": "a21124b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "a7600e",
+        "hash": "5403d16b",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "a7600e",
+        "hash": "5fbb7d4a",
+        "encoded": "@DisplayName(%22alert%202:%20clear%20skies%20(cloud%20cover%20exactly%2020)%22)",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "a7600e",
+        "hash": "08d98665",
+        "encoded": "class%20Alert2CloudBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "a7600e",
+        "hash": "ed63f7db",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "a7600e",
+        "hash": "fe6af6e8",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20cloud%20cover%20exactly%2020,%20when%20alerts%20are%20built,%20then%20alert%202%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "a7600e",
+        "hash": "59a02086",
+        "encoded": "void%20givenCloudExactly20_whenBuilt_thenAlert2DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "a7600e",
+        "hash": "d00b7e5a",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "a7600e",
+        "hash": "a96a0eb7",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2020.0,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "a7600e",
+        "hash": "c5290231",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "a7600e",
+        "hash": "7341866d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "a7600e",
+        "hash": "d986a530",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "a7600e",
+        "hash": "b3bfa12f",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20cloud%20cover%2019.9,%20when%20alerts%20are%20built,%20then%20alert%202%20fires%22)",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "a7600e",
+        "hash": "62dc6932",
+        "encoded": "void%20givenCloud19_9_whenBuilt_thenAlert2Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "a7600e",
+        "hash": "23ad6030",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "a7600e",
+        "hash": "fdb2233d",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2019.9,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "a7600e",
+        "hash": "b9e51656",
+        "encoded": "assertThat(alerts).contains(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "a7600e",
+        "hash": "ca7cf983",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "a7600e",
+        "hash": "d86bb7db",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "a7600e",
+        "hash": "fd172646",
+        "encoded": "@DisplayName(%22given%20alert-1%20condition%20and%20null%20cloud%20cover,%20when%20alerts%20are%20built,%20then%20alert%202%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "a7600e",
+        "hash": "f02f8d3b",
+        "encoded": "void%20givenNullCloud_whenBuilt_thenAlert2DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "a7600e",
+        "hash": "172f9efb",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(120),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "a7600e",
+        "hash": "646dfdce",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "a7600e",
+        "hash": "f106c0cf",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_2);",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "a7600e",
+        "hash": "26c302bf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "a7600e",
+        "hash": "38a8b62c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "a7600e",
+        "hash": "d414ac08",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "a7600e",
+        "hash": "3a7a2d9c",
+        "encoded": "@DisplayName(%22alert%203:%20extended%20viewing%20(duration%20exactly%20300)%22)",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "a7600e",
+        "hash": "578906e7",
+        "encoded": "class%20Alert3DurationBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "a7600e",
+        "hash": "bc643203",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "a7600e",
+        "hash": "d0c81556",
+        "encoded": "@DisplayName(%22given%20duration_sec%20exactly%20300,%20when%20alerts%20are%20built,%20then%20alert%203%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "a7600e",
+        "hash": "1c6d2e42",
+        "encoded": "void%20givenDurationExactly300_whenBuilt_thenAlert3DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "a7600e",
+        "hash": "3ebcc466",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "a7600e",
+        "hash": "f997ea08",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "a7600e",
+        "hash": "a83838c1",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_3);",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "a7600e",
+        "hash": "5260c15f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "a7600e",
+        "hash": "05819d4c",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "a7600e",
+        "hash": "bf5af40a",
+        "encoded": "@DisplayName(%22given%20duration_sec%20301,%20when%20alerts%20are%20built,%20then%20alert%203%20fires%22)",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "a7600e",
+        "hash": "ad8b0838",
+        "encoded": "void%20givenDuration301_whenBuilt_thenAlert3Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "a7600e",
+        "hash": "6269814a",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20301,%200.0);",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "a7600e",
+        "hash": "4044d17b",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-1.0,%20now);",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "a7600e",
+        "hash": "f66a9b9e",
+        "encoded": "assertThat(alerts).contains(ALERT_3);",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "a7600e",
+        "hash": "21f0f958",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "a7600e",
+        "hash": "33853bd5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "a7600e",
+        "hash": "05ac825c",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "a7600e",
+        "hash": "778de2d2",
+        "encoded": "@DisplayName(%22alert%204:%20exceptionally%20bright%20(magnitude%20exactly%20-2.0)%22)",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "a7600e",
+        "hash": "2491c234",
+        "encoded": "class%20Alert4MagnitudeBoundary%20%7B",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "a7600e",
+        "hash": "3ef10067",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "a7600e",
+        "hash": "175ad980",
+        "encoded": "@DisplayName(%22given%20magnitude%20exactly%20-2.0,%20when%20alerts%20are%20built,%20then%20alert%204%20does%20not%20fire%22)",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "a7600e",
+        "hash": "54f3c8a7",
+        "encoded": "void%20givenMagnitudeExactlyMinus2_whenBuilt_thenAlert4DoesNotFire()%20%7B",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "a7600e",
+        "hash": "734b5c1c",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "a7600e",
+        "hash": "cf39078e",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-2.0,%20now);",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "a7600e",
+        "hash": "0ee2535f",
+        "encoded": "assertThat(alerts).doesNotContain(ALERT_4);",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "a7600e",
+        "hash": "8e24bd9a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "a7600e",
+        "hash": "eecfab86",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "a7600e",
+        "hash": "c7d7d56b",
+        "encoded": "@DisplayName(%22given%20magnitude%20-2.1,%20when%20alerts%20are%20built,%20then%20alert%204%20fires%22)",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "a7600e",
+        "hash": "e62543b1",
+        "encoded": "void%20givenMagnitudeMinus2_1_whenBuilt_thenAlert4Fires()%20%7B",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "a7600e",
+        "hash": "75f0a5d0",
+        "encoded": "Pass%20pass%20=%20observablePass(now.plusSeconds(7200),%20now.plusSeconds(7200).plusSeconds(60),%20300,%200.0);",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "a7600e",
+        "hash": "1d96283d",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%20null,%20-2.1,%20now);",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "a7600e",
+        "hash": "83b620a5",
+        "encoded": "assertThat(alerts).contains(ALERT_4);",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "a7600e",
+        "hash": "cd00e377",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "a7600e",
+        "hash": "4b683e12",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "a7600e",
+        "hash": "e430bcc3",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "a7600e",
+        "hash": "a5f7de34",
+        "encoded": "@DisplayName(%22alert%20ordering%22)",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "a7600e",
+        "hash": "a037096b",
+        "encoded": "class%20AlertOrdering%20%7B",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "a7600e",
+        "hash": "20697a89",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "a7600e",
+        "hash": "31ab9bee",
+        "encoded": "@DisplayName(%22given%20all%20four%20alert%20conditions%20are%20met,%20when%20alerts%20are%20built,%20then%20they%20appear%20in%20order%201,2,3,4%22)",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "a7600e",
+        "hash": "9dc12c5f",
+        "encoded": "void%20givenAllFourConditionsMet_whenBuilt_thenOrderedOneToFour()%20%7B",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "a7600e",
+        "hash": "4eb90514",
+        "encoded": "Pass%20pass%20=%20observablePass(now,%20now.plusSeconds(301),%20301,%200.0);",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "a7600e",
+        "hash": "7615a92b",
+        "encoded": "List%3CString%3E%20alerts%20=%20alertService.build(pass,%2010.0,%20-2.1,%20now);",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "a7600e",
+        "hash": "45f307f9",
+        "encoded": "assertThat(alerts).containsExactly(",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "a7600e",
+        "hash": "d6c3c161",
+        "encoded": "String.format(ALERT_1_TEMPLATE,%20Compass.N),",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "a7600e",
+        "hash": "0839575a",
+        "encoded": "ALERT_2,",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "a7600e",
+        "hash": "ec4925d9",
+        "encoded": "ALERT_3,",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "a7600e",
+        "hash": "16bcc623",
+        "encoded": "ALERT_4",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "a7600e",
+        "hash": "6041b5d4",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "a7600e",
+        "hash": "60ad2182",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "a7600e",
+        "hash": "a0b42f54",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "a7600e",
+        "hash": "006fda5f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "frontend/tests/components/AlertList.test.jsx": {
+    "filename": "AlertList.test.jsx",
+    "path": "frontend/tests/components/AlertList.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "bc0027": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "396e9eb4",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "bc0027",
+        "hash": "cfec9bb0",
+        "encoded": "import%20%7B%20describe,%20it,%20expect%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "bc0027",
+        "hash": "19d4d65c",
+        "encoded": "import%20%7B%20render,%20screen%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "bc0027",
+        "hash": "e2752ff7",
+        "encoded": "import%20AlertList%20from%20'../../src/components/AlertList.jsx';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "bc0027",
+        "hash": "5322c3ac",
+        "encoded": "import%20fixture%20from%20'../fixtures/overview-response.json';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "bc0027",
+        "hash": "e65ef95a",
+        "encoded": "describe('AlertList',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "bc0027",
+        "hash": "07480fd8",
+        "encoded": "it('given%20alerts%20from%20the%20real%20fixture,%20when%20rendered,%20then%20every%20alert%20text%20is%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "bc0027",
+        "hash": "038ef918",
+        "encoded": "render(%3CAlertList%20alerts=%7Bfixture.alerts%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "bc0027",
+        "hash": "1e61bf79",
+        "encoded": "fixture.alerts.forEach((alertText)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "bc0027",
+        "hash": "33b8b3c6",
+        "encoded": "expect(screen.getByText(alertText)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "bc0027",
+        "hash": "c484fef0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "bc0027",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "bc0027",
+        "hash": "4ba111c0",
+        "encoded": "it('given%20an%20empty%20alerts%20array,%20when%20rendered,%20then%20nothing%20is%20shown',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "bc0027",
+        "hash": "8540b9d1",
+        "encoded": "const%20%7B%20container%20%7D%20=%20render(%3CAlertList%20alerts=%7B%5B%5D%7D%20/%3E);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "bc0027",
+        "hash": "4e7356ef",
+        "encoded": "expect(container.textContent).toBe('');",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "bc0027",
+        "hash": "ff07c7b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "bc0027",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

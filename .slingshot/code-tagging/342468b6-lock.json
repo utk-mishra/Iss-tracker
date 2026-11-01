@@ -1,0 +1,247 @@
+{
+  "backend/src/test/java/com/example/iss/resilience/MutableClock.java": {
+    "filename": "MutableClock.java",
+    "path": "backend/src/test/java/com/example/iss/resilience/MutableClock.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ec4462": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793537094,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "8493eeec",
+          "files": "737ca0c7"
+        },
+        "hash": "eeee87ca",
+        "messageId": "system_e1bf95e0-d5f1-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:14:54\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ec4462",
+        "hash": "ad23dc91",
+        "encoded": "package%20com.example.iss.resilience;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ec4462",
+        "hash": "d9619686",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ec4462",
+        "hash": "deddbc39",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ec4462",
+        "hash": "92aa0b8c",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ec4462",
+        "hash": "7bc3fedf",
+        "encoded": "import%20java.time.ZoneId;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ec4462",
+        "hash": "a2e1cd3a",
+        "encoded": "import%20java.time.ZoneOffset;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ec4462",
+        "hash": "cfd8e328",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ec4462",
+        "hash": "99aa4db0",
+        "encoded": "*%20Test-only%20mutable%20Clock%20so%20resilience%20tests%20(TtlCache,%20CircuitBreaker,%20...)%20can",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ec4462",
+        "hash": "a1cb749d",
+        "encoded": "*%20deterministically%20advance%20time%20without%20Thread.sleep.",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ec4462",
+        "hash": "c27421dc",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ec4462",
+        "hash": "9cc4492f",
+        "encoded": "final%20class%20MutableClock%20extends%20Clock%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ec4462",
+        "hash": "391eecaa",
+        "encoded": "private%20Instant%20instant;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ec4462",
+        "hash": "2b22d185",
+        "encoded": "private%20final%20ZoneId%20zone;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ec4462",
+        "hash": "9256d934",
+        "encoded": "MutableClock(Instant%20start)%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ec4462",
+        "hash": "7744ef32",
+        "encoded": "this(start,%20ZoneOffset.UTC);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ec4462",
+        "hash": "ee39c532",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ec4462",
+        "hash": "27770805",
+        "encoded": "private%20MutableClock(Instant%20start,%20ZoneId%20zone)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ec4462",
+        "hash": "c0b53659",
+        "encoded": "this.instant%20=%20start;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ec4462",
+        "hash": "79b6cc3b",
+        "encoded": "this.zone%20=%20zone;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ec4462",
+        "hash": "71870443",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ec4462",
+        "hash": "99a0c511",
+        "encoded": "void%20advance(Duration%20duration)%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ec4462",
+        "hash": "0ef6e7b9",
+        "encoded": "this.instant%20=%20this.instant.plus(duration);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ec4462",
+        "hash": "46b23985",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ec4462",
+        "hash": "b1c9d7f0",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "ec4462",
+        "hash": "fb26e955",
+        "encoded": "public%20ZoneId%20getZone()%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ec4462",
+        "hash": "710bbff4",
+        "encoded": "return%20zone;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ec4462",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ec4462",
+        "hash": "206c67f1",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ec4462",
+        "hash": "fd2c992e",
+        "encoded": "public%20Clock%20withZone(ZoneId%20zone)%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ec4462",
+        "hash": "a3325a69",
+        "encoded": "return%20new%20MutableClock(instant,%20zone);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ec4462",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ec4462",
+        "hash": "737e81a4",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ec4462",
+        "hash": "c9e87f94",
+        "encoded": "public%20Instant%20instant()%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ec4462",
+        "hash": "ca388178",
+        "encoded": "return%20instant;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ec4462",
+        "hash": "d6071ac7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ec4462",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

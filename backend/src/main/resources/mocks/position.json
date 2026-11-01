@@ -1,0 +1,10 @@
+{
+  "_label": "MOCK",
+  "_comment": "Static fallback for Open-Notify ISS position. Used only when upstream and cache are both unavailable (MOCK degradation level). Shape mirrors the real api.open-notify.org/iss-now.json contract so OpenNotifyClient.parse(JsonNode) can parse it unchanged. timestamp is a placeholder and is NOT time-shifted at load (position has no 'next event' semantics).",
+  "message": "success",
+  "timestamp": 1793440000,
+  "iss_position": {
+    "latitude": "20.0000",
+    "longitude": "0.0000"
+  }
+}

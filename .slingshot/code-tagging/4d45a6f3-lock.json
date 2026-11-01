@@ -1,0 +1,883 @@
+{
+  "backend/src/test/java/com/example/iss/resilience/CircuitBreakerTest.java": {
+    "filename": "CircuitBreakerTest.java",
+    "path": "backend/src/test/java/com/example/iss/resilience/CircuitBreakerTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "965370": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793537126,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "8493eeec",
+          "files": "737ca0c7"
+        },
+        "hash": "3d4730ff",
+        "messageId": "system_e1bf95e0-d5f1-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:15:26\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "965370",
+        "hash": "ad23dc91",
+        "encoded": "package%20com.example.iss.resilience;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "965370",
+        "hash": "ccf5397e",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "965370",
+        "hash": "30ce71d8",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "965370",
+        "hash": "05e61be7",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "965370",
+        "hash": "bb73e0ae",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "965370",
+        "hash": "601f609b",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "965370",
+        "hash": "27cc2e5b",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "965370",
+        "hash": "4bda1ce5",
+        "encoded": "import%20static%20org.assertj.core.api.Assertions.assertThat;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "965370",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "965370",
+        "hash": "905517d3",
+        "encoded": "*%20CircuitBreaker:%20one%20per%20upstream.%203%20failures%20-%3E%20OPEN;%20skips%20upstream%20calls%20while%20OPEN;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "965370",
+        "hash": "e26bfb4f",
+        "encoded": "*%20after%20the%20cooldown%20it%20goes%20HALF_OPEN%20and%20allows%20exactly%20one%20trial%20call.",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "965370",
+        "hash": "fedbc419",
+        "encoded": "*%20See%20PROMPT.md%20section%202%20and%20section%209.",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "965370",
+        "hash": "7ca1406f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "965370",
+        "hash": "d3f10ff0",
+        "encoded": "class%20CircuitBreakerTest%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "965370",
+        "hash": "d78109a6",
+        "encoded": "private%20static%20final%20int%20FAILURE_THRESHOLD%20=%203;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "965370",
+        "hash": "5a9d15f7",
+        "encoded": "private%20static%20final%20Duration%20COOLDOWN%20=%20Duration.ofSeconds(30);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "965370",
+        "hash": "74ee4482",
+        "encoded": "private%20MutableClock%20clock;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "965370",
+        "hash": "eed967f0",
+        "encoded": "private%20CircuitBreaker%20breaker;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "965370",
+        "hash": "b71275d9",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "965370",
+        "hash": "2ecb5f8b",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "965370",
+        "hash": "47dfdfd7",
+        "encoded": "clock%20=%20new%20MutableClock(Instant.parse(%222026-11-01T00:00:00Z%22));",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "965370",
+        "hash": "cef1a61a",
+        "encoded": "breaker%20=%20new%20CircuitBreaker(clock,%20FAILURE_THRESHOLD,%20COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "965370",
+        "hash": "7721e417",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "965370",
+        "hash": "982ef1e0",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "965370",
+        "hash": "47980175",
+        "encoded": "@DisplayName(%22closed%20state%22)",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "965370",
+        "hash": "ef9f73ad",
+        "encoded": "class%20Closed%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "965370",
+        "hash": "c5eb05e4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "965370",
+        "hash": "2207de48",
+        "encoded": "@DisplayName(%22given%20a%20new%20breaker,%20when%20checked,%20then%20it%20allows%20calls%20and%20is%20CLOSED%22)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "965370",
+        "hash": "a0ceb58e",
+        "encoded": "void%20givenNewBreaker_whenChecked_thenAllowsCallsAndIsClosed()%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "965370",
+        "hash": "471326ec",
+        "encoded": "assertThat(breaker.allowRequest()).isTrue();",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "965370",
+        "hash": "5fbb04cd",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "965370",
+        "hash": "792377b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "965370",
+        "hash": "533a5a9f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "965370",
+        "hash": "3cf95c27",
+        "encoded": "@DisplayName(%22given%20fewer%20than%20threshold%20failures,%20when%20checked,%20then%20it%20stays%20CLOSED%22)",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "965370",
+        "hash": "8b0beafa",
+        "encoded": "void%20givenFewerThanThresholdFailures_whenChecked_thenStaysClosed()%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "965370",
+        "hash": "b5d0ad39",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "965370",
+        "hash": "80b4ec8f",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "965370",
+        "hash": "9349b253",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "965370",
+        "hash": "89b5520c",
+        "encoded": "assertThat(breaker.allowRequest()).isTrue();",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "965370",
+        "hash": "6a5bdc1a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "965370",
+        "hash": "af5e472d",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "965370",
+        "hash": "620833d1",
+        "encoded": "@DisplayName(%22given%20a%20success%20after%20some%20failures,%20when%20recorded,%20then%20failure%20count%20resets%22)",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "965370",
+        "hash": "aa2bd922",
+        "encoded": "void%20givenSuccessAfterFailures_whenRecorded_thenFailureCountResets()%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "965370",
+        "hash": "0da181dd",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "965370",
+        "hash": "b31be530",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "965370",
+        "hash": "849aa214",
+        "encoded": "breaker.recordSuccess();",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "965370",
+        "hash": "3626611e",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "965370",
+        "hash": "daba5913",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "965370",
+        "hash": "47a2e33e",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "965370",
+        "hash": "255a7047",
+        "encoded": "assertThat(breaker.allowRequest()).isTrue();",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "965370",
+        "hash": "78db855a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "965370",
+        "hash": "48dc6fe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "965370",
+        "hash": "4d3c5ab8",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "965370",
+        "hash": "60457655",
+        "encoded": "@DisplayName(%22opens%20after%20threshold%20failures%22)",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "965370",
+        "hash": "3a521506",
+        "encoded": "class%20OpensAfterThreshold%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "965370",
+        "hash": "f84e34c4",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "965370",
+        "hash": "33f66fd9",
+        "encoded": "@DisplayName(%22given%20exactly%203%20consecutive%20failures,%20when%20checked,%20then%20breaker%20opens%22)",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "965370",
+        "hash": "ea3d8568",
+        "encoded": "void%20givenExactly3ConsecutiveFailures_whenChecked_thenBreakerOpens()%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "965370",
+        "hash": "6f0eceb4",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "965370",
+        "hash": "936e40c9",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "965370",
+        "hash": "0d1e6e12",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "965370",
+        "hash": "48eda3cc",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "965370",
+        "hash": "c46ffadb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "965370",
+        "hash": "1cb2ee18",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "965370",
+        "hash": "bc3705ac",
+        "encoded": "@DisplayName(%22given%20breaker%20is%20OPEN,%20when%20a%20request%20is%20attempted,%20then%20it%20is%20skipped%20(not%20allowed)%22)",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "965370",
+        "hash": "69f0e1c0",
+        "encoded": "void%20givenBreakerOpen_whenRequestAttempted_thenSkipped()%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "965370",
+        "hash": "abe8d361",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "965370",
+        "hash": "7bdf6a75",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "965370",
+        "hash": "b06e866f",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "965370",
+        "hash": "ede5d8c4",
+        "encoded": "assertThat(breaker.allowRequest()).isFalse();",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "965370",
+        "hash": "726efa75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "965370",
+        "hash": "9b477039",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "965370",
+        "hash": "f4657ad6",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "965370",
+        "hash": "bf4bdaef",
+        "encoded": "@DisplayName(%22half-open%20after%20cooldown%22)",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "965370",
+        "hash": "6da3a6c6",
+        "encoded": "class%20HalfOpenAfterCooldown%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "965370",
+        "hash": "26e32e7c",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "965370",
+        "hash": "7e139264",
+        "encoded": "void%20openTheBreaker()%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "965370",
+        "hash": "b77d4fe7",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "965370",
+        "hash": "be69d4c9",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "965370",
+        "hash": "965bed86",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "965370",
+        "hash": "020d2fe1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "965370",
+        "hash": "cd2d7591",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "965370",
+        "hash": "f6d6b16c",
+        "encoded": "@DisplayName(%22given%20breaker%20OPEN%20and%20cooldown%20not%20yet%20elapsed,%20when%20checked,%20then%20still%20not%20allowed%22)",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "965370",
+        "hash": "dc620b70",
+        "encoded": "void%20givenOpenAndCooldownNotElapsed_whenChecked_thenStillNotAllowed()%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "965370",
+        "hash": "d0b9ef41",
+        "encoded": "clock.advance(COOLDOWN.minusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "965370",
+        "hash": "72248b5f",
+        "encoded": "assertThat(breaker.allowRequest()).isFalse();",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "965370",
+        "hash": "7a47a7e2",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "965370",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "965370",
+        "hash": "7d3a96cc",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "965370",
+        "hash": "05e9353c",
+        "encoded": "@DisplayName(%22given%20breaker%20OPEN%20and%20cooldown%20elapsed,%20when%20checked,%20then%20it%20transitions%20to%20HALF_OPEN%20and%20allows%20one%20trial%22)",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "965370",
+        "hash": "0965206a",
+        "encoded": "void%20givenOpenAndCooldownElapsed_whenChecked_thenHalfOpenAllowsOneTrial()%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "965370",
+        "hash": "655438e6",
+        "encoded": "clock.advance(COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "965370",
+        "hash": "7cac4eb5",
+        "encoded": "boolean%20allowed%20=%20breaker.allowRequest();",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "965370",
+        "hash": "dd18075d",
+        "encoded": "assertThat(allowed).isTrue();",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "965370",
+        "hash": "f0f1922b",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.HALF_OPEN);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "965370",
+        "hash": "0ca73160",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "965370",
+        "hash": "9b2dd21b",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "965370",
+        "hash": "e5141ee3",
+        "encoded": "@DisplayName(%22given%20HALF_OPEN%20trial%20succeeds,%20when%20recorded,%20then%20breaker%20closes%22)",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "965370",
+        "hash": "4170f960",
+        "encoded": "void%20givenHalfOpenTrialSucceeds_whenRecorded_thenBreakerCloses()%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "965370",
+        "hash": "23309b6d",
+        "encoded": "clock.advance(COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "965370",
+        "hash": "acc6094b",
+        "encoded": "breaker.allowRequest();",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "965370",
+        "hash": "ea40de38",
+        "encoded": "breaker.recordSuccess();",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "965370",
+        "hash": "ad4c7c04",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "965370",
+        "hash": "2dd2eac5",
+        "encoded": "assertThat(breaker.allowRequest()).isTrue();",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "965370",
+        "hash": "59e86bfa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "965370",
+        "hash": "a248a6f6",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "965370",
+        "hash": "9647d090",
+        "encoded": "@DisplayName(%22given%20HALF_OPEN%20trial%20fails,%20when%20recorded,%20then%20breaker%20re-opens%20and%20restarts%20cooldown%22)",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "965370",
+        "hash": "67bded14",
+        "encoded": "void%20givenHalfOpenTrialFails_whenRecorded_thenBreakerReopensAndRestartsCooldown()%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "965370",
+        "hash": "052f21eb",
+        "encoded": "clock.advance(COOLDOWN);",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "965370",
+        "hash": "c670af15",
+        "encoded": "breaker.allowRequest();",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "965370",
+        "hash": "d99ce6a6",
+        "encoded": "breaker.recordFailure();",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "965370",
+        "hash": "60180a8b",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "965370",
+        "hash": "abf502c7",
+        "encoded": "assertThat(breaker.allowRequest()).isFalse();",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "965370",
+        "hash": "2eb0ce79",
+        "encoded": "clock.advance(COOLDOWN.minusSeconds(1));",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "965370",
+        "hash": "ac95d9b3",
+        "encoded": "assertThat(breaker.allowRequest()).isFalse();",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "965370",
+        "hash": "96ee4355",
+        "encoded": "clock.advance(Duration.ofSeconds(1));",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "965370",
+        "hash": "28eefa44",
+        "encoded": "assertThat(breaker.allowRequest()).isTrue();",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "965370",
+        "hash": "5c972532",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.HALF_OPEN);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "965370",
+        "hash": "5a35ac4c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "965370",
+        "hash": "bbf48fdf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "965370",
+        "hash": "84872ec1",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "965370",
+        "hash": "2f3c9d38",
+        "encoded": "@DisplayName(%22thread%20safety%22)",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "965370",
+        "hash": "2d3cbd05",
+        "encoded": "class%20ThreadSafety%20%7B",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "965370",
+        "hash": "389319e2",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "965370",
+        "hash": "57bac281",
+        "encoded": "@DisplayName(%22given%20concurrent%20failure%20recordings,%20when%20threshold%20is%20reached,%20then%20breaker%20opens%20exactly%20once%20and%20consistently%22)",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "965370",
+        "hash": "da4553cf",
+        "encoded": "void%20givenConcurrentFailures_whenThresholdReached_thenBreakerOpensConsistently()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "965370",
+        "hash": "dffed13f",
+        "encoded": "int%20threads%20=%2010;",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "965370",
+        "hash": "5d0c604b",
+        "encoded": "Thread%5B%5D%20workers%20=%20new%20Thread%5Bthreads%5D;",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "965370",
+        "hash": "41fce2c2",
+        "encoded": "for%20(int%20i%20=%200;%20i%20%3C%20threads;%20i++)%20%7B",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "965370",
+        "hash": "5331fc7e",
+        "encoded": "workers%5Bi%5D%20=%20new%20Thread(breaker::recordFailure);",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "965370",
+        "hash": "a4485fa2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "965370",
+        "hash": "fe26481d",
+        "encoded": "for%20(Thread%20t%20:%20workers)%20%7B",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "965370",
+        "hash": "593f36e6",
+        "encoded": "t.start();",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "965370",
+        "hash": "d5691714",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "965370",
+        "hash": "263c15d3",
+        "encoded": "for%20(Thread%20t%20:%20workers)%20%7B",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "965370",
+        "hash": "996a8c94",
+        "encoded": "t.join();",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "965370",
+        "hash": "3dffa596",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "965370",
+        "hash": "63ca22ae",
+        "encoded": "assertThat(breaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "965370",
+        "hash": "2940d923",
+        "encoded": "assertThat(breaker.allowRequest()).isFalse();",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "965370",
+        "hash": "cc7af933",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "965370",
+        "hash": "9a3fe29c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "965370",
+        "hash": "5efbcd97",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

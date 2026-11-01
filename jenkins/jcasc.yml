@@ -1,0 +1,94 @@
+# Jenkins Configuration as Code (JCasC) for ISS Tracker
+# Alternative to job-config.xml; use with the JCasC plugin
+
+jenkins:
+  systemMessage: "ISS Tracker CI/CD - Automated via JCasC"
+  numExecutors: 2
+  mode: NORMAL
+  
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          name: "Administrator"
+          password: "${JENKINS_ADMIN_PASSWORD}"
+
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "docker-registry-credentials"
+              username: "${DOCKER_REGISTRY_USER}"
+              password: "${DOCKER_REGISTRY_PASSWORD}"
+              description: "Docker registry credentials"
+          
+          - string:
+              scope: GLOBAL
+              id: "docker-registry-url"
+              secret: "${DOCKER_REGISTRY_URL}"
+              description: "Docker registry URL"
+          
+          - usernamePassword:
+              scope: GLOBAL
+              id: "github-credentials"
+              username: "${GITHUB_USER}"
+              password: "${GITHUB_TOKEN}"
+              description: "GitHub credentials"
+          
+          - usernamePassword:
+              scope: GLOBAL
+              id: "deploy-dev-credentials"
+              username: "${DEPLOY_DEV_USER}"
+              password: "${DEPLOY_DEV_KEY}"
+              description: "Dev environment deployment credentials"
+          
+          - usernamePassword:
+              scope: GLOBAL
+              id: "deploy-staging-credentials"
+              username: "${DEPLOY_STAGING_USER}"
+              password: "${DEPLOY_STAGING_KEY}"
+              description: "Staging environment deployment credentials"
+          
+          - usernamePassword:
+              scope: GLOBAL
+              id: "deploy-prod-credentials"
+              username: "${DEPLOY_PROD_USER}"
+              password: "${DEPLOY_PROD_KEY}"
+              description: "Production environment deployment credentials"
+
+jobs:
+  - script: |
+      pipelineJob('iss-tracker') {
+        description('ISS Location & Pass Predictor - Multi-stage pipeline')
+        
+        parameters {
+          choiceParam('DEPLOY_ENV', ['dev', 'staging', 'prod'], 'Spring Boot profile / deployment environment')
+        }
+        
+        triggers {
+          scm('H/5 * * * *')
+        }
+        
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('https://github.com/your-org/iss-tracker.git')
+                  credentials('github-credentials')
+                }
+                branches('*/main', '*/develop')
+              }
+            }
+            scriptPath('Jenkinsfile')
+            lightweight(true)
+          }
+        }
+      }

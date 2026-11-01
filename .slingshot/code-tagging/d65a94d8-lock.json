@@ -1,0 +1,559 @@
+{
+  "backend/src/main/java/com/example/iss/resilience/CircuitBreaker.java": {
+    "filename": "CircuitBreaker.java",
+    "path": "backend/src/main/java/com/example/iss/resilience/CircuitBreaker.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "85da68": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793537199,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "8493eeec",
+          "files": "737ca0c7"
+        },
+        "hash": "53384ee8",
+        "messageId": "system_e1bf95e0-d5f1-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:16:39\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "85da68",
+        "hash": "ad23dc91",
+        "encoded": "package%20com.example.iss.resilience;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "85da68",
+        "hash": "d9619686",
+        "encoded": "import%20java.time.Clock;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "85da68",
+        "hash": "deddbc39",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "85da68",
+        "hash": "92aa0b8c",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "85da68",
+        "hash": "2795dd41",
+        "encoded": "import%20java.util.Objects;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "85da68",
+        "hash": "6aab29d8",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "85da68",
+        "hash": "b3027955",
+        "encoded": "*%20Hand-written%20circuit%20breaker,%20one%20instance%20per%20upstream%20(PROMPT.md%20section%202).",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "85da68",
+        "hash": "7aeb6bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "85da68",
+        "hash": "942dd678",
+        "encoded": "*%20%3Cp%3EStates:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "85da68",
+        "hash": "d680a9a0",
+        "encoded": "*%20%3Cul%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "85da68",
+        "hash": "5103645c",
+        "encoded": "*%20%20%20%3Cli%3ECLOSED:%20requests%20allowed;%20after%20%7B@code%20failureThreshold%7D%20consecutive%20failures",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "85da68",
+        "hash": "9d6e12ac",
+        "encoded": "*%20%20%20%20%20%20%20(no%20intervening%20success)%20it%20opens.%3C/li%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "85da68",
+        "hash": "abb968fc",
+        "encoded": "*%20%20%20%3Cli%3EOPEN:%20requests%20are%20skipped%20until%20%7B@code%20cooldown%7D%20has%20elapsed%20since%20the%20breaker",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "85da68",
+        "hash": "08323933",
+        "encoded": "*%20%20%20%20%20%20%20opened.%3C/li%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "85da68",
+        "hash": "366493cf",
+        "encoded": "*%20%20%20%3Cli%3EHALF_OPEN:%20exactly%20one%20trial%20request%20is%20allowed%20after%20the%20cooldown;%20a%20success",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "85da68",
+        "hash": "5c385262",
+        "encoded": "*%20%20%20%20%20%20%20closes%20the%20breaker%20and%20resets%20the%20failure%20count,%20a%20failure%20re-opens%20it%20and",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "85da68",
+        "hash": "69f4b04d",
+        "encoded": "*%20%20%20%20%20%20%20restarts%20the%20cooldown.%3C/li%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "85da68",
+        "hash": "0c56ebaf",
+        "encoded": "*%20%3C/ul%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "85da68",
+        "hash": "6c04ffe7",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "85da68",
+        "hash": "c5d2d000",
+        "encoded": "*%20%3Cp%3EThread-safe:%20all%20state%20transitions%20are%20synchronized,%20which%20is%20appropriate%20given%20the",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "85da68",
+        "hash": "cbea9f12",
+        "encoded": "*%20low%20call%20volume%20per%20upstream%20(at%20most%20one%20breaker%20per%20of%20three%20upstreams).",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "85da68",
+        "hash": "93865dfa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "85da68",
+        "hash": "15a05075",
+        "encoded": "public%20final%20class%20CircuitBreaker%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "85da68",
+        "hash": "473d09ba",
+        "encoded": "public%20enum%20State%20%7B%20CLOSED,%20OPEN,%20HALF_OPEN%20%7D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "85da68",
+        "hash": "52fd9d64",
+        "encoded": "private%20final%20Clock%20clock;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "85da68",
+        "hash": "4ebf6324",
+        "encoded": "private%20final%20int%20failureThreshold;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "85da68",
+        "hash": "2b2756ae",
+        "encoded": "private%20final%20Duration%20cooldown;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "85da68",
+        "hash": "a79e4b8b",
+        "encoded": "private%20State%20state%20=%20State.CLOSED;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "85da68",
+        "hash": "2ef0a0a8",
+        "encoded": "private%20int%20consecutiveFailures%20=%200;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "85da68",
+        "hash": "9516c4e2",
+        "encoded": "private%20Instant%20openedAt;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "85da68",
+        "hash": "8f9c6593",
+        "encoded": "private%20boolean%20halfOpenTrialInFlight%20=%20false;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "85da68",
+        "hash": "24aba380",
+        "encoded": "public%20CircuitBreaker(Clock%20clock,%20int%20failureThreshold,%20Duration%20cooldown)%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "85da68",
+        "hash": "30257bc0",
+        "encoded": "this.clock%20=%20Objects.requireNonNull(clock,%20%22clock%22);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "85da68",
+        "hash": "b8ac2c2b",
+        "encoded": "if%20(failureThreshold%20%3C=%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "85da68",
+        "hash": "826c620d",
+        "encoded": "throw%20new%20IllegalArgumentException(%22failureThreshold%20must%20be%20positive%22);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "85da68",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "85da68",
+        "hash": "e357c888",
+        "encoded": "this.failureThreshold%20=%20failureThreshold;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "85da68",
+        "hash": "864b925d",
+        "encoded": "this.cooldown%20=%20Objects.requireNonNull(cooldown,%20%22cooldown%22);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "85da68",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "85da68",
+        "hash": "fe10bc0c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "85da68",
+        "hash": "3242dd3b",
+        "encoded": "*%20Returns%20whether%20a%20call%20to%20the%20upstream%20is%20currently%20permitted.%20When%20OPEN%20and%20the",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "85da68",
+        "hash": "f392d0f9",
+        "encoded": "*%20cooldown%20has%20elapsed,%20this%20transitions%20the%20breaker%20to%20HALF_OPEN%20and%20allows%20exactly",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "85da68",
+        "hash": "74cbabf9",
+        "encoded": "*%20one%20trial%20call;%20subsequent%20calls%20return%20false%20until%20that%20trial%20is%20resolved%20via",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "85da68",
+        "hash": "76e84c48",
+        "encoded": "*%20%7B@link%20#recordSuccess()%7D%20or%20%7B@link%20#recordFailure()%7D.",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "85da68",
+        "hash": "7e4503c1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "85da68",
+        "hash": "2c6005d6",
+        "encoded": "public%20synchronized%20boolean%20allowRequest()%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "85da68",
+        "hash": "2ba739ca",
+        "encoded": "switch%20(state)%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "85da68",
+        "hash": "9ef3b954",
+        "encoded": "case%20CLOSED%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "85da68",
+        "hash": "a0c6c3ca",
+        "encoded": "return%20true;",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "85da68",
+        "hash": "cdb7b2a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "85da68",
+        "hash": "ca6b6680",
+        "encoded": "case%20HALF_OPEN%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "85da68",
+        "hash": "fa4454b8",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "85da68",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "85da68",
+        "hash": "5bfd7573",
+        "encoded": "case%20OPEN%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "85da68",
+        "hash": "f222c886",
+        "encoded": "if%20(Duration.between(openedAt,%20clock.instant()).compareTo(cooldown)%20%3E=%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "85da68",
+        "hash": "03685fba",
+        "encoded": "state%20=%20State.HALF_OPEN;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "85da68",
+        "hash": "d5d1b6bd",
+        "encoded": "halfOpenTrialInFlight%20=%20true;",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "85da68",
+        "hash": "eb5bae3f",
+        "encoded": "return%20true;",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "85da68",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "85da68",
+        "hash": "31d6edd5",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "85da68",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "85da68",
+        "hash": "ac98c157",
+        "encoded": "default%20-%3E%20throw%20new%20IllegalStateException(%22Unknown%20state:%20%22%20+%20state);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "85da68",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "85da68",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "85da68",
+        "hash": "2c9e103c",
+        "encoded": "public%20synchronized%20void%20recordSuccess()%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "85da68",
+        "hash": "649c8811",
+        "encoded": "consecutiveFailures%20=%200;",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "85da68",
+        "hash": "2394fb07",
+        "encoded": "state%20=%20State.CLOSED;",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "85da68",
+        "hash": "59c0ba8e",
+        "encoded": "halfOpenTrialInFlight%20=%20false;",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "85da68",
+        "hash": "88f18366",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "85da68",
+        "hash": "2b57ff58",
+        "encoded": "public%20synchronized%20void%20recordFailure()%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "85da68",
+        "hash": "b707aa84",
+        "encoded": "if%20(state%20==%20State.HALF_OPEN)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "85da68",
+        "hash": "844acbd3",
+        "encoded": "open();",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "85da68",
+        "hash": "b55bc4bd",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "85da68",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "85da68",
+        "hash": "2a2ba15d",
+        "encoded": "consecutiveFailures++;",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "85da68",
+        "hash": "d0debc92",
+        "encoded": "if%20(consecutiveFailures%20%3E=%20failureThreshold)%20%7B",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "85da68",
+        "hash": "dc866b21",
+        "encoded": "open();",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "85da68",
+        "hash": "9c0e6ebc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "85da68",
+        "hash": "f4ff50cd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "85da68",
+        "hash": "38a3ad28",
+        "encoded": "public%20synchronized%20State%20getState()%20%7B",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "85da68",
+        "hash": "5a365c4f",
+        "encoded": "return%20state;",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "85da68",
+        "hash": "70416dc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "85da68",
+        "hash": "5118a775",
+        "encoded": "private%20void%20open()%20%7B",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "85da68",
+        "hash": "c2b41236",
+        "encoded": "state%20=%20State.OPEN;",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "85da68",
+        "hash": "355f2c85",
+        "encoded": "openedAt%20=%20clock.instant();",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "85da68",
+        "hash": "d38e4dbb",
+        "encoded": "halfOpenTrialInFlight%20=%20false;",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "85da68",
+        "hash": "21cc0f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "85da68",
+        "hash": "998d938c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

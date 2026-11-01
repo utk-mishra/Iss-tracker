@@ -1,0 +1,55 @@
+{
+  "backend/src/main/java/com/example/iss/api/dto/LinksDto.java": {
+    "filename": "LinksDto.java",
+    "path": "backend/src/main/java/com/example/iss/api/dto/LinksDto.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "7dcec5": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "6fb20637",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7dcec5",
+        "hash": "f5994d6d",
+        "encoded": "package%20com.example.iss.api.dto;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7dcec5",
+        "hash": "7e7f439c",
+        "encoded": "/**%20HATEOAS-style%20links%20present%20on%20every%20successful%20response%20(PROMPT.md%20section%206).%20*/",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7dcec5",
+        "hash": "bb318ecf",
+        "encoded": "public%20record%20LinksDto(String%20self,%20String%20position,%20String%20passes,%20String%20health,%20String%20docs)%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7dcec5",
+        "hash": "22b977f0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

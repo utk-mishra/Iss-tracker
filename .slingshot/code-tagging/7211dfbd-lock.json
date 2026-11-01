@@ -1,0 +1,325 @@
+{
+  "backend/src/main/java/com/example/iss/domain/VelocityEstimator.java": {
+    "filename": "VelocityEstimator.java",
+    "path": "backend/src/main/java/com/example/iss/domain/VelocityEstimator.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e85021": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793538968,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0418f3bc",
+          "files": "80393ba7"
+        },
+        "hash": "51b1204b",
+        "messageId": "system_47436920-d5f5-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 18:46:08\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e85021",
+        "hash": "61a2dcac",
+        "encoded": "package%20com.example.iss.domain;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e85021",
+        "hash": "2b51177c",
+        "encoded": "import%20java.time.Duration;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e85021",
+        "hash": "99fe1c67",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e85021",
+        "hash": "12ef1b7c",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicReference;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e85021",
+        "hash": "692dab65",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e85021",
+        "hash": "3cd1ca79",
+        "encoded": "*%20Derives%20ISS%20ground%20velocity%20(km/h)%20from%20consecutive%20position%20samples",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e85021",
+        "hash": "a6da8192",
+        "encoded": "*%20(PROMPT.md%20section%205):%20haversine%20arc%20length%20between%20the%20previous%20and%20current",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e85021",
+        "hash": "ee99d402",
+        "encoded": "*%20sample,%20scaled%20by%20(R+408)/R%20to%20account%20for%20orbital%20altitude,%20divided%20by%20the",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e85021",
+        "hash": "050f0e80",
+        "encoded": "*%20elapsed%20time.%20Falls%20back%20to%20the%20documented%20default%20of%2027,600%20km/h%20when%20there%20is",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "e85021",
+        "hash": "35f657f6",
+        "encoded": "*%20no%20previous%20sample%20or%20the%20timestamp%20did%20not%20advance%20(including%20going%20backwards).",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "e85021",
+        "hash": "738e256a",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "e85021",
+        "hash": "c60cf799",
+        "encoded": "*%20%3Cp%3EThread-safe%20via%20a%20single%20%7B@link%20AtomicReference%7D%20holding%20the%20previous%20sample,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "e85021",
+        "hash": "eacceb0f",
+        "encoded": "*%20swapped%20atomically%20with%20%7B@link%20AtomicReference#getAndSet%7D;%20this%20must%20be%20called",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "e85021",
+        "hash": "c07a6a4e",
+        "encoded": "*%20INSIDE%20the%20upstream%20callable%20(not%20on%20a%20cache%20hit)%20so%20cache%20hits%20never%20corrupt",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "e85021",
+        "hash": "62e3ceae",
+        "encoded": "*%20estimator%20state%20(see%20ResilientFetcher%20/%20IssFacade%20in%20later%20steps).",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "e85021",
+        "hash": "fc142b2b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "e85021",
+        "hash": "eca6a566",
+        "encoded": "public%20final%20class%20VelocityEstimator%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "e85021",
+        "hash": "924979f3",
+        "encoded": "private%20static%20final%20double%20DEFAULT_VELOCITY_KMH%20=%2027_600.0;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "e85021",
+        "hash": "89101e65",
+        "encoded": "private%20static%20final%20double%20EARTH_RADIUS_KM%20=%206371.0;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "e85021",
+        "hash": "7c784eed",
+        "encoded": "private%20static%20final%20double%20ISS_ALTITUDE_KM%20=%20408.0;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "e85021",
+        "hash": "917fe2ee",
+        "encoded": "private%20static%20final%20double%20ALTITUDE_SCALE%20=%20(EARTH_RADIUS_KM%20+%20ISS_ALTITUDE_KM)%20/%20EARTH_RADIUS_KM;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "e85021",
+        "hash": "5560a328",
+        "encoded": "private%20record%20Sample(double%20latitude,%20double%20longitude,%20Instant%20timestamp)%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "e85021",
+        "hash": "e256b81a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "e85021",
+        "hash": "c097f77f",
+        "encoded": "private%20final%20AtomicReference%3CSample%3E%20previous%20=%20new%20AtomicReference%3C%3E();",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "e85021",
+        "hash": "9ad5fef4",
+        "encoded": "public%20double%20estimateKmh(double%20latitude,%20double%20longitude,%20Instant%20timestamp)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "e85021",
+        "hash": "1692e3ea",
+        "encoded": "Sample%20current%20=%20new%20Sample(latitude,%20longitude,%20timestamp);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "e85021",
+        "hash": "12cdd8fd",
+        "encoded": "Sample%20prior%20=%20previous.getAndSet(current);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "e85021",
+        "hash": "eb7f3ea3",
+        "encoded": "if%20(prior%20==%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "e85021",
+        "hash": "ffba98f9",
+        "encoded": "return%20DEFAULT_VELOCITY_KMH;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "e85021",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "e85021",
+        "hash": "888b23c5",
+        "encoded": "Duration%20elapsed%20=%20Duration.between(prior.timestamp(),%20timestamp);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "e85021",
+        "hash": "0a47e8f6",
+        "encoded": "if%20(elapsed.isZero()%20%7C%7C%20elapsed.isNegative())%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "e85021",
+        "hash": "be3550c6",
+        "encoded": "return%20DEFAULT_VELOCITY_KMH;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "e85021",
+        "hash": "792377b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "e85021",
+        "hash": "0c0d8fac",
+        "encoded": "double%20groundDistanceKm%20=%20haversineKm(prior.latitude(),%20prior.longitude(),%20latitude,%20longitude);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "e85021",
+        "hash": "a2168723",
+        "encoded": "double%20scaledDistanceKm%20=%20groundDistanceKm%20*%20ALTITUDE_SCALE;",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "e85021",
+        "hash": "e9f7ec40",
+        "encoded": "double%20elapsedHours%20=%20elapsed.toMillis()%20/%203_600_000.0;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "e85021",
+        "hash": "7a31ed22",
+        "encoded": "return%20scaledDistanceKm%20/%20elapsedHours;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "e85021",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "e85021",
+        "hash": "53e9eaca",
+        "encoded": "private%20static%20double%20haversineKm(double%20lat1,%20double%20lon1,%20double%20lat2,%20double%20lon2)%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "e85021",
+        "hash": "ee87864d",
+        "encoded": "double%20dLat%20=%20Math.toRadians(lat2%20-%20lat1);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "e85021",
+        "hash": "3a0de464",
+        "encoded": "double%20dLon%20=%20Math.toRadians(lon2%20-%20lon1);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "e85021",
+        "hash": "73dcca83",
+        "encoded": "double%20a%20=%20Math.sin(dLat%20/%202)%20*%20Math.sin(dLat%20/%202)",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "e85021",
+        "hash": "81ffcbf2",
+        "encoded": "+%20Math.cos(Math.toRadians(lat1))%20*%20Math.cos(Math.toRadians(lat2))",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "e85021",
+        "hash": "16ea71ce",
+        "encoded": "*%20Math.sin(dLon%20/%202)%20*%20Math.sin(dLon%20/%202);",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "e85021",
+        "hash": "d8388232",
+        "encoded": "double%20c%20=%202%20*%20Math.atan2(Math.sqrt(a),%20Math.sqrt(1%20-%20a));",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "e85021",
+        "hash": "a028c953",
+        "encoded": "return%20EARTH_RADIUS_KM%20*%20c;",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "e85021",
+        "hash": "cdb7b2a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "e85021",
+        "hash": "17837346",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

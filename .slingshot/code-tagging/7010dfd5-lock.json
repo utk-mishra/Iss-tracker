@@ -1,0 +1,259 @@
+{
+  "frontend/tests/utils/storage.test.js": {
+    "filename": "storage.test.js",
+    "path": "frontend/tests/utils/storage.test.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "918ea8": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793544924,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "04c94d4e",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:25:24\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "918ea8",
+        "hash": "c01c9563",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach,%20afterEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "918ea8",
+        "hash": "95c4af86",
+        "encoded": "import%20%7B%20safeGetItem,%20safeSetItem%20%7D%20from%20'../../src/utils/storage.js';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "918ea8",
+        "hash": "be58ab48",
+        "encoded": "describe('safeGetItem',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "918ea8",
+        "hash": "ceb3aa01",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "918ea8",
+        "hash": "07383132",
+        "encoded": "window.localStorage.clear();",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "918ea8",
+        "hash": "022881cf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "918ea8",
+        "hash": "b4b00da8",
+        "encoded": "it('given%20a%20stored%20value,%20when%20read,%20then%20it%20is%20returned',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "918ea8",
+        "hash": "227c76a4",
+        "encoded": "window.localStorage.setItem('key',%20'value');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "918ea8",
+        "hash": "3c4916a0",
+        "encoded": "expect(safeGetItem('key')).toBe('value');",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "918ea8",
+        "hash": "c484fef0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "918ea8",
+        "hash": "e55fc04d",
+        "encoded": "it('given%20no%20stored%20value,%20when%20read,%20then%20null%20is%20returned',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "918ea8",
+        "hash": "b5d2dfa0",
+        "encoded": "expect(safeGetItem('missing')).toBeNull();",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "918ea8",
+        "hash": "7abc93a1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "918ea8",
+        "hash": "ae9ca02b",
+        "encoded": "it('given%20localStorage.getItem%20throws,%20when%20read,%20then%20null%20is%20returned%20instead%20of%20crashing',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "918ea8",
+        "hash": "7797fbb7",
+        "encoded": "const%20spy%20=%20vi.spyOn(window.localStorage.__proto__,%20'getItem').mockImplementation(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "918ea8",
+        "hash": "3bb56c3f",
+        "encoded": "throw%20new%20Error('disabled%20storage');",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "918ea8",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "918ea8",
+        "hash": "4a1647e5",
+        "encoded": "expect(()%20=%3E%20safeGetItem('key')).not.toThrow();",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "918ea8",
+        "hash": "7c97cf70",
+        "encoded": "expect(safeGetItem('key')).toBeNull();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "918ea8",
+        "hash": "309ddbda",
+        "encoded": "spy.mockRestore();",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "918ea8",
+        "hash": "1ca2ca1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "918ea8",
+        "hash": "6e3edb2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "918ea8",
+        "hash": "f9ae0cb0",
+        "encoded": "describe('safeSetItem',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "918ea8",
+        "hash": "e186bfa6",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "918ea8",
+        "hash": "72bcfece",
+        "encoded": "window.localStorage.clear();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "918ea8",
+        "hash": "25c863d9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "918ea8",
+        "hash": "393609bb",
+        "encoded": "it('given%20a%20value,%20when%20set,%20then%20it%20is%20stored',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "918ea8",
+        "hash": "d76b20b7",
+        "encoded": "safeSetItem('key',%20'value');",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "918ea8",
+        "hash": "1f8f253f",
+        "encoded": "expect(window.localStorage.getItem('key')).toBe('value');",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "918ea8",
+        "hash": "8e8ca0f5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "918ea8",
+        "hash": "586db362",
+        "encoded": "it('given%20localStorage.setItem%20throws,%20when%20set,%20then%20it%20does%20not%20crash',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "918ea8",
+        "hash": "e19d6e5c",
+        "encoded": "const%20spy%20=%20vi.spyOn(window.localStorage.__proto__,%20'setItem').mockImplementation(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "918ea8",
+        "hash": "cbc6b8bb",
+        "encoded": "throw%20new%20Error('quota%20exceeded');",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "918ea8",
+        "hash": "6f909b24",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "918ea8",
+        "hash": "50d25ee1",
+        "encoded": "expect(()%20=%3E%20safeSetItem('key',%20'value')).not.toThrow();",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "918ea8",
+        "hash": "2f98cca2",
+        "encoded": "spy.mockRestore();",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "918ea8",
+        "hash": "6c3f165a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "918ea8",
+        "hash": "0fc0ec26",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

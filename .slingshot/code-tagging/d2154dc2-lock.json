@@ -1,0 +1,1498 @@
+{
+  "backend/src/test/java/com/example/iss/api/IssControllerTest.java": {
+    "filename": "IssControllerTest.java",
+    "path": "backend/src/test/java/com/example/iss/api/IssControllerTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "780998": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793541933,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "0f2fece0",
+          "files": "59080d46"
+        },
+        "hash": "dcde3ff0",
+        "messageId": "system_f871bda0-d5fa-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:35:33\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "4cff51": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793542572,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2af341d1",
+          "files": "30db33c1"
+        },
+        "hash": "c5a922d6",
+        "messageId": "system_9f368ab0-d5fd-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:46:12\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "e7b9c4": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793542572,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2af341d1",
+          "files": "30db33c1"
+        },
+        "hash": "3da5415b",
+        "messageId": "system_9f368ab0-d5fd-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:46:12\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f594e5": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793542572,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2af341d1",
+          "files": "30db33c1"
+        },
+        "hash": "4401dbaf",
+        "messageId": "system_9f368ab0-d5fd-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 19:46:12\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "780998",
+        "hash": "d10dddef",
+        "encoded": "package%20com.example.iss.api;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "780998",
+        "hash": "85043d35",
+        "encoded": "import%20com.example.iss.client.CloudClient;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "780998",
+        "hash": "bcd0d4e4",
+        "encoded": "import%20com.example.iss.client.PassesClient;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "780998",
+        "hash": "047b7c83",
+        "encoded": "import%20com.example.iss.client.PositionClient;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "780998",
+        "hash": "a463ca91",
+        "encoded": "import%20com.example.iss.domain.IssPosition;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "780998",
+        "hash": "c4916a8d",
+        "encoded": "import%20com.example.iss.domain.CloudForecast;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "780998",
+        "hash": "40609616",
+        "encoded": "import%20com.example.iss.domain.PassFeed;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "780998",
+        "hash": "17d2d0d5",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "780998",
+        "hash": "653d05f1",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "780998",
+        "hash": "44bd74c6",
+        "encoded": "import%20org.junit.jupiter.api.Nested;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "780998",
+        "hash": "89da0bfb",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "780998",
+        "hash": "fccc3f27",
+        "encoded": "import%20org.springframework.beans.factory.annotation.Autowired;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "780998",
+        "hash": "05cc4f86",
+        "encoded": "import%20org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "780998",
+        "hash": "f73e67a8",
+        "encoded": "import%20org.springframework.boot.test.context.SpringBootTest;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "780998",
+        "hash": "9fefa8e0",
+        "encoded": "import%20org.springframework.boot.test.mock.mockito.MockBean;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "780998",
+        "hash": "200eaf92",
+        "encoded": "import%20org.springframework.test.web.servlet.MockMvc;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "780998",
+        "hash": "67c4bd8d",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "780998",
+        "hash": "8719682d",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "780998",
+        "hash": "39acb3cd",
+        "encoded": "import%20static%20org.mockito.ArgumentMatchers.anyDouble;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "780998",
+        "hash": "27a5237a",
+        "encoded": "import%20static%20org.mockito.Mockito.when;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "780998",
+        "hash": "eb554e54",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "780998",
+        "hash": "1bae48a1",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "780998",
+        "hash": "8efb0526",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "780998",
+        "hash": "03a8a607",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "780998",
+        "hash": "86e1a908",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "780998",
+        "hash": "bfc13828",
+        "encoded": "*%20IssController:%20full%20Spring%20context%20+%20MockMvc.%20Upstream%20clients%20are%20mocked%20so%20no%20real",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "780998",
+        "hash": "bd5e697b",
+        "encoded": "*%20network%20calls%20happen;%20the%20resilience%20layer%20still%20runs%20(cache%20miss%20-%3E%20client%20-%3E%20FRESH).",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "780998",
+        "hash": "c26d7e8c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "780998",
+        "hash": "ab5b0ef6",
+        "encoded": "@SpringBootTest",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "780998",
+        "hash": "c86eef35",
+        "encoded": "@AutoConfigureMockMvc",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "780998",
+        "hash": "0d2c690b",
+        "encoded": "class%20IssControllerTest%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "780998",
+        "hash": "9607ce9e",
+        "encoded": "@Autowired",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "780998",
+        "hash": "e915d848",
+        "encoded": "private%20MockMvc%20mockMvc;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "780998",
+        "hash": "8c1b79e4",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "780998",
+        "hash": "28f33be3",
+        "encoded": "private%20PositionClient%20positionClient;",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "780998",
+        "hash": "60b92516",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "780998",
+        "hash": "9a68fd84",
+        "encoded": "private%20PassesClient%20passesClient;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "780998",
+        "hash": "e072be65",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "780998",
+        "hash": "ae61f795",
+        "encoded": "private%20CloudClient%20cloudClient;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "780998",
+        "hash": "1cc0b806",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "780998",
+        "hash": "031ab9d7",
+        "encoded": "void%20setUp()%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "780998",
+        "hash": "01ffbafd",
+        "encoded": "when(positionClient.fetch()).thenReturn(",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "780998",
+        "hash": "37dfd954",
+        "encoded": "new%20IssPosition(10.0,%2020.0,%20408.0,%2027000.0,%20Instant.parse(%222026-11-01T00:00:00Z%22),%20%22note%22));",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "780998",
+        "hash": "a009c957",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble())).thenReturn(new%20PassFeed(List.of(),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "780998",
+        "hash": "7a61ba47",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble())).thenReturn(new%20CloudForecast(List.of(),%20List.of()));",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "780998",
+        "hash": "88fadba2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "780998",
+        "hash": "59bf7c21",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "780998",
+        "hash": "ec6ca41f",
+        "encoded": "@DisplayName(%22validation%22)",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "780998",
+        "hash": "3e3b9420",
+        "encoded": "class%20Validation%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "780998",
+        "hash": "524ab78c",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "780998",
+        "hash": "cd2a8b30",
+        "encoded": "@DisplayName(%22given%20lat=91,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%20with%20a%20clean%20JSON%20error%20body%22)",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "780998",
+        "hash": "a8bfca88",
+        "encoded": "void%20givenLat91_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "780998",
+        "hash": "1442ce9c",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2291%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "780998",
+        "hash": "8f197e8d",
+        "encoded": ".andExpect(status().isBadRequest())",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "780998",
+        "hash": "1d4299d9",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(400))",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "780998",
+        "hash": "4b969876",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).exists());",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "780998",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "780998",
+        "hash": "850f23c8",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "780998",
+        "hash": "23b329ae",
+        "encoded": "@DisplayName(%22given%20lon=181,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "780998",
+        "hash": "e37eedac",
+        "encoded": "void%20givenLon181_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "780998",
+        "hash": "71f52457",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22).param(%22lon%22,%20%22181%22))",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "780998",
+        "hash": "5ea69577",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "780998",
+        "hash": "ae47b750",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "780998",
+        "hash": "18c498d9",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "780998",
+        "hash": "f19939fc",
+        "encoded": "@DisplayName(%22given%20lat=NaN,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "780998",
+        "hash": "2d1b58bd",
+        "encoded": "void%20givenLatNaN_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "780998",
+        "hash": "78e36fd6",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%22NaN%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "780998",
+        "hash": "aee22429",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "780998",
+        "hash": "8aac2494",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "780998",
+        "hash": "4964995b",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "780998",
+        "hash": "d3476366",
+        "encoded": "@DisplayName(%22given%20lat=Infinity,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "780998",
+        "hash": "be6ca7b9",
+        "encoded": "void%20givenLatInfinity_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "780998",
+        "hash": "e533000c",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%22Infinity%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "780998",
+        "hash": "24829aa5",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "780998",
+        "hash": "9c0e6ebc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "780998",
+        "hash": "5e0effd8",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "780998",
+        "hash": "6f80f231",
+        "encoded": "@DisplayName(%22given%20a%20missing%20lat%20parameter,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "780998",
+        "hash": "6781be15",
+        "encoded": "void%20givenMissingLat_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "780998",
+        "hash": "eb1bb659",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "780998",
+        "hash": "adb137b0",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "780998",
+        "hash": "94b19f35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "780998",
+        "hash": "2da52a75",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "780998",
+        "hash": "556c6f52",
+        "encoded": "@DisplayName(%22given%20a%20non-numeric%20lat%20parameter,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "780998",
+        "hash": "cd5c5542",
+        "encoded": "void%20givenNonNumericLat_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "780998",
+        "hash": "c2651c33",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%22abc%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "780998",
+        "hash": "c8a30336",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "780998",
+        "hash": "020d2fe1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "780998",
+        "hash": "cd2d7591",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "780998",
+        "hash": "0fb5bf46",
+        "encoded": "@DisplayName(%22given%20offline%20is%20not%20exactly%20'true'%20or%20'false',%20when%20overview%20is%20requested,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "780998",
+        "hash": "f154a5df",
+        "encoded": "void%20givenInvalidOfflineValue_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "780998",
+        "hash": "7ff1bf79",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22).param(%22lon%22,%20%220%22).param(%22offline%22,%20%22yes%22))",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "780998",
+        "hash": "c44af2f9",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "780998",
+        "hash": "8c67c4cf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "f594e5",
+        "hash": "47727659",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "f594e5",
+        "hash": "db8f85d4",
+        "encoded": "@DisplayName(%22given%20offline=true,%20when%20overview%20is%20requested,%20then%20200%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "f594e5",
+        "hash": "aacaeb9d",
+        "encoded": "void%20givenOfflineTrue_whenOverviewRequested_then200()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "f594e5",
+        "hash": "071cb0fc",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22).param(%22lon%22,%20%220%22).param(%22offline%22,%20%22true%22))",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "f594e5",
+        "hash": "bb71f8f4",
+        "encoded": ".andExpect(status().isOk());",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "f594e5",
+        "hash": "d750d26f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "f594e5",
+        "hash": "6c6997a1",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "f594e5",
+        "hash": "a71619cd",
+        "encoded": "@DisplayName(%22given%20a%20missing%20lon%20parameter,%20when%20overview%20is%20requested,%20then%20400%20is%20returned%20with%20a%20clean%20JSON%20error%20body%22)",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "f594e5",
+        "hash": "247e7cb6",
+        "encoded": "void%20givenMissingLon_whenOverviewRequested_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "f594e5",
+        "hash": "4919e1f5",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "f594e5",
+        "hash": "322f8d66",
+        "encoded": ".andExpect(status().isBadRequest())",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "f594e5",
+        "hash": "ffe9cb0a",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(400))",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "f594e5",
+        "hash": "0625a029",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).exists());",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "f594e5",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "f594e5",
+        "hash": "331ddc52",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "f594e5",
+        "hash": "32156412",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "f594e5",
+        "hash": "d6e339d7",
+        "encoded": "@DisplayName(%22exception%20handling%20(bug%20fix:%20catch-all%20handler%20must%20not%20swallow%20Spring%20MVC's%20own%20exceptions)%22)",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "f594e5",
+        "hash": "a0a27839",
+        "encoded": "class%20ExceptionHandling%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "f594e5",
+        "hash": "94f59b31",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "f594e5",
+        "hash": "9ee83ad5",
+        "encoded": "@DisplayName(%22given%20an%20unknown%20URL%20under%20/api,%20when%20requested,%20then%20404%20is%20returned%20with%20a%20clean%20JSON%20error%20body%22)",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "f594e5",
+        "hash": "60d43cf6",
+        "encoded": "void%20givenUnknownApiUrl_whenRequested_then404()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "f594e5",
+        "hash": "0f7978b4",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/does-not-exist%22))",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "f594e5",
+        "hash": "278d070c",
+        "encoded": ".andExpect(status().isNotFound())",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "f594e5",
+        "hash": "321fc2d1",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(404))",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "f594e5",
+        "hash": "6af80e1f",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).exists());",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "f594e5",
+        "hash": "1dc2599e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "f594e5",
+        "hash": "f0d392aa",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "f594e5",
+        "hash": "4cab36fb",
+        "encoded": "@DisplayName(%22given%20a%20POST%20to%20the%20overview%20endpoint%20(wrong%20method),%20when%20requested,%20then%20405%20is%20returned%20with%20an%20Allow%20header%20and%20a%20clean%20JSON%20error%20body%22)",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "f594e5",
+        "hash": "edcc74ab",
+        "encoded": "void%20givenPostToOverview_whenRequested_then405WithAllowHeader()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "f594e5",
+        "hash": "f5e5b99e",
+        "encoded": "mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "f594e5",
+        "hash": "5478cdec",
+        "encoded": ".post(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "f594e5",
+        "hash": "d706b25f",
+        "encoded": ".andExpect(status().isMethodNotAllowed())",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "f594e5",
+        "hash": "2defb58b",
+        "encoded": ".andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers.header().exists(%22Allow%22))",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "f594e5",
+        "hash": "668948f7",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(405))",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "f594e5",
+        "hash": "82d1a007",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).exists());",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "f594e5",
+        "hash": "a6adb000",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "f594e5",
+        "hash": "8e5b814e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "f594e5",
+        "hash": "8b2b7d28",
+        "encoded": "@DisplayName(%22given%20an%20upstream%20client%20throws%20an%20arbitrary%20RuntimeException,%20when%20overview%20is%20requested,%20then%20500%20is%20returned%20with%20the%20generic%20message%20and%20no%20leaked%20details%22)",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "f594e5",
+        "hash": "522d4620",
+        "encoded": "void%20givenUpstreamThrowsRuntimeException_whenOverviewRequested_then500GenericNoLeak()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "f594e5",
+        "hash": "5e96e563",
+        "encoded": "when(positionClient.fetch()).thenThrow(new%20RuntimeException(%22some%20internal%20secret%20detail%22));",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "f594e5",
+        "hash": "ed5d6e85",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2233.0%22).param(%22lon%22,%20%2244.0%22))",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "f594e5",
+        "hash": "d47a3da3",
+        "encoded": ".andExpect(status().isInternalServerError())",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "f594e5",
+        "hash": "841868f8",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(500))",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "f594e5",
+        "hash": "74af51a9",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).value(%22Internal%20server%20error%22))",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "f594e5",
+        "hash": "a71fc658",
+        "encoded": ".andExpect(content().string(org.hamcrest.Matchers.not(",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "f594e5",
+        "hash": "981eba15",
+        "encoded": "org.hamcrest.Matchers.containsString(%22some%20internal%20secret%20detail%22))));",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "f594e5",
+        "hash": "e9785117",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "f594e5",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "780998",
+        "hash": "ff74f5da",
+        "encoded": "@DisplayName(%22given%20offline=true,%20when%20overview%20is%20requested,%20then%20200%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "780998",
+        "hash": "8bf402ff",
+        "encoded": "void%20givenOfflineTrue_whenOverviewRequested_then200()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "780998",
+        "hash": "b196a0f4",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%220%22).param(%22lon%22,%20%220%22).param(%22offline%22,%20%22true%22))",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "780998",
+        "hash": "a5680d7e",
+        "encoded": ".andExpect(status().isOk());",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "780998",
+        "hash": "73b8c9b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "780998",
+        "hash": "d5691714",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "780998",
+        "hash": "7e2be81b",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "780998",
+        "hash": "4b38938b",
+        "encoded": "@DisplayName(%22overview%20happy%20path%22)",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "780998",
+        "hash": "b80bfbaf",
+        "encoded": "class%20OverviewHappyPath%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "780998",
+        "hash": "beb7e041",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "780998",
+        "hash": "e306ac67",
+        "encoded": "@DisplayName(%22given%20valid%20lat/lon,%20when%20overview%20is%20requested,%20then%20200%20with%20position,%20meta%20and%20links%22)",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "780998",
+        "hash": "5bf7f094",
+        "encoded": "void%20givenValidLatLon_whenOverviewRequested_then200WithExpectedShape()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "780998",
+        "hash": "d9b54c4f",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2228.6139%22).param(%22lon%22,%20%2277.2090%22))",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "780998",
+        "hash": "c957b22d",
+        "encoded": ".andExpect(status().isOk())",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "780998",
+        "hash": "2c8adc74",
+        "encoded": ".andExpect(content().contentType(%22application/json%22))",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "780998",
+        "hash": "4e5a46a7",
+        "encoded": ".andExpect(jsonPath(%22$.position.latitude%22).value(10.0))",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "780998",
+        "hash": "c60865d1",
+        "encoded": ".andExpect(jsonPath(%22$.meta.position.source%22).value(%22FRESH%22))",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "780998",
+        "hash": "df8b48f0",
+        "encoded": ".andExpect(jsonPath(%22$._links.self%22).exists())",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "780998",
+        "hash": "aef6ffd6",
+        "encoded": ".andExpect(jsonPath(%22$._links.position%22).exists())",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "780998",
+        "hash": "616c0c4d",
+        "encoded": ".andExpect(jsonPath(%22$._links.passes%22).exists())",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "780998",
+        "hash": "dcb23f42",
+        "encoded": ".andExpect(jsonPath(%22$._links.health%22).exists())",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "780998",
+        "hash": "70e5b792",
+        "encoded": ".andExpect(jsonPath(%22$._links.docs%22).exists());",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "780998",
+        "hash": "aab5eeb9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "780998",
+        "hash": "167ff3ae",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "780998",
+        "hash": "582f5404",
+        "encoded": "@DisplayName(%22given%20no%20passes,%20when%20overview%20is%20requested,%20then%20message%20states%20no%20visible%20pass%22)",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "780998",
+        "hash": "827f828d",
+        "encoded": "void%20givenNoPasses_whenOverviewRequested_thenNoVisiblePassMessage()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "780998",
+        "hash": "57ab91ad",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2228.6139%22).param(%22lon%22,%20%2277.2090%22))",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "780998",
+        "hash": "b40b7735",
+        "encoded": ".andExpect(status().isOk())",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "780998",
+        "hash": "b3757145",
+        "encoded": ".andExpect(jsonPath(%22$.message%22).value(%22No%20visible%20pass%20in%20the%20returned%20predictions%22))",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "780998",
+        "hash": "62586e34",
+        "encoded": ".andExpect(jsonPath(%22$.nextVisiblePass%22).doesNotExist());",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "780998",
+        "hash": "990329ab",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "780998",
+        "hash": "4ff5cbdc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "780998",
+        "hash": "787ee9bd",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "780998",
+        "hash": "77c5011a",
+        "encoded": "@DisplayName(%22position%20endpoint%22)",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "780998",
+        "hash": "00bc1e5a",
+        "encoded": "class%20PositionEndpoint%20%7B",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "e7b9c4",
+        "hash": "95ea3a0f",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "e7b9c4",
+        "hash": "4bbe4242",
+        "encoded": "@DisplayName(%22given%20an%20unexpected%20RuntimeException%20occurs%20outside%20the%20resilience%20fallback%20chain,%20when%20overview%20is%20requested,%20then%20500%20is%20returned%20with%20the%20generic%20message%20and%20no%20leaked%20details%22)",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "e7b9c4",
+        "hash": "00523fdd",
+        "encoded": "void%20givenUnexpectedRuntimeExceptionOutsideResilience_whenOverviewRequested_then500GenericNoLeak()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "e7b9c4",
+        "hash": "c2495b82",
+        "encoded": "//%20A%20client-thrown%20exception%20alone%20can%20NEVER%20surface%20as%20a%20500:%20ResilientFetcher",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "e7b9c4",
+        "hash": "9c377556",
+        "encoded": "//%20(Step%203)%20catches%20it%20and%20falls%20back%20to%20STALE/MOCK%20by%20design,%20so%20the%20controller",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "e7b9c4",
+        "hash": "d3ff2b5e",
+        "encoded": "//%20would%20correctly%20still%20see%20200.%20To%20exercise%20the%20generic-500%20path%20we%20need%20a",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "e7b9c4",
+        "hash": "7a0cca21",
+        "encoded": "//%20failure%20OUTSIDE%20that%20fallback-protected%20fetch%20-%20e.g.%20a%20malformed%20upstream",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "e7b9c4",
+        "hash": "815c0ba0",
+        "encoded": "//%20response%20that%20breaks%20IssFacade's%20post-fetch%20enrichment.%20Returning%20null%20here",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "e7b9c4",
+        "hash": "87560505",
+        "encoded": "//%20(a%20buggy/unexpected%20upstream%20client%20implementation)%20triggers%20a%20real",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "e7b9c4",
+        "hash": "56be0006",
+        "encoded": "//%20NullPointerException%20in%20IssFacade.enrichPasses%20-%3E%20CloudForecast.cloudCoverPctAt,",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "e7b9c4",
+        "hash": "8c6e6f06",
+        "encoded": "//%20which%20is%20exactly%20the%20kind%20of%20%22genuinely%20unexpected%20failure%22%20the%20generic",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "e7b9c4",
+        "hash": "d5a5688f",
+        "encoded": "//%20handler%20exists%20for.",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "e7b9c4",
+        "hash": "1c4724f8",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble())).thenReturn(null);",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "e7b9c4",
+        "hash": "6e47a714",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2233.0%22).param(%22lon%22,%20%2244.0%22))",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "e7b9c4",
+        "hash": "012c6120",
+        "encoded": ".andExpect(status().isInternalServerError())",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "e7b9c4",
+        "hash": "96863b76",
+        "encoded": ".andExpect(jsonPath(%22$.status%22).value(500))",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "e7b9c4",
+        "hash": "45ab5e17",
+        "encoded": ".andExpect(jsonPath(%22$.error%22).value(%22Internal%20server%20error%22))",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "e7b9c4",
+        "hash": "39e39cc4",
+        "encoded": ".andExpect(content().string(org.hamcrest.Matchers.not(",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "e7b9c4",
+        "hash": "7c34d3ee",
+        "encoded": "org.hamcrest.Matchers.containsString(%22NullPointerException%22))));",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "e7b9c4",
+        "hash": "75bbcadd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "e7b9c4",
+        "hash": "4bec1b99",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "780998",
+        "hash": "a6e4b3a3",
+        "encoded": "@DisplayName(%22given%20a%20request,%20when%20position%20is%20fetched,%20then%20200%20with%20position%20and%20links%22)",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "780998",
+        "hash": "59a3b1dc",
+        "encoded": "void%20givenRequest_whenPositionFetched_then200()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "780998",
+        "hash": "0786b5d9",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/position%22))",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "780998",
+        "hash": "9d9d5b13",
+        "encoded": ".andExpect(status().isOk())",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "780998",
+        "hash": "bcbb5d4b",
+        "encoded": ".andExpect(jsonPath(%22$.position.latitude%22).value(10.0))",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "780998",
+        "hash": "c5db6216",
+        "encoded": ".andExpect(jsonPath(%22$._links.self%22).exists());",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "780998",
+        "hash": "9d1eb832",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "780998",
+        "hash": "156d2c96",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "780998",
+        "hash": "6ef39350",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "780998",
+        "hash": "f3cc8a67",
+        "encoded": "@DisplayName(%22passes%20endpoint%22)",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "4cff51",
+        "hash": "5e0cb10e",
+        "encoded": "Instant%20now%20=%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "4cff51",
+        "hash": "6d6e0e44",
+        "encoded": "com.example.iss.domain.Pass%20pass%20=%20new%20com.example.iss.domain.Pass(",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "4cff51",
+        "hash": "3e6a674e",
+        "encoded": "now.plusSeconds(3600),%2010.0,%20%22N%22,",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "4cff51",
+        "hash": "9eca83cc",
+        "encoded": "now.plusSeconds(3660),%2050.0,",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "4cff51",
+        "hash": "66e88263",
+        "encoded": "now.plusSeconds(3900),%20200.0,%20%22S%22,",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "4cff51",
+        "hash": "175c78a2",
+        "encoded": "300,%20true,%20now.plusSeconds(3660),%20now.plusSeconds(3900),%20240",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "4cff51",
+        "hash": "08ea279b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "4cff51",
+        "hash": "5081ac07",
+        "encoded": "when(passesClient.fetch(anyDouble(),%20anyDouble()))",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "4cff51",
+        "hash": "1b169b80",
+        "encoded": ".thenReturn(new%20PassFeed(List.of(pass),%205.0,%20false));",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "4cff51",
+        "hash": "058eea98",
+        "encoded": "when(cloudClient.fetch(anyDouble(),%20anyDouble())).thenReturn(null);",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "4cff51",
+        "hash": "300b1539",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/overview%22).param(%22lat%22,%20%2233.0%22).param(%22lon%22,%20%2244.0%22))",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "780998",
+        "hash": "f612b76e",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "780998",
+        "hash": "81718e92",
+        "encoded": "@DisplayName(%22given%20valid%20lat/lon,%20when%20passes%20are%20fetched,%20then%20200%20with%20passes%20array%20and%20meta%22)",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "780998",
+        "hash": "1322a42f",
+        "encoded": "void%20givenValidLatLon_whenPassesFetched_then200()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "780998",
+        "hash": "49b1c03a",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/passes%22).param(%22lat%22,%20%2228.6139%22).param(%22lon%22,%20%2277.2090%22))",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "780998",
+        "hash": "b850d593",
+        "encoded": ".andExpect(status().isOk())",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "780998",
+        "hash": "d111fdf7",
+        "encoded": ".andExpect(jsonPath(%22$.passes%22).isArray())",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "780998",
+        "hash": "6faf845c",
+        "encoded": ".andExpect(jsonPath(%22$.meta.passes%22).exists())",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "780998",
+        "hash": "5cccdfa7",
+        "encoded": ".andExpect(jsonPath(%22$.meta.cloud%22).exists());",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "780998",
+        "hash": "f26791a2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "780998",
+        "hash": "c793e9b8",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "780998",
+        "hash": "68edb5c8",
+        "encoded": "@DisplayName(%22given%20lat=91,%20when%20passes%20are%20fetched,%20then%20400%20is%20returned%22)",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "780998",
+        "hash": "a372833e",
+        "encoded": "void%20givenLat91_whenPassesFetched_then400()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "780998",
+        "hash": "96188656",
+        "encoded": "mockMvc.perform(get(%22/api/v1/iss/passes%22).param(%22lat%22,%20%2291%22).param(%22lon%22,%20%220%22))",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "780998",
+        "hash": "593a2187",
+        "encoded": ".andExpect(status().isBadRequest());",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "780998",
+        "hash": "2a88b195",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "780998",
+        "hash": "2b3722a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "780998",
+        "hash": "f9e5f5b0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

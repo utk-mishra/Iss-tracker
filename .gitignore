@@ -1,0 +1,30 @@
+# Maven
+backend/target/
+**/target/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+
+# Env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# JaCoCo / test reports
+**/jacoco.exec
+backend/target/site/
+
+# OS
+Thumbs.db

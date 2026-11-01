@@ -1,0 +1,31 @@
+{
+  "filename": "jcasc.yml",
+  "path": "jenkins/jcasc.yml",
+  "version": "1.1",
+  "files": {
+    "17ee55be": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "PROMPT.md",
+          "relativeFilePath": "PROMPT.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            219
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "d6d8f4f5": {
+      "value": "approve step 8 and proceed ahead"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

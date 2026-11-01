@@ -1,0 +1,97 @@
+{
+  "frontend/src/components/LoadingSkeleton.jsx": {
+    "filename": "LoadingSkeleton.jsx",
+    "path": "frontend/src/components/LoadingSkeleton.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "4adfc5": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793546022,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "bfb7e7e4",
+          "files": "17ee55be"
+        },
+        "hash": "9b571fc0",
+        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:43:42\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4adfc5",
+        "hash": "de871456",
+        "encoded": "//%20Accessible%20loading%20placeholder%20shown%20before%20the%20first%20successful%20fetch",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "4adfc5",
+        "hash": "fdbb0693",
+        "encoded": "//%20(PROMPT.md%20section%207:%20loading%20skeletons).",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4adfc5",
+        "hash": "869b0ecd",
+        "encoded": "export%20default%20function%20LoadingSkeleton()%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4adfc5",
+        "hash": "2d3cc1df",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "4adfc5",
+        "hash": "d0157890",
+        "encoded": "%3Cdiv%20role=%22status%22%20className=%22loading-skeleton%22%20aria-label=%22Loading%22%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "4adfc5",
+        "hash": "5887b7b2",
+        "encoded": "%3Cspan%20className=%22skeleton-line%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "4adfc5",
+        "hash": "3b27202b",
+        "encoded": "%3Cspan%20className=%22skeleton-line%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "4adfc5",
+        "hash": "24c4d984",
+        "encoded": "%3Cspan%20className=%22skeleton-line%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "4adfc5",
+        "hash": "69b0bcfb",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4adfc5",
+        "hash": "17bc86d1",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4adfc5",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
