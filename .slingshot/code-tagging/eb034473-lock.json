@@ -23,882 +23,2179 @@
         "codeBlockId": null,
         "isActive": true,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 21:26:16\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "f88784": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793577867,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "7dcec627",
+          "files": "8224eedc"
+        },
+        "hash": "46739f52",
+        "messageId": "system_758feb90-d650-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 05:34:27\n- **source**: agent\n- **type**: agentWriteTool\n"
       }
     },
     "lines": {
       "0": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "0252a8fb",
         "encoded": "//%20Jenkins%20declarative%20pipeline%20for%20ISS%20Tracker%20(PROMPT.md%20section%2011)",
         "prevChunkIds": []
       },
       "1": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "b659afd6",
         "encoded": "//%20Stages:%20checkout,%20backend%20tests,%20frontend%20tests,%20build%20image,%20Trivy%20scan,%20push,%20deploy",
         "prevChunkIds": []
       },
       "2": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "d06845c5",
         "encoded": "//%20Per-environment%20config%20via%20Spring%20profiles:%20dev/staging/prod",
         "prevChunkIds": []
       },
       "4": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "c4821ac3",
         "encoded": "pipeline%20%7B",
         "prevChunkIds": []
       },
       "5": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "4fbcf029",
         "encoded": "agent%20any",
         "prevChunkIds": []
       },
       "7": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "c8515d4f",
         "encoded": "environment%20%7B",
         "prevChunkIds": []
       },
       "8": {
-        "chunkId": "f8f7cb",
-        "hash": "f03d74b4",
-        "encoded": "//%20Docker%20registry%20and%20image%20name%20(adjust%20to%20your%20registry)",
+        "chunkId": "f88784",
+        "hash": "56e3bb0c",
+        "encoded": "//%20Docker%20registry%20and%20image%20name",
         "prevChunkIds": []
       },
       "9": {
-        "chunkId": "f8f7cb",
-        "hash": "798776df",
-        "encoded": "DOCKER_REGISTRY%20=%20credentials('docker-registry-url')",
+        "chunkId": "f88784",
+        "hash": "c6a86ed3",
+        "encoded": "//%20NOTE:%20Configure%20'docker-registry-url'%20credential%20in%20Jenkins",
         "prevChunkIds": []
       },
       "10": {
-        "chunkId": "f8f7cb",
-        "hash": "aab227fd",
-        "encoded": "IMAGE_NAME%20=%20%22iss-tracker%22",
+        "chunkId": "f88784",
+        "hash": "09e42a79",
+        "encoded": "DOCKER_REGISTRY%20=%20credentials('docker-registry-url')%20%20//%20e.g.,%20'docker.io'%20or%20'ghcr.io'",
         "prevChunkIds": []
       },
       "11": {
-        "chunkId": "f8f7cb",
-        "hash": "be4556c0",
+        "chunkId": "f88784",
+        "hash": "f6b12385",
+        "encoded": "IMAGE_NAME%20=%20%22iss-tracker%22",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f88784",
+        "hash": "d9723462",
         "encoded": "IMAGE_TAG%20=%20%22$%7Benv.BUILD_NUMBER%7D%22",
         "prevChunkIds": []
       },
-      "13": {
-        "chunkId": "f8f7cb",
-        "hash": "be455166",
+      "14": {
+        "chunkId": "f88784",
+        "hash": "880edeea",
         "encoded": "//%20Spring%20Boot%20profile%20per%20environment",
         "prevChunkIds": []
       },
-      "14": {
-        "chunkId": "f8f7cb",
-        "hash": "0806bf5b",
+      "15": {
+        "chunkId": "f88784",
+        "hash": "d43c371a",
         "encoded": "SPRING_PROFILE%20=%20%22$%7Benv.DEPLOY_ENV%20?:%20'dev'%7D%22",
         "prevChunkIds": []
       },
-      "15": {
-        "chunkId": "f8f7cb",
-        "hash": "c8f9d1c3",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
       "17": {
-        "chunkId": "f8f7cb",
-        "hash": "4b429bad",
-        "encoded": "stages%20%7B",
+        "chunkId": "f88784",
+        "hash": "5e545ae0",
+        "encoded": "//%20Docker%20image%20full%20name",
         "prevChunkIds": []
       },
       "18": {
-        "chunkId": "f8f7cb",
-        "hash": "03bd5ace",
-        "encoded": "stage('Checkout')%20%7B",
+        "chunkId": "f88784",
+        "hash": "b05b38ce",
+        "encoded": "FULL_IMAGE_NAME%20=%20%22$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D%22",
         "prevChunkIds": []
       },
       "19": {
-        "chunkId": "f8f7cb",
-        "hash": "0f268901",
-        "encoded": "steps%20%7B",
-        "prevChunkIds": []
-      },
-      "20": {
-        "chunkId": "f8f7cb",
-        "hash": "3c755ba0",
-        "encoded": "echo%20%22Checking%20out%20code...%22",
+        "chunkId": "f88784",
+        "hash": "ee39c532",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "21": {
-        "chunkId": "f8f7cb",
-        "hash": "4fe22376",
-        "encoded": "checkout%20scm",
+        "chunkId": "f88784",
+        "hash": "116c8039",
+        "encoded": "stages%20%7B",
         "prevChunkIds": []
       },
       "22": {
-        "chunkId": "f8f7cb",
-        "hash": "4c3814eb",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "8687f8cd",
+        "encoded": "stage('Checkout')%20%7B",
         "prevChunkIds": []
       },
       "23": {
-        "chunkId": "f8f7cb",
-        "hash": "7b3531ab",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "25": {
-        "chunkId": "f8f7cb",
-        "hash": "cae7e67b",
-        "encoded": "stage('Backend%20Tests')%20%7B",
-        "prevChunkIds": []
-      },
-      "26": {
-        "chunkId": "f8f7cb",
-        "hash": "4e602baa",
-        "encoded": "agent%20%7B",
-        "prevChunkIds": []
-      },
-      "27": {
-        "chunkId": "f8f7cb",
-        "hash": "39e2ca7e",
-        "encoded": "docker%20%7B",
-        "prevChunkIds": []
-      },
-      "28": {
-        "chunkId": "f8f7cb",
-        "hash": "d5489632",
-        "encoded": "image%20'maven:3.9-eclipse-temurin-21'",
-        "prevChunkIds": []
-      },
-      "29": {
-        "chunkId": "f8f7cb",
-        "hash": "37bbe641",
-        "encoded": "args%20'-v%20$HOME/.m2:/root/.m2'",
-        "prevChunkIds": []
-      },
-      "30": {
-        "chunkId": "f8f7cb",
-        "hash": "cfdac52c",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "31": {
-        "chunkId": "f8f7cb",
-        "hash": "43353d17",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "32": {
-        "chunkId": "f8f7cb",
-        "hash": "f2d69f4e",
+        "chunkId": "f88784",
+        "hash": "0232e3e1",
         "encoded": "steps%20%7B",
         "prevChunkIds": []
       },
+      "24": {
+        "chunkId": "f88784",
+        "hash": "51737352",
+        "encoded": "echo%20%22Checking%20out%20code%20from%20SCM...%22",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "f88784",
+        "hash": "636eb419",
+        "encoded": "checkout%20scm",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "f88784",
+        "hash": "e256b81a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "f88784",
+        "hash": "a7947416",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "f88784",
+        "hash": "9aed8351",
+        "encoded": "stage('Backend%20Tests')%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "f88784",
+        "hash": "e1dbba8c",
+        "encoded": "agent%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "f88784",
+        "hash": "4bdf71e0",
+        "encoded": "docker%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "f88784",
+        "hash": "220218ea",
+        "encoded": "image%20'maven:3.9-eclipse-temurin-21'",
+        "prevChunkIds": []
+      },
       "33": {
-        "chunkId": "f8f7cb",
-        "hash": "2fedbf31",
-        "encoded": "echo%20%22Running%20backend%20tests%20with%20Maven...%22",
+        "chunkId": "f88784",
+        "hash": "b431e3cd",
+        "encoded": "args%20'-v%20$HOME/.m2:/root/.m2'",
         "prevChunkIds": []
       },
       "34": {
-        "chunkId": "f8f7cb",
-        "hash": "29815248",
-        "encoded": "dir('backend')%20%7B",
+        "chunkId": "f88784",
+        "hash": "843c084b",
+        "encoded": "reuseNode%20true",
         "prevChunkIds": []
       },
       "35": {
-        "chunkId": "f8f7cb",
-        "hash": "cef6588a",
-        "encoded": "sh%20'mvn%20-B%20-q%20clean%20verify'",
+        "chunkId": "f88784",
+        "hash": "dfad4947",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "36": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "b14d68ea",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "37": {
-        "chunkId": "f8f7cb",
-        "hash": "880eeeff",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "8d233749",
+        "encoded": "steps%20%7B",
         "prevChunkIds": []
       },
       "38": {
-        "chunkId": "f8f7cb",
-        "hash": "8bdfda54",
-        "encoded": "post%20%7B",
+        "chunkId": "f88784",
+        "hash": "d5146647",
+        "encoded": "echo%20%22Running%20backend%20tests%20with%20Maven...%22",
         "prevChunkIds": []
       },
       "39": {
-        "chunkId": "f8f7cb",
-        "hash": "ae7245ee",
-        "encoded": "always%20%7B",
+        "chunkId": "f88784",
+        "hash": "033ddee7",
+        "encoded": "dir('backend')%20%7B",
         "prevChunkIds": []
       },
       "40": {
-        "chunkId": "f8f7cb",
-        "hash": "babca668",
-        "encoded": "junit%20'backend/target/surefire-reports/**/*.xml'",
+        "chunkId": "f88784",
+        "hash": "dd69f3e4",
+        "encoded": "sh%20'mvn%20-B%20-q%20clean%20verify'",
         "prevChunkIds": []
       },
       "41": {
-        "chunkId": "f8f7cb",
-        "hash": "bb6488c9",
-        "encoded": "publishHTML(%5B",
+        "chunkId": "f88784",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "42": {
-        "chunkId": "f8f7cb",
-        "hash": "daf1182e",
-        "encoded": "reportDir:%20'backend/target/site/jacoco',",
+        "chunkId": "f88784",
+        "hash": "5663967b",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "43": {
-        "chunkId": "f8f7cb",
-        "hash": "0d0607a9",
-        "encoded": "reportFiles:%20'index.html',",
+        "chunkId": "f88784",
+        "hash": "e8b5014e",
+        "encoded": "post%20%7B",
         "prevChunkIds": []
       },
       "44": {
-        "chunkId": "f8f7cb",
-        "hash": "49db6786",
-        "encoded": "reportName:%20'JaCoCo%20Coverage%20Report',",
+        "chunkId": "f88784",
+        "hash": "039fd76c",
+        "encoded": "always%20%7B",
         "prevChunkIds": []
       },
       "45": {
-        "chunkId": "f8f7cb",
-        "hash": "84d8c3ca",
-        "encoded": "allowMissing:%20true",
+        "chunkId": "f88784",
+        "hash": "2690d7a8",
+        "encoded": "junit%20'backend/target/surefire-reports/**/*.xml'",
         "prevChunkIds": []
       },
       "46": {
-        "chunkId": "f8f7cb",
-        "hash": "3a102942",
-        "encoded": "%5D)",
+        "chunkId": "f88784",
+        "hash": "d8dc0576",
+        "encoded": "publishHTML(%5B",
         "prevChunkIds": []
       },
       "47": {
-        "chunkId": "f8f7cb",
-        "hash": "57c5213d",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "a7a6d314",
+        "encoded": "reportDir:%20'backend/target/site/jacoco',",
         "prevChunkIds": []
       },
       "48": {
-        "chunkId": "f8f7cb",
-        "hash": "d90811a0",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "fe8b2b89",
+        "encoded": "reportFiles:%20'index.html',",
         "prevChunkIds": []
       },
       "49": {
-        "chunkId": "f8f7cb",
-        "hash": "0b4804f7",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "9f5abe0e",
+        "encoded": "reportName:%20'JaCoCo%20Coverage%20Report',",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "f88784",
+        "hash": "2a9b6a70",
+        "encoded": "allowMissing:%20true",
         "prevChunkIds": []
       },
       "51": {
-        "chunkId": "f8f7cb",
-        "hash": "149b799c",
-        "encoded": "stage('Frontend%20Tests')%20%7B",
+        "chunkId": "f88784",
+        "hash": "7dc578bc",
+        "encoded": "%5D)",
         "prevChunkIds": []
       },
       "52": {
-        "chunkId": "f8f7cb",
-        "hash": "cd6a8d13",
-        "encoded": "agent%20%7B",
+        "chunkId": "f88784",
+        "hash": "88fadba2",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "53": {
-        "chunkId": "f8f7cb",
-        "hash": "4b3a2243",
-        "encoded": "docker%20%7B",
+        "chunkId": "f88784",
+        "hash": "e392f376",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "54": {
-        "chunkId": "f8f7cb",
-        "hash": "360fa5f6",
-        "encoded": "image%20'node:20-alpine'",
-        "prevChunkIds": []
-      },
-      "55": {
-        "chunkId": "f8f7cb",
-        "hash": "2ef1d392",
+        "chunkId": "f88784",
+        "hash": "5c9d24d4",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "56": {
-        "chunkId": "f8f7cb",
-        "hash": "cdb7b2a0",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "2095b2a3",
+        "encoded": "stage('Frontend%20Tests')%20%7B",
         "prevChunkIds": []
       },
       "57": {
-        "chunkId": "f8f7cb",
-        "hash": "e3559c4d",
-        "encoded": "steps%20%7B",
+        "chunkId": "f88784",
+        "hash": "e2542cfa",
+        "encoded": "agent%20%7B",
         "prevChunkIds": []
       },
       "58": {
-        "chunkId": "f8f7cb",
-        "hash": "f8e843c4",
-        "encoded": "echo%20%22Running%20frontend%20tests%20with%20Vitest...%22",
+        "chunkId": "f88784",
+        "hash": "fb05b86a",
+        "encoded": "docker%20%7B",
         "prevChunkIds": []
       },
       "59": {
-        "chunkId": "f8f7cb",
-        "hash": "16d495e6",
-        "encoded": "dir('frontend')%20%7B",
+        "chunkId": "f88784",
+        "hash": "206fee1e",
+        "encoded": "image%20'node:20-alpine'",
         "prevChunkIds": []
       },
       "60": {
-        "chunkId": "f8f7cb",
-        "hash": "e8f936c8",
-        "encoded": "sh%20'npm%20ci'",
+        "chunkId": "f88784",
+        "hash": "e79c72c4",
+        "encoded": "reuseNode%20true",
         "prevChunkIds": []
       },
       "61": {
-        "chunkId": "f8f7cb",
-        "hash": "aa807e3d",
-        "encoded": "sh%20'npm%20test%20--%20--run'",
+        "chunkId": "f88784",
+        "hash": "92368879",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "62": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "646a8e84",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "63": {
-        "chunkId": "f8f7cb",
-        "hash": "78db855a",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "bed93b73",
+        "encoded": "steps%20%7B",
         "prevChunkIds": []
       },
       "64": {
-        "chunkId": "f8f7cb",
-        "hash": "48dc6fe2",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "b1d592c2",
+        "encoded": "echo%20%22Running%20frontend%20tests%20with%20Vitest...%22",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "f88784",
+        "hash": "d4e54d99",
+        "encoded": "dir('frontend')%20%7B",
         "prevChunkIds": []
       },
       "66": {
-        "chunkId": "f8f7cb",
-        "hash": "d319d078",
-        "encoded": "stage('Build%20Docker%20Image')%20%7B",
+        "chunkId": "f88784",
+        "hash": "20a181b2",
+        "encoded": "sh%20'npm%20ci'",
         "prevChunkIds": []
       },
       "67": {
-        "chunkId": "f8f7cb",
-        "hash": "59f9fdbd",
-        "encoded": "steps%20%7B",
+        "chunkId": "f88784",
+        "hash": "6acdd714",
+        "encoded": "sh%20'npm%20test%20--%20--run'",
         "prevChunkIds": []
       },
       "68": {
-        "chunkId": "f8f7cb",
-        "hash": "cab1a5b1",
-        "encoded": "echo%20%22Building%20Docker%20image:%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "chunkId": "f88784",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "69": {
-        "chunkId": "f8f7cb",
-        "hash": "9a355674",
-        "encoded": "script%20%7B",
+        "chunkId": "f88784",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "70": {
-        "chunkId": "f8f7cb",
-        "hash": "6e43d4c3",
-        "encoded": "docker.build(%22$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22)",
-        "prevChunkIds": []
-      },
-      "71": {
-        "chunkId": "f8f7cb",
-        "hash": "9f9f5e04",
-        "encoded": "docker.image(%22$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22).tag('latest')",
+        "chunkId": "f88784",
+        "hash": "352e9b23",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "72": {
-        "chunkId": "f8f7cb",
-        "hash": "ae47b750",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "4e7bee8c",
+        "encoded": "stage('Build%20Docker%20Image')%20%7B",
         "prevChunkIds": []
       },
       "73": {
-        "chunkId": "f8f7cb",
-        "hash": "3654c6d8",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "74": {
-        "chunkId": "f8f7cb",
-        "hash": "6387e751",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "76": {
-        "chunkId": "f8f7cb",
-        "hash": "0ed7890c",
-        "encoded": "stage('Security%20Scan')%20%7B",
-        "prevChunkIds": []
-      },
-      "77": {
-        "chunkId": "f8f7cb",
-        "hash": "0d878c2f",
+        "chunkId": "f88784",
+        "hash": "bcf5b55d",
         "encoded": "steps%20%7B",
         "prevChunkIds": []
       },
-      "78": {
-        "chunkId": "f8f7cb",
-        "hash": "fe618eef",
-        "encoded": "echo%20%22Scanning%20image%20for%20vulnerabilities%20with%20Trivy...%22",
+      "74": {
+        "chunkId": "f88784",
+        "hash": "ff15b3f2",
+        "encoded": "echo%20%22Building%20Docker%20image:%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
         "prevChunkIds": []
       },
-      "79": {
-        "chunkId": "f8f7cb",
-        "hash": "7ac3895e",
+      "75": {
+        "chunkId": "f88784",
+        "hash": "21a929e7",
         "encoded": "script%20%7B",
         "prevChunkIds": []
       },
-      "80": {
-        "chunkId": "f8f7cb",
-        "hash": "83179e5b",
-        "encoded": "sh%20%22%22%22",
+      "76": {
+        "chunkId": "f88784",
+        "hash": "af4e3b25",
+        "encoded": "//%20Build%20main%20image",
         "prevChunkIds": []
       },
-      "81": {
-        "chunkId": "f8f7cb",
-        "hash": "bab56606",
-        "encoded": "docker%20run%20--rm%20-v%20/var/run/docker.sock:/var/run/docker.sock%20%5C",
+      "77": {
+        "chunkId": "f88784",
+        "hash": "9f1d6036",
+        "encoded": "docker.build(%22$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22)",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "f88784",
+        "hash": "735ad8d1",
+        "encoded": "//%20Tag%20as%20latest",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "f88784",
+        "hash": "a205bb5c",
+        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20$%7BIMAGE_NAME%7D:latest%22",
         "prevChunkIds": []
       },
       "82": {
-        "chunkId": "f8f7cb",
-        "hash": "054d68a0",
-        "encoded": "aquasec/trivy:latest%20image%20--exit-code%200%20--severity%20HIGH,CRITICAL%20%5C",
+        "chunkId": "f88784",
+        "hash": "d43ab70e",
+        "encoded": "//%20Tag%20with%20registry%20prefix%20for%20push",
         "prevChunkIds": []
       },
       "83": {
-        "chunkId": "f8f7cb",
-        "hash": "029025ed",
-        "encoded": "--format%20table%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D",
+        "chunkId": "f88784",
+        "hash": "5bf2a33f",
+        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
         "prevChunkIds": []
       },
       "84": {
-        "chunkId": "f8f7cb",
-        "hash": "40a55e65",
-        "encoded": "%22%22%22",
+        "chunkId": "f88784",
+        "hash": "a9269212",
+        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20$%7BFULL_IMAGE_NAME%7D:latest%22",
         "prevChunkIds": []
       },
       "85": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "7bb00016",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "86": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "9c0e6ebc",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "87": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "f4ff50cd",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "89": {
-        "chunkId": "f8f7cb",
-        "hash": "42ec225b",
-        "encoded": "stage('Push%20to%20Registry')%20%7B",
+        "chunkId": "f88784",
+        "hash": "c074a550",
+        "encoded": "stage('Security%20Scan')%20%7B",
         "prevChunkIds": []
       },
       "90": {
-        "chunkId": "f8f7cb",
-        "hash": "44e97c38",
-        "encoded": "when%20%7B",
+        "chunkId": "f88784",
+        "hash": "c4e132ca",
+        "encoded": "steps%20%7B",
         "prevChunkIds": []
       },
       "91": {
-        "chunkId": "f8f7cb",
-        "hash": "edb83461",
-        "encoded": "branch%20'main'",
+        "chunkId": "f88784",
+        "hash": "30f6f40b",
+        "encoded": "echo%20%22Scanning%20image%20for%20vulnerabilities%20with%20Trivy...%22",
         "prevChunkIds": []
       },
       "92": {
-        "chunkId": "f8f7cb",
-        "hash": "06a855c2",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "3926c166",
+        "encoded": "script%20%7B",
         "prevChunkIds": []
       },
       "93": {
-        "chunkId": "f8f7cb",
-        "hash": "d38c98dd",
-        "encoded": "steps%20%7B",
-        "prevChunkIds": []
-      },
-      "94": {
-        "chunkId": "f8f7cb",
-        "hash": "b3613983",
-        "encoded": "echo%20%22Pushing%20image%20to%20registry...%22",
-        "prevChunkIds": []
-      },
-      "95": {
-        "chunkId": "f8f7cb",
-        "hash": "632d885a",
-        "encoded": "script%20%7B",
-        "prevChunkIds": []
-      },
-      "96": {
-        "chunkId": "f8f7cb",
-        "hash": "4ee1351c",
-        "encoded": "withCredentials(%5BusernamePassword(",
-        "prevChunkIds": []
-      },
-      "97": {
-        "chunkId": "f8f7cb",
-        "hash": "4dd27af8",
-        "encoded": "credentialsId:%20'docker-registry-credentials',",
-        "prevChunkIds": []
-      },
-      "98": {
-        "chunkId": "f8f7cb",
-        "hash": "318e5494",
-        "encoded": "usernameVariable:%20'DOCKER_USER',",
-        "prevChunkIds": []
-      },
-      "99": {
-        "chunkId": "f8f7cb",
-        "hash": "8a93cbb6",
-        "encoded": "passwordVariable:%20'DOCKER_PASS'",
-        "prevChunkIds": []
-      },
-      "100": {
-        "chunkId": "f8f7cb",
-        "hash": "7516b152",
-        "encoded": ")%5D)%20%7B",
-        "prevChunkIds": []
-      },
-      "101": {
-        "chunkId": "f8f7cb",
-        "hash": "9becb501",
-        "encoded": "sh%20%22echo%20%5C$DOCKER_PASS%20%7C%20docker%20login%20-u%20%5C$DOCKER_USER%20--password-stdin%20%5C$%7BDOCKER_REGISTRY%7D%22",
-        "prevChunkIds": []
-      },
-      "102": {
-        "chunkId": "f8f7cb",
-        "hash": "541792fc",
-        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
-        "prevChunkIds": []
-      },
-      "103": {
-        "chunkId": "f8f7cb",
-        "hash": "eaa66993",
-        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:latest%22",
-        "prevChunkIds": []
-      },
-      "104": {
-        "chunkId": "f8f7cb",
-        "hash": "d22c464a",
-        "encoded": "sh%20%22docker%20push%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
-        "prevChunkIds": []
-      },
-      "105": {
-        "chunkId": "f8f7cb",
-        "hash": "c2e97731",
-        "encoded": "sh%20%22docker%20push%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:latest%22",
-        "prevChunkIds": []
-      },
-      "106": {
-        "chunkId": "f8f7cb",
-        "hash": "5a59cee7",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "107": {
-        "chunkId": "f8f7cb",
-        "hash": "8c67c4cf",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "108": {
-        "chunkId": "f8f7cb",
-        "hash": "c146bd79",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "109": {
-        "chunkId": "f8f7cb",
-        "hash": "7e03f6ac",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "111": {
-        "chunkId": "f8f7cb",
-        "hash": "4cedd2e0",
-        "encoded": "stage('Deploy')%20%7B",
-        "prevChunkIds": []
-      },
-      "112": {
-        "chunkId": "f8f7cb",
-        "hash": "bab930d7",
-        "encoded": "when%20%7B",
-        "prevChunkIds": []
-      },
-      "113": {
-        "chunkId": "f8f7cb",
-        "hash": "993b76ba",
-        "encoded": "anyOf%20%7B",
-        "prevChunkIds": []
-      },
-      "114": {
-        "chunkId": "f8f7cb",
-        "hash": "9192a570",
-        "encoded": "branch%20'main'",
-        "prevChunkIds": []
-      },
-      "115": {
-        "chunkId": "f8f7cb",
-        "hash": "f6d75f0b",
-        "encoded": "branch%20'develop'",
-        "prevChunkIds": []
-      },
-      "116": {
-        "chunkId": "f8f7cb",
-        "hash": "2de22ffd",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "117": {
-        "chunkId": "f8f7cb",
-        "hash": "056477bc",
-        "encoded": "%7D",
-        "prevChunkIds": []
-      },
-      "118": {
-        "chunkId": "f8f7cb",
-        "hash": "d45e92d2",
-        "encoded": "steps%20%7B",
-        "prevChunkIds": []
-      },
-      "119": {
-        "chunkId": "f8f7cb",
-        "hash": "1cbcbd09",
-        "encoded": "echo%20%22Deploying%20to%20$%7BSPRING_PROFILE%7D%20environment...%22",
-        "prevChunkIds": []
-      },
-      "120": {
-        "chunkId": "f8f7cb",
-        "hash": "eb2c637c",
-        "encoded": "script%20%7B",
-        "prevChunkIds": []
-      },
-      "121": {
-        "chunkId": "f8f7cb",
-        "hash": "c1e7de32",
-        "encoded": "withCredentials(%5BusernamePassword(",
-        "prevChunkIds": []
-      },
-      "122": {
-        "chunkId": "f8f7cb",
-        "hash": "16556880",
-        "encoded": "credentialsId:%20%22deploy-$%7BSPRING_PROFILE%7D-credentials%22,",
-        "prevChunkIds": []
-      },
-      "123": {
-        "chunkId": "f8f7cb",
-        "hash": "4cb70432",
-        "encoded": "usernameVariable:%20'DEPLOY_USER',",
-        "prevChunkIds": []
-      },
-      "124": {
-        "chunkId": "f8f7cb",
-        "hash": "832add06",
-        "encoded": "passwordVariable:%20'DEPLOY_KEY'",
-        "prevChunkIds": []
-      },
-      "125": {
-        "chunkId": "f8f7cb",
-        "hash": "1baf3376",
-        "encoded": ")%5D)%20%7B",
-        "prevChunkIds": []
-      },
-      "126": {
-        "chunkId": "f8f7cb",
-        "hash": "65bd38ed",
-        "encoded": "//%20Example%20deployment%20command%20(adjust%20to%20your%20infrastructure)",
-        "prevChunkIds": []
-      },
-      "127": {
-        "chunkId": "f8f7cb",
-        "hash": "3ee0f43f",
+        "chunkId": "f88784",
+        "hash": "963ac4a8",
         "encoded": "sh%20%22%22%22",
         "prevChunkIds": []
       },
-      "128": {
-        "chunkId": "f8f7cb",
-        "hash": "380cba02",
-        "encoded": "ssh%20-i%20%5C$DEPLOY_KEY%20%5C$DEPLOY_USER@%5C$%7BDEPLOY_HOST_$%7BSPRING_PROFILE.toUpperCase()%7D%7D%20%5C",
+      "94": {
+        "chunkId": "f88784",
+        "hash": "dc8319d7",
+        "encoded": "docker%20run%20--rm%20-v%20/var/run/docker.sock:/var/run/docker.sock%20%5C",
         "prevChunkIds": []
       },
-      "129": {
-        "chunkId": "f8f7cb",
-        "hash": "d7b62a92",
-        "encoded": "%22docker%20pull%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20&&%20%5C",
+      "95": {
+        "chunkId": "f88784",
+        "hash": "abb582d4",
+        "encoded": "aquasec/trivy:latest%20image%20%5C",
         "prevChunkIds": []
       },
-      "130": {
-        "chunkId": "f8f7cb",
-        "hash": "080d258d",
-        "encoded": "docker%20stop%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+      "96": {
+        "chunkId": "f88784",
+        "hash": "2ce1b887",
+        "encoded": "--exit-code%200%20%5C",
         "prevChunkIds": []
       },
-      "131": {
-        "chunkId": "f8f7cb",
-        "hash": "f5a368a8",
-        "encoded": "docker%20rm%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+      "97": {
+        "chunkId": "f88784",
+        "hash": "9db18d14",
+        "encoded": "--severity%20HIGH,CRITICAL%20%5C",
         "prevChunkIds": []
       },
-      "132": {
-        "chunkId": "f8f7cb",
-        "hash": "be24678b",
-        "encoded": "docker%20run%20-d%20--name%20iss-tracker-$%7BSPRING_PROFILE%7D%20%5C",
+      "98": {
+        "chunkId": "f88784",
+        "hash": "41c0d57a",
+        "encoded": "--format%20table%20%5C",
         "prevChunkIds": []
       },
-      "133": {
-        "chunkId": "f8f7cb",
-        "hash": "5d9d951e",
-        "encoded": "-p%208080:8080%20%5C",
+      "99": {
+        "chunkId": "f88784",
+        "hash": "3e604fda",
+        "encoded": "$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D",
         "prevChunkIds": []
       },
-      "134": {
-        "chunkId": "f8f7cb",
-        "hash": "f293fa66",
-        "encoded": "-e%20SPRING_PROFILES_ACTIVE=$%7BSPRING_PROFILE%7D%20%5C",
-        "prevChunkIds": []
-      },
-      "135": {
-        "chunkId": "f8f7cb",
-        "hash": "eab6b679",
-        "encoded": "--restart%20unless-stopped%20%5C",
-        "prevChunkIds": []
-      },
-      "136": {
-        "chunkId": "f8f7cb",
-        "hash": "b72b5bba",
-        "encoded": "%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
-        "prevChunkIds": []
-      },
-      "137": {
-        "chunkId": "f8f7cb",
-        "hash": "f9de5ea2",
+      "100": {
+        "chunkId": "f88784",
+        "hash": "a239000a",
         "encoded": "%22%22%22",
         "prevChunkIds": []
       },
-      "138": {
-        "chunkId": "f8f7cb",
-        "hash": "a91910dd",
+      "101": {
+        "chunkId": "f88784",
+        "hash": "6bf91891",
         "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "f88784",
+        "hash": "79409de0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "f88784",
+        "hash": "34001782",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "f88784",
+        "hash": "472492c2",
+        "encoded": "stage('Smoke%20Test')%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "f88784",
+        "hash": "bca6ec4d",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "f88784",
+        "hash": "3bf9ac19",
+        "encoded": "echo%20%22Running%20container%20smoke%20test...%22",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "f88784",
+        "hash": "22b162be",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "f88784",
+        "hash": "8458a25d",
+        "encoded": "sh%20%22%22%22",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "f88784",
+        "hash": "b01d3f22",
+        "encoded": "#%20Start%20container",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "f88784",
+        "hash": "dd1d8156",
+        "encoded": "docker%20run%20-d%20--name%20iss-tracker-smoke-$%7BBUILD_NUMBER%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "f88784",
+        "hash": "bd8234c3",
+        "encoded": "-p%208081:8080%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "f88784",
+        "hash": "e9177a14",
+        "encoded": "#%20Wait%20for%20startup",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "f88784",
+        "hash": "80f7f861",
+        "encoded": "sleep%2020",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "f88784",
+        "hash": "0c6124e2",
+        "encoded": "#%20Test%20health%20endpoint",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "f88784",
+        "hash": "4e436894",
+        "encoded": "curl%20-f%20http://localhost:8081/actuator/health%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "f88784",
+        "hash": "80928a55",
+        "encoded": "#%20Test%20API%20with%20offline%20mode",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "f88784",
+        "hash": "16a9c8d2",
+        "encoded": "curl%20-f%20'http://localhost:8081/api/v1/iss/overview?lat=0&lon=0&offline=true'%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "f88784",
+        "hash": "4763c418",
+        "encoded": "#%20Cleanup",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "f88784",
+        "hash": "f4674a55",
+        "encoded": "docker%20stop%20iss-tracker-smoke-$%7BBUILD_NUMBER%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "f88784",
+        "hash": "4026a922",
+        "encoded": "docker%20rm%20iss-tracker-smoke-$%7BBUILD_NUMBER%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "f88784",
+        "hash": "d22c8e7d",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "f88784",
+        "hash": "b945986d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "f88784",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "f88784",
+        "hash": "ff6991dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "f88784",
+        "hash": "5779b63e",
+        "encoded": "stage('Push%20to%20Registry')%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "f88784",
+        "hash": "1c63dfb0",
+        "encoded": "when%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "f88784",
+        "hash": "4c4d5499",
+        "encoded": "branch%20'main'",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "f88784",
+        "hash": "59c23335",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "f88784",
+        "hash": "bc447727",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "f88784",
+        "hash": "6c534440",
+        "encoded": "echo%20%22Pushing%20image%20to%20registry:%20$%7BFULL_IMAGE_NAME%7D%22",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "f88784",
+        "hash": "466be282",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "f88784",
+        "hash": "6b7b48a0",
+        "encoded": "//%20Check%20if%20credentials%20exist",
         "prevChunkIds": []
       },
       "139": {
-        "chunkId": "f8f7cb",
-        "hash": "8e724f24",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "e9b3346f",
+        "encoded": "try%20%7B",
         "prevChunkIds": []
       },
       "140": {
-        "chunkId": "f8f7cb",
-        "hash": "be05556d",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "4e707f23",
+        "encoded": "withCredentials(%5BusernamePassword(",
         "prevChunkIds": []
       },
       "141": {
-        "chunkId": "f8f7cb",
-        "hash": "4e2389e2",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "aa152e5e",
+        "encoded": "credentialsId:%20'docker-registry-credentials',",
         "prevChunkIds": []
       },
       "142": {
-        "chunkId": "f8f7cb",
-        "hash": "1b2fde43",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "02302c37",
+        "encoded": "usernameVariable:%20'DOCKER_USER',",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "f88784",
+        "hash": "d4a019a3",
+        "encoded": "passwordVariable:%20'DOCKER_PASS'",
         "prevChunkIds": []
       },
       "144": {
-        "chunkId": "f8f7cb",
-        "hash": "55112592",
-        "encoded": "post%20%7B",
+        "chunkId": "f88784",
+        "hash": "de1eb2c6",
+        "encoded": ")%5D)%20%7B",
         "prevChunkIds": []
       },
       "145": {
-        "chunkId": "f8f7cb",
-        "hash": "0e554ca7",
-        "encoded": "always%20%7B",
+        "chunkId": "f88784",
+        "hash": "64dcc68f",
+        "encoded": "echo%20%22Logging%20in%20to%20$%7BDOCKER_REGISTRY%7D...%22",
         "prevChunkIds": []
       },
       "146": {
-        "chunkId": "f8f7cb",
-        "hash": "164b3e06",
-        "encoded": "echo%20%22Cleaning%20up...%22",
-        "prevChunkIds": []
-      },
-      "147": {
-        "chunkId": "f8f7cb",
-        "hash": "955847d8",
-        "encoded": "sh%20'docker%20system%20prune%20-f%20%7C%7C%20true'",
+        "chunkId": "f88784",
+        "hash": "e228dec4",
+        "encoded": "sh%20%22echo%20%5C$DOCKER_PASS%20%7C%20docker%20login%20-u%20%5C$DOCKER_USER%20--password-stdin%20$%7BDOCKER_REGISTRY%7D%22",
         "prevChunkIds": []
       },
       "148": {
-        "chunkId": "f8f7cb",
-        "hash": "a6adb000",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "d9e79b8d",
+        "encoded": "echo%20%22Pushing%20$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D...%22",
         "prevChunkIds": []
       },
       "149": {
-        "chunkId": "f8f7cb",
-        "hash": "5bd54db7",
-        "encoded": "success%20%7B",
-        "prevChunkIds": []
-      },
-      "150": {
-        "chunkId": "f8f7cb",
-        "hash": "ffa5c2dc",
-        "encoded": "echo%20%22%E2%9C%85%20Pipeline%20completed%20successfully!%22",
+        "chunkId": "f88784",
+        "hash": "b9ecf6d7",
+        "encoded": "sh%20%22docker%20push%20$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
         "prevChunkIds": []
       },
       "151": {
-        "chunkId": "f8f7cb",
-        "hash": "5a35ac4c",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "1d6524c5",
+        "encoded": "echo%20%22Pushing%20$%7BFULL_IMAGE_NAME%7D:latest...%22",
         "prevChunkIds": []
       },
       "152": {
-        "chunkId": "f8f7cb",
-        "hash": "02542755",
-        "encoded": "failure%20%7B",
-        "prevChunkIds": []
-      },
-      "153": {
-        "chunkId": "f8f7cb",
-        "hash": "a388e527",
-        "encoded": "echo%20%22%E2%9D%8C%20Pipeline%20failed.%20Check%20logs%20above.%22",
+        "chunkId": "f88784",
+        "hash": "7cf9daeb",
+        "encoded": "sh%20%22docker%20push%20$%7BFULL_IMAGE_NAME%7D:latest%22",
         "prevChunkIds": []
       },
       "154": {
-        "chunkId": "f8f7cb",
-        "hash": "dbb55d46",
-        "encoded": "%7D",
+        "chunkId": "f88784",
+        "hash": "cdd40bb5",
+        "encoded": "echo%20%22%E2%9C%85%20Image%20pushed%20successfully!%22",
         "prevChunkIds": []
       },
       "155": {
-        "chunkId": "f8f7cb",
+        "chunkId": "f88784",
         "hash": "0b3cc65a",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "156": {
+        "chunkId": "f88784",
+        "hash": "ece54c8e",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "f88784",
+        "hash": "e35c10df",
+        "encoded": "echo%20%22%E2%9A%A0%EF%B8%8F%20WARNING:%20Could%20not%20push%20to%20registry.%20Credential%20'docker-registry-credentials'%20not%20found.%22",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "f88784",
+        "hash": "1583d9ff",
+        "encoded": "echo%20%22%20%20%20Configure%20credentials%20in%20Jenkins:%20Manage%20Jenkins%20%E2%86%92%20Credentials%22",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "f88784",
+        "hash": "a1ffc404",
+        "encoded": "echo%20%22%20%20%20See%20SECRETS_SETUP.md%20for%20detailed%20instructions.%22",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "f88784",
+        "hash": "633ae19f",
+        "encoded": "echo%20%22%20%20%20Continuing%20pipeline...%22",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "f88784",
+        "hash": "682589d1",
+        "encoded": "currentBuild.result%20=%20'UNSTABLE'",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "f88784",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "f88784",
+        "hash": "b205e858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "f88784",
+        "hash": "3e35702d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "f88784",
+        "hash": "a4485fa2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "f88784",
+        "hash": "16c69ef2",
+        "encoded": "stage('Deploy')%20%7B",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "f88784",
+        "hash": "746c3bb3",
+        "encoded": "when%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "f88784",
+        "hash": "b4d2f893",
+        "encoded": "anyOf%20%7B",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "f88784",
+        "hash": "b6d6e296",
+        "encoded": "branch%20'main'",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "f88784",
+        "hash": "688ad5ec",
+        "encoded": "branch%20'develop'",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "f88784",
+        "hash": "6577ae4e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "f88784",
+        "hash": "2107d871",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "f88784",
+        "hash": "abf75102",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "f88784",
+        "hash": "2c466536",
+        "encoded": "echo%20%22Deploying%20to%20$%7BSPRING_PROFILE%7D%20environment...%22",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "f88784",
+        "hash": "060017cd",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "f88784",
+        "hash": "98b432bf",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "f88784",
+        "hash": "ba69bf5a",
+        "encoded": "//%20Get%20deployment%20host%20from%20environment%20variable",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "f88784",
+        "hash": "566f7338",
+        "encoded": "def%20deployHost%20=%20env.%22DEPLOY_HOST_$%7BSPRING_PROFILE.toUpperCase()%7D%22",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "f88784",
+        "hash": "82681ef6",
+        "encoded": "if%20(!deployHost)%20%7B",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "f88784",
+        "hash": "ae51ce4f",
+        "encoded": "echo%20%22%E2%9A%A0%EF%B8%8F%20WARNING:%20DEPLOY_HOST_$%7BSPRING_PROFILE.toUpperCase()%7D%20not%20set.%20Skipping%20deployment.%22",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "f88784",
+        "hash": "34846834",
+        "encoded": "echo%20%22%20%20%20Configure%20in%20Jenkins:%20Manage%20Jenkins%20%E2%86%92%20Configure%20System%20%E2%86%92%20Global%20properties%22",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "f88784",
+        "hash": "ee836e59",
+        "encoded": "currentBuild.result%20=%20'UNSTABLE'",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "f88784",
+        "hash": "4add04c4",
+        "encoded": "return",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "f88784",
+        "hash": "92ab12a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "f88784",
+        "hash": "bfa1d153",
+        "encoded": "withCredentials(%5BsshUserPrivateKey(",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "f88784",
+        "hash": "d426cd73",
+        "encoded": "credentialsId:%20%22deploy-$%7BSPRING_PROFILE%7D-credentials%22,",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "f88784",
+        "hash": "7979a08b",
+        "encoded": "keyFileVariable:%20'SSH_KEY',",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "f88784",
+        "hash": "90a01f33",
+        "encoded": "usernameVariable:%20'SSH_USER'",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "f88784",
+        "hash": "4b0510aa",
+        "encoded": ")%5D)%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "f88784",
+        "hash": "ff970173",
+        "encoded": "echo%20%22Deploying%20to%20$%7BdeployHost%7D...%22",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "f88784",
+        "hash": "a422a242",
+        "encoded": "sh%20%22%22%22",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "f88784",
+        "hash": "b188f260",
+        "encoded": "ssh%20-o%20StrictHostKeyChecking=no%20%5C",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "f88784",
+        "hash": "cc3820a7",
+        "encoded": "-i%20%5C$SSH_KEY%20%5C$SSH_USER@$%7BdeployHost%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "f88784",
+        "hash": "808a8322",
+        "encoded": "%22docker%20pull%20$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "f88784",
+        "hash": "71a51763",
+        "encoded": "docker%20stop%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "f88784",
+        "hash": "e9a625b4",
+        "encoded": "docker%20rm%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "f88784",
+        "hash": "7b8ddc1c",
+        "encoded": "docker%20run%20-d%20--name%20iss-tracker-$%7BSPRING_PROFILE%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "f88784",
+        "hash": "1d4f807a",
+        "encoded": "-p%208080:8080%20%5C",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "f88784",
+        "hash": "703ed701",
+        "encoded": "-e%20SPRING_PROFILES_ACTIVE=$%7BSPRING_PROFILE%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "f88784",
+        "hash": "58428be1",
+        "encoded": "--restart%20unless-stopped%20%5C",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "f88784",
+        "hash": "f5ff909c",
+        "encoded": "$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "f88784",
+        "hash": "5664a170",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "f88784",
+        "hash": "ad76250f",
+        "encoded": "echo%20%22%E2%9C%85%20Deployed%20successfully%20to%20$%7BSPRING_PROFILE%7D!%22",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "f88784",
+        "hash": "d5064ca8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "f88784",
+        "hash": "1ccdf2ce",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "f88784",
+        "hash": "8fba618d",
+        "encoded": "echo%20%22%E2%9A%A0%EF%B8%8F%20WARNING:%20Deployment%20failed.%20Credential%20'deploy-$%7BSPRING_PROFILE%7D-credentials'%20not%20found.%22",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "f88784",
+        "hash": "5be2129c",
+        "encoded": "echo%20%22%20%20%20Configure%20SSH%20credentials%20in%20Jenkins%20for%20deployment.%22",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "f88784",
+        "hash": "6de73977",
+        "encoded": "echo%20%22%20%20%20See%20SECRETS_SETUP.md%20for%20detailed%20instructions.%22",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "f88784",
+        "hash": "25932fc8",
+        "encoded": "currentBuild.result%20=%20'UNSTABLE'",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "f88784",
+        "hash": "5328d41a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "f88784",
+        "hash": "b9f9adb8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "f88784",
+        "hash": "8da2b88b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "f88784",
+        "hash": "84f00426",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "f88784",
+        "hash": "ce884ff8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "f88784",
+        "hash": "33ba80d7",
+        "encoded": "post%20%7B",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "f88784",
+        "hash": "86bcc7d4",
+        "encoded": "always%20%7B",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "f88784",
+        "hash": "0c522299",
+        "encoded": "echo%20%22Cleaning%20up%20Docker%20images...%22",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "f88784",
+        "hash": "93cf7362",
+        "encoded": "sh%20'docker%20system%20prune%20-f%20%7C%7C%20true'",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "f88784",
+        "hash": "75bbcadd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "f88784",
+        "hash": "650fca38",
+        "encoded": "success%20%7B",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "f88784",
+        "hash": "afbbfde9",
+        "encoded": "echo%20%22%E2%9C%85%20Pipeline%20completed%20successfully!%22",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "f88784",
+        "hash": "343541d3",
+        "encoded": "echo%20%22Image:%20$%7BFULL_IMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "f88784",
+        "hash": "30e86338",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "f88784",
+        "hash": "3915eac8",
+        "encoded": "unstable%20%7B",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "f88784",
+        "hash": "fb33febb",
+        "encoded": "echo%20%22%E2%9A%A0%EF%B8%8F%20Pipeline%20completed%20with%20warnings%20(check%20logs%20above).%22",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "f88784",
+        "hash": "0976c8c6",
+        "encoded": "echo%20%22Most%20likely:%20registry%20credentials%20or%20deployment%20credentials%20not%20configured.%22",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "f88784",
+        "hash": "158fcb14",
+        "encoded": "echo%20%22See%20SECRETS_SETUP.md%20for%20setup%20instructions.%22",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "f88784",
+        "hash": "156d2c96",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "f88784",
+        "hash": "4d4edeef",
+        "encoded": "failure%20%7B",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "f88784",
+        "hash": "71da9bd3",
+        "encoded": "echo%20%22%E2%9D%8C%20Pipeline%20failed.%20Check%20logs%20above%20for%20errors.%22",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "f88784",
+        "hash": "65e737b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "f88784",
+        "hash": "0c95109b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "f88784",
+        "hash": "58b80ca9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "239": {
         "chunkId": "f8f7cb",
-        "hash": "c2938672",
+        "hash": "d844d979",
+        "encoded": "//%20Stages:%20checkout,%20backend%20tests,%20frontend%20tests,%20build%20image,%20Trivy%20scan,%20push,%20deploy",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "f8f7cb",
+        "hash": "d35288df",
+        "encoded": "//%20Per-environment%20config%20via%20Spring%20profiles:%20dev/staging/prod",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "f8f7cb",
+        "hash": "2650aeb8",
+        "encoded": "pipeline%20%7B",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "f8f7cb",
+        "hash": "182198c4",
+        "encoded": "agent%20any",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "f8f7cb",
+        "hash": "311a5c64",
+        "encoded": "environment%20%7B",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "f8f7cb",
+        "hash": "97bb0f36",
+        "encoded": "//%20Docker%20registry%20and%20image%20name%20(adjust%20to%20your%20registry)",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "f8f7cb",
+        "hash": "4bfd3557",
+        "encoded": "DOCKER_REGISTRY%20=%20credentials('docker-registry-url')",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "f8f7cb",
+        "hash": "a2590662",
+        "encoded": "IMAGE_NAME%20=%20%22iss-tracker%22",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "f8f7cb",
+        "hash": "5f77a146",
+        "encoded": "IMAGE_TAG%20=%20%22$%7Benv.BUILD_NUMBER%7D%22",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "f8f7cb",
+        "hash": "8ebe50f7",
+        "encoded": "//%20Spring%20Boot%20profile%20per%20environment",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "f8f7cb",
+        "hash": "018399ec",
+        "encoded": "SPRING_PROFILE%20=%20%22$%7Benv.DEPLOY_ENV%20?:%20'dev'%7D%22",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "f8f7cb",
+        "hash": "c0a12feb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "f8f7cb",
+        "hash": "1b3b733f",
+        "encoded": "stages%20%7B",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "f8f7cb",
+        "hash": "d249973a",
+        "encoded": "stage('Checkout')%20%7B",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "f8f7cb",
+        "hash": "829fe47b",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "f8f7cb",
+        "hash": "c57fca07",
+        "encoded": "echo%20%22Checking%20out%20code...%22",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "f8f7cb",
+        "hash": "027e397e",
+        "encoded": "checkout%20scm",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "f8f7cb",
+        "hash": "e40a7bcd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "f8f7cb",
+        "hash": "d163128b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "f8f7cb",
+        "hash": "7e324850",
+        "encoded": "stage('Backend%20Tests')%20%7B",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "f8f7cb",
+        "hash": "f2131721",
+        "encoded": "agent%20%7B",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "f8f7cb",
+        "hash": "449478bf",
+        "encoded": "docker%20%7B",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "f8f7cb",
+        "hash": "405b3b5a",
+        "encoded": "image%20'maven:3.9-eclipse-temurin-21'",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "f8f7cb",
+        "hash": "03e708ae",
+        "encoded": "args%20'-v%20$HOME/.m2:/root/.m2'",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "f8f7cb",
+        "hash": "5c85fe45",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "f8f7cb",
+        "hash": "61d1130a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "f8f7cb",
+        "hash": "8ee50f45",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "f8f7cb",
+        "hash": "37ac8865",
+        "encoded": "echo%20%22Running%20backend%20tests%20with%20Maven...%22",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "f8f7cb",
+        "hash": "19a269c4",
+        "encoded": "dir('backend')%20%7B",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "f8f7cb",
+        "hash": "05591ebc",
+        "encoded": "sh%20'mvn%20-B%20-q%20clean%20verify'",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "f8f7cb",
+        "hash": "2eb2d005",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "f8f7cb",
+        "hash": "28746c88",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "f8f7cb",
+        "hash": "2c733b6d",
+        "encoded": "post%20%7B",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "f8f7cb",
+        "hash": "c9482e8e",
+        "encoded": "always%20%7B",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "f8f7cb",
+        "hash": "0ec82547",
+        "encoded": "junit%20'backend/target/surefire-reports/**/*.xml'",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "f8f7cb",
+        "hash": "4b0e2cfa",
+        "encoded": "publishHTML(%5B",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "f8f7cb",
+        "hash": "e459aeb2",
+        "encoded": "reportDir:%20'backend/target/site/jacoco',",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "f8f7cb",
+        "hash": "5dde7f28",
+        "encoded": "reportFiles:%20'index.html',",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "f8f7cb",
+        "hash": "0de83fc6",
+        "encoded": "reportName:%20'JaCoCo%20Coverage%20Report',",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "f8f7cb",
+        "hash": "324945b3",
+        "encoded": "allowMissing:%20true",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "f8f7cb",
+        "hash": "8e5c63e8",
+        "encoded": "%5D)",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "f8f7cb",
+        "hash": "43651e39",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "f8f7cb",
+        "hash": "40b784f3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "f8f7cb",
+        "hash": "c89f6ffc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "f8f7cb",
+        "hash": "3abc224b",
+        "encoded": "stage('Frontend%20Tests')%20%7B",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "f8f7cb",
+        "hash": "9bc275b6",
+        "encoded": "agent%20%7B",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "f8f7cb",
+        "hash": "b13b5eeb",
+        "encoded": "docker%20%7B",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "f8f7cb",
+        "hash": "df224feb",
+        "encoded": "image%20'node:20-alpine'",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "f8f7cb",
+        "hash": "70d6c9f9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "f8f7cb",
+        "hash": "d71f86cc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "f8f7cb",
+        "hash": "13ffcbb2",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "f8f7cb",
+        "hash": "5df788d4",
+        "encoded": "echo%20%22Running%20frontend%20tests%20with%20Vitest...%22",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "f8f7cb",
+        "hash": "7de7ea1d",
+        "encoded": "dir('frontend')%20%7B",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "f8f7cb",
+        "hash": "2a28b14b",
+        "encoded": "sh%20'npm%20ci'",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "f8f7cb",
+        "hash": "1c99d8de",
+        "encoded": "sh%20'npm%20test%20--%20--run'",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "f8f7cb",
+        "hash": "75239ee8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "f8f7cb",
+        "hash": "6a99a355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "f8f7cb",
+        "hash": "b4d113d9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "f8f7cb",
+        "hash": "1700abbf",
+        "encoded": "stage('Build%20Docker%20Image')%20%7B",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "f8f7cb",
+        "hash": "1edfc424",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "f8f7cb",
+        "hash": "5b1f8d44",
+        "encoded": "echo%20%22Building%20Docker%20image:%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "f8f7cb",
+        "hash": "c928836c",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "f8f7cb",
+        "hash": "5d4fae0d",
+        "encoded": "docker.build(%22$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22)",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "f8f7cb",
+        "hash": "00430729",
+        "encoded": "docker.image(%22$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22).tag('latest')",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "f8f7cb",
+        "hash": "b19573d5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "f8f7cb",
+        "hash": "972a0b71",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "f8f7cb",
+        "hash": "290ef136",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "f8f7cb",
+        "hash": "d257f3bd",
+        "encoded": "stage('Security%20Scan')%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "f8f7cb",
+        "hash": "3027622c",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "f8f7cb",
+        "hash": "7e902d33",
+        "encoded": "echo%20%22Scanning%20image%20for%20vulnerabilities%20with%20Trivy...%22",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "f8f7cb",
+        "hash": "2951ad6f",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "f8f7cb",
+        "hash": "d5463f85",
+        "encoded": "sh%20%22%22%22",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "f8f7cb",
+        "hash": "68f68c9a",
+        "encoded": "docker%20run%20--rm%20-v%20/var/run/docker.sock:/var/run/docker.sock%20%5C",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "f8f7cb",
+        "hash": "62d662ff",
+        "encoded": "aquasec/trivy:latest%20image%20--exit-code%200%20--severity%20HIGH,CRITICAL%20%5C",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "f8f7cb",
+        "hash": "3b021a71",
+        "encoded": "--format%20table%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "f8f7cb",
+        "hash": "6bba61ec",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "f8f7cb",
+        "hash": "ec4f700a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "f8f7cb",
+        "hash": "97eb50be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "f8f7cb",
+        "hash": "895a4ec6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "f8f7cb",
+        "hash": "51b230d3",
+        "encoded": "stage('Push%20to%20Registry')%20%7B",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "f8f7cb",
+        "hash": "e2f2e53f",
+        "encoded": "when%20%7B",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "f8f7cb",
+        "hash": "28778b2f",
+        "encoded": "branch%20'main'",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "f8f7cb",
+        "hash": "55a9e46b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "f8f7cb",
+        "hash": "3021ff8f",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "f8f7cb",
+        "hash": "69443a14",
+        "encoded": "echo%20%22Pushing%20image%20to%20registry...%22",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "f8f7cb",
+        "hash": "78179285",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "f8f7cb",
+        "hash": "2f0bf284",
+        "encoded": "withCredentials(%5BusernamePassword(",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "f8f7cb",
+        "hash": "0ff225c6",
+        "encoded": "credentialsId:%20'docker-registry-credentials',",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "f8f7cb",
+        "hash": "b2562c1e",
+        "encoded": "usernameVariable:%20'DOCKER_USER',",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "f8f7cb",
+        "hash": "5edd3b44",
+        "encoded": "passwordVariable:%20'DOCKER_PASS'",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "f8f7cb",
+        "hash": "3c6dd873",
+        "encoded": ")%5D)%20%7B",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "f8f7cb",
+        "hash": "14754590",
+        "encoded": "sh%20%22echo%20%5C$DOCKER_PASS%20%7C%20docker%20login%20-u%20%5C$DOCKER_USER%20--password-stdin%20%5C$%7BDOCKER_REGISTRY%7D%22",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "f8f7cb",
+        "hash": "ed6cfdb7",
+        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "f8f7cb",
+        "hash": "56d5b9d5",
+        "encoded": "sh%20%22docker%20tag%20$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:latest%22",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "f8f7cb",
+        "hash": "c5614adf",
+        "encoded": "sh%20%22docker%20push%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "f8f7cb",
+        "hash": "adbcccba",
+        "encoded": "sh%20%22docker%20push%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:latest%22",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "f8f7cb",
+        "hash": "d75ea64d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "f8f7cb",
+        "hash": "992696b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "f8f7cb",
+        "hash": "b0d56384",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "f8f7cb",
+        "hash": "15bfe668",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "f8f7cb",
+        "hash": "c8cddb7e",
+        "encoded": "stage('Deploy')%20%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "f8f7cb",
+        "hash": "ecf6955d",
+        "encoded": "when%20%7B",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "f8f7cb",
+        "hash": "e4806e46",
+        "encoded": "anyOf%20%7B",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "f8f7cb",
+        "hash": "f1f98f23",
+        "encoded": "branch%20'main'",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "f8f7cb",
+        "hash": "20b74253",
+        "encoded": "branch%20'develop'",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "f8f7cb",
+        "hash": "bb5dc0a7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "f8f7cb",
+        "hash": "a3fee69b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "f8f7cb",
+        "hash": "8d919966",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "f8f7cb",
+        "hash": "e29fae52",
+        "encoded": "echo%20%22Deploying%20to%20$%7BSPRING_PROFILE%7D%20environment...%22",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "f8f7cb",
+        "hash": "7c6abcea",
+        "encoded": "script%20%7B",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "f8f7cb",
+        "hash": "1e2d76bd",
+        "encoded": "withCredentials(%5BusernamePassword(",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "f8f7cb",
+        "hash": "2fa8bb02",
+        "encoded": "credentialsId:%20%22deploy-$%7BSPRING_PROFILE%7D-credentials%22,",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "f8f7cb",
+        "hash": "128c4f47",
+        "encoded": "usernameVariable:%20'DEPLOY_USER',",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "f8f7cb",
+        "hash": "456b57a1",
+        "encoded": "passwordVariable:%20'DEPLOY_KEY'",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "f8f7cb",
+        "hash": "ea3a42f8",
+        "encoded": ")%5D)%20%7B",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "f8f7cb",
+        "hash": "eaeb28cd",
+        "encoded": "//%20Example%20deployment%20command%20(adjust%20to%20your%20infrastructure)",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "f8f7cb",
+        "hash": "46fd8fb9",
+        "encoded": "sh%20%22%22%22",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "f8f7cb",
+        "hash": "ec68474e",
+        "encoded": "ssh%20-i%20%5C$DEPLOY_KEY%20%5C$DEPLOY_USER@%5C$%7BDEPLOY_HOST_$%7BSPRING_PROFILE.toUpperCase()%7D%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "f8f7cb",
+        "hash": "b7526ee0",
+        "encoded": "%22docker%20pull%20%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "f8f7cb",
+        "hash": "7165d16a",
+        "encoded": "docker%20stop%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "f8f7cb",
+        "hash": "ed662e5f",
+        "encoded": "docker%20rm%20iss-tracker-$%7BSPRING_PROFILE%7D%20%7C%7C%20true%20&&%20%5C",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "f8f7cb",
+        "hash": "cf45ee11",
+        "encoded": "docker%20run%20-d%20--name%20iss-tracker-$%7BSPRING_PROFILE%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "f8f7cb",
+        "hash": "9c9af55c",
+        "encoded": "-p%208080:8080%20%5C",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "f8f7cb",
+        "hash": "6ae541dd",
+        "encoded": "-e%20SPRING_PROFILES_ACTIVE=$%7BSPRING_PROFILE%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "f8f7cb",
+        "hash": "053ba542",
+        "encoded": "--restart%20unless-stopped%20%5C",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "f8f7cb",
+        "hash": "a0471d05",
+        "encoded": "%5C$%7BDOCKER_REGISTRY%7D/$%7BIMAGE_NAME%7D:$%7BIMAGE_TAG%7D%22",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "f8f7cb",
+        "hash": "104d49f4",
+        "encoded": "%22%22%22",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "f8f7cb",
+        "hash": "b3bd566b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "f8f7cb",
+        "hash": "53e09fdc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "f8f7cb",
+        "hash": "749a6433",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "f8f7cb",
+        "hash": "44c3a508",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "f8f7cb",
+        "hash": "c9c33bb8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "f8f7cb",
+        "hash": "9cc2a340",
+        "encoded": "post%20%7B",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "f8f7cb",
+        "hash": "2b66048c",
+        "encoded": "always%20%7B",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "f8f7cb",
+        "hash": "2bd66a20",
+        "encoded": "echo%20%22Cleaning%20up...%22",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "f8f7cb",
+        "hash": "0d739c02",
+        "encoded": "sh%20'docker%20system%20prune%20-f%20%7C%7C%20true'",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "f8f7cb",
+        "hash": "e90535c0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "f8f7cb",
+        "hash": "afa36f85",
+        "encoded": "success%20%7B",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "f8f7cb",
+        "hash": "05d4e727",
+        "encoded": "echo%20%22%E2%9C%85%20Pipeline%20completed%20successfully!%22",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "f8f7cb",
+        "hash": "9b75c53d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "f8f7cb",
+        "hash": "f02e4fa9",
+        "encoded": "failure%20%7B",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "f8f7cb",
+        "hash": "f6e69ed7",
+        "encoded": "echo%20%22%E2%9D%8C%20Pipeline%20failed.%20Check%20logs%20above.%22",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "f8f7cb",
+        "hash": "04240e1e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "f8f7cb",
+        "hash": "b51ca264",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "f8f7cb",
+        "hash": "de1ace9c",
         "encoded": "%7D",
         "prevChunkIds": []
       }

@@ -1,0 +1,1057 @@
+{
+  "SECRETS_SETUP.md": {
+    "filename": "SECRETS_SETUP.md",
+    "path": "SECRETS_SETUP.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "0c085e": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793577867,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "7dcec627",
+          "files": "8224eedc"
+        },
+        "hash": "b4156d74",
+        "messageId": "system_758feb90-d650-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 05:34:27\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "0c085e",
+        "hash": "068b9fc9",
+        "encoded": "#%20Secrets%20and%20Credentials%20Setup%20Guide",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "0c085e",
+        "hash": "675c612a",
+        "encoded": "This%20document%20explains%20how%20to%20configure%20secrets%20for%20CI/CD%20pipelines.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "0c085e",
+        "hash": "0b8d5084",
+        "encoded": "##%20%F0%9F%94%90%20GitHub%20Actions%20Secrets",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "0c085e",
+        "hash": "4aff8b71",
+        "encoded": "###%20Required%20Secrets%20(for%20push-to-registry%20job)",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "0c085e",
+        "hash": "569ed6a7",
+        "encoded": "To%20enable%20Docker%20image%20pushing%20to%20a%20container%20registry,%20configure%20these%20secrets%20in%20your%20GitHub%20repository:",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "0c085e",
+        "hash": "491dcf60",
+        "encoded": "**Go%20to**:%20Repository%20%E2%86%92%20Settings%20%E2%86%92%20Secrets%20and%20variables%20%E2%86%92%20Actions%20%E2%86%92%20New%20repository%20secret",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "0c085e",
+        "hash": "e1838ac7",
+        "encoded": "%7C%20Secret%20Name%20%7C%20Description%20%7C%20Example%20Value%20%7C",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "0c085e",
+        "hash": "c3e2cbe6",
+        "encoded": "%7C-------------%7C-------------%7C---------------%7C",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "0c085e",
+        "hash": "d852ab1f",
+        "encoded": "%7C%20%60DOCKER_REGISTRY%60%20%7C%20Container%20registry%20URL%20%7C%20%60docker.io%60%20or%20%60ghcr.io%60%20or%20%60your-registry.com%60%20%7C",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "0c085e",
+        "hash": "763e929a",
+        "encoded": "%7C%20%60DOCKER_USERNAME%60%20%7C%20Registry%20username%20%7C%20%60your-dockerhub-username%60%20%7C",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "0c085e",
+        "hash": "8d874f69",
+        "encoded": "%7C%20%60DOCKER_PASSWORD%60%20%7C%20Registry%20password/token%20%7C%20%60dckr_pat_abc123...%60%20(use%20access%20token,%20not%20password)%20%7C",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "0c085e",
+        "hash": "c59a56bc",
+        "encoded": "###%20How%20to%20Create%20Docker%20Hub%20Access%20Token",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "0c085e",
+        "hash": "344bbcc4",
+        "encoded": "1.%20Log%20in%20to%20%5BDocker%20Hub%5D(https://hub.docker.com/)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "0c085e",
+        "hash": "45ccab91",
+        "encoded": "2.%20Go%20to%20**Account%20Settings**%20%E2%86%92%20**Security**%20%E2%86%92%20**New%20Access%20Token**",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "0c085e",
+        "hash": "0087e539",
+        "encoded": "3.%20Name:%20%60github-actions-iss-tracker%60",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "0c085e",
+        "hash": "e33c00b1",
+        "encoded": "4.%20Permissions:%20**Read,%20Write,%20Delete**",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "0c085e",
+        "hash": "94a28a3c",
+        "encoded": "5.%20Copy%20the%20token%20(you%20won't%20see%20it%20again!)",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "0c085e",
+        "hash": "15ba9263",
+        "encoded": "6.%20Add%20to%20GitHub%20secrets%20as%20%60DOCKER_PASSWORD%60",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "0c085e",
+        "hash": "8f26cd62",
+        "encoded": "###%20How%20to%20Use%20GitHub%20Container%20Registry%20(GHCR)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "0c085e",
+        "hash": "0718e4ac",
+        "encoded": "Alternatively,%20use%20GitHub's%20own%20registry%20(no%20external%20account%20needed):",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "0c085e",
+        "hash": "9f1f41bb",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "0c085e",
+        "hash": "5d075a70",
+        "encoded": "DOCKER_REGISTRY:%20ghcr.io",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "0c085e",
+        "hash": "27c96907",
+        "encoded": "DOCKER_USERNAME:%20$%7B%7B%20github.actor%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "0c085e",
+        "hash": "4a47891a",
+        "encoded": "DOCKER_PASSWORD:%20$%7B%7B%20secrets.GITHUB_TOKEN%20%7D%7D%20%20#%20Auto-provided%20by%20GitHub",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "0c085e",
+        "hash": "a355a5c4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "0c085e",
+        "hash": "e99d6c06",
+        "encoded": "**Update%20workflow**%20to%20use%20GHCR:",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "0c085e",
+        "hash": "630c2417",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "0c085e",
+        "hash": "df18896f",
+        "encoded": "-%20name:%20Log%20in%20to%20GitHub%20Container%20Registry",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "0c085e",
+        "hash": "6530c364",
+        "encoded": "uses:%20docker/login-action@v3",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "0c085e",
+        "hash": "d1b5f158",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "0c085e",
+        "hash": "e37779f0",
+        "encoded": "registry:%20ghcr.io",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "0c085e",
+        "hash": "6b238ea8",
+        "encoded": "username:%20$%7B%7B%20github.actor%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "0c085e",
+        "hash": "5bcd626f",
+        "encoded": "password:%20$%7B%7B%20secrets.GITHUB_TOKEN%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "0c085e",
+        "hash": "5daefab5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "0c085e",
+        "hash": "8aab50c1",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "0c085e",
+        "hash": "c196b239",
+        "encoded": "##%20%F0%9F%94%A7%20Jenkins%20Credentials",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "0c085e",
+        "hash": "aa4d4fdf",
+        "encoded": "###%20Required%20Jenkins%20Credentials",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "0c085e",
+        "hash": "e66f1eab",
+        "encoded": "The%20Jenkinsfile%20expects%20these%20credentials%20to%20be%20configured%20in%20Jenkins:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "0c085e",
+        "hash": "b0323bbd",
+        "encoded": "####%201.%20Docker%20Registry%20URL%20(Secret%20Text)",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "0c085e",
+        "hash": "4754d250",
+        "encoded": "-%20**ID**:%20%60docker-registry-url%60",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "0c085e",
+        "hash": "37ae2c32",
+        "encoded": "-%20**Type**:%20Secret%20text",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "0c085e",
+        "hash": "061b2aec",
+        "encoded": "-%20**Value**:%20%60docker.io%60%20or%20%60ghcr.io%60%20or%20your%20registry%20URL",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "0c085e",
+        "hash": "c2fcb4fe",
+        "encoded": "####%202.%20Docker%20Registry%20Credentials%20(Username%20with%20password)",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "0c085e",
+        "hash": "9755d01c",
+        "encoded": "-%20**ID**:%20%60docker-registry-credentials%60",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "0c085e",
+        "hash": "376855dd",
+        "encoded": "-%20**Type**:%20Username%20with%20password",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "0c085e",
+        "hash": "6ec99f17",
+        "encoded": "-%20**Username**:%20Your%20registry%20username",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "0c085e",
+        "hash": "ccfc2a00",
+        "encoded": "-%20**Password**:%20Your%20registry%20access%20token",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "0c085e",
+        "hash": "2c4f9ab4",
+        "encoded": "####%203.%20Deployment%20Credentials%20(per%20environment)",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "0c085e",
+        "hash": "fa7e809c",
+        "encoded": "-%20**ID**:%20%60deploy-dev-credentials%60,%20%60deploy-staging-credentials%60,%20%60deploy-prod-credentials%60",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "0c085e",
+        "hash": "232583ee",
+        "encoded": "-%20**Type**:%20SSH%20Username%20with%20private%20key",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "0c085e",
+        "hash": "b4db7241",
+        "encoded": "-%20**Username**:%20%60deploy%60",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "0c085e",
+        "hash": "32818088",
+        "encoded": "-%20**Private%20Key**:%20SSH%20private%20key%20for%20deployment%20server",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "0c085e",
+        "hash": "2ca73738",
+        "encoded": "###%20How%20to%20Add%20Credentials%20in%20Jenkins",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "0c085e",
+        "hash": "a7c356cf",
+        "encoded": "1.%20Go%20to%20**Jenkins%20Dashboard**%20%E2%86%92%20**Manage%20Jenkins**%20%E2%86%92%20**Credentials**",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "0c085e",
+        "hash": "cd9d4b00",
+        "encoded": "2.%20Select%20**(global)**%20domain",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "0c085e",
+        "hash": "ffbcd4a4",
+        "encoded": "3.%20Click%20**Add%20Credentials**",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "0c085e",
+        "hash": "5aa578db",
+        "encoded": "4.%20Fill%20in%20the%20form:",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "0c085e",
+        "hash": "6b8d1600",
+        "encoded": "-%20**Kind**:%20Username%20with%20password%20(for%20Docker)%20or%20SSH%20Username%20with%20private%20key%20(for%20deployment)",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "0c085e",
+        "hash": "22fc2d92",
+        "encoded": "-%20**ID**:%20Use%20exact%20IDs%20from%20table%20above",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "0c085e",
+        "hash": "3b6e7cfa",
+        "encoded": "-%20**Username**:%20Your%20username",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "0c085e",
+        "hash": "6acc1b84",
+        "encoded": "-%20**Password/Private%20Key**:%20Your%20secret",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "0c085e",
+        "hash": "e33c0342",
+        "encoded": "5.%20Click%20**Create**",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "0c085e",
+        "hash": "075ee8ad",
+        "encoded": "###%20Environment%20Variables%20for%20Jenkins",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "0c085e",
+        "hash": "06acab31",
+        "encoded": "Set%20these%20in%20Jenkins%20%E2%86%92%20Configure%20System%20%E2%86%92%20Global%20properties%20%E2%86%92%20Environment%20variables:",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "0c085e",
+        "hash": "b500d40d",
+        "encoded": "%7C%20Variable%20%7C%20Description%20%7C%20Example%20Value%20%7C",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "0c085e",
+        "hash": "1d5dbe30",
+        "encoded": "%7C----------%7C-------------%7C---------------%7C",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "0c085e",
+        "hash": "ddd54b5b",
+        "encoded": "%7C%20%60DEPLOY_HOST_DEV%60%20%7C%20Dev%20server%20hostname%20%7C%20%60dev.example.com%60%20%7C",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "0c085e",
+        "hash": "25b8dc93",
+        "encoded": "%7C%20%60DEPLOY_HOST_STAGING%60%20%7C%20Staging%20server%20hostname%20%7C%20%60staging.example.com%60%20%7C",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "0c085e",
+        "hash": "b8c29abb",
+        "encoded": "%7C%20%60DEPLOY_HOST_PROD%60%20%7C%20Production%20server%20hostname%20%7C%20%60prod.example.com%60%20%7C",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "0c085e",
+        "hash": "0b9c608f",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "0c085e",
+        "hash": "e4b2d841",
+        "encoded": "##%20%F0%9F%9A%80%20Quick%20Setup%20Commands",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "0c085e",
+        "hash": "ec099ccb",
+        "encoded": "###%20For%20GitHub%20Actions",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "0c085e",
+        "hash": "ce37855e",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "0c085e",
+        "hash": "5671ddc3",
+        "encoded": "#%20Using%20GitHub%20CLI",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "0c085e",
+        "hash": "e41c80b3",
+        "encoded": "gh%20secret%20set%20DOCKER_REGISTRY%20-b%20%22docker.io%22",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "0c085e",
+        "hash": "34f5ffaa",
+        "encoded": "gh%20secret%20set%20DOCKER_USERNAME%20-b%20%22your-username%22",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "0c085e",
+        "hash": "739e9b29",
+        "encoded": "gh%20secret%20set%20DOCKER_PASSWORD%20-b%20%22your-token-here%22",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "0c085e",
+        "hash": "2e8577fa",
+        "encoded": "#%20Verify%20secrets%20are%20set",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "0c085e",
+        "hash": "3a22a725",
+        "encoded": "gh%20secret%20list",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "0c085e",
+        "hash": "e52b4fee",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "0c085e",
+        "hash": "22826594",
+        "encoded": "###%20For%20Jenkins%20(using%20Jenkins%20CLI)",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "0c085e",
+        "hash": "27968b7c",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "0c085e",
+        "hash": "9473d5dd",
+        "encoded": "#%20Add%20Docker%20registry%20URL",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "0c085e",
+        "hash": "14d2845e",
+        "encoded": "echo%20'docker.io'%20%7C%20java%20-jar%20jenkins-cli.jar%20%5C",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "0c085e",
+        "hash": "effe5ee2",
+        "encoded": "-s%20http://localhost:8080/%20%5C",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "0c085e",
+        "hash": "211b54a7",
+        "encoded": "create-credentials-by-xml%20system::system::jenkins%20%5C",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "0c085e",
+        "hash": "f5ba3c1d",
+        "encoded": "%22(global)%22%20%3C%20docker-registry-url.xml",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "0c085e",
+        "hash": "1b36590a",
+        "encoded": "#%20Add%20Docker%20credentials",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "0c085e",
+        "hash": "01834eb0",
+        "encoded": "java%20-jar%20jenkins-cli.jar%20%5C",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "0c085e",
+        "hash": "fd93ba1a",
+        "encoded": "-s%20http://localhost:8080/%20%5C",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "0c085e",
+        "hash": "cf9e7114",
+        "encoded": "create-credentials-by-xml%20system::system::jenkins%20%5C",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "0c085e",
+        "hash": "e9295bcd",
+        "encoded": "%22(global)%22%20%3C%20docker-credentials.xml",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "0c085e",
+        "hash": "3b55dd73",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "0c085e",
+        "hash": "faf0546a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "0c085e",
+        "hash": "45cc8a6c",
+        "encoded": "##%20%E2%9A%A0%EF%B8%8F%20Current%20Workflow%20Behavior",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "0c085e",
+        "hash": "30fc631a",
+        "encoded": "###%20GitHub%20Actions",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "0c085e",
+        "hash": "e3b2861d",
+        "encoded": "%E2%9C%85%20**Without%20secrets%20configured:**",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "0c085e",
+        "hash": "8e7841d2",
+        "encoded": "-%20%E2%9C%85%20Backend%20tests%20run",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "0c085e",
+        "hash": "16be3861",
+        "encoded": "-%20%E2%9C%85%20Frontend%20tests%20run",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "0c085e",
+        "hash": "25780c10",
+        "encoded": "-%20%E2%9C%85%20Docker%20build%20succeeds",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "0c085e",
+        "hash": "f4fe27cc",
+        "encoded": "-%20%E2%9C%85%20Trivy%20security%20scan%20runs",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "0c085e",
+        "hash": "f9edfdc9",
+        "encoded": "-%20%E2%9C%85%20Smoke%20tests%20pass",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "0c085e",
+        "hash": "ade213cb",
+        "encoded": "-%20%E2%8F%AD%EF%B8%8F%20**Push-to-registry%20job%20skipped**%20(secrets%20not%20available)",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "0c085e",
+        "hash": "692ac354",
+        "encoded": "-%20%E2%9C%85%20**Overall%20workflow:%20SUCCESS**",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "0c085e",
+        "hash": "e1e64245",
+        "encoded": "%E2%9C%85%20**With%20secrets%20configured:**",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "0c085e",
+        "hash": "2d73278b",
+        "encoded": "-%20%E2%9C%85%20All%20above%20steps%20run",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "0c085e",
+        "hash": "4f1dac0e",
+        "encoded": "-%20%E2%9C%85%20**Push-to-registry%20job%20runs**",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "0c085e",
+        "hash": "843dcb09",
+        "encoded": "-%20%E2%9C%85%20Image%20pushed%20to%20registry",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "0c085e",
+        "hash": "1afccd2d",
+        "encoded": "-%20%E2%9C%85%20**Overall%20workflow:%20SUCCESS**",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "0c085e",
+        "hash": "6c82edc7",
+        "encoded": "###%20Jenkins",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "0c085e",
+        "hash": "b95c85a6",
+        "encoded": "%E2%9D%8C%20**Without%20credentials:**",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "0c085e",
+        "hash": "ea177316",
+        "encoded": "-%20%E2%9C%85%20Checkout%20succeeds",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "0c085e",
+        "hash": "06ead627",
+        "encoded": "-%20%E2%9C%85%20Backend%20tests%20pass",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "0c085e",
+        "hash": "fe5f6d24",
+        "encoded": "-%20%E2%9C%85%20Frontend%20tests%20pass",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "0c085e",
+        "hash": "9ef37f76",
+        "encoded": "-%20%E2%9C%85%20Docker%20build%20succeeds",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "0c085e",
+        "hash": "4e65c2ae",
+        "encoded": "-%20%E2%9C%85%20Trivy%20scan%20runs",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "0c085e",
+        "hash": "c1e9861a",
+        "encoded": "-%20%E2%9D%8C%20**Push%20to%20Registry%20fails**%20(credentials%20not%20found)",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "0c085e",
+        "hash": "4ee100ec",
+        "encoded": "-%20%E2%8F%AD%EF%B8%8F%20Deploy%20skipped",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "0c085e",
+        "hash": "aaabe4b3",
+        "encoded": "-%20%E2%9D%8C%20**Pipeline:%20FAILURE**",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "0c085e",
+        "hash": "0f7ca413",
+        "encoded": "%E2%9C%85%20**With%20credentials:**",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "0c085e",
+        "hash": "a434da96",
+        "encoded": "-%20%E2%9C%85%20All%20stages%20succeed",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "0c085e",
+        "hash": "2e616e19",
+        "encoded": "-%20%E2%9C%85%20Image%20pushed%20to%20registry",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "0c085e",
+        "hash": "8e9685ba",
+        "encoded": "-%20%E2%9C%85%20Deployment%20succeeds",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "0c085e",
+        "hash": "7b6a3c74",
+        "encoded": "-%20%E2%9C%85%20**Pipeline:%20SUCCESS**",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "0c085e",
+        "hash": "fb65cffa",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "0c085e",
+        "hash": "c91b7744",
+        "encoded": "##%20%F0%9F%94%8D%20Troubleshooting",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "0c085e",
+        "hash": "bd8fbb0c",
+        "encoded": "###%20GitHub%20Actions:%20%22Username%20and%20password%20required%22",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "0c085e",
+        "hash": "74b141f8",
+        "encoded": "**Cause**:%20%60DOCKER_USERNAME%60%20or%20%60DOCKER_PASSWORD%60%20secrets%20are%20not%20set%20or%20are%20empty.",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "0c085e",
+        "hash": "b4d18ffc",
+        "encoded": "**Fix**:",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "0c085e",
+        "hash": "042bc9cf",
+        "encoded": "1.%20Go%20to%20repository%20Settings%20%E2%86%92%20Secrets%20%E2%86%92%20Actions",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "0c085e",
+        "hash": "1b2873d3",
+        "encoded": "2.%20Verify%20all%20three%20secrets%20exist:%20%60DOCKER_REGISTRY%60,%20%60DOCKER_USERNAME%60,%20%60DOCKER_PASSWORD%60",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "0c085e",
+        "hash": "766091f0",
+        "encoded": "3.%20If%20missing,%20add%20them%20following%20the%20guide%20above",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "0c085e",
+        "hash": "605db2d5",
+        "encoded": "###%20GitHub%20Actions:%20%22Resource%20not%20accessible%20by%20integration%22",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "0c085e",
+        "hash": "eeb8e047",
+        "encoded": "**Cause**:%20Missing%20%60security-events:%20write%60%20permission%20for%20SARIF%20upload.",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "0c085e",
+        "hash": "891357e9",
+        "encoded": "**Fix**:%20Already%20fixed%20in%20%60.github/workflows/ci.yml%60%20(permissions%20block%20added).",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "0c085e",
+        "hash": "6e21cd02",
+        "encoded": "###%20Jenkins:%20%22Credentials%20not%20found%22",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "0c085e",
+        "hash": "55f6da8a",
+        "encoded": "**Cause**:%20Jenkins%20can't%20find%20the%20credential%20with%20the%20specified%20ID.",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "0c085e",
+        "hash": "fea85a56",
+        "encoded": "**Fix**:",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "0c085e",
+        "hash": "6a157b0d",
+        "encoded": "1.%20Go%20to%20Jenkins%20%E2%86%92%20Credentials",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "0c085e",
+        "hash": "6206fe86",
+        "encoded": "2.%20Verify%20the%20credential%20exists%20with%20exact%20ID:%20%60docker-registry-credentials%60",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "0c085e",
+        "hash": "198d563b",
+        "encoded": "3.%20If%20missing,%20add%20it%20following%20the%20guide%20above",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "0c085e",
+        "hash": "bbdb02ae",
+        "encoded": "###%20Jenkins:%20Deployment%20fails%20with%20%22Connection%20refused%22",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "0c085e",
+        "hash": "606ce227",
+        "encoded": "**Cause**:%20Deployment%20server%20hostname%20or%20SSH%20key%20is%20incorrect.",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "0c085e",
+        "hash": "d99d3a94",
+        "encoded": "**Fix**:",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "0c085e",
+        "hash": "f4d8fc9b",
+        "encoded": "1.%20Verify%20%60DEPLOY_HOST_DEV%60%20environment%20variable%20is%20set%20correctly",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "0c085e",
+        "hash": "74588f5a",
+        "encoded": "2.%20Verify%20SSH%20credentials%20have%20correct%20private%20key",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "0c085e",
+        "hash": "0cd9ad97",
+        "encoded": "3.%20Test%20SSH%20connection%20manually:%20%60ssh%20-i%20/path/to/key%20deploy@dev.example.com%60",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "0c085e",
+        "hash": "073e2fde",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "0c085e",
+        "hash": "253614f1",
+        "encoded": "##%20%F0%9F%93%8B%20Checklist",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "0c085e",
+        "hash": "97ebaf71",
+        "encoded": "###%20GitHub%20Actions%20Setup",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "0c085e",
+        "hash": "a8e80c35",
+        "encoded": "-%20%5B%20%5D%20%60DOCKER_REGISTRY%60%20secret%20added",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "0c085e",
+        "hash": "97049eda",
+        "encoded": "-%20%5B%20%5D%20%60DOCKER_USERNAME%60%20secret%20added",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "0c085e",
+        "hash": "a806ab88",
+        "encoded": "-%20%5B%20%5D%20%60DOCKER_PASSWORD%60%20secret%20added%20(use%20token,%20not%20password)",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "0c085e",
+        "hash": "dcd977bd",
+        "encoded": "-%20%5B%20%5D%20Pushed%20a%20commit%20to%20trigger%20workflow",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "0c085e",
+        "hash": "185bf3d8",
+        "encoded": "-%20%5B%20%5D%20Verified%20workflow%20runs%20successfully",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "0c085e",
+        "hash": "62572bbf",
+        "encoded": "-%20%5B%20%5D%20Checked%20Security%20tab%20for%20Trivy%20scan%20results",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "0c085e",
+        "hash": "0bc59d4c",
+        "encoded": "###%20Jenkins%20Setup",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "0c085e",
+        "hash": "ca43f6c6",
+        "encoded": "-%20%5B%20%5D%20Jenkins%20installed%20and%20running",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "0c085e",
+        "hash": "49fb49e8",
+        "encoded": "-%20%5B%20%5D%20%60docker-registry-url%60%20credential%20added",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "0c085e",
+        "hash": "e9808d1c",
+        "encoded": "-%20%5B%20%5D%20%60docker-registry-credentials%60%20credential%20added",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "0c085e",
+        "hash": "66961abb",
+        "encoded": "-%20%5B%20%5D%20%60deploy-dev-credentials%60%20credential%20added%20(if%20deploying)",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "0c085e",
+        "hash": "12735e4e",
+        "encoded": "-%20%5B%20%5D%20%60DEPLOY_HOST_DEV%60%20environment%20variable%20set",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "0c085e",
+        "hash": "c24d5142",
+        "encoded": "-%20%5B%20%5D%20Pipeline%20created%20and%20linked%20to%20repository",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "0c085e",
+        "hash": "11697063",
+        "encoded": "-%20%5B%20%5D%20Pipeline%20runs%20successfully",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "0c085e",
+        "hash": "dba4fa4a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "0c085e",
+        "hash": "b42d211d",
+        "encoded": "##%20%F0%9F%94%97%20References",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "0c085e",
+        "hash": "8b8be6df",
+        "encoded": "-%20%5BGitHub%20Actions%20Secrets%5D(https://docs.github.com/en/actions/security-guides/encrypted-secrets)",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "0c085e",
+        "hash": "ff92a35e",
+        "encoded": "-%20%5BDocker%20Hub%20Access%20Tokens%5D(https://docs.docker.com/docker-hub/access-tokens/)",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "0c085e",
+        "hash": "140d47bc",
+        "encoded": "-%20%5BGitHub%20Container%20Registry%5D(https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "0c085e",
+        "hash": "3aa7c7ba",
+        "encoded": "-%20%5BJenkins%20Credentials%5D(https://www.jenkins.io/doc/book/using/using-credentials/)",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "0c085e",
+        "hash": "9b545f4a",
+        "encoded": "-%20%5BTrivy%20Security%20Scanner%5D(https://github.com/aquasecurity/trivy)",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
