@@ -1,339 +1,780 @@
-<mxfile host="65bd71144e">
-    <diagram name="1-Happy-Path-FRESH" id="seq1">
-        <mxGraphModel dx="1327" dy="979" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" value="Scenario 1: Happy Path (All FRESH)" vertex="1">
-                    <mxGeometry height="40" width="1320" x="40" y="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="client" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" value="Client" vertex="1">
-                    <mxGeometry height="700" width="100" x="80" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="controller" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="IssController" vertex="1">
-                    <mxGeometry height="700" width="120" x="240" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="facade" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="IssFacade" vertex="1">
-                    <mxGeometry height="700" width="120" x="420" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="fetcher" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="ResilientFetcher" vertex="1">
-                    <mxGeometry height="700" width="140" x="600" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="cache" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="TtlCache" vertex="1">
-                    <mxGeometry height="700" width="100" x="800" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="breaker" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="CircuitBreaker" vertex="1">
-                    <mxGeometry height="700" width="120" x="960" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstream" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Upstream API" vertex="1">
-                    <mxGeometry height="700" width="120" x="1140" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg1" edge="1" parent="1" source="client" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="controller" value="GET /overview">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="130" y="200" as="sourcePoint"/>
-                        <mxPoint x="300" y="200" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg2" edge="1" parent="1" source="controller" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="facade" value="getOverview(lat, lon, offline)">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="300" y="240" as="sourcePoint"/>
-                        <mxPoint x="480" y="240" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg3" edge="1" parent="1" source="facade" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="fetcher" value="fetch(key, callable, offline=false)">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="480" y="280" as="sourcePoint"/>
-                        <mxPoint x="670" y="280" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg4" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache" value="get(key)">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="670" y="320" as="sourcePoint"/>
-                        <mxPoint x="850" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg4ret" edge="1" parent="1" source="cache" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher" value="MISS">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="850" y="360" as="sourcePoint"/>
-                        <mxPoint x="670" y="360" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg5" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="breaker" value="isOpen()">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="670" y="400" as="sourcePoint"/>
-                        <mxPoint x="1020" y="400" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg5ret" edge="1" parent="1" source="breaker" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher" value="false (CLOSED)">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1020" y="440" as="sourcePoint"/>
-                        <mxPoint x="670" y="440" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg6" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="upstream" value="HTTP GET">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="670" y="480" as="sourcePoint"/>
-                        <mxPoint x="1200" y="480" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg6ret" edge="1" parent="1" source="upstream" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;" target="fetcher" value="200 OK + JSON">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1200" y="520" as="sourcePoint"/>
-                        <mxPoint x="670" y="520" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg7" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="breaker" value="recordSuccess()">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="670" y="560" as="sourcePoint"/>
-                        <mxPoint x="1020" y="560" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg8" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache" value="put(key, data)">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="670" y="600" as="sourcePoint"/>
-                        <mxPoint x="850" y="600" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg9ret" edge="1" parent="1" source="fetcher" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;" target="facade" value="Result(data, FRESH, 0ms)">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="670" y="640" as="sourcePoint"/>
-                        <mxPoint x="480" y="640" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg10ret" edge="1" parent="1" source="facade" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="controller" value="IssOverview">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="480" y="680" as="sourcePoint"/>
-                        <mxPoint x="300" y="680" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="msg11ret" edge="1" parent="1" source="controller" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#82b366;" target="client" value="200 OK (source: FRESH)">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="300" y="720" as="sourcePoint"/>
-                        <mxPoint x="130" y="720" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="note1" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;" value="Cache MISS - Circuit breaker CLOSED - Upstream healthy - Returns FRESH data" vertex="1">
-                    <mxGeometry height="60" width="320" x="80" y="800" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram name="2-Cache-Hit-STALE" id="seq2">
-        <mxGraphModel dx="1150" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="title2" parent="1" style="text;html=1;strokeColor=none;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" value="Scenario 2: Upstream Fails - STALE Cache Fallback" vertex="1">
-                    <mxGeometry height="40" width="1120" x="40" y="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="fetcher2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="ResilientFetcher" vertex="1">
-                    <mxGeometry height="600" width="140" x="120" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="cache2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="TtlCache" vertex="1">
-                    <mxGeometry height="600" width="100" x="320" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="breaker2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="CircuitBreaker" vertex="1">
-                    <mxGeometry height="600" width="120" x="480" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstream2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Upstream API" vertex="1">
-                    <mxGeometry height="600" width="120" x="660" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg21" edge="1" parent="1" source="fetcher2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache2" value="1. get(key)">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg21ret" edge="1" parent="1" source="cache2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher2" value="MISS">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg22" edge="1" parent="1" source="fetcher2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="breaker2" value="2. isOpen()">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg22ret" edge="1" parent="1" source="breaker2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher2" value="false">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg23" edge="1" parent="1" source="fetcher2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="upstream2" value="3. HTTP GET">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg23ret" edge="1" parent="1" source="upstream2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;" target="fetcher2" value="TIMEOUT / ERROR">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg24" edge="1" parent="1" source="fetcher2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="breaker2" value="4. recordFailure()">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg25" edge="1" parent="1" source="fetcher2" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache2" value="5. get(key) - Fallback">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg25ret" edge="1" parent="1" source="cache2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#d79b00;" target="fetcher2" value="STALE">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="note2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d6b656;align=left;verticalAlign=top;" value="Upstream failed - Cache has STALE entry - Returns degraded data - UI shows amber badge" vertex="1">
-                    <mxGeometry height="60" width="400" x="120" y="720" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram name="3-MOCK-Fallback" id="seq3">
-        <mxGraphModel dx="1062" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="title3" parent="1" style="text;html=1;strokeColor=none;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" value="Scenario 3: Upstream Fails + No Cache - MOCK Fallback" vertex="1">
-                    <mxGeometry height="40" width="1020" x="40" y="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="fetcher3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="ResilientFetcher" vertex="1">
-                    <mxGeometry height="600" width="140" x="120" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="cache3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="TtlCache" vertex="1">
-                    <mxGeometry height="600" width="100" x="320" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstream3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Upstream API" vertex="1">
-                    <mxGeometry height="600" width="120" x="480" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="mockdata3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f5f5f5;strokeColor=#666666;" value="MockData" vertex="1">
-                    <mxGeometry height="600" width="120" x="660" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg31" edge="1" parent="1" source="fetcher3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache3" value="1. get(key)">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg31ret" edge="1" parent="1" source="cache3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher3" value="MISS">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg32" edge="1" parent="1" source="fetcher3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="upstream3" value="2. Try upstream">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg32ret" edge="1" parent="1" source="upstream3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;" target="fetcher3" value="FAIL">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg33" edge="1" parent="1" source="fetcher3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache3" value="3. get(key) - Fallback">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg33ret" edge="1" parent="1" source="cache3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher3" value="MISS (too old)">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg34" edge="1" parent="1" source="fetcher3" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="mockdata3" value="4. mockSupplier.get()">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg34ret" edge="1" parent="1" source="mockdata3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" target="fetcher3" value="Static JSON (time-shifted)">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="note3" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;" value="Upstream failed - No usable cache - Returns MOCK data - UI shows red badge - MOCK data NOT written to cache" vertex="1">
-                    <mxGeometry height="60" width="460" x="120" y="720" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram name="4-Offline-Mode" id="seq4">
-        <mxGraphModel dx="1131" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="title4" parent="1" style="text;html=1;strokeColor=none;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" value="Scenario 4: Forced Offline Mode (offline=true)" vertex="1">
-                    <mxGeometry height="40" width="920" x="40" y="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="fetcher4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="ResilientFetcher" vertex="1">
-                    <mxGeometry height="600" width="140" x="120" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="cache4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" value="TtlCache" vertex="1">
-                    <mxGeometry height="600" width="100" x="320" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstream4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 8;" value="Upstream API" vertex="1">
-                    <mxGeometry height="600" width="120" x="480" y="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstreamlabel4" parent="1" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1" value="NEVER CALLED" vertex="1">
-                    <mxGeometry height="30" width="140" x="470" y="700" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg41" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#9673a6;" value="fetch(offline=TRUE)">
-                    <mxGeometry relative="1" width="80" as="geometry">
-                        <mxPoint x="60" y="200" as="sourcePoint"/>
-                        <mxPoint x="190" y="200" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="check4" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=middle;" value="if (offline) return fetchOffline()" vertex="1">
-                    <mxGeometry height="50" width="220" x="120" y="240" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg42" edge="1" parent="1" source="fetcher4" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="cache4" value="get(key)">
-                    <mxGeometry relative="1" width="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="decision4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Has cache?" vertex="1">
-                    <mxGeometry height="80" width="80" x="330" y="380" as="geometry"/>
-                </mxCell>
-                <mxCell id="yespath4" edge="1" parent="1" style="endArrow=classic;html=1;strokeColor=#82b366;" value="">
-                    <mxGeometry height="50" relative="1" width="50" as="geometry">
-                        <mxPoint x="330" y="420" as="sourcePoint"/>
-                        <mxPoint x="260" y="420" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="yeslabel4" parent="1" style="text;html=1;align=center;" value="YES" vertex="1">
-                    <mxGeometry height="20" width="40" x="270" y="395" as="geometry"/>
-                </mxCell>
-                <mxCell id="yesresult4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="STALE" vertex="1">
-                    <mxGeometry height="60" width="80" x="180" y="390" as="geometry"/>
-                </mxCell>
-                <mxCell id="nopath4" edge="1" parent="1" style="endArrow=classic;html=1;strokeColor=#666666;" value="">
-                    <mxGeometry height="50" relative="1" width="50" as="geometry">
-                        <mxPoint x="410" y="420" as="sourcePoint"/>
-                        <mxPoint x="490" y="420" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="nolabel4" parent="1" style="text;html=1;align=center;" value="NO" vertex="1">
-                    <mxGeometry height="20" width="40" x="430" y="395" as="geometry"/>
-                </mxCell>
-                <mxCell id="noresult4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="MOCK" vertex="1">
-                    <mxGeometry height="60" width="80" x="490" y="390" as="geometry"/>
-                </mxCell>
-                <mxCell id="note4" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;" value="Offline mode: Upstream NEVER called - Never reports FRESH - Returns STALE if cache exists else MOCK" vertex="1">
-                    <mxGeometry height="80" width="380" x="120" y="750" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram name="5-Circuit-Breaker-Open" id="seq5">
-        <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="title5" value="Scenario 5: Circuit Breaker OPEN (3+ failures within 30s cooldown)" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="40" y="20" width="1020" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="fetcher5" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="80" width="140" height="600" as="geometry"/>
-                </mxCell>
-                <mxCell id="cache5" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;" vertex="1" parent="1">
-                    <mxGeometry x="320" y="80" width="100" height="600" as="geometry"/>
-                </mxCell>
-                <mxCell id="breaker5" value="CircuitBreaker" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="480" y="80" width="120" height="600" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstream5" value="Upstream API" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
-                    <mxGeometry x="660" y="80" width="120" height="600" as="geometry"/>
-                </mxCell>
-                <mxCell id="upstreamlabel5" value="NOT CALLED" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1" vertex="1" parent="1">
-                    <mxGeometry x="650" y="700" width="140" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg51" value="1. get(key)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="fetcher5" target="cache5">
-                    <mxGeometry width="80" relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg51ret" value="MISS" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="cache5" target="fetcher5">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg52" value="2. isOpen()" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="fetcher5" target="breaker5">
-                    <mxGeometry width="80" relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg52ret" value="TRUE (OPEN)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="breaker5" target="fetcher5">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="skip5" value="Skip upstream - go to fallback" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="380" width="140" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg53" value="3. get(key) - Fallback" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1" source="fetcher5" target="cache5">
-                    <mxGeometry width="80" relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="msg53ret" value="STALE or MOCK" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#d79b00;" edge="1" parent="1" source="cache5" target="fetcher5">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="note5" value="Circuit opens after 3 failures - Stays OPEN for 30s - All requests fail-fast - After cooldown: closes and resumes" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="750" width="380" height="80" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
+<mxfile host="app.diagrams.net">
+ <diagram name="1-Happy-Path-FRESH" id="seq1">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2050" pageHeight="1482" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq1-title" parent="1" vertex="1" value="Scenario 1: Happy path (cache miss, upstream OK, result FRESH)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1970" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1970" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-B" parent="1" vertex="1" value="Browser / Postman" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="45" y="96" width="130" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-F" parent="1" vertex="1" value="Filters&lt;br&gt;RateLimit + SecurityHeaders" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="245" y="96" width="150" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-C" parent="1" vertex="1" value="IssController" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="470" y="96" width="120" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="680" y="96" width="120" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="880" y="96" width="140" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="1105" y="96" width="110" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="1305" y="96" width="130" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="1485" y="96" width="190" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1730" y="96" width="120" height="1306" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-f22" parent="1" vertex="1" value="SingleFlight" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="870" y="640" width="1000" height="468" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-c23" parent="1" vertex="1" value="SingleFlight(key): concurrent callers for the same key share ONE upstream attempt" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="966" y="642" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-f25" parent="1" vertex="1" value="par" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="660" y="462" width="1210" height="710" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-c26" parent="1" vertex="1" value="3 fetches: position | passes | cloud" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="756" y="464" width="1110" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-e1" edge="1" parent="1" value="GET /api/v1/iss/overview?lat&amp;lon&amp;offline=false" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e2" edge="1" parent="1" value="" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="204" as="sourcePoint" />
+      <mxPoint x="320" y="230" as="targetPoint" />
+      <Array as="points">
+       <mxPoint x="365" y="204" />
+       <mxPoint x="365" y="230" />
+      </Array>
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-t3" parent="1" vertex="1" value="token-bucket per IP (429 if empty) + security headers" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;">
+     <mxGeometry x="372" y="200" width="300" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-e4" edge="1" parent="1" value="chain.doFilter()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="268" as="sourcePoint" />
+      <mxPoint x="530" y="268" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e5" edge="1" parent="1" value="" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="302" as="sourcePoint" />
+      <mxPoint x="530" y="328" as="targetPoint" />
+      <Array as="points">
+       <mxPoint x="575" y="302" />
+       <mxPoint x="575" y="328" />
+      </Array>
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-t6" parent="1" vertex="1" value="validate lat, lon, offline (400 on invalid)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;">
+     <mxGeometry x="582" y="298" width="300" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-e7" edge="1" parent="1" value="overview(lat, lon, offline)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="366" as="sourcePoint" />
+      <mxPoint x="740" y="366" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e9" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=false)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="522" as="sourcePoint" />
+      <mxPoint x="950" y="522" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e10" edge="1" parent="1" value="get fresh(key)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="568" as="sourcePoint" />
+      <mxPoint x="1160" y="568" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e11" edge="1" parent="1" value="MISS or expired" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1160" y="614" as="sourcePoint" />
+      <mxPoint x="950" y="614" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e12" edge="1" parent="1" value="allow request?" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="700" as="sourcePoint" />
+      <mxPoint x="1370" y="700" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e13" edge="1" parent="1" value="yes (CLOSED)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1370" y="746" as="sourcePoint" />
+      <mxPoint x="950" y="746" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e14" edge="1" parent="1" value="upstream.call()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="792" as="sourcePoint" />
+      <mxPoint x="1580" y="792" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e15" edge="1" parent="1" value="HTTP GET (3 s timeout)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1580" y="838" as="sourcePoint" />
+      <mxPoint x="1790" y="838" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e16" edge="1" parent="1" value="200 OK + JSON" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1790" y="884" as="sourcePoint" />
+      <mxPoint x="1580" y="884" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e17" edge="1" parent="1" value="" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1580" y="918" as="sourcePoint" />
+      <mxPoint x="1580" y="944" as="targetPoint" />
+      <Array as="points">
+       <mxPoint x="1625" y="918" />
+       <mxPoint x="1625" y="944" />
+      </Array>
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-t18" parent="1" vertex="1" value="parse() + validate (position also runs VelocityEstimator)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;">
+     <mxGeometry x="1632" y="914" width="300" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-e19" edge="1" parent="1" value="domain object" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1580" y="982" as="sourcePoint" />
+      <mxPoint x="950" y="982" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e20" edge="1" parent="1" value="recordSuccess()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="1028" as="sourcePoint" />
+      <mxPoint x="1370" y="1028" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e21" edge="1" parent="1" value="put(key, data)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="1074" as="sourcePoint" />
+      <mxPoint x="1160" y="1074" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e24" edge="1" parent="1" value="Result(data, FRESH, ageMs=0)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="1138" as="sourcePoint" />
+      <mxPoint x="740" y="1138" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e27" edge="1" parent="1" value="" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="1190" as="sourcePoint" />
+      <mxPoint x="740" y="1216" as="targetPoint" />
+      <Array as="points">
+       <mxPoint x="785" y="1190" />
+       <mxPoint x="785" y="1216" />
+      </Array>
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-t28" parent="1" vertex="1" value="nextVisiblePass, magnitude, AlertService.build(pass, cloud, mag, now)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fillColor=#ffffff;">
+     <mxGeometry x="792" y="1186" width="300" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-e29" edge="1" parent="1" value="IssOverview (data + meta per upstream)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="1254" as="sourcePoint" />
+      <mxPoint x="530" y="1254" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-e30" edge="1" parent="1" value="200 OK {position, passes, nextVisiblePass, alerts, meta, _links}" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="1300" as="sourcePoint" />
+      <mxPoint x="110" y="1300" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq1-n8" parent="1" vertex="1" value="Position, passes and cloud are fetched CONCURRENTLY (virtual threads), each with its own cache key, TTL and breaker. One fetch is shown below." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="680" y="398" width="330" height="48" as="geometry" />
+    </mxCell>
+    <mxCell id="seq1-n31" parent="1" vertex="1" value="All three sources FRESH: UI shows green &quot;Live&quot; badges." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="50" y="1332" width="540" height="34" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
+ <diagram name="2-Cache-Hit-FRESH" id="seq2">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1420" pageHeight="560" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq2-title" parent="1" vertex="1" value="Scenario 2: Cache hit within TTL (no network call, still FRESH)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1340" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1340" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="50" y="96" width="120" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="250" y="96" width="140" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="475" y="96" width="110" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="675" y="96" width="130" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="855" y="96" width="190" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1100" y="96" width="120" height="384" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-e1" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=false)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq2-e2" edge="1" parent="1" value="get fresh(key)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="216" as="sourcePoint" />
+      <mxPoint x="530" y="216" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq2-e3" edge="1" parent="1" value="entry younger than TTL" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="262" as="sourcePoint" />
+      <mxPoint x="320" y="262" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq2-e4" edge="1" parent="1" value="Result(cached data, FRESH, ageMs)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="308" as="sourcePoint" />
+      <mxPoint x="110" y="308" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq2-n5" parent="1" vertex="1" value="NOT TOUCHED: no breaker check, no HTTP call." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#f5f5f5;strokeColor=#999999;">
+     <mxGeometry x="680" y="340" width="540" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq2-n6" parent="1" vertex="1" value="FRESH means live data OR a cache entry within TTL (position 5 s, passes 15 min, cloud 30 min). UI shows the green &quot;Live&quot; badge." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="50" y="396" width="540" height="48" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
+ <diagram name="3-Upstream-Fails-STALE" id="seq3">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1420" pageHeight="1034" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq3-title" parent="1" vertex="1" value="Scenario 3: Upstream fails, expired cache entry still usable (STALE)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1340" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1340" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="50" y="96" width="120" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="250" y="96" width="140" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="475" y="96" width="110" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="675" y="96" width="130" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="855" y="96" width="190" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1100" y="96" width="120" height="858" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-f10" parent="1" vertex="1" value="loop" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="240" y="420" width="1000" height="232" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-c11" parent="1" vertex="1" value="attempt 1, then ONE immediate retry (no backoff; any exception is retried)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="336" y="422" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-f13" parent="1" vertex="1" value="SingleFlight" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="240" y="288" width="1000" height="428" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-c14" parent="1" vertex="1" value="SingleFlight(key): concurrent callers for the same key share ONE upstream attempt" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="336" y="290" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq3-e1" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=false)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e2" edge="1" parent="1" value="get fresh(key)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="216" as="sourcePoint" />
+      <mxPoint x="530" y="216" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e3" edge="1" parent="1" value="MISS or expired (older than TTL)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="262" as="sourcePoint" />
+      <mxPoint x="320" y="262" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e4" edge="1" parent="1" value="allow request?" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="348" as="sourcePoint" />
+      <mxPoint x="740" y="348" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e5" edge="1" parent="1" value="yes (CLOSED or HALF-OPEN)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="394" as="sourcePoint" />
+      <mxPoint x="320" y="394" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e6" edge="1" parent="1" value="upstream.call()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="480" as="sourcePoint" />
+      <mxPoint x="950" y="480" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e7" edge="1" parent="1" value="HTTP GET (3 s timeout)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="526" as="sourcePoint" />
+      <mxPoint x="1160" y="526" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e8" edge="1" parent="1" value="timeout / 5xx / bad JSON" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1160" y="572" as="sourcePoint" />
+      <mxPoint x="950" y="572" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e9" edge="1" parent="1" value="exception" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="618" as="sourcePoint" />
+      <mxPoint x="320" y="618" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e12" edge="1" parent="1" value="recordFailure() (ONE failure per fetch)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="682" as="sourcePoint" />
+      <mxPoint x="740" y="682" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e15" edge="1" parent="1" value="get stale(key) within max-stale" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="746" as="sourcePoint" />
+      <mxPoint x="530" y="746" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e16" edge="1" parent="1" value="entry age &lt; max-stale (position 1 h, passes 24 h, cloud 12 h)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="792" as="sourcePoint" />
+      <mxPoint x="320" y="792" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-e17" edge="1" parent="1" value="Result(cached data, STALE, ageMs)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="838" as="sourcePoint" />
+      <mxPoint x="110" y="838" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq3-n18" parent="1" vertex="1" value="Cached value is returned but NOT re-written to the cache. UI shows the amber &quot;Cached N min ago&quot; badge and a degraded banner." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;">
+     <mxGeometry x="50" y="870" width="1170" height="48" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
+ <diagram name="4-Upstream-Fails-MOCK" id="seq4">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1630" pageHeight="1126" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq4-title" parent="1" vertex="1" value="Scenario 4: Upstream fails and no usable cache (MOCK fallback)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1550" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1550" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="50" y="96" width="120" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="250" y="96" width="140" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="475" y="96" width="110" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="675" y="96" width="130" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="855" y="96" width="190" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1100" y="96" width="120" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-ll-M" parent="1" vertex="1" value="MockSupplier&lt;br&gt;mocks/*.json" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#f8cecc;strokeColor=#b85450;">
+     <mxGeometry x="1305" y="96" width="130" height="950" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-f10" parent="1" vertex="1" value="loop" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="240" y="420" width="1000" height="232" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-c11" parent="1" vertex="1" value="attempt 1, then ONE immediate retry (no backoff; any exception is retried)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="336" y="422" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-f13" parent="1" vertex="1" value="SingleFlight" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="240" y="288" width="1000" height="428" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-c14" parent="1" vertex="1" value="SingleFlight(key): concurrent callers for the same key share ONE upstream attempt" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="336" y="290" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq4-e1" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=false)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e2" edge="1" parent="1" value="get fresh(key)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="216" as="sourcePoint" />
+      <mxPoint x="530" y="216" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e3" edge="1" parent="1" value="MISS or expired (older than TTL)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="262" as="sourcePoint" />
+      <mxPoint x="320" y="262" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e4" edge="1" parent="1" value="allow request?" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="348" as="sourcePoint" />
+      <mxPoint x="740" y="348" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e5" edge="1" parent="1" value="yes (CLOSED or HALF-OPEN)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="394" as="sourcePoint" />
+      <mxPoint x="320" y="394" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e6" edge="1" parent="1" value="upstream.call()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="480" as="sourcePoint" />
+      <mxPoint x="950" y="480" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e7" edge="1" parent="1" value="HTTP GET (3 s timeout)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="526" as="sourcePoint" />
+      <mxPoint x="1160" y="526" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e8" edge="1" parent="1" value="timeout / 5xx / bad JSON" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1160" y="572" as="sourcePoint" />
+      <mxPoint x="950" y="572" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e9" edge="1" parent="1" value="exception" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="950" y="618" as="sourcePoint" />
+      <mxPoint x="320" y="618" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e12" edge="1" parent="1" value="recordFailure() (ONE failure per fetch)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="682" as="sourcePoint" />
+      <mxPoint x="740" y="682" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e15" edge="1" parent="1" value="get stale(key) within max-stale" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="746" as="sourcePoint" />
+      <mxPoint x="530" y="746" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e16" edge="1" parent="1" value="no entry, or older than max-stale (evicted)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="792" as="sourcePoint" />
+      <mxPoint x="320" y="792" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e17" edge="1" parent="1" value="mockSupplier.get()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="838" as="sourcePoint" />
+      <mxPoint x="1370" y="838" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e18" edge="1" parent="1" value="static JSON, time-shifted to now" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1370" y="884" as="sourcePoint" />
+      <mxPoint x="320" y="884" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-e19" edge="1" parent="1" value="Result(mock, MOCK)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="930" as="sourcePoint" />
+      <mxPoint x="110" y="930" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq4-n20" parent="1" vertex="1" value="MOCK is NEVER written to the cache. UI shows the red &quot;Fallback data&quot; badge. Mock pass is anchored ~90 min ahead so alerts still demo." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#f8cecc;strokeColor=#b85450;">
+     <mxGeometry x="50" y="962" width="1380" height="48" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
+ <diagram name="5-Offline-Mode" id="seq5">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1630" pageHeight="824" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq5-title" parent="1" vertex="1" value="Scenario 5: Forced offline (offline=true, network is never touched)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1550" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1550" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="50" y="96" width="120" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="250" y="96" width="140" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="475" y="96" width="110" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="675" y="96" width="130" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="855" y="96" width="190" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1100" y="96" width="120" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-ll-M" parent="1" vertex="1" value="MockSupplier&lt;br&gt;mocks/*.json" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#f8cecc;strokeColor=#b85450;">
+     <mxGeometry x="1305" y="96" width="130" height="648" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-f10" parent="1" vertex="1" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="30" y="298" width="1420" height="360" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-c11" parent="1" vertex="1" value="[cache entry exists and is younger than max-stale]" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="126" y="300" width="1320" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-d12" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="30" y="434" as="sourcePoint" />
+      <mxPoint x="1450" y="434" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-c13" parent="1" vertex="1" value="[no entry, or older than max-stale]" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="38" y="436" width="1320" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-e1" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=true)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e3" edge="1" parent="1" value="get stale(key) within max-stale (TTL ignored)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="272" as="sourcePoint" />
+      <mxPoint x="530" y="272" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e4" edge="1" parent="1" value="entry" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="358" as="sourcePoint" />
+      <mxPoint x="320" y="358" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e5" edge="1" parent="1" value="Result(cached, STALE, ageMs)  (never FRESH, even within TTL)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="404" as="sourcePoint" />
+      <mxPoint x="110" y="404" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e6" edge="1" parent="1" value="none" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="486" as="sourcePoint" />
+      <mxPoint x="320" y="486" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e7" edge="1" parent="1" value="mockSupplier.get()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="532" as="sourcePoint" />
+      <mxPoint x="1370" y="532" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e8" edge="1" parent="1" value="static JSON, time-shifted" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1370" y="578" as="sourcePoint" />
+      <mxPoint x="320" y="578" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-e9" edge="1" parent="1" value="Result(mock, MOCK)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="624" as="sourcePoint" />
+      <mxPoint x="110" y="624" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq5-n2" parent="1" vertex="1" value="NEVER CALLED: no breaker check, no HTTP, upstream callable is not invoked." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#f5f5f5;strokeColor=#999999;">
+     <mxGeometry x="680" y="202" width="540" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq5-n14" parent="1" vertex="1" value="Badges: amber &quot;Cached N min ago&quot; (STALE) or red &quot;Fallback data&quot; (MOCK). Never green while offline." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;">
+     <mxGeometry x="50" y="674" width="1380" height="34" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
+ <diagram name="6-Circuit-Breaker-Open" id="seq6">
+  <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1630" pageHeight="1092" math="0" shadow="0">
+   <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="seq6-title" parent="1" vertex="1" value="Scenario 6: Circuit breaker OPEN (fail fast, no upstream call)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1">
+     <mxGeometry x="40" y="20" width="1550" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-legend" parent="1" vertex="1" value="Solid arrow = call &amp;nbsp;|&amp;nbsp; Dashed arrow = return &amp;nbsp;|&amp;nbsp; Boxes with a tab = fragments (alt / loop / par / SingleFlight)" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;">
+     <mxGeometry x="40" y="62" width="1550" height="18" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-FA" parent="1" vertex="1" value="IssFacade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="50" y="96" width="120" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-R" parent="1" vertex="1" value="ResilientFetcher" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="250" y="96" width="140" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-T" parent="1" vertex="1" value="TtlCache" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="475" y="96" width="110" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-CB" parent="1" vertex="1" value="CircuitBreaker&lt;br&gt;(one per upstream)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="675" y="96" width="130" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-AD" parent="1" vertex="1" value="Upstream client (adapter)&lt;br&gt;OpenNotify / Pollux / OpenMeteo" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#ffffff;strokeColor=#666666;">
+     <mxGeometry x="855" y="96" width="190" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-U" parent="1" vertex="1" value="Upstream API&lt;br&gt;(HTTP)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#d5e8d4;strokeColor=#82b366;">
+     <mxGeometry x="1100" y="96" width="120" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-ll-M" parent="1" vertex="1" value="MockSupplier&lt;br&gt;mocks/*.json" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;fontSize=11;size=44;fillColor=#f8cecc;strokeColor=#b85450;">
+     <mxGeometry x="1305" y="96" width="130" height="916" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-f7" parent="1" vertex="1" value="SingleFlight" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="240" y="288" width="1000" height="196" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-c8" parent="1" vertex="1" value="SingleFlight(key): concurrent callers for the same key share ONE upstream attempt" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="336" y="290" width="900" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-f16" parent="1" vertex="1" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=90;height=22;fontStyle=1;fontSize=11;fillColor=none;strokeColor=#666666;">
+     <mxGeometry x="30" y="540" width="1420" height="360" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-c17" parent="1" vertex="1" value="[entry younger than max-stale]" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="126" y="542" width="1320" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-d18" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="30" y="676" as="sourcePoint" />
+      <mxPoint x="1450" y="676" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-c19" parent="1" vertex="1" value="[no entry, or older than max-stale]" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;">
+     <mxGeometry x="38" y="678" width="1320" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-e1" edge="1" parent="1" value="fetch(key, upstream, mockSupplier, offline=false)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="110" y="170" as="sourcePoint" />
+      <mxPoint x="320" y="170" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e2" edge="1" parent="1" value="get fresh(key)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="216" as="sourcePoint" />
+      <mxPoint x="530" y="216" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e3" edge="1" parent="1" value="MISS or expired" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="262" as="sourcePoint" />
+      <mxPoint x="320" y="262" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e4" edge="1" parent="1" value="allow request?" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="348" as="sourcePoint" />
+      <mxPoint x="740" y="348" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e5" edge="1" parent="1" value="NO: OPEN (3 failures, 30 s cooldown not elapsed)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="740" y="394" as="sourcePoint" />
+      <mxPoint x="320" y="394" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e9" edge="1" parent="1" value="get stale(key) within max-stale" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="514" as="sourcePoint" />
+      <mxPoint x="530" y="514" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e10" edge="1" parent="1" value="entry" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="600" as="sourcePoint" />
+      <mxPoint x="320" y="600" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e11" edge="1" parent="1" value="Result(cached, STALE, ageMs)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="646" as="sourcePoint" />
+      <mxPoint x="110" y="646" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e12" edge="1" parent="1" value="none" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="530" y="728" as="sourcePoint" />
+      <mxPoint x="320" y="728" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e13" edge="1" parent="1" value="mockSupplier.get()" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=block;endFill=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="774" as="sourcePoint" />
+      <mxPoint x="1370" y="774" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e14" edge="1" parent="1" value="static JSON, time-shifted" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="1370" y="820" as="sourcePoint" />
+      <mxPoint x="320" y="820" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-e15" edge="1" parent="1" value="Result(mock, MOCK)" style="html=1;verticalAlign=bottom;rounded=0;fontSize=11;endArrow=open;endFill=0;dashed=1;">
+     <mxGeometry relative="1" as="geometry">
+      <mxPoint x="320" y="866" as="sourcePoint" />
+      <mxPoint x="110" y="866" as="targetPoint" />
+     </mxGeometry>
+    </mxCell>
+    <mxCell id="seq6-n6" parent="1" vertex="1" value="Fail fast: upstream is NOT called and no new failure is recorded." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#f5f5f5;strokeColor=#999999;">
+     <mxGeometry x="890" y="426" width="330" height="34" as="geometry" />
+    </mxCell>
+    <mxCell id="seq6-n20" parent="1" vertex="1" value="Breaker lifecycle: CLOSED -(3 failures)-&gt; OPEN -(30 s)-&gt; HALF-OPEN -(trial ok)-&gt; CLOSED, or -(trial fails)-&gt; OPEN. One breaker per upstream, so a dead Pollux changes only the passes badge." style="shape=note;size=10;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=6;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+     <mxGeometry x="50" y="916" width="1380" height="60" as="geometry" />
+    </mxCell>
+   </root>
+  </mxGraphModel>
+ </diagram>
 </mxfile>
