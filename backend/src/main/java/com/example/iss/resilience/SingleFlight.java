@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * De-duplicates concurrent calls for the same key: the first caller ("leader") runs
@@ -29,12 +30,22 @@ public final class SingleFlight<T> {
      *                    wrapping the leader's failure (followers)
      */
     public T execute(String key, Callable<T> work) throws Exception {
-        CompletableFuture<T> future = new CompletableFuture<>();
-        CompletableFuture<T> existing = inFlight.putIfAbsent(key, future);
-        if (existing != null) {
-            return awaitFollowerResult(existing);
+        // Use AtomicBoolean to track if this thread is the leader
+        AtomicBoolean isLeader = new AtomicBoolean(false);
+        
+        // Atomically get or create the future for this key
+        CompletableFuture<T> future = inFlight.computeIfAbsent(key, k -> {
+            isLeader.set(true);
+            return new CompletableFuture<>();
+        });
+        
+        // If we created the future, we're the leader
+        if (isLeader.get()) {
+            return runAsLeader(key, future, work);
+        } else {
+            // We're a follower, wait for the leader's result
+            return awaitFollowerResult(future);
         }
-        return runAsLeader(key, future, work);
     }
 
     private T runAsLeader(String key, CompletableFuture<T> future, Callable<T> work) throws Exception {
