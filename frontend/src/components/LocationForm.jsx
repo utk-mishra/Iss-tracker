@@ -31,7 +31,13 @@ export default function LocationForm({ onSubmit }) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         setError(null);
-        onSubmit({ lat: position.coords.latitude, lon: position.coords.longitude });
+        // FIXED: Now populates the form fields instead of immediately submitting
+        const latitude = position.coords.latitude.toFixed(4);
+        const longitude = position.coords.longitude.toFixed(4);
+        setLat(latitude);
+        setLon(longitude);
+        // Auto-submit after populating (you can remove this line if you want manual submit)
+        onSubmit({ lat: parseFloat(latitude), lon: parseFloat(longitude) });
       },
       () => {
         setError('Could not determine your location.');
