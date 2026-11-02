@@ -118,1446 +118,2083 @@
         "codeBlockId": null,
         "isActive": true,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 05:34:27\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "5a51fa": {
+        "user": "You",
+        "model": "gpt-4.1",
+        "timestamp": 1793578662,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "3.6.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "01f0acc9",
+          "files": "e6123722"
+        },
+        "hash": "e3db9775",
+        "messageId": "system_adf89d90-d652-11f1-a621-096a9ff7de59",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 05:47:42\n- **source**: agent\n- **type**: agentWriteTool\n"
       }
     },
     "lines": {
       "0": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "46c3d2ae",
         "encoded": "name:%20CI",
         "prevChunkIds": []
       },
       "2": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "8b0cac53",
         "encoded": "on:",
         "prevChunkIds": []
       },
       "3": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "2964a980",
         "encoded": "push:",
         "prevChunkIds": []
       },
       "4": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "903d14d5",
         "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": []
       },
       "5": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "74a1e20b",
         "encoded": "pull_request:",
         "prevChunkIds": []
       },
       "6": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "00c8ff45",
         "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": []
       },
       "8": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "7999c197",
         "encoded": "#%20Required%20permissions%20for%20security%20scanning",
         "prevChunkIds": []
       },
       "9": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "b260eca2",
         "encoded": "permissions:",
         "prevChunkIds": []
       },
       "10": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "57dbce1b",
         "encoded": "contents:%20read",
         "prevChunkIds": []
       },
       "11": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "4b3a1405",
         "encoded": "security-events:%20write",
         "prevChunkIds": []
       },
       "12": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "a0586ae2",
         "encoded": "actions:%20read",
         "prevChunkIds": []
       },
       "14": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "a40e6ffb",
         "encoded": "jobs:",
         "prevChunkIds": []
       },
       "15": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "bf9aa4ec",
         "encoded": "backend-tests:",
         "prevChunkIds": []
       },
       "16": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "1135e125",
         "encoded": "name:%20Backend%20tests%20(Maven)",
         "prevChunkIds": []
       },
       "17": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "e4efc014",
         "encoded": "runs-on:%20ubuntu-latest",
         "prevChunkIds": []
       },
       "18": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "73722a20",
         "encoded": "steps:",
         "prevChunkIds": []
       },
       "19": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "65166ae2",
         "encoded": "-%20uses:%20actions/checkout@v4",
         "prevChunkIds": []
       },
       "20": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "626c6f03",
         "encoded": "-%20name:%20Set%20up%20JDK%2021",
         "prevChunkIds": []
       },
       "21": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "6a33f404",
         "encoded": "uses:%20actions/setup-java@v4",
         "prevChunkIds": []
       },
       "22": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "69657d32",
         "encoded": "with:",
         "prevChunkIds": []
       },
       "23": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "bb292b9e",
         "encoded": "distribution:%20temurin",
         "prevChunkIds": []
       },
       "24": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "e2f0b563",
         "encoded": "java-version:%20'21'",
         "prevChunkIds": []
       },
       "25": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "4754b613",
         "encoded": "cache:%20maven",
         "prevChunkIds": []
       },
       "26": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "639c8c6c",
         "encoded": "-%20name:%20Run%20backend%20tests",
         "prevChunkIds": []
       },
       "27": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "4a591dbf",
         "encoded": "working-directory:%20backend",
         "prevChunkIds": []
       },
       "28": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "3b5b7226",
         "encoded": "run:%20mvn%20-B%20-q%20verify",
         "prevChunkIds": []
       },
       "30": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "51f528d3",
         "encoded": "frontend-tests:",
         "prevChunkIds": []
       },
       "31": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "9144c89c",
         "encoded": "name:%20Frontend%20tests%20(Vitest)",
         "prevChunkIds": []
       },
       "32": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "e400f4f8",
         "encoded": "runs-on:%20ubuntu-latest",
         "prevChunkIds": []
       },
       "33": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "34ce1f26",
         "encoded": "steps:",
         "prevChunkIds": []
       },
       "34": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "e0a92b8d",
         "encoded": "-%20uses:%20actions/checkout@v4",
         "prevChunkIds": []
       },
       "35": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "7eec179e",
         "encoded": "-%20name:%20Set%20up%20Node",
         "prevChunkIds": []
       },
       "36": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "27ad1510",
         "encoded": "uses:%20actions/setup-node@v4",
         "prevChunkIds": []
       },
       "37": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "87f5aa06",
         "encoded": "with:",
         "prevChunkIds": []
       },
       "38": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "c752ec2d",
         "encoded": "node-version:%20'20'",
         "prevChunkIds": []
       },
       "39": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "6b305263",
         "encoded": "cache:%20npm",
         "prevChunkIds": []
       },
       "40": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "476ac1e6",
         "encoded": "cache-dependency-path:%20frontend/package-lock.json",
         "prevChunkIds": []
       },
       "41": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "c7e231c0",
         "encoded": "-%20name:%20Install%20and%20test",
         "prevChunkIds": []
       },
       "42": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "4a3644d7",
         "encoded": "working-directory:%20frontend",
         "prevChunkIds": []
       },
       "43": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "418a3442",
         "encoded": "run:%20%7C",
         "prevChunkIds": []
       },
       "44": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "4d550fdf",
         "encoded": "npm%20ci",
         "prevChunkIds": []
       },
       "45": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "98c051e4",
         "encoded": "npm%20test%20--%20--run",
         "prevChunkIds": []
       },
       "47": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "f29d2093",
         "encoded": "docker-build:",
         "prevChunkIds": []
       },
       "48": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "c6023a91",
         "encoded": "name:%20Docker%20build%20and%20scan",
         "prevChunkIds": []
       },
       "49": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "01b6e26c",
         "encoded": "runs-on:%20ubuntu-latest",
         "prevChunkIds": []
       },
       "50": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "f291505f",
         "encoded": "needs:%20%5Bbackend-tests,%20frontend-tests%5D",
         "prevChunkIds": []
       },
       "51": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "26ea0370",
         "encoded": "steps:",
         "prevChunkIds": []
       },
       "52": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "ebfd7039",
         "encoded": "-%20uses:%20actions/checkout@v4",
         "prevChunkIds": []
       },
       "54": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "3eefac11",
         "encoded": "-%20name:%20Build%20image",
         "prevChunkIds": []
       },
       "55": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "f8b0e2a8",
         "encoded": "run:%20docker%20build%20-t%20iss-tracker:latest%20.",
         "prevChunkIds": []
       },
       "57": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "a8d778ff",
         "encoded": "-%20name:%20Security%20scan%20with%20Trivy",
         "prevChunkIds": []
       },
       "58": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "d814c2c1",
         "encoded": "uses:%20aquasecurity/trivy-action@master",
         "prevChunkIds": []
       },
       "59": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "9fa96e94",
         "encoded": "with:",
         "prevChunkIds": []
       },
       "60": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "49561a91",
         "encoded": "image-ref:%20'iss-tracker:latest'",
         "prevChunkIds": []
       },
       "61": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "d6efeb5e",
         "encoded": "format:%20'sarif'",
         "prevChunkIds": []
       },
       "62": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "f8a73156",
         "encoded": "output:%20'trivy-results.sarif'",
         "prevChunkIds": []
       },
       "64": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "73a4dce6",
         "encoded": "-%20name:%20Upload%20Trivy%20results%20to%20GitHub%20Security",
         "prevChunkIds": []
       },
       "65": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "f7341d94",
         "encoded": "uses:%20github/codeql-action/upload-sarif@v3",
         "prevChunkIds": []
       },
       "66": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "478e66e7",
         "encoded": "if:%20always()",
         "prevChunkIds": []
       },
       "67": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "b4df1b2b",
         "encoded": "with:",
         "prevChunkIds": []
       },
       "68": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "12248929",
         "encoded": "sarif_file:%20'trivy-results.sarif'",
         "prevChunkIds": []
       },
       "69": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "19570718",
         "encoded": "continue-on-error:%20true",
         "prevChunkIds": []
       },
       "71": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "580ec78e",
         "encoded": "-%20name:%20Run%20container%20smoke%20test",
         "prevChunkIds": []
       },
       "72": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "97b35795",
         "encoded": "run:%20%7C",
         "prevChunkIds": []
       },
       "73": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "165e7da5",
         "encoded": "docker%20run%20-d%20--name%20iss-tracker-test%20-p%208080:8080%20iss-tracker:latest",
         "prevChunkIds": []
       },
       "74": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "ecdf4ca6",
         "encoded": "sleep%2020",
         "prevChunkIds": []
       },
       "75": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "e6213bab",
         "encoded": "curl%20-f%20http://localhost:8080/actuator/health%20%7C%7C%20exit%201",
         "prevChunkIds": []
       },
       "76": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "90d3fa5b",
         "encoded": "curl%20-f%20http://localhost:8080/api/v1/iss/overview?lat=0%5C&lon=0%5C&offline=true%20%7C%7C%20exit%201",
         "prevChunkIds": []
       },
       "77": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "ab3e63b7",
         "encoded": "docker%20stop%20iss-tracker-test",
         "prevChunkIds": []
       },
       "78": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "163d68d3",
         "encoded": "docker%20rm%20iss-tracker-test",
         "prevChunkIds": []
       },
       "80": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "869f7d79",
         "encoded": "push-to-registry:",
         "prevChunkIds": []
       },
       "81": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "c932eb91",
         "encoded": "name:%20Push%20to%20container%20registry",
         "prevChunkIds": []
       },
       "82": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "022c2ce4",
         "encoded": "runs-on:%20ubuntu-latest",
         "prevChunkIds": []
       },
       "83": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "3b09e6fa",
         "encoded": "needs:%20%5Bdocker-build%5D",
         "prevChunkIds": []
       },
       "84": {
-        "chunkId": "544c0f",
-        "hash": "60db391a",
-        "encoded": "#%20Only%20run%20on%20main%20branch%20pushes%20AND%20if%20registry%20secrets%20are%20configured",
+        "chunkId": "5a51fa",
+        "hash": "b8c9f6a7",
+        "encoded": "if:%20github.ref%20==%20'refs/heads/main'%20&&%20github.event_name%20==%20'push'",
         "prevChunkIds": []
       },
       "85": {
-        "chunkId": "544c0f",
-        "hash": "26802705",
-        "encoded": "if:%20%7C",
-        "prevChunkIds": []
-      },
-      "86": {
-        "chunkId": "544c0f",
-        "hash": "703c3748",
-        "encoded": "github.ref%20==%20'refs/heads/main'%20&&",
-        "prevChunkIds": []
-      },
-      "87": {
-        "chunkId": "544c0f",
-        "hash": "869d6273",
-        "encoded": "github.event_name%20==%20'push'%20&&",
-        "prevChunkIds": []
-      },
-      "88": {
-        "chunkId": "544c0f",
-        "hash": "0d4ce1f9",
-        "encoded": "github.repository_owner%20!=%20'fork-owner'",
-        "prevChunkIds": []
-      },
-      "89": {
-        "chunkId": "544c0f",
-        "hash": "5a9f56dd",
+        "chunkId": "5a51fa",
+        "hash": "3cdba11f",
         "encoded": "steps:",
         "prevChunkIds": []
       },
-      "90": {
-        "chunkId": "544c0f",
-        "hash": "c338c548",
+      "86": {
+        "chunkId": "5a51fa",
+        "hash": "8ea574fd",
         "encoded": "-%20uses:%20actions/checkout@v4",
         "prevChunkIds": []
       },
-      "92": {
-        "chunkId": "544c0f",
-        "hash": "b1258ed5",
+      "88": {
+        "chunkId": "5a51fa",
+        "hash": "3981ea20",
         "encoded": "-%20name:%20Set%20up%20Docker%20Buildx",
         "prevChunkIds": []
       },
-      "93": {
-        "chunkId": "544c0f",
-        "hash": "35bc710a",
+      "89": {
+        "chunkId": "5a51fa",
+        "hash": "04249ea2",
         "encoded": "uses:%20docker/setup-buildx-action@v3",
         "prevChunkIds": []
       },
-      "95": {
-        "chunkId": "544c0f",
-        "hash": "6e16e4ae",
-        "encoded": "#%20Only%20login%20if%20secrets%20are%20available%20(optional%20step)",
-        "prevChunkIds": []
-      },
-      "96": {
-        "chunkId": "544c0f",
-        "hash": "fa730882",
+      "91": {
+        "chunkId": "5a51fa",
+        "hash": "7249c33b",
         "encoded": "-%20name:%20Log%20in%20to%20Container%20Registry",
         "prevChunkIds": []
       },
-      "97": {
-        "chunkId": "544c0f",
-        "hash": "b51714fb",
-        "encoded": "if:%20%7C",
-        "prevChunkIds": []
-      },
-      "98": {
-        "chunkId": "544c0f",
-        "hash": "7dea00ea",
-        "encoded": "secrets.DOCKER_REGISTRY%20!=%20''%20&&",
-        "prevChunkIds": []
-      },
-      "99": {
-        "chunkId": "544c0f",
-        "hash": "3a56b973",
-        "encoded": "secrets.DOCKER_USERNAME%20!=%20''%20&&",
-        "prevChunkIds": []
-      },
-      "100": {
-        "chunkId": "544c0f",
-        "hash": "7a00dbfc",
-        "encoded": "secrets.DOCKER_PASSWORD%20!=%20''",
-        "prevChunkIds": []
-      },
-      "101": {
-        "chunkId": "544c0f",
-        "hash": "e0906e6d",
+      "92": {
+        "chunkId": "5a51fa",
+        "hash": "0cb4346f",
         "encoded": "uses:%20docker/login-action@v3",
         "prevChunkIds": []
       },
+      "93": {
+        "chunkId": "5a51fa",
+        "hash": "31b929aa",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "5a51fa",
+        "hash": "7b193cc1",
+        "encoded": "registry:%20$%7B%7B%20secrets.DOCKER_REGISTRY%20%7C%7C%20'docker.io'%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "5a51fa",
+        "hash": "818393fe",
+        "encoded": "username:%20$%7B%7B%20secrets.DOCKER_USERNAME%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "5a51fa",
+        "hash": "a945a1a6",
+        "encoded": "password:%20$%7B%7B%20secrets.DOCKER_PASSWORD%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "5a51fa",
+        "hash": "65ff83ba",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "5a51fa",
+        "hash": "9581deef",
+        "encoded": "-%20name:%20Extract%20metadata",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "5a51fa",
+        "hash": "0e575bdc",
+        "encoded": "id:%20meta",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "5a51fa",
+        "hash": "e51acfd9",
+        "encoded": "uses:%20docker/metadata-action@v5",
+        "prevChunkIds": []
+      },
       "102": {
-        "chunkId": "544c0f",
+        "chunkId": "5a51fa",
         "hash": "a18ed8f2",
         "encoded": "with:",
         "prevChunkIds": []
       },
       "103": {
-        "chunkId": "544c0f",
-        "hash": "e7964c20",
-        "encoded": "registry:%20$%7B%7B%20secrets.DOCKER_REGISTRY%20%7C%7C%20'docker.io'%20%7D%7D",
-        "prevChunkIds": []
-      },
-      "104": {
-        "chunkId": "544c0f",
-        "hash": "2878b0e6",
-        "encoded": "username:%20$%7B%7B%20secrets.DOCKER_USERNAME%20%7D%7D",
-        "prevChunkIds": []
-      },
-      "105": {
-        "chunkId": "544c0f",
-        "hash": "b9c711af",
-        "encoded": "password:%20$%7B%7B%20secrets.DOCKER_PASSWORD%20%7D%7D",
-        "prevChunkIds": []
-      },
-      "106": {
-        "chunkId": "544c0f",
-        "hash": "e1a56f9e",
-        "encoded": "continue-on-error:%20true",
-        "prevChunkIds": []
-      },
-      "108": {
-        "chunkId": "544c0f",
-        "hash": "b88a8a2c",
-        "encoded": "-%20name:%20Extract%20metadata",
-        "prevChunkIds": []
-      },
-      "109": {
-        "chunkId": "544c0f",
-        "hash": "ac8ae8d7",
-        "encoded": "id:%20meta",
-        "prevChunkIds": []
-      },
-      "110": {
-        "chunkId": "544c0f",
-        "hash": "68a66945",
-        "encoded": "uses:%20docker/metadata-action@v5",
-        "prevChunkIds": []
-      },
-      "111": {
-        "chunkId": "544c0f",
-        "hash": "4a0ec62f",
-        "encoded": "with:",
-        "prevChunkIds": []
-      },
-      "112": {
-        "chunkId": "544c0f",
-        "hash": "35c580b2",
+        "chunkId": "5a51fa",
+        "hash": "6674779b",
         "encoded": "images:%20$%7B%7B%20secrets.DOCKER_REGISTRY%20%7C%7C%20'docker.io'%20%7D%7D/iss-tracker",
         "prevChunkIds": []
       },
-      "113": {
-        "chunkId": "544c0f",
-        "hash": "03f4a064",
+      "104": {
+        "chunkId": "5a51fa",
+        "hash": "a67dc35f",
         "encoded": "tags:%20%7C",
         "prevChunkIds": []
       },
-      "114": {
-        "chunkId": "544c0f",
-        "hash": "99fc8ae6",
+      "105": {
+        "chunkId": "5a51fa",
+        "hash": "1147181b",
         "encoded": "type=sha,prefix=%7B%7Bbranch%7D%7D-",
         "prevChunkIds": []
       },
-      "115": {
-        "chunkId": "544c0f",
-        "hash": "4024d225",
+      "106": {
+        "chunkId": "5a51fa",
+        "hash": "0b0bf738",
         "encoded": "type=raw,value=latest,enable=%7B%7Bis_default_branch%7D%7D",
         "prevChunkIds": []
       },
-      "117": {
-        "chunkId": "544c0f",
-        "hash": "1f9de659",
-        "encoded": "#%20Only%20push%20if%20login%20succeeded",
-        "prevChunkIds": []
-      },
-      "118": {
-        "chunkId": "544c0f",
-        "hash": "103bf0b8",
+      "108": {
+        "chunkId": "5a51fa",
+        "hash": "7a5b9c64",
         "encoded": "-%20name:%20Build%20and%20push",
         "prevChunkIds": []
       },
-      "119": {
-        "chunkId": "544c0f",
-        "hash": "78eda4df",
-        "encoded": "if:%20success()",
+      "109": {
+        "chunkId": "5a51fa",
+        "hash": "c7b9d359",
+        "encoded": "uses:%20docker/build-push-action@v5",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "5a51fa",
+        "hash": "1dfe6def",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "5a51fa",
+        "hash": "e3557d92",
+        "encoded": "context:%20.",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "5a51fa",
+        "hash": "f4f4497b",
+        "encoded": "push:%20true",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "5a51fa",
+        "hash": "9f2fbb05",
+        "encoded": "tags:%20$%7B%7B%20steps.meta.outputs.tags%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "5a51fa",
+        "hash": "4a6ea585",
+        "encoded": "labels:%20$%7B%7B%20steps.meta.outputs.labels%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "5a51fa",
+        "hash": "58bc3fe4",
+        "encoded": "cache-from:%20type=gha",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "5a51fa",
+        "hash": "48f746fe",
+        "encoded": "cache-to:%20type=gha,mode=max",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "5a51fa",
+        "hash": "784a94b4",
+        "encoded": "continue-on-error:%20true",
         "prevChunkIds": []
       },
       "120": {
         "chunkId": "544c0f",
-        "hash": "8670ba08",
-        "encoded": "uses:%20docker/build-push-action@v5",
+        "hash": "4a02ba62",
+        "encoded": "on:",
         "prevChunkIds": []
       },
       "121": {
         "chunkId": "544c0f",
-        "hash": "11f56a7f",
-        "encoded": "with:",
+        "hash": "7403cb45",
+        "encoded": "push:",
         "prevChunkIds": []
       },
       "122": {
         "chunkId": "544c0f",
-        "hash": "3a2db4e7",
-        "encoded": "context:%20.",
+        "hash": "31140ccb",
+        "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": []
       },
       "123": {
         "chunkId": "544c0f",
-        "hash": "1119c54b",
-        "encoded": "push:%20true",
+        "hash": "9c6359b2",
+        "encoded": "pull_request:",
         "prevChunkIds": []
       },
       "124": {
         "chunkId": "544c0f",
-        "hash": "55229353",
-        "encoded": "tags:%20$%7B%7B%20steps.meta.outputs.tags%20%7D%7D",
-        "prevChunkIds": []
-      },
-      "125": {
-        "chunkId": "544c0f",
-        "hash": "d1252ef3",
-        "encoded": "labels:%20$%7B%7B%20steps.meta.outputs.labels%20%7D%7D",
+        "hash": "528fb4f4",
+        "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": []
       },
       "126": {
         "chunkId": "544c0f",
-        "hash": "9e7af63d",
-        "encoded": "cache-from:%20type=gha",
+        "hash": "a9638a75",
+        "encoded": "#%20Required%20permissions%20for%20security%20scanning",
         "prevChunkIds": []
       },
       "127": {
         "chunkId": "544c0f",
-        "hash": "1fb2efbb",
-        "encoded": "cache-to:%20type=gha,mode=max",
+        "hash": "a718be0f",
+        "encoded": "permissions:",
         "prevChunkIds": []
       },
       "128": {
         "chunkId": "544c0f",
-        "hash": "63889ea2",
+        "hash": "c1a3f050",
+        "encoded": "contents:%20read",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "544c0f",
+        "hash": "79de87a1",
+        "encoded": "security-events:%20write",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "544c0f",
+        "hash": "93df956b",
+        "encoded": "actions:%20read",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "544c0f",
+        "hash": "5fa36a95",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "544c0f",
+        "hash": "947d637d",
+        "encoded": "backend-tests:",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "544c0f",
+        "hash": "5cb92075",
+        "encoded": "name:%20Backend%20tests%20(Maven)",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "544c0f",
+        "hash": "addfb1c5",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "544c0f",
+        "hash": "89346a48",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "544c0f",
+        "hash": "d5c22d69",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "544c0f",
+        "hash": "c4334cd0",
+        "encoded": "-%20name:%20Set%20up%20JDK%2021",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "544c0f",
+        "hash": "89148ad3",
+        "encoded": "uses:%20actions/setup-java@v4",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "544c0f",
+        "hash": "ace27915",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "544c0f",
+        "hash": "2ec9cbbf",
+        "encoded": "distribution:%20temurin",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "544c0f",
+        "hash": "3568613c",
+        "encoded": "java-version:%20'21'",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "544c0f",
+        "hash": "75518c35",
+        "encoded": "cache:%20maven",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "544c0f",
+        "hash": "b71aaaae",
+        "encoded": "-%20name:%20Run%20backend%20tests",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "544c0f",
+        "hash": "c13e0f1f",
+        "encoded": "working-directory:%20backend",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "544c0f",
+        "hash": "263d2df2",
+        "encoded": "run:%20mvn%20-B%20-q%20verify",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "544c0f",
+        "hash": "d1925091",
+        "encoded": "frontend-tests:",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "544c0f",
+        "hash": "6ec6d036",
+        "encoded": "name:%20Frontend%20tests%20(Vitest)",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "544c0f",
+        "hash": "c7c7d630",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "544c0f",
+        "hash": "582f76d1",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "544c0f",
+        "hash": "3dd88ba3",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "544c0f",
+        "hash": "a3819d40",
+        "encoded": "-%20name:%20Set%20up%20Node",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "544c0f",
+        "hash": "b6375116",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "544c0f",
+        "hash": "fdefda13",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "544c0f",
+        "hash": "171eaf35",
+        "encoded": "node-version:%20'20'",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "544c0f",
+        "hash": "53bcd593",
+        "encoded": "cache:%20npm",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "544c0f",
+        "hash": "0010c5fa",
+        "encoded": "cache-dependency-path:%20frontend/package-lock.json",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "544c0f",
+        "hash": "578acfdf",
+        "encoded": "-%20name:%20Install%20and%20test",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "544c0f",
+        "hash": "ef4dcd9f",
+        "encoded": "working-directory:%20frontend",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "544c0f",
+        "hash": "cc034aae",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "544c0f",
+        "hash": "1fddb4e3",
+        "encoded": "npm%20ci",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "544c0f",
+        "hash": "cb75aefd",
+        "encoded": "npm%20test%20--%20--run",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "544c0f",
+        "hash": "84f38535",
+        "encoded": "docker-build:",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "544c0f",
+        "hash": "049bb6ea",
+        "encoded": "name:%20Docker%20build%20and%20scan",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "544c0f",
+        "hash": "eb1b4d87",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "544c0f",
+        "hash": "e368e637",
+        "encoded": "needs:%20%5Bbackend-tests,%20frontend-tests%5D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "544c0f",
+        "hash": "cfaa7739",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "544c0f",
+        "hash": "e0fa2408",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "544c0f",
+        "hash": "5f27f18f",
+        "encoded": "-%20name:%20Build%20image",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "544c0f",
+        "hash": "96b0067e",
+        "encoded": "run:%20docker%20build%20-t%20iss-tracker:latest%20.",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "544c0f",
+        "hash": "0bd76431",
+        "encoded": "-%20name:%20Security%20scan%20with%20Trivy",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "544c0f",
+        "hash": "e5b7e727",
+        "encoded": "uses:%20aquasecurity/trivy-action@master",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "544c0f",
+        "hash": "677233be",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "544c0f",
+        "hash": "3baaddb8",
+        "encoded": "image-ref:%20'iss-tracker:latest'",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "544c0f",
+        "hash": "f3e31a1c",
+        "encoded": "format:%20'sarif'",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "544c0f",
+        "hash": "48775fde",
+        "encoded": "output:%20'trivy-results.sarif'",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "544c0f",
+        "hash": "8070ee32",
+        "encoded": "-%20name:%20Upload%20Trivy%20results%20to%20GitHub%20Security",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "544c0f",
+        "hash": "a78d9828",
+        "encoded": "uses:%20github/codeql-action/upload-sarif@v3",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "544c0f",
+        "hash": "ac5d77c9",
+        "encoded": "if:%20always()",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "544c0f",
+        "hash": "fcdbae0a",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "544c0f",
+        "hash": "fbc5819f",
+        "encoded": "sarif_file:%20'trivy-results.sarif'",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "544c0f",
+        "hash": "86ed7523",
         "encoded": "continue-on-error:%20true",
         "prevChunkIds": []
       },
-      "131": {
+      "189": {
+        "chunkId": "544c0f",
+        "hash": "38452e27",
+        "encoded": "-%20name:%20Run%20container%20smoke%20test",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "544c0f",
+        "hash": "c56e876b",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "544c0f",
+        "hash": "0392d880",
+        "encoded": "docker%20run%20-d%20--name%20iss-tracker-test%20-p%208080:8080%20iss-tracker:latest",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "544c0f",
+        "hash": "27a67ad7",
+        "encoded": "sleep%2020",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "544c0f",
+        "hash": "d4ec8b97",
+        "encoded": "curl%20-f%20http://localhost:8080/actuator/health%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "544c0f",
+        "hash": "7526baf5",
+        "encoded": "curl%20-f%20http://localhost:8080/api/v1/iss/overview?lat=0%5C&lon=0%5C&offline=true%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "544c0f",
+        "hash": "b0b033f4",
+        "encoded": "docker%20stop%20iss-tracker-test",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "544c0f",
+        "hash": "d4ff58f8",
+        "encoded": "docker%20rm%20iss-tracker-test",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "544c0f",
+        "hash": "4200a3cf",
+        "encoded": "push-to-registry:",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "544c0f",
+        "hash": "84630ec6",
+        "encoded": "name:%20Push%20to%20container%20registry",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "544c0f",
+        "hash": "55180aae",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "544c0f",
+        "hash": "84dcaacb",
+        "encoded": "needs:%20%5Bdocker-build%5D",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "544c0f",
+        "hash": "7570f4d4",
+        "encoded": "#%20Only%20run%20on%20main%20branch%20pushes%20AND%20if%20registry%20secrets%20are%20configured",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "544c0f",
+        "hash": "8fea6642",
+        "encoded": "if:%20%7C",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "544c0f",
+        "hash": "5cd9a692",
+        "encoded": "github.ref%20==%20'refs/heads/main'%20&&",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "544c0f",
+        "hash": "b6bb20b1",
+        "encoded": "github.event_name%20==%20'push'%20&&",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "544c0f",
+        "hash": "dab120ef",
+        "encoded": "github.repository_owner%20!=%20'fork-owner'",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "544c0f",
+        "hash": "8dbe29e5",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "544c0f",
+        "hash": "b82a3e8e",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "544c0f",
+        "hash": "a2133c6e",
+        "encoded": "-%20name:%20Set%20up%20Docker%20Buildx",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "544c0f",
+        "hash": "45eb5d08",
+        "encoded": "uses:%20docker/setup-buildx-action@v3",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "544c0f",
+        "hash": "fcf5628a",
+        "encoded": "#%20Only%20login%20if%20secrets%20are%20available%20(optional%20step)",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "544c0f",
+        "hash": "b0fa1e6b",
+        "encoded": "-%20name:%20Log%20in%20to%20Container%20Registry",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "544c0f",
+        "hash": "5fd67d3e",
+        "encoded": "if:%20%7C",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "544c0f",
+        "hash": "f701fa26",
+        "encoded": "secrets.DOCKER_REGISTRY%20!=%20''%20&&",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "544c0f",
+        "hash": "5f2f51d3",
+        "encoded": "secrets.DOCKER_USERNAME%20!=%20''%20&&",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "544c0f",
+        "hash": "bbb7aff7",
+        "encoded": "secrets.DOCKER_PASSWORD%20!=%20''",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "544c0f",
+        "hash": "65f57326",
+        "encoded": "uses:%20docker/login-action@v3",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "544c0f",
+        "hash": "ec4e3ef4",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "544c0f",
+        "hash": "ab87bb0c",
+        "encoded": "registry:%20$%7B%7B%20secrets.DOCKER_REGISTRY%20%7C%7C%20'docker.io'%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "544c0f",
+        "hash": "8aef2224",
+        "encoded": "username:%20$%7B%7B%20secrets.DOCKER_USERNAME%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "544c0f",
+        "hash": "ba34088f",
+        "encoded": "password:%20$%7B%7B%20secrets.DOCKER_PASSWORD%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "544c0f",
+        "hash": "d42996a2",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "544c0f",
+        "hash": "945d3f90",
+        "encoded": "-%20name:%20Extract%20metadata",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "544c0f",
+        "hash": "37612147",
+        "encoded": "id:%20meta",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "544c0f",
+        "hash": "258228eb",
+        "encoded": "uses:%20docker/metadata-action@v5",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "544c0f",
+        "hash": "eba46e94",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "544c0f",
+        "hash": "db584855",
+        "encoded": "images:%20$%7B%7B%20secrets.DOCKER_REGISTRY%20%7C%7C%20'docker.io'%20%7D%7D/iss-tracker",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "544c0f",
+        "hash": "9f74cf6d",
+        "encoded": "tags:%20%7C",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "544c0f",
+        "hash": "ff4946c2",
+        "encoded": "type=sha,prefix=%7B%7Bbranch%7D%7D-",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "544c0f",
+        "hash": "d8fabc87",
+        "encoded": "type=raw,value=latest,enable=%7B%7Bis_default_branch%7D%7D",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "544c0f",
+        "hash": "646ba52b",
+        "encoded": "#%20Only%20push%20if%20login%20succeeded",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "544c0f",
+        "hash": "15a0e22c",
+        "encoded": "-%20name:%20Build%20and%20push",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "544c0f",
+        "hash": "22241457",
+        "encoded": "if:%20success()",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "544c0f",
+        "hash": "af4fa616",
+        "encoded": "uses:%20docker/build-push-action@v5",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "544c0f",
+        "hash": "4e23c618",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "544c0f",
+        "hash": "d62102c0",
+        "encoded": "context:%20.",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "544c0f",
+        "hash": "b5ac4048",
+        "encoded": "push:%20true",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "544c0f",
+        "hash": "664076c6",
+        "encoded": "tags:%20$%7B%7B%20steps.meta.outputs.tags%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "544c0f",
+        "hash": "05c67a6c",
+        "encoded": "labels:%20$%7B%7B%20steps.meta.outputs.labels%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "544c0f",
+        "hash": "347ffa09",
+        "encoded": "cache-from:%20type=gha",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "544c0f",
+        "hash": "78f52f82",
+        "encoded": "cache-to:%20type=gha,mode=max",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "544c0f",
+        "hash": "b831a640",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "249": {
         "chunkId": "0abf63",
-        "hash": "d4f5efbb",
+        "hash": "0ce9009f",
         "encoded": "on:",
         "prevChunkIds": [
           "de063e"
         ]
       },
-      "132": {
-        "chunkId": "0abf63",
-        "hash": "1f278341",
-        "encoded": "push:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "133": {
-        "chunkId": "0abf63",
-        "hash": "2ae9f8cf",
-        "encoded": "branches:%20%5Bmain%5D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "134": {
-        "chunkId": "0abf63",
-        "hash": "5f3e4df8",
-        "encoded": "pull_request:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "135": {
-        "chunkId": "0abf63",
-        "hash": "2899687a",
-        "encoded": "branches:%20%5Bmain%5D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "137": {
-        "chunkId": "0abf63",
-        "hash": "56667e39",
-        "encoded": "#%20Required%20permissions%20for%20security%20scanning",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "138": {
-        "chunkId": "0abf63",
-        "hash": "6783c292",
-        "encoded": "permissions:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "139": {
-        "chunkId": "0abf63",
-        "hash": "0d9bddd3",
-        "encoded": "contents:%20read",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "140": {
-        "chunkId": "0abf63",
-        "hash": "d5c826b8",
-        "encoded": "security-events:%20write",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "141": {
-        "chunkId": "0abf63",
-        "hash": "8c22d9c7",
-        "encoded": "actions:%20read",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "143": {
-        "chunkId": "0abf63",
-        "hash": "1a0fef6f",
-        "encoded": "jobs:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "144": {
-        "chunkId": "0abf63",
-        "hash": "ab343a9d",
-        "encoded": "backend-tests:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "145": {
-        "chunkId": "0abf63",
-        "hash": "14d613b1",
-        "encoded": "name:%20Backend%20tests%20(Maven)",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "146": {
-        "chunkId": "0abf63",
-        "hash": "b6f59f81",
-        "encoded": "runs-on:%20ubuntu-latest",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "147": {
-        "chunkId": "0abf63",
-        "hash": "fcb095eb",
-        "encoded": "steps:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "148": {
-        "chunkId": "0abf63",
-        "hash": "73811f4d",
-        "encoded": "-%20uses:%20actions/checkout@v4",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "149": {
-        "chunkId": "0abf63",
-        "hash": "c8558392",
-        "encoded": "-%20name:%20Set%20up%20JDK%2021",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "150": {
-        "chunkId": "0abf63",
-        "hash": "811ab364",
-        "encoded": "uses:%20actions/setup-java@v4",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "151": {
-        "chunkId": "0abf63",
-        "hash": "ac2e6bac",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "152": {
-        "chunkId": "0abf63",
-        "hash": "760dd7a5",
-        "encoded": "distribution:%20temurin",
-        "prevChunkIds": []
-      },
-      "153": {
-        "chunkId": "0abf63",
-        "hash": "636d7fd9",
-        "encoded": "java-version:%20'21'",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "154": {
-        "chunkId": "0abf63",
-        "hash": "b1e9f842",
-        "encoded": "cache:%20maven",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "155": {
-        "chunkId": "0abf63",
-        "hash": "69e788b5",
-        "encoded": "-%20name:%20Run%20backend%20tests",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "156": {
-        "chunkId": "0abf63",
-        "hash": "3cb81114",
-        "encoded": "working-directory:%20backend",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "157": {
-        "chunkId": "0abf63",
-        "hash": "3dbc93d3",
-        "encoded": "run:%20mvn%20-B%20-q%20verify",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "159": {
-        "chunkId": "0abf63",
-        "hash": "45067774",
-        "encoded": "frontend-tests:",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "160": {
-        "chunkId": "0abf63",
-        "hash": "21a991fc",
-        "encoded": "name:%20Frontend%20tests%20(Vitest)",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "161": {
-        "chunkId": "0abf63",
-        "hash": "36c93af4",
-        "encoded": "runs-on:%20ubuntu-latest",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "162": {
-        "chunkId": "0abf63",
-        "hash": "d2a5ca12",
-        "encoded": "steps:",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "163": {
-        "chunkId": "0abf63",
-        "hash": "1ee70ffb",
-        "encoded": "-%20uses:%20actions/checkout@v4",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "164": {
-        "chunkId": "0abf63",
-        "hash": "40eb1e53",
-        "encoded": "-%20name:%20Set%20up%20Node",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "165": {
-        "chunkId": "0abf63",
-        "hash": "acb13cdb",
-        "encoded": "uses:%20actions/setup-node@v4",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "166": {
-        "chunkId": "0abf63",
-        "hash": "8ecc3af3",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "167": {
-        "chunkId": "0abf63",
-        "hash": "defa4bc5",
-        "encoded": "node-version:%20'20'",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "168": {
-        "chunkId": "0abf63",
-        "hash": "8722227a",
-        "encoded": "cache:%20npm",
-        "prevChunkIds": [
-          "160bfb"
-        ]
-      },
-      "169": {
-        "chunkId": "0abf63",
-        "hash": "ccf81e0e",
-        "encoded": "cache-dependency-path:%20frontend/package-lock.json",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "170": {
-        "chunkId": "0abf63",
-        "hash": "92df13e2",
-        "encoded": "-%20name:%20Install%20and%20test",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "171": {
-        "chunkId": "0abf63",
-        "hash": "c1232a6b",
-        "encoded": "working-directory:%20frontend",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "172": {
-        "chunkId": "0abf63",
-        "hash": "2061674d",
-        "encoded": "run:%20%7C",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "173": {
-        "chunkId": "0abf63",
-        "hash": "4158614d",
-        "encoded": "npm%20ci",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "174": {
-        "chunkId": "0abf63",
-        "hash": "df84a46f",
-        "encoded": "npm%20test%20--%20--run",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "176": {
-        "chunkId": "0abf63",
-        "hash": "43818673",
-        "encoded": "docker-build:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "177": {
-        "chunkId": "0abf63",
-        "hash": "9b3d1e62",
-        "encoded": "name:%20Docker%20build%20and%20scan",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "178": {
-        "chunkId": "0abf63",
-        "hash": "81f844d6",
-        "encoded": "runs-on:%20ubuntu-latest",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "179": {
-        "chunkId": "0abf63",
-        "hash": "f7212131",
-        "encoded": "needs:%20%5Bbackend-tests,%20frontend-tests%5D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "180": {
-        "chunkId": "0abf63",
-        "hash": "a8adbf75",
-        "encoded": "steps:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "181": {
-        "chunkId": "0abf63",
-        "hash": "bffd5b3d",
-        "encoded": "-%20uses:%20actions/checkout@v4",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "183": {
-        "chunkId": "0abf63",
-        "hash": "464b4bff",
-        "encoded": "-%20name:%20Build%20image",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "186": {
-        "chunkId": "0abf63",
-        "hash": "205c2992",
-        "encoded": "-%20name:%20Security%20scan%20with%20Trivy",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "187": {
-        "chunkId": "0abf63",
-        "hash": "658cf656",
-        "encoded": "uses:%20aquasecurity/trivy-action@master",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "188": {
-        "chunkId": "0abf63",
-        "hash": "1cf234b2",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "189": {
-        "chunkId": "0abf63",
-        "hash": "d8485944",
-        "encoded": "image-ref:%20'iss-tracker:latest'",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "190": {
-        "chunkId": "0abf63",
-        "hash": "36162277",
-        "encoded": "format:%20'sarif'",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "191": {
-        "chunkId": "0abf63",
-        "hash": "f1605bcc",
-        "encoded": "output:%20'trivy-results.sarif'",
-        "prevChunkIds": []
-      },
-      "193": {
-        "chunkId": "0abf63",
-        "hash": "5676a32c",
-        "encoded": "-%20name:%20Upload%20Trivy%20results%20to%20GitHub%20Security",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "194": {
-        "chunkId": "0abf63",
-        "hash": "c2e129b3",
-        "encoded": "uses:%20github/codeql-action/upload-sarif@v3",
-        "prevChunkIds": []
-      },
-      "195": {
-        "chunkId": "0abf63",
-        "hash": "0f178e7b",
-        "encoded": "if:%20always()",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "196": {
-        "chunkId": "0abf63",
-        "hash": "130e593e",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "197": {
-        "chunkId": "0abf63",
-        "hash": "3e502f41",
-        "encoded": "sarif_file:%20'trivy-results.sarif'",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "198": {
-        "chunkId": "0abf63",
-        "hash": "7db716ac",
-        "encoded": "continue-on-error:%20true",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "200": {
-        "chunkId": "0abf63",
-        "hash": "816d7d8c",
-        "encoded": "-%20name:%20Run%20container%20smoke%20test",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "201": {
-        "chunkId": "0abf63",
-        "hash": "e7a2ca33",
-        "encoded": "run:%20%7C",
-        "prevChunkIds": []
-      },
-      "203": {
-        "chunkId": "0abf63",
-        "hash": "652020de",
-        "encoded": "sleep%2020",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "204": {
-        "chunkId": "0abf63",
-        "hash": "e24c0d77",
-        "encoded": "curl%20-f%20http://localhost:8080/actuator/health%20%7C%7C%20exit%201",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "205": {
-        "chunkId": "0abf63",
-        "hash": "a24c1403",
-        "encoded": "curl%20-f%20http://localhost:8080/api/v1/iss/overview?lat=0%5C&lon=0%5C&offline=true%20%7C%7C%20exit%201",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "206": {
-        "chunkId": "0abf63",
-        "hash": "2c1ae0fd",
-        "encoded": "docker%20stop%20iss-tracker-test",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "207": {
-        "chunkId": "0abf63",
-        "hash": "394148f8",
-        "encoded": "docker%20rm%20iss-tracker-test",
-        "prevChunkIds": []
-      },
-      "209": {
-        "chunkId": "0abf63",
-        "hash": "57c1b5f4",
-        "encoded": "push-to-registry:",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "210": {
-        "chunkId": "0abf63",
-        "hash": "429de15c",
-        "encoded": "name:%20Push%20to%20container%20registry",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "211": {
-        "chunkId": "0abf63",
-        "hash": "92c5b922",
-        "encoded": "runs-on:%20ubuntu-latest",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "212": {
-        "chunkId": "0abf63",
-        "hash": "69eb67e1",
-        "encoded": "needs:%20%5Bdocker-build%5D",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "218": {
-        "chunkId": "0abf63",
-        "hash": "1a3e6273",
-        "encoded": "steps:",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "219": {
-        "chunkId": "0abf63",
-        "hash": "bc6ba2e5",
-        "encoded": "-%20uses:%20actions/checkout@v4",
-        "prevChunkIds": [
-          "49a8a5"
-        ]
-      },
-      "221": {
-        "chunkId": "0abf63",
-        "hash": "62f3f20d",
-        "encoded": "-%20name:%20Set%20up%20Docker%20Buildx",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "222": {
-        "chunkId": "0abf63",
-        "hash": "8f2edd85",
-        "encoded": "uses:%20docker/setup-buildx-action@v3",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "225": {
-        "chunkId": "0abf63",
-        "hash": "1932a2da",
-        "encoded": "-%20name:%20Log%20in%20to%20Container%20Registry",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "230": {
-        "chunkId": "0abf63",
-        "hash": "97984f63",
-        "encoded": "uses:%20docker/login-action@v3",
-        "prevChunkIds": []
-      },
-      "231": {
-        "chunkId": "0abf63",
-        "hash": "4c7be250",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "233": {
-        "chunkId": "0abf63",
-        "hash": "2233d268",
-        "encoded": "username:%20$%7B%7B%20secrets.DOCKER_USERNAME%20%7D%7D",
-        "prevChunkIds": []
-      },
-      "234": {
-        "chunkId": "0abf63",
-        "hash": "4a63b9dd",
-        "encoded": "password:%20$%7B%7B%20secrets.DOCKER_PASSWORD%20%7D%7D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "237": {
-        "chunkId": "0abf63",
-        "hash": "d81b12ec",
-        "encoded": "-%20name:%20Extract%20metadata",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "238": {
-        "chunkId": "0abf63",
-        "hash": "a4d0f1f5",
-        "encoded": "id:%20meta",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "239": {
-        "chunkId": "0abf63",
-        "hash": "f692e26c",
-        "encoded": "uses:%20docker/metadata-action@v5",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "240": {
-        "chunkId": "0abf63",
-        "hash": "973d5636",
-        "encoded": "with:",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "242": {
-        "chunkId": "0abf63",
-        "hash": "12b05236",
-        "encoded": "tags:%20%7C",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "243": {
-        "chunkId": "0abf63",
-        "hash": "8ba58ce8",
-        "encoded": "type=sha,prefix=%7B%7Bbranch%7D%7D-",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "244": {
-        "chunkId": "0abf63",
-        "hash": "5328b05e",
-        "encoded": "type=raw,value=latest,enable=%7B%7Bis_default_branch%7D%7D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "247": {
-        "chunkId": "0abf63",
-        "hash": "9170c37f",
-        "encoded": "-%20name:%20Build%20and%20push",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "249": {
-        "chunkId": "0abf63",
-        "hash": "c47d0d23",
-        "encoded": "uses:%20docker/build-push-action@v5",
-        "prevChunkIds": []
-      },
       "250": {
         "chunkId": "0abf63",
-        "hash": "0ef2167e",
-        "encoded": "with:",
+        "hash": "8288a2b0",
+        "encoded": "push:",
         "prevChunkIds": [
           "de063e"
         ]
       },
       "251": {
         "chunkId": "0abf63",
-        "hash": "52ea9bc4",
-        "encoded": "context:%20.",
+        "hash": "6c4834d5",
+        "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": [
           "de063e"
         ]
       },
       "252": {
         "chunkId": "0abf63",
-        "hash": "ea3d82d4",
-        "encoded": "push:%20true",
+        "hash": "d46930bc",
+        "encoded": "pull_request:",
         "prevChunkIds": [
           "de063e"
         ]
       },
       "253": {
         "chunkId": "0abf63",
-        "hash": "7f01352a",
-        "encoded": "tags:%20$%7B%7B%20steps.meta.outputs.tags%20%7D%7D",
-        "prevChunkIds": [
-          "de063e"
-        ]
-      },
-      "254": {
-        "chunkId": "0abf63",
-        "hash": "8f275a25",
-        "encoded": "labels:%20$%7B%7B%20steps.meta.outputs.labels%20%7D%7D",
+        "hash": "22f16d1a",
+        "encoded": "branches:%20%5Bmain%5D",
         "prevChunkIds": [
           "de063e"
         ]
       },
       "255": {
         "chunkId": "0abf63",
-        "hash": "eb3011b3",
-        "encoded": "cache-from:%20type=gha",
+        "hash": "01df2abd",
+        "encoded": "#%20Required%20permissions%20for%20security%20scanning",
         "prevChunkIds": [
           "de063e"
         ]
       },
       "256": {
         "chunkId": "0abf63",
-        "hash": "eb5ecba5",
+        "hash": "34b860e7",
+        "encoded": "permissions:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "257": {
+        "chunkId": "0abf63",
+        "hash": "1e6a0892",
+        "encoded": "contents:%20read",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "258": {
+        "chunkId": "0abf63",
+        "hash": "8dda2208",
+        "encoded": "security-events:%20write",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "259": {
+        "chunkId": "0abf63",
+        "hash": "4060e623",
+        "encoded": "actions:%20read",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "261": {
+        "chunkId": "0abf63",
+        "hash": "f156a75a",
+        "encoded": "jobs:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "262": {
+        "chunkId": "0abf63",
+        "hash": "88271e2d",
+        "encoded": "backend-tests:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "263": {
+        "chunkId": "0abf63",
+        "hash": "6f9d29db",
+        "encoded": "name:%20Backend%20tests%20(Maven)",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "264": {
+        "chunkId": "0abf63",
+        "hash": "da4343d6",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "265": {
+        "chunkId": "0abf63",
+        "hash": "f1ebea5f",
+        "encoded": "steps:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "266": {
+        "chunkId": "0abf63",
+        "hash": "062111c4",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "267": {
+        "chunkId": "0abf63",
+        "hash": "c58fd884",
+        "encoded": "-%20name:%20Set%20up%20JDK%2021",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "268": {
+        "chunkId": "0abf63",
+        "hash": "1a50ff5e",
+        "encoded": "uses:%20actions/setup-java@v4",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "269": {
+        "chunkId": "0abf63",
+        "hash": "09649292",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "270": {
+        "chunkId": "0abf63",
+        "hash": "6efd1957",
+        "encoded": "distribution:%20temurin",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "0abf63",
+        "hash": "6de2a889",
+        "encoded": "java-version:%20'21'",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "272": {
+        "chunkId": "0abf63",
+        "hash": "91d0ccc9",
+        "encoded": "cache:%20maven",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "273": {
+        "chunkId": "0abf63",
+        "hash": "26a58aae",
+        "encoded": "-%20name:%20Run%20backend%20tests",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "274": {
+        "chunkId": "0abf63",
+        "hash": "fe6dbd3f",
+        "encoded": "working-directory:%20backend",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "275": {
+        "chunkId": "0abf63",
+        "hash": "f7b0b55c",
+        "encoded": "run:%20mvn%20-B%20-q%20verify",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "277": {
+        "chunkId": "0abf63",
+        "hash": "c69f63f5",
+        "encoded": "frontend-tests:",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "278": {
+        "chunkId": "0abf63",
+        "hash": "dd009930",
+        "encoded": "name:%20Frontend%20tests%20(Vitest)",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "279": {
+        "chunkId": "0abf63",
+        "hash": "1dc644be",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "280": {
+        "chunkId": "0abf63",
+        "hash": "ef82b84e",
+        "encoded": "steps:",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "281": {
+        "chunkId": "0abf63",
+        "hash": "ee65d5c6",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "282": {
+        "chunkId": "0abf63",
+        "hash": "6040e838",
+        "encoded": "-%20name:%20Set%20up%20Node",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "283": {
+        "chunkId": "0abf63",
+        "hash": "f45ca6d4",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "284": {
+        "chunkId": "0abf63",
+        "hash": "0267e55e",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "285": {
+        "chunkId": "0abf63",
+        "hash": "cfd87746",
+        "encoded": "node-version:%20'20'",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "286": {
+        "chunkId": "0abf63",
+        "hash": "6a6cee96",
+        "encoded": "cache:%20npm",
+        "prevChunkIds": [
+          "160bfb"
+        ]
+      },
+      "287": {
+        "chunkId": "0abf63",
+        "hash": "dde52985",
+        "encoded": "cache-dependency-path:%20frontend/package-lock.json",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "288": {
+        "chunkId": "0abf63",
+        "hash": "a9bbc70f",
+        "encoded": "-%20name:%20Install%20and%20test",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "289": {
+        "chunkId": "0abf63",
+        "hash": "ecf5d034",
+        "encoded": "working-directory:%20frontend",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "290": {
+        "chunkId": "0abf63",
+        "hash": "cc329fb1",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "291": {
+        "chunkId": "0abf63",
+        "hash": "b5e0c423",
+        "encoded": "npm%20ci",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "292": {
+        "chunkId": "0abf63",
+        "hash": "d5b4dbf3",
+        "encoded": "npm%20test%20--%20--run",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "294": {
+        "chunkId": "0abf63",
+        "hash": "2ac63a03",
+        "encoded": "docker-build:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "295": {
+        "chunkId": "0abf63",
+        "hash": "1a1daa9c",
+        "encoded": "name:%20Docker%20build%20and%20scan",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "296": {
+        "chunkId": "0abf63",
+        "hash": "db1b0f83",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "297": {
+        "chunkId": "0abf63",
+        "hash": "045caf24",
+        "encoded": "needs:%20%5Bbackend-tests,%20frontend-tests%5D",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "298": {
+        "chunkId": "0abf63",
+        "hash": "166aef32",
+        "encoded": "steps:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "299": {
+        "chunkId": "0abf63",
+        "hash": "d84b5d2e",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "301": {
+        "chunkId": "0abf63",
+        "hash": "fe211509",
+        "encoded": "-%20name:%20Build%20image",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "304": {
+        "chunkId": "0abf63",
+        "hash": "271f6f90",
+        "encoded": "-%20name:%20Security%20scan%20with%20Trivy",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "305": {
+        "chunkId": "0abf63",
+        "hash": "94e7b063",
+        "encoded": "uses:%20aquasecurity/trivy-action@master",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "306": {
+        "chunkId": "0abf63",
+        "hash": "dd31b05c",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "307": {
+        "chunkId": "0abf63",
+        "hash": "422efd2a",
+        "encoded": "image-ref:%20'iss-tracker:latest'",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "308": {
+        "chunkId": "0abf63",
+        "hash": "f29edc4f",
+        "encoded": "format:%20'sarif'",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "309": {
+        "chunkId": "0abf63",
+        "hash": "cfc1c04c",
+        "encoded": "output:%20'trivy-results.sarif'",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "0abf63",
+        "hash": "db715015",
+        "encoded": "-%20name:%20Upload%20Trivy%20results%20to%20GitHub%20Security",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "312": {
+        "chunkId": "0abf63",
+        "hash": "9fcf7216",
+        "encoded": "uses:%20github/codeql-action/upload-sarif@v3",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "0abf63",
+        "hash": "efc2847c",
+        "encoded": "if:%20always()",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "314": {
+        "chunkId": "0abf63",
+        "hash": "94d6e2ef",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "315": {
+        "chunkId": "0abf63",
+        "hash": "2f050692",
+        "encoded": "sarif_file:%20'trivy-results.sarif'",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "316": {
+        "chunkId": "0abf63",
+        "hash": "e12940ea",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "318": {
+        "chunkId": "0abf63",
+        "hash": "6783f9ff",
+        "encoded": "-%20name:%20Run%20container%20smoke%20test",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "319": {
+        "chunkId": "0abf63",
+        "hash": "2c079180",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "0abf63",
+        "hash": "889e8204",
+        "encoded": "sleep%2020",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "322": {
+        "chunkId": "0abf63",
+        "hash": "d42b81c0",
+        "encoded": "curl%20-f%20http://localhost:8080/actuator/health%20%7C%7C%20exit%201",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "323": {
+        "chunkId": "0abf63",
+        "hash": "aab0af71",
+        "encoded": "curl%20-f%20http://localhost:8080/api/v1/iss/overview?lat=0%5C&lon=0%5C&offline=true%20%7C%7C%20exit%201",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "324": {
+        "chunkId": "0abf63",
+        "hash": "3a504473",
+        "encoded": "docker%20stop%20iss-tracker-test",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "325": {
+        "chunkId": "0abf63",
+        "hash": "ce1adcee",
+        "encoded": "docker%20rm%20iss-tracker-test",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "0abf63",
+        "hash": "b5d269b8",
+        "encoded": "push-to-registry:",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "328": {
+        "chunkId": "0abf63",
+        "hash": "bd17afd7",
+        "encoded": "name:%20Push%20to%20container%20registry",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "329": {
+        "chunkId": "0abf63",
+        "hash": "87df02b8",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "330": {
+        "chunkId": "0abf63",
+        "hash": "f3dc65bc",
+        "encoded": "needs:%20%5Bdocker-build%5D",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "336": {
+        "chunkId": "0abf63",
+        "hash": "042ee224",
+        "encoded": "steps:",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "337": {
+        "chunkId": "0abf63",
+        "hash": "9d0c1e7f",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": [
+          "49a8a5"
+        ]
+      },
+      "339": {
+        "chunkId": "0abf63",
+        "hash": "0f16d634",
+        "encoded": "-%20name:%20Set%20up%20Docker%20Buildx",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "340": {
+        "chunkId": "0abf63",
+        "hash": "af1bbfbd",
+        "encoded": "uses:%20docker/setup-buildx-action@v3",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "343": {
+        "chunkId": "0abf63",
+        "hash": "460a9eca",
+        "encoded": "-%20name:%20Log%20in%20to%20Container%20Registry",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "348": {
+        "chunkId": "0abf63",
+        "hash": "eb34b51d",
+        "encoded": "uses:%20docker/login-action@v3",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "0abf63",
+        "hash": "75372ccf",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "351": {
+        "chunkId": "0abf63",
+        "hash": "f9deb1bf",
+        "encoded": "username:%20$%7B%7B%20secrets.DOCKER_USERNAME%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "0abf63",
+        "hash": "ea1adced",
+        "encoded": "password:%20$%7B%7B%20secrets.DOCKER_PASSWORD%20%7D%7D",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "355": {
+        "chunkId": "0abf63",
+        "hash": "9f8b43c4",
+        "encoded": "-%20name:%20Extract%20metadata",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "356": {
+        "chunkId": "0abf63",
+        "hash": "432f5fab",
+        "encoded": "id:%20meta",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "357": {
+        "chunkId": "0abf63",
+        "hash": "7c17fe39",
+        "encoded": "uses:%20docker/metadata-action@v5",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "358": {
+        "chunkId": "0abf63",
+        "hash": "803552c3",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "360": {
+        "chunkId": "0abf63",
+        "hash": "516f5e78",
+        "encoded": "tags:%20%7C",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "361": {
+        "chunkId": "0abf63",
+        "hash": "5fb4c01f",
+        "encoded": "type=sha,prefix=%7B%7Bbranch%7D%7D-",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "362": {
+        "chunkId": "0abf63",
+        "hash": "b7c87f13",
+        "encoded": "type=raw,value=latest,enable=%7B%7Bis_default_branch%7D%7D",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "365": {
+        "chunkId": "0abf63",
+        "hash": "ac6e2c85",
+        "encoded": "-%20name:%20Build%20and%20push",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "367": {
+        "chunkId": "0abf63",
+        "hash": "49d31815",
+        "encoded": "uses:%20docker/build-push-action@v5",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "0abf63",
+        "hash": "4405eec3",
+        "encoded": "with:",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "369": {
+        "chunkId": "0abf63",
+        "hash": "c67d013d",
+        "encoded": "context:%20.",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "370": {
+        "chunkId": "0abf63",
+        "hash": "81da3920",
+        "encoded": "push:%20true",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "371": {
+        "chunkId": "0abf63",
+        "hash": "a7ba12ea",
+        "encoded": "tags:%20$%7B%7B%20steps.meta.outputs.tags%20%7D%7D",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "372": {
+        "chunkId": "0abf63",
+        "hash": "fa7d3f6a",
+        "encoded": "labels:%20$%7B%7B%20steps.meta.outputs.labels%20%7D%7D",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "373": {
+        "chunkId": "0abf63",
+        "hash": "3fa624a9",
+        "encoded": "cache-from:%20type=gha",
+        "prevChunkIds": [
+          "de063e"
+        ]
+      },
+      "374": {
+        "chunkId": "0abf63",
+        "hash": "746c3cb6",
         "encoded": "cache-to:%20type=gha,mode=max",
         "prevChunkIds": [
           "de063e"

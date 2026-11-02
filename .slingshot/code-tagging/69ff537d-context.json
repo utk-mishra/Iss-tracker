@@ -62,6 +62,21 @@
           ]
         }
       ]
+    },
+    "e6123722": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "SECRETS_SETUP.md",
+          "relativeFilePath": "SECRETS_SETUP.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            233
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
@@ -76,6 +91,9 @@
     },
     "7dcec627": {
       "value": "This job failed during the Docker registry login step, not because of a test or build error in the app itself.\n\nWhat the log shows:\n\nThe workflow calls Docker login here:\n.github/workflows/ci.yml lines 92–97\nuses: docker/login-action@v3\nwith:\nusername: ${{ secrets.DOCKER_USERNAME }}\npassword: ${{ secrets.DOCKER_PASSWORD }}\nThe failing log line is:\n##[error]Username and password required\nThat means the GitHub Actions run did not have valid values for the required registry secrets, so Docker login"
+    },
+    "01f0acc9": {
+      "value": "remove that condition. GitHub doesn’t allow the secrets context in a job-level if:, so it rejects the whole workflow. Because of that one error, none of your jobs run, including the tests.\n\nInvalid workflow file: .github/workflows/ci.yml#L1\n(Line: 98, Col: 13): Unrecognized named-value: 'secrets'. Located at position 1 within expression: secrets.DOCKER_REGISTRY != '' &&\nsecrets.DOCKER_USERNAME != '' &&\nsecrets.DOCKER_PASSWORD != ''\nRemove all this"
     }
   },
   "localPrompts": {},

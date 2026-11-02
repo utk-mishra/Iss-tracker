@@ -82,23 +82,14 @@ jobs:
     name: Push to container registry
     runs-on: ubuntu-latest
     needs: [docker-build]
-    # Only run on main branch pushes AND if registry secrets are configured
-    if: |
-      github.ref == 'refs/heads/main' && 
-      github.event_name == 'push' &&
-      github.repository_owner != 'fork-owner'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
-      # Only login if secrets are available (optional step)
       - name: Log in to Container Registry
-        if: |
-          secrets.DOCKER_REGISTRY != '' &&
-          secrets.DOCKER_USERNAME != '' &&
-          secrets.DOCKER_PASSWORD != ''
         uses: docker/login-action@v3
         with:
           registry: ${{ secrets.DOCKER_REGISTRY || 'docker.io' }}
@@ -115,9 +106,7 @@ jobs:
             type=sha,prefix={{branch}}-
             type=raw,value=latest,enable={{is_default_branch}}
       
-      # Only push if login succeeded
       - name: Build and push
-        if: success()
         uses: docker/build-push-action@v5
         with:
           context: .
