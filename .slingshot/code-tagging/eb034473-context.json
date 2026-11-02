@@ -3,43 +3,25 @@
   "path": "Jenkinsfile",
   "version": "1.1",
   "files": {
-    "17ee55be": {
-      "value": [
-        {
-          "programming_language": "Markdown",
-          "fileName": "PROMPT.md",
-          "relativeFilePath": "PROMPT.md",
-          "startLine": [
-            1
-          ],
-          "endLine": [
-            219
-          ]
-        }
-      ]
-    },
-    "8224eedc": {
+    "eec45d9f": {
       "value": [
         {
           "programming_language": "YAML",
-          "fileName": "ci.yml",
-          "relativeFilePath": ".github/workflows/ci.yml",
+          "fileName": "docker-compose.yml",
+          "relativeFilePath": "docker-compose.yml",
           "startLine": [
             1
           ],
           "endLine": [
-            117
+            62
           ]
         }
       ]
     }
   },
   "promptMessage": {
-    "d6d8f4f5": {
-      "value": "approve step 8 and proceed ahead"
-    },
-    "7dcec627": {
-      "value": "This job failed during the Docker registry login step, not because of a test or build error in the app itself.\n\nWhat the log shows:\n\nThe workflow calls Docker login here:\n.github/workflows/ci.yml lines 92–97\nuses: docker/login-action@v3\nwith:\nusername: ${{ secrets.DOCKER_USERNAME }}\npassword: ${{ secrets.DOCKER_PASSWORD }}\nThe failing log line is:\n##[error]Username and password required\nThat means the GitHub Actions run did not have valid values for the required registry secrets, so Docker login"
+    "ebd1ed1b": {
+      "value": "does my use these coordinates button works correctly or not?\ni dont think so can you check once"
     }
   },
   "localPrompts": {},

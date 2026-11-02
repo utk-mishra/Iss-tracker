@@ -5,438 +5,474 @@
     "version": "1.2",
     "contextFile": null,
     "chunks": {
-      "620c9d": {
+      "8f0b57": {
         "user": "You",
         "model": "gpt-4.1",
-        "timestamp": 1793545097,
+        "timestamp": 1793583896,
         "platform": "VisualStudioCode",
         "product": "AIPP",
         "productVersion": "3.6.1",
         "source": "agent",
         "type": "agentWriteTool",
         "extraContext": {
-          "promptMessage": "bfb7e7e4",
-          "files": "17ee55be"
+          "promptMessage": "ebd1ed1b",
+          "files": "eec45d9f"
         },
-        "hash": "272629e4",
-        "messageId": "system_db0d8ba0-d603-11f1-a621-096a9ff7de59",
+        "hash": "da8de65d",
+        "messageId": "system_d246c800-d65e-11f1-a621-096a9ff7de59",
         "codeBlockId": null,
         "isActive": true,
-        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 01/11/2026, 20:28:17\n- **source**: agent\n- **type**: agentWriteTool\n"
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4.1\n- **timestamp**: 02/11/2026, 07:14:56\n- **source**: agent\n- **type**: agentWriteTool\n"
       }
     },
     "lines": {
       "0": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "c9be6c9c",
         "encoded": "import%20%7B%20useState%20%7D%20from%20'react';",
         "prevChunkIds": []
       },
       "1": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "eeac30a6",
         "encoded": "import%20%7B%20validateLatitude,%20validateLongitude%20%7D%20from%20'../utils/validation.js';",
         "prevChunkIds": []
       },
       "3": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "4b7d87a7",
         "encoded": "//%20Manual%20lat/lon%20form%20with%20validation%20+%20%22Use%20my%20location%22%20(PROMPT.md%20section%207).",
         "prevChunkIds": []
       },
       "4": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "0d7caea1",
         "encoded": "export%20default%20function%20LocationForm(%7B%20onSubmit%20%7D)%20%7B",
         "prevChunkIds": []
       },
       "5": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "581b1cbc",
         "encoded": "const%20%5Blat,%20setLat%5D%20=%20useState('');",
         "prevChunkIds": []
       },
       "6": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "faea9ef2",
         "encoded": "const%20%5Blon,%20setLon%5D%20=%20useState('');",
         "prevChunkIds": []
       },
       "7": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "2d555b4c",
         "encoded": "const%20%5Berror,%20setError%5D%20=%20useState(null);",
         "prevChunkIds": []
       },
       "9": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "f2485803",
         "encoded": "function%20handleSubmit(event)%20%7B",
         "prevChunkIds": []
       },
       "10": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "171c0b36",
         "encoded": "event.preventDefault();",
         "prevChunkIds": []
       },
       "11": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "12eb984a",
         "encoded": "const%20latResult%20=%20validateLatitude(lat);",
         "prevChunkIds": []
       },
       "12": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "45c98faf",
         "encoded": "if%20(!latResult.valid)%20%7B",
         "prevChunkIds": []
       },
       "13": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "54aa2235",
         "encoded": "setError(latResult.error);",
         "prevChunkIds": []
       },
       "14": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "c6698a2f",
         "encoded": "return;",
         "prevChunkIds": []
       },
       "15": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "c8f9d1c3",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "16": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "e4427797",
         "encoded": "const%20lonResult%20=%20validateLongitude(lon);",
         "prevChunkIds": []
       },
       "17": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "a6a5b26b",
         "encoded": "if%20(!lonResult.valid)%20%7B",
         "prevChunkIds": []
       },
       "18": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "61845fb8",
         "encoded": "setError(lonResult.error);",
         "prevChunkIds": []
       },
       "19": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "c3b08c20",
         "encoded": "return;",
         "prevChunkIds": []
       },
       "20": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "acbf036f",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "21": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "f7871789",
         "encoded": "setError(null);",
         "prevChunkIds": []
       },
       "22": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "f4cacb6d",
         "encoded": "onSubmit(%7B%20lat:%20latResult.value,%20lon:%20lonResult.value%20%7D);",
         "prevChunkIds": []
       },
       "23": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "7b3531ab",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "25": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "d0b2e5b2",
         "encoded": "function%20handleUseMyLocation()%20%7B",
         "prevChunkIds": []
       },
       "26": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "4c21b825",
         "encoded": "if%20(!navigator.geolocation)%20%7B",
         "prevChunkIds": []
       },
       "27": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "21ea6b18",
         "encoded": "setError('Geolocation%20is%20not%20available%20in%20this%20browser.');",
         "prevChunkIds": []
       },
       "28": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "f2b900e9",
         "encoded": "return;",
         "prevChunkIds": []
       },
       "29": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "7721e417",
         "encoded": "%7D",
         "prevChunkIds": []
       },
       "30": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "6059489a",
         "encoded": "navigator.geolocation.getCurrentPosition(",
         "prevChunkIds": []
       },
       "31": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "ee505c20",
         "encoded": "(position)%20=%3E%20%7B",
         "prevChunkIds": []
       },
       "32": {
-        "chunkId": "620c9d",
+        "chunkId": "8f0b57",
         "hash": "9885f465",
         "encoded": "setError(null);",
         "prevChunkIds": []
       },
       "33": {
-        "chunkId": "620c9d",
-        "hash": "896fad10",
-        "encoded": "onSubmit(%7B%20lat:%20position.coords.latitude,%20lon:%20position.coords.longitude%20%7D);",
+        "chunkId": "8f0b57",
+        "hash": "ef7dd8c1",
+        "encoded": "//%20FIXED:%20Now%20populates%20the%20form%20fields%20instead%20of%20immediately%20submitting",
         "prevChunkIds": []
       },
       "34": {
-        "chunkId": "620c9d",
-        "hash": "108b8db2",
-        "encoded": "%7D,",
+        "chunkId": "8f0b57",
+        "hash": "4ac52733",
+        "encoded": "const%20latitude%20=%20position.coords.latitude.toFixed(4);",
         "prevChunkIds": []
       },
       "35": {
-        "chunkId": "620c9d",
-        "hash": "6c52bdb3",
-        "encoded": "()%20=%3E%20%7B",
+        "chunkId": "8f0b57",
+        "hash": "07ea7b36",
+        "encoded": "const%20longitude%20=%20position.coords.longitude.toFixed(4);",
         "prevChunkIds": []
       },
       "36": {
-        "chunkId": "620c9d",
-        "hash": "9dbe18c2",
-        "encoded": "setError('Could%20not%20determine%20your%20location.');",
+        "chunkId": "8f0b57",
+        "hash": "9634727e",
+        "encoded": "setLat(latitude);",
         "prevChunkIds": []
       },
       "37": {
-        "chunkId": "620c9d",
-        "hash": "880eeeff",
-        "encoded": "%7D",
+        "chunkId": "8f0b57",
+        "hash": "10702414",
+        "encoded": "setLon(longitude);",
         "prevChunkIds": []
       },
       "38": {
-        "chunkId": "620c9d",
-        "hash": "883f8be2",
-        "encoded": ");",
+        "chunkId": "8f0b57",
+        "hash": "cc86db60",
+        "encoded": "//%20Auto-submit%20after%20populating%20(you%20can%20remove%20this%20line%20if%20you%20want%20manual%20submit)",
         "prevChunkIds": []
       },
       "39": {
-        "chunkId": "620c9d",
-        "hash": "4771cdac",
-        "encoded": "%7D",
+        "chunkId": "8f0b57",
+        "hash": "9c2f3520",
+        "encoded": "onSubmit(%7B%20lat:%20parseFloat(latitude),%20lon:%20parseFloat(longitude)%20%7D);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "8f0b57",
+        "hash": "a2f87705",
+        "encoded": "%7D,",
         "prevChunkIds": []
       },
       "41": {
-        "chunkId": "620c9d",
-        "hash": "b4f60d2a",
-        "encoded": "return%20(",
+        "chunkId": "8f0b57",
+        "hash": "ee0cd991",
+        "encoded": "()%20=%3E%20%7B",
         "prevChunkIds": []
       },
       "42": {
-        "chunkId": "620c9d",
-        "hash": "0adb3182",
-        "encoded": "%3Cform%20onSubmit=%7BhandleSubmit%7D%20className=%22location-form%22%20aria-label=%22Observer%20location%22%3E",
+        "chunkId": "8f0b57",
+        "hash": "f6738343",
+        "encoded": "setError('Could%20not%20determine%20your%20location.');",
         "prevChunkIds": []
       },
       "43": {
-        "chunkId": "620c9d",
-        "hash": "2356f4b3",
-        "encoded": "%3Cdiv%20className=%22form-row%22%3E",
+        "chunkId": "8f0b57",
+        "hash": "d6071ac7",
+        "encoded": "%7D",
         "prevChunkIds": []
       },
       "44": {
-        "chunkId": "620c9d",
-        "hash": "e663b06e",
-        "encoded": "%3Clabel%20htmlFor=%22latitude-input%22%3ELatitude%3C/label%3E",
-        "prevChunkIds": []
-      },
-      "45": {
-        "chunkId": "620c9d",
-        "hash": "2e61f0c9",
-        "encoded": "%3Cinput",
-        "prevChunkIds": []
-      },
-      "46": {
-        "chunkId": "620c9d",
-        "hash": "e1aad1b0",
-        "encoded": "id=%22latitude-input%22",
-        "prevChunkIds": []
-      },
-      "47": {
-        "chunkId": "620c9d",
-        "hash": "c3e94892",
-        "encoded": "type=%22text%22",
-        "prevChunkIds": []
-      },
-      "48": {
-        "chunkId": "620c9d",
-        "hash": "fa0565a7",
-        "encoded": "inputMode=%22decimal%22",
-        "prevChunkIds": []
-      },
-      "49": {
-        "chunkId": "620c9d",
-        "hash": "4ee33044",
-        "encoded": "value=%7Blat%7D",
-        "prevChunkIds": []
-      },
-      "50": {
-        "chunkId": "620c9d",
-        "hash": "0b972017",
-        "encoded": "onChange=%7B(e)%20=%3E%20setLat(e.target.value)%7D",
-        "prevChunkIds": []
-      },
-      "51": {
-        "chunkId": "620c9d",
-        "hash": "5cc8b31c",
-        "encoded": "placeholder=%22-90%20to%2090%22",
-        "prevChunkIds": []
-      },
-      "52": {
-        "chunkId": "620c9d",
-        "hash": "c179cd19",
-        "encoded": "/%3E",
-        "prevChunkIds": []
-      },
-      "53": {
-        "chunkId": "620c9d",
-        "hash": "e88470f6",
-        "encoded": "%3C/div%3E",
-        "prevChunkIds": []
-      },
-      "54": {
-        "chunkId": "620c9d",
-        "hash": "3708d894",
-        "encoded": "%3Cdiv%20className=%22form-row%22%3E",
-        "prevChunkIds": []
-      },
-      "55": {
-        "chunkId": "620c9d",
-        "hash": "1100691d",
-        "encoded": "%3Clabel%20htmlFor=%22longitude-input%22%3ELongitude%3C/label%3E",
-        "prevChunkIds": []
-      },
-      "56": {
-        "chunkId": "620c9d",
-        "hash": "e107c531",
-        "encoded": "%3Cinput",
-        "prevChunkIds": []
-      },
-      "57": {
-        "chunkId": "620c9d",
-        "hash": "66c43f6c",
-        "encoded": "id=%22longitude-input%22",
-        "prevChunkIds": []
-      },
-      "58": {
-        "chunkId": "620c9d",
-        "hash": "306a1f8f",
-        "encoded": "type=%22text%22",
-        "prevChunkIds": []
-      },
-      "59": {
-        "chunkId": "620c9d",
-        "hash": "e3f1157f",
-        "encoded": "inputMode=%22decimal%22",
-        "prevChunkIds": []
-      },
-      "60": {
-        "chunkId": "620c9d",
-        "hash": "4a99e3bc",
-        "encoded": "value=%7Blon%7D",
-        "prevChunkIds": []
-      },
-      "61": {
-        "chunkId": "620c9d",
-        "hash": "13fce7d0",
-        "encoded": "onChange=%7B(e)%20=%3E%20setLon(e.target.value)%7D",
-        "prevChunkIds": []
-      },
-      "62": {
-        "chunkId": "620c9d",
-        "hash": "4184d10d",
-        "encoded": "placeholder=%22-180%20to%20180%22",
-        "prevChunkIds": []
-      },
-      "63": {
-        "chunkId": "620c9d",
-        "hash": "005b6a99",
-        "encoded": "/%3E",
-        "prevChunkIds": []
-      },
-      "64": {
-        "chunkId": "620c9d",
-        "hash": "2c7f6be1",
-        "encoded": "%3C/div%3E",
-        "prevChunkIds": []
-      },
-      "65": {
-        "chunkId": "620c9d",
-        "hash": "ed803a1a",
-        "encoded": "%7Berror%20&&%20%3Cp%20role=%22alert%22%20className=%22form-error%22%3E%7Berror%7D%3C/p%3E%7D",
-        "prevChunkIds": []
-      },
-      "66": {
-        "chunkId": "620c9d",
-        "hash": "157d10cc",
-        "encoded": "%3Cdiv%20className=%22form-actions%22%3E",
-        "prevChunkIds": []
-      },
-      "67": {
-        "chunkId": "620c9d",
-        "hash": "a7711e2b",
-        "encoded": "%3Cbutton%20type=%22submit%22%3EUse%20these%20coordinates%3C/button%3E",
-        "prevChunkIds": []
-      },
-      "68": {
-        "chunkId": "620c9d",
-        "hash": "d9ba7d31",
-        "encoded": "%3Cbutton%20type=%22button%22%20onClick=%7BhandleUseMyLocation%7D%3EUse%20my%20location%3C/button%3E",
-        "prevChunkIds": []
-      },
-      "69": {
-        "chunkId": "620c9d",
-        "hash": "ebc4aab1",
-        "encoded": "%3C/div%3E",
-        "prevChunkIds": []
-      },
-      "70": {
-        "chunkId": "620c9d",
-        "hash": "8ccc5baa",
-        "encoded": "%3C/form%3E",
-        "prevChunkIds": []
-      },
-      "71": {
-        "chunkId": "620c9d",
-        "hash": "793c9e03",
+        "chunkId": "8f0b57",
+        "hash": "15b81b0c",
         "encoded": ");",
         "prevChunkIds": []
       },
+      "45": {
+        "chunkId": "8f0b57",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "8f0b57",
+        "hash": "8623cfd5",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "8f0b57",
+        "hash": "3fd3a5fc",
+        "encoded": "%3Cform%20onSubmit=%7BhandleSubmit%7D%20className=%22location-form%22%20aria-label=%22Observer%20location%22%3E",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "8f0b57",
+        "hash": "e2f3ebfc",
+        "encoded": "%3Cdiv%20className=%22form-row%22%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "8f0b57",
+        "hash": "8f41480a",
+        "encoded": "%3Clabel%20htmlFor=%22latitude-input%22%3ELatitude%3C/label%3E",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "8f0b57",
+        "hash": "e061c1fe",
+        "encoded": "%3Cinput",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "8f0b57",
+        "hash": "d6332043",
+        "encoded": "id=%22latitude-input%22",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "8f0b57",
+        "hash": "bc934f89",
+        "encoded": "type=%22text%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "8f0b57",
+        "hash": "3d44bf43",
+        "encoded": "inputMode=%22decimal%22",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "8f0b57",
+        "hash": "5ac24a96",
+        "encoded": "value=%7Blat%7D",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "8f0b57",
+        "hash": "529c2181",
+        "encoded": "onChange=%7B(e)%20=%3E%20setLat(e.target.value)%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "8f0b57",
+        "hash": "f02b7bde",
+        "encoded": "placeholder=%22-90%20to%2090%22",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "8f0b57",
+        "hash": "27220071",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "8f0b57",
+        "hash": "dd4b8b3b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "8f0b57",
+        "hash": "1c5d3cb3",
+        "encoded": "%3Cdiv%20className=%22form-row%22%3E",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "8f0b57",
+        "hash": "036d5b3f",
+        "encoded": "%3Clabel%20htmlFor=%22longitude-input%22%3ELongitude%3C/label%3E",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "8f0b57",
+        "hash": "d681287f",
+        "encoded": "%3Cinput",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "8f0b57",
+        "hash": "db636554",
+        "encoded": "id=%22longitude-input%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "8f0b57",
+        "hash": "35ad0361",
+        "encoded": "type=%22text%22",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "8f0b57",
+        "hash": "35bf5e39",
+        "encoded": "inputMode=%22decimal%22",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "8f0b57",
+        "hash": "58937312",
+        "encoded": "value=%7Blon%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "8f0b57",
+        "hash": "c515062f",
+        "encoded": "onChange=%7B(e)%20=%3E%20setLon(e.target.value)%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "8f0b57",
+        "hash": "f64988f3",
+        "encoded": "placeholder=%22-180%20to%20180%22",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "8f0b57",
+        "hash": "f2185b99",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "8f0b57",
+        "hash": "d333aa3e",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "8f0b57",
+        "hash": "0ebc9da9",
+        "encoded": "%7Berror%20&&%20%3Cp%20role=%22alert%22%20className=%22form-error%22%3E%7Berror%7D%3C/p%3E%7D",
+        "prevChunkIds": []
+      },
       "72": {
-        "chunkId": "620c9d",
-        "hash": "ae47b750",
+        "chunkId": "8f0b57",
+        "hash": "5ec2d26a",
+        "encoded": "%3Cdiv%20className=%22form-actions%22%3E",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "8f0b57",
+        "hash": "55ba8bac",
+        "encoded": "%3Cbutton%20type=%22submit%22%3EUse%20these%20coordinates%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "8f0b57",
+        "hash": "b1d28b50",
+        "encoded": "%3Cbutton%20type=%22button%22%20onClick=%7BhandleUseMyLocation%7D%3EUse%20my%20location%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "8f0b57",
+        "hash": "13168142",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "8f0b57",
+        "hash": "d81ac885",
+        "encoded": "%3C/form%3E",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "8f0b57",
+        "hash": "0afea6a9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "8f0b57",
+        "hash": "c46ffadb",
         "encoded": "%7D",
         "prevChunkIds": []
       }
