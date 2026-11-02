@@ -94,6 +94,9 @@
     },
     "01f0acc9": {
       "value": "remove that condition. GitHub doesn’t allow the secrets context in a job-level if:, so it rejects the whole workflow. Because of that one error, none of your jobs run, including the tests.\n\nInvalid workflow file: .github/workflows/ci.yml#L1\n(Line: 98, Col: 13): Unrecognized named-value: 'secrets'. Located at position 1 within expression: secrets.DOCKER_REGISTRY != '' &&\nsecrets.DOCKER_USERNAME != '' &&\nsecrets.DOCKER_PASSWORD != ''\nRemove all this"
+    },
+    "798645d0": {
+      "value": "delete the whole push-to-registry job. Remove everything from push-to-registry: down to the end of the file. The workflow still runs backend tests, frontend tests, the image build, the Trivy scan and the smoke test, which covers what the brief asks for. Describe the push as an optional extra in the README."
     }
   },
   "localPrompts": {},

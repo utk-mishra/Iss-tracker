@@ -17,11 +17,29 @@
           ]
         }
       ]
+    },
+    "e6123722": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "SECRETS_SETUP.md",
+          "relativeFilePath": "SECRETS_SETUP.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            233
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
     "d200a887": {
       "value": "proceed to step 9"
+    },
+    "798645d0": {
+      "value": "delete the whole push-to-registry job. Remove everything from push-to-registry: down to the end of the file. The workflow still runs backend tests, frontend tests, the image build, the Trivy scan and the smoke test, which covers what the brief asks for. Describe the push as an optional extra in the README."
     }
   },
   "localPrompts": {},

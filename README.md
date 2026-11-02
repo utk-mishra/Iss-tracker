@@ -716,17 +716,30 @@ docker run -d \
 
 ### CI/CD
 
-**GitHub Actions**: Automated on every push/PR
-- Backend + frontend tests
-- Docker build + Trivy scan
-- Push to registry (main branch only)
+**GitHub Actions** (`.github/workflows/ci.yml`): Runs automatically on every push and pull request
 
-**Jenkins**: Production pipeline
-- Full test suite
-- Security scanning
-- Deploy to dev/staging/prod
+✅ **What's Included**:
+- Backend tests (Maven + JUnit)
+- Frontend tests (Vitest + React Testing Library)
+- Docker image build
+- Trivy security scanning (uploads results to GitHub Security tab)
+- Container smoke tests (health check + API validation)
 
-See `Jenkinsfile` and `.github/workflows/ci.yml`
+**Jenkins** (`Jenkinsfile`): Production deployment pipeline
+
+✅ **What's Included**:
+- Full test suite with coverage reports
+- Docker image build and tagging
+- Trivy security scanning
+- Container smoke tests
+- **Optional**: Push to container registry (requires credentials)
+- **Optional**: Deploy to dev/staging/prod environments (requires credentials)
+
+📚 **Setup Guides**:
+- [`SECRETS_SETUP.md`](SECRETS_SETUP.md) - Configure registry and deployment credentials
+- [`docs/CI_CD_SETUP.md`](docs/CI_CD_SETUP.md) - Quick reference for both pipelines
+
+**Note**: Container registry push is an **optional enhancement**. The core CI workflow (tests + build + scan) works without any secrets configured.
 
 ---
 
