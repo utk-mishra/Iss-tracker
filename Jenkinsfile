@@ -19,6 +19,11 @@ pipeline {
         FULL_IMAGE_NAME = "${DOCKER_REGISTRY}/${IMAGE_NAME}"
     }
 
+    tools {
+        maven 'Maven 3.9'
+        nodejs 'NodeJS 20'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -28,13 +33,6 @@ pipeline {
         }
 
         stage('Backend Tests') {
-            agent {
-                docker {
-                    image 'maven:3.9-eclipse-temurin-21'
-                    args '-v $HOME/.m2:/root/.m2'
-                    reuseNode true
-                }
-            }
             steps {
                 echo "Running backend tests with Maven..."
                 dir('backend') {
@@ -55,12 +53,6 @@ pipeline {
         }
 
         stage('Frontend Tests') {
-            agent {
-                docker {
-                    image 'node:20-alpine'
-                    reuseNode true
-                }
-            }
             steps {
                 echo "Running frontend tests with Vitest..."
                 dir('frontend') {
@@ -75,7 +67,7 @@ pipeline {
                 echo "Building Docker image: ${IMAGE_NAME}:${IMAGE_TAG}"
                 script {
                     // Build main image
-                    docker.build("${IMAGE_NAME}:${IMAGE_TAG}")
+                    sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
                     
                     // Tag as latest
                     sh "docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${IMAGE_NAME}:latest"
